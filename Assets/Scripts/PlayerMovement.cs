@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,21 +16,10 @@ public class PlayerMovement : MonoBehaviour
     public bool HasGun = false;
     public float dotProductRight;
     public float dotProductUp;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-       
-    }
 
     private void FixedUpdate()
     {
         Movement();
-
-
 
         if (Input.GetMouseButtonDown(1) && HasGun)
         {
@@ -71,27 +61,20 @@ public class PlayerMovement : MonoBehaviour
             rdb.AddRelativeForce(Vector2.down * playerSpeed * runPressed);
         }
 
-        else
-        {
-
-        }
     }
 
-    void ThrowWeapon() {
+    void ThrowWeapon() 
+    {
         weapon.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * 10, ForceMode2D.Impulse);
-
-
     }
 
     void Direction()
     {
-        if (rdb.velocity.x > 0.001) transform.rotation = Quaternion.Euler(0, 0, 0);
-        if (rdb.velocity.x < -0.001) transform.rotation = Quaternion.Euler(0, 180, 0);
         Vector3 playerPositionPixels = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 mouseDirection = (Input.mousePosition - playerPositionPixels).normalized;
         dotProductRight = Vector3.Dot(Vector3.right, mouseDirection);
         dotProductUp = Vector3.Dot(Vector3.up, mouseDirection);
-
+        print(dotProductRight);
         if (dotProductUp > 0.5) animator.SetBool("Up",true);
         else animator.SetBool("Up", false);
 
@@ -100,6 +83,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
         else transform.rotation = Quaternion.Euler(0, 180, 0);
+
+
+        
     }
 
 }
