@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 487652053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.479, y: 0.238, z: -1.0276378}
+  m_LocalPosition: {x: 0.573, y: -0.176, z: -1.0276378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,7 +288,6 @@ GameObject:
   - component: {fileID: 825457740}
   - component: {fileID: 825457742}
   - component: {fileID: 825457741}
-  - component: {fileID: 825457745}
   - component: {fileID: 825457746}
   - component: {fileID: 825457747}
   - component: {fileID: 825457748}
@@ -327,15 +326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d8c423aff299c4e9ecd0c89974cbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 1622956830877753371, guid: c6c038ed92833b54dbc0762df2b6e245, type: 3}
-  FirePoint: {fileID: 207212373}
-  maxAmmo: 100
-  reloadTime: 0
-  timePerBullet: 0.05
-  canShoot: 1
-  currentAmmo: 0
-  reloading: 0
-  IsAttachedToPlayer: 0
 --- !u!212 &825457742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -388,41 +378,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &825457745
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825457739}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!114 &825457746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,10 +459,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07}
+  m_Offset: {x: 0.18, y: 0.165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.15623082, y: 0.03754844}
     oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
@@ -745,6 +700,7 @@ GameObject:
   - component: {fileID: 2141283300}
   - component: {fileID: 2141283304}
   - component: {fileID: 2141283305}
+  - component: {fileID: 2141283306}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -796,6 +752,7 @@ MonoBehaviour:
   runPressed: 0
   runSpeed: 2
   weapon: {fileID: 825457739}
+  animator: {fileID: 2141283306}
   HasGun: 1
 --- !u!212 &2141283302
 SpriteRenderer:
@@ -946,6 +903,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.84}
   m_EdgeRadius: 0
+--- !u!95 &2141283306
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141283299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e77b9fd1494019b419e26d9b80f5fd7d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

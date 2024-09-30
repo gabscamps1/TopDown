@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 2;
 
     public GameObject weapon;
-
+    public Animator animator;
     public bool HasGun = false;
-
+    public float dotProductRight;
+    public float dotProductUp;
     void Start()
     {
         
@@ -43,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             runPressed = 1;
         }
 
-        //Direction();
+        Direction();
     }
 
     void Movement() {
@@ -85,7 +87,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rdb.velocity.x > 0.001) transform.rotation = Quaternion.Euler(0, 0, 0);
         if (rdb.velocity.x < -0.001) transform.rotation = Quaternion.Euler(0, 180, 0);
+        Vector3 playerPositionPixels = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 mouseDirection = (Input.mousePosition - playerPositionPixels).normalized;
+        dotProductRight = Vector3.Dot(Vector3.right, mouseDirection);
+        dotProductUp = Vector3.Dot(Vector3.up, mouseDirection);
 
+        if (dotProductUp > 0.5) animator.SetBool("Up",true);
+        else animator.SetBool("Up", false);
+
+        if (dotProductUp < -0.5) animator.SetBool("Down", true);
+        else animator.SetBool("Down", false);
+
+        if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
+        else transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
 }

@@ -8,6 +8,7 @@ public class ItemPickup : MonoBehaviour
     private bool isNearPlayer = false;
     private bool isHoldingItem = false;
     private Transform playerHoldPosition;
+    private GameObject player;
     private Rigidbody2D rb;
 
     public float throwForce = 10f; // Força com que o item será arremessado
@@ -55,6 +56,7 @@ public class ItemPickup : MonoBehaviour
 
             // Aplicar força na direção do mouse
             rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            player = null;
         }
 
         if (isHoldingItem) {
@@ -84,6 +86,7 @@ public class ItemPickup : MonoBehaviour
             isNearPlayer = true;
             // Obter a posição de segurar do jogador
             playerHoldPosition = collision.transform.Find("ItemHoldPosition");
+            player = collision.gameObject;
         }
     }
 
@@ -94,6 +97,7 @@ public class ItemPickup : MonoBehaviour
         {
             isNearPlayer = false;
             playerHoldPosition = null;
+            player = null;
         }
     }
 
@@ -135,6 +139,24 @@ public class ItemPickup : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Aplicar apenas a rotação ao objeto no eixo Z (mantendo a posição intacta)
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        
+
+        float dotProduct = Vector3.Dot(Vector3.right, direction.normalized);
+        
+        
+        if (player)
+        {
+            PlayerMovement playerScript = player.GetComponent<PlayerMovement>();
+            if (playerScript.dotProductUp > 0)
+            {
+                transform.localScale = new Vector2(1, 1);
+                if (dotProduct > 0.5) transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+            else
+            {
+                transform.localScale = new Vector2(-1, 1);
+                if (dotProduct < -0.5) transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+        }
     }
 }
