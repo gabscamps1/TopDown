@@ -286,8 +286,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 825457740}
-  - component: {fileID: 825457742}
   - component: {fileID: 825457741}
+  - component: {fileID: 825457742}
   - component: {fileID: 825457745}
   - component: {fileID: 825457746}
   - component: {fileID: 825457747}
@@ -327,15 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d8c423aff299c4e9ecd0c89974cbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 1622956830877753371, guid: c6c038ed92833b54dbc0762df2b6e245, type: 3}
-  FirePoint: {fileID: 207212373}
-  maxAmmo: 100
-  reloadTime: 0
-  timePerBullet: 0.05
-  canShoot: 1
-  currentAmmo: 0
-  reloading: 0
-  IsAttachedToPlayer: 0
 --- !u!212 &825457742
 SpriteRenderer:
   m_ObjectHideFlags: 0
