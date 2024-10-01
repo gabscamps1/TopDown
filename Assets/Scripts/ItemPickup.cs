@@ -101,7 +101,8 @@ public class ItemPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Collider2D playerCollider = collision.GetComponent<CircleCollider2D>();
-            if (collision.IsTouching(playerCollider))
+            Collider2D gunCollider = GetComponent<Collider2D>(); 
+            if (!playerCollider.IsTouching(gunCollider))
             {
                 isNearPlayer = false;
                 playerHoldPosition = null;
