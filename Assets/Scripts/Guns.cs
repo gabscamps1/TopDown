@@ -12,24 +12,34 @@ public class Guns : MonoBehaviour
     private Collider2D areaGun;
 
     [Header("InfoGun")]
-    public int maxAmmo = 100; // Quantidade máxima de munição da arma carregada.
+    private int maxAmmo; // Quantidade máxima de munição da arma carregada.
     public int currentAmmo; // Munição atual na arma.
-    public int reserveAmmo; // Munição reserva da arma.
-    public float reloadTime = 1f;    // Tempo total de recarga.
-    public float timePerBullet = 0.05f; // Tempo para recarregar uma unidade de munição.
+    public float timePerBullet = 0f; // Tempo entre cada saída de tiro.
+    private float countTimePerBullet;
+    public float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     public float bulletSpeed = 10f; // Velocidade do disparo.
 
     [Header("StateGun")]
-    public bool canShoot = true;
-    public bool reloading = false;
+    public bool canReload = true;
+    public bool isReloading = false;
     public bool isHold;
+    public bool isAutomatic;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         areaGun = GetComponent<Collider2D>();
-        currentAmmo = maxAmmo;
+
+        maxAmmo = currentAmmo;
+        countTimePerBullet = timePerBullet;
+        timeReloadPerBullet = 2f/currentAmmo;
+
         var mainFireParticle = fireParticle.main;
         mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
+    }
+
+    private void OnEnable()
+    {
+        isReloading = false; // Seta o reloading como falso, quando o código da arma é ativado.
     }
 
     void Update()
@@ -40,13 +50,24 @@ public class Guns : MonoBehaviour
             rb.isKinematic = true; // Desabilita física enquanto o item é carregado.
             FollowMouseRotation();
 
-            if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !reloading && canShoot)
+            countTimePerBullet -= Time.deltaTime;
+            if (isAutomatic)
             {
-                Shoot();
+                if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                {
+                    Shoot();
+                }
+            }
+            else
+            {
+                if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                {
+                    Shoot();
+                }
             }
 
             // Inicia o processo de recarga se a munição for zero e não estiver reloading.
-            if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !reloading && reserveAmmo != 0)
+            if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading)
             {
                 StartCoroutine(Recarregar());
             }
@@ -56,29 +77,30 @@ public class Guns : MonoBehaviour
             areaGun.enabled = true;
         }
             
-
     }
 
+    // Chama a função de Tiro.
     void Shoot()
     {
         fireParticle.Emit(1);
         currentAmmo--; // Reduz a munição ao disparar.
+        countTimePerBullet = timePerBullet;
     }
 
+    // Chama a função de Recarregar.
     IEnumerator Recarregar()
     {
-        reloading = true;
-        yield return new WaitForSeconds(reloadTime); // Espera o tempo total de recarga.
+        isReloading = true;
+        yield return new WaitForSeconds(timeReloadPerBullet * currentAmmo); // Espera o tempo total de recarga.
 
         // Recarga progressiva
-        while (currentAmmo < maxAmmo && reserveAmmo > 0)
+        while (currentAmmo < maxAmmo)
         {
-            currentAmmo++;
-            reserveAmmo--;
-            yield return new WaitForSeconds(timePerBullet);
+           currentAmmo++;
+           yield return new WaitForSeconds(timeReloadPerBullet);
         }
 
-        reloading = false;
+        isReloading = false;
     }
 
     void FollowMouseRotation()

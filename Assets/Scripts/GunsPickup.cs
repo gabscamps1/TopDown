@@ -126,7 +126,7 @@ public class GunsPickup : MonoBehaviour
     void SelectGun()
     {
         // Ativa a Arma selecionada.
-        if (inventory[selectGun] != null)
+        /*if (inventory[selectGun] != null)
         {
             inventory[selectGun].SetActive(true);
         }
@@ -135,10 +135,10 @@ public class GunsPickup : MonoBehaviour
         if (inventory[(selectGun + 1) % 2] != null)
         {
             inventory[(selectGun + 1) % 2].SetActive(false);
-        }
+        }*/
+        
 
-
-        /*if (inventory[selectGun] != null)
+        if (inventory[selectGun] != null)
         {
             inventory[selectGun].SetActive(true);
         }
@@ -149,7 +149,7 @@ public class GunsPickup : MonoBehaviour
         else if (selectGun == 1 && inventory[0] != null)
         {
             inventory[0].SetActive(false);
-        }*/
+        }
 
 
     }
