@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 mouseDirection = (Input.mousePosition - playerPositionPixels).normalized;
         dotProductRight = Vector3.Dot(Vector3.right, mouseDirection);
         dotProductUp = Vector3.Dot(Vector3.up, mouseDirection);
-        print(dotProductRight);
+
         if (dotProductUp > 0.5) animator.SetBool("Up",true);
         else animator.SetBool("Up", false);
 

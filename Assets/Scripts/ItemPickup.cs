@@ -32,7 +32,8 @@ public class ItemPickup : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentAmmo = maxAmmo;
-        fireParticle.startSpeed = bulletSpeed;
+        var mainFireParticle = fireParticle.main;
+        mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
     }
 
     void Update()

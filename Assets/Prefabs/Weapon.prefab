@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4214750556010910015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8988104095284656834}
-  m_Layer: 6
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8988104095284656834
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214750556010910015}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.418, y: 0.295, z: 1.0829091}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 500100817908933881}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &4343581350437211065
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,9 +13,10 @@ GameObject:
   - component: {fileID: 7461104896885748450}
   - component: {fileID: 4176255896668712578}
   - component: {fileID: 4827475675152487251}
+  - component: {fileID: -3419241780885375441}
   m_Layer: 6
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6996080160001293176}
-  - {fileID: 8988104095284656834}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5989260715198129850
@@ -127,14 +96,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4343581350437211065}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdd5714aeebc8742b4b9e2425c89b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   throwForce: 40
   objectToSpawn: {fileID: 1622956830877753371, guid: c6c038ed92833b54dbc0762df2b6e245, type: 3}
-  FirePoint: {fileID: 8988104095284656834}
+  FirePoint: {fileID: 0}
   fireParticle: {fileID: 9192957602193728531}
   maxAmmo: 12
   currentAmmo: 0
@@ -216,6 +185,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &-3419241780885375441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343581350437211065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c636e0b938955e441b3dd9e97ac4b5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  fireParticle: {fileID: 9192957602193728531}
+  maxAmmo: 12
+  currentAmmo: 12
+  reserveAmmo: 24
+  reloadTime: 1
+  timePerBullet: 0.05
+  bulletSpeed: 15
+  canShoot: 1
+  reloading: 0
+  isHold: 0
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0
