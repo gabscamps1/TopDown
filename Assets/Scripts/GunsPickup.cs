@@ -8,23 +8,18 @@ public class GunsPickup : MonoBehaviour
     public int selectGun; // Arma selecionada.
     public float throwForce = 10f; // Força com que o item será arremessado.
     public GameObject[] inventory; // Inventário das armas.
-    List<GameObject> gunList = new List<GameObject>();
+    List<GameObject> gunList = new List<GameObject>(); // Lista das armas que estão no chão dentro do collider do GameObject ItemPlaceholder.
 
     void Update()
     {
-        SelectGun();
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            selectGun = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            selectGun = 1;
-        }
+        SelectGun(); // Ativar arma do slot selecionado.
+        SelectSlot(); // Inputs para trocar de slot.
+
+        // Input para pegar armas no chão.
         if (Input.GetKeyDown(KeyCode.F))
         {
             DisarmGun();
-            EquipNearestGun();
+            SearchNearestGun();
         }
     }
 
@@ -33,7 +28,7 @@ public class GunsPickup : MonoBehaviour
         // Verificar se o objeto que colidiu é o jogador.
         if (collision.CompareTag("Gun"))
         {
-            // guns[selectGun] != collision.gameObject &&
+            // Adiciona o game object na lista se ele não estiver nela. 
             if (!gunList.Contains(collision.gameObject)) gunList.Add(collision.gameObject);
         }
     }
@@ -47,11 +42,11 @@ public class GunsPickup : MonoBehaviour
         }
     }
 
-    
-    void EquipNearestGun()
+    // Procura a arma mais próxima do Player.
+    void SearchNearestGun()
     {
         // Encontra todas as armas na cena
-        GameObject nearestWeapon = null;
+        GameObject nearestGun = null;
         float nearestDistance = Mathf.Infinity;
 
         // Verifica a arma mais próxima
@@ -61,33 +56,38 @@ public class GunsPickup : MonoBehaviour
             if (distance < nearestDistance)
             {
                 nearestDistance = distance;
-                nearestWeapon = gun;
+                nearestGun = gun;
             }
         }
 
-        // Se uma arma foi encontrada, equipe-a
-        if (nearestWeapon != null)
+        // Se uma arma foi encontrada, equipe-a.
+        if (nearestGun != null)
         {
-            EquipGun(nearestWeapon);
+            EquipGun(nearestGun);
         }
     }
 
-    private void EquipGun(GameObject nearestWeapon)
+    // Pega a arma do chão.
+    private void EquipGun(GameObject nearestGun)
     {
-        nearestWeapon.transform.position = transform.position;
-        nearestWeapon.transform.SetParent(transform);
-        inventory[selectGun] = nearestWeapon;
-
+        inventory[selectGun] = nearestGun; // Coloca no inventário a arma mais próxima.
+        inventory[selectGun].transform.position = transform.position; // Coloca a arma no ItemPlaceholder do Player.
+        inventory[selectGun].transform.SetParent(transform); // Seta a arma como filha do Player.
+        
+        // Desativa a colisão da Arma.
         Collider2D colliderGun = inventory[selectGun].GetComponent<Collider2D>();
         if (colliderGun != null) 
             colliderGun.enabled = false;
+
+        // Remove a arma coletada da lista de armas que estão no chão.
         gunList.Remove(inventory[selectGun]);
 
+        // Altera váriaveis no código da arma que será equipada.
         Guns scriptGun = inventory[selectGun].GetComponent<Guns>();
         if (scriptGun != null)
         {
-            scriptGun.isHold = true;
-            scriptGun.player = transform.parent.gameObject;
+            scriptGun.isHold = true; // Player está segurando a arma equipada.
+            scriptGun.player = transform.parent.gameObject; // Arma possui o gameObject do Player.
         }
             
     }
@@ -102,56 +102,61 @@ public class GunsPickup : MonoBehaviour
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 throwDirection = (mousePosition - transform.position).normalized;
 
+            // Altera váriaveis no código da arma que será tirada do inventário.
             Guns scriptGun = inventory[selectGun].GetComponent<Guns>();
             if (scriptGun != null)
             {
-                scriptGun.isHold = false;
-                scriptGun.player = null;
+                scriptGun.isHold = false; // Player não está mais segurando a arma solta.
+                scriptGun.player = null; // Arma não possui mais o gameObject do Player.
             }
                 
 
-            // Aplicar força na direção do mouse
+            // Pega o Rigidbody2D da arma que será tirada do inventário.
             Rigidbody2D rb = inventory[selectGun].GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.isKinematic = false;
-                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+                rb.isKinematic = false; // Transforma o Rigidbody2D da arma em Dynamic.
+                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse); // Aplicar força na direção do mouse.
             }
 
-            inventory[selectGun].transform.SetParent(null);  // Remove o item como filho do jogador.
-            inventory[selectGun] = null;
+            inventory[selectGun].transform.SetParent(null);  // Remove a arma como filho do Player.
+            inventory[selectGun] = null; // Tira o GameObject da arma do inventário.
         }
     }
 
     void SelectGun()
     {
-        // Ativa a Arma selecionada.
-        /*if (inventory[selectGun] != null)
-        {
-            inventory[selectGun].SetActive(true);
-        }
-
-        // Desativa a arma não selecionada.
-        if (inventory[(selectGun + 1) % 2] != null)
-        {
-            inventory[(selectGun + 1) % 2].SetActive(false);
-        }*/
-        
-
+        // Ativa o slot selecionado.
         if (inventory[selectGun] != null)
         {
-            inventory[selectGun].SetActive(true);
+            inventory[selectGun].SetActive(true); 
         }
+
+        // Desativa o slot não selecionado.
         if (selectGun == 0 && inventory[1] != null)
         {
-            inventory[1].SetActive(false);
+            inventory[1].SetActive(false); 
         }
         else if (selectGun == 1 && inventory[0] != null)
         {
             inventory[0].SetActive(false);
         }
-
-
     }
 
+    void SelectSlot()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel"); // Recebe a direção do scroll do mouse.
+
+        // Input para o 1° Slot.
+        if (Input.GetKeyDown(KeyCode.Alpha1) || scroll > 0)
+        {
+            selectGun = 0;
+        }
+
+        // Input para o 2° Slot.
+        if (Input.GetKeyDown(KeyCode.Alpha2) || scroll < 0)
+        {
+            selectGun = 1;
+        }
+    }
 }

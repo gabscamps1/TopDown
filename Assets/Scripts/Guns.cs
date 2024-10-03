@@ -12,8 +12,8 @@ public class Guns : MonoBehaviour
     private Collider2D areaGun;
 
     [Header("InfoGun")]
-    private int maxAmmo; // Quantidade máxima de munição da arma carregada.
     public int currentAmmo; // Munição atual na arma.
+    private int maxAmmo; // Quantidade máxima de munição da arma carregada.
     public float timePerBullet = 0f; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
     public float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.

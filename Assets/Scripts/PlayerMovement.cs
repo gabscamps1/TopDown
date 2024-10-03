@@ -6,26 +6,22 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rdb;
-    public float playerSpeed = 10;
-    public float runPressed = 1;
-    public float runSpeed = 2;
+    [Header("References")]
+    public Rigidbody2D rdb; // Referência do Rigidbody2D.
+    public Animator animator; // Referência do Animator.
 
-    public GameObject weapon;
-    public Animator animator;
-    public bool HasGun = false;
+    [Header("InfoPlayer")]
+    public float playerSpeed = 10; // Velocidade do player.
+    public float runSpeed = 2; // Multiplicador da velocidade quando está correndo.
+    private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
+
+    [Header("InfoToGuns")]
     public float dotProductRight;
-    public float dotProductUp;
+    private float dotProductUp;
 
     private void FixedUpdate()
     {
         Movement();
-
-        if (Input.GetMouseButtonDown(1) && HasGun)
-        {
-            //ThrowWeapon();
-        }
-        
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -39,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Movement() {
-        //Horizontal
+        
         if (Input.GetKey(KeyCode.D))
         {
             rdb.AddRelativeForce(Vector2.right * playerSpeed * runPressed);
@@ -61,11 +57,6 @@ public class PlayerMovement : MonoBehaviour
             rdb.AddRelativeForce(Vector2.down * playerSpeed * runPressed);
         }
 
-    }
-
-    void ThrowWeapon() 
-    {
-        weapon.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * 10, ForceMode2D.Impulse);
     }
 
     void Direction()
