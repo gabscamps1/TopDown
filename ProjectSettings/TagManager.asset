@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Gun
+  - Money
   layers:
   - Default
   - TransparentFX
