@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001277440}
   - component: {fileID: 1001277439}
+  - component: {fileID: 1001277441}
   m_Layer: 0
   m_Name: spr_Player
   m_TagString: Untagged
@@ -455,6 +456,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001277441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001277437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8342cdea6f0f2df4abab45e997ab3fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensDrop:
+  - {fileID: 4343581350437211065, guid: b610dc221c9259e4b99ec532d01c836a, type: 3}
+  itenChance: 14000000
+  money: {fileID: 0}
 --- !u!1001 &1440660601
 PrefabInstance:
   m_ObjectHideFlags: 0

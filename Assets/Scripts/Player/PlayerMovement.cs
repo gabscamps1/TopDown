@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
 
     [Header("InfoToGuns")]
-    public float dotProductRight;
-    private float dotProductUp;
+    public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
+    private float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
     private void FixedUpdate()
     {
@@ -74,9 +74,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
         else transform.rotation = Quaternion.Euler(0, 180, 0);
-
-
-        
     }
 
 }

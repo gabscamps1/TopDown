@@ -11,7 +11,7 @@ public class Dropper : MonoBehaviour
 
     private void Start()
     {
-        // Destroy(gameObject,2f);
+        Destroy(gameObject,2f);
     }
     private void OnDestroy()
     {
