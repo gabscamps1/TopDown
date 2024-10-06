@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerMovement : MonoBehaviour
@@ -29,6 +30,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else {
             runPressed = 1;
+        }
+
+        if (Input.GetKey(KeyCode.P))
+        {
+            SceneManager.LoadScene("TesteScene1");
+        }
+        if (Input.GetKey(KeyCode.O))
+        {
+            SceneManager.LoadScene("TesteScene");
         }
 
         Direction();

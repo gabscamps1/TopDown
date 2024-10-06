@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameData.money = money; // Passa o valor do dinheiro atual para o GameData, para esse valor se manter durante as cenas.
+        if (money != 0)
+        {
+            gameData.money += money; // Passa o valor do dinheiro atual para o GameData, para esse valor se manter durante as cenas.
+            money = 0; // Volta o money para 0 depois de alterar o valor no GameData.
+        }
+        
+        
     }
 }

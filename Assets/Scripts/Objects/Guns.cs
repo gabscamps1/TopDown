@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public class Guns : MonoBehaviour
@@ -18,6 +19,7 @@ public class Guns : MonoBehaviour
     private float countTimePerBullet;
     public float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     public float bulletSpeed = 10f; // Velocidade do disparo.
+    public float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao mouse.
 
     [Header("StateGun")]
     public bool canReload = true;
@@ -122,11 +124,11 @@ public class Guns : MonoBehaviour
             // Rotacionar a arma em volta do Player dependendo da posição do Mouse.
             if (playerScript.dotProductRight > 0)
             {
-                if (playerScript.dotProductRight > 0.3) transform.rotation = Quaternion.Euler(0, transform.rotation.y, angle);
+                if (playerScript.dotProductRight > 0.3) transform.rotation = Quaternion.Euler(0, transform.rotation.y, angle + angleVariance);
             }
             else
             {
-                if (playerScript.dotProductRight < -0.3) transform.rotation = Quaternion.Euler(180, transform.rotation.y, -angle);
+                if (playerScript.dotProductRight < -0.3) transform.rotation = Quaternion.Euler(180, transform.rotation.y, -angle + angleVariance);
             }
         }
     }

@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class ItensPickUp : MonoBehaviour
 {
-    public Collider2D areaItens;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Money"))
@@ -17,8 +16,7 @@ public class ItensPickUp : MonoBehaviour
             {
                 GameManager.instance.money = moneyObject.moneyAmount; // Pega a quantia de dinheiro que está no Object Money e coloca no GameManager.
             }
-            
-            Destroy(moneyObject);
+            Destroy(moneyObject.gameObject);
         }
     }
 
