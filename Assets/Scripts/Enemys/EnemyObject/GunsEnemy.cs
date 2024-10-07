@@ -15,13 +15,19 @@ public class GunsEnemy : MonoBehaviour
     private int maxAmmo; // Quantidade máxima de munição da arma carregada.
     public float timePerBullet = 0f; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
-    public float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
+    private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     public float bulletSpeed = 10f; // Velocidade do disparo.
-    private Quaternion initialRotation; // Rotação inicial da Arma.
-
+    
     [Header("StateGun")]
     public bool canReload = true;
     public bool isReloading = false;
+    private bool sawPlayer;
+
+    [Header("PreconfigGun")]
+    [SerializeField] float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao Player.
+    [SerializeField] Vector2 raycastInitialPosition; // Ajuste para a posição inicial do Raycast detect em relação do pivo da Arma.
+    private Quaternion initialRotation; // Rotação inicial da Arma.
+    
 
     void Start()
     {
@@ -44,13 +50,15 @@ public class GunsEnemy : MonoBehaviour
     void Update()
     {
         FollowMouseRotation();
+        DetectPlayer(); // Identifica quando o Player entra na visão da Arma.
 
         countTimePerBullet -= Time.deltaTime;
-        if (enemyScript.sawPlayer == true && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+        if (sawPlayer == true && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
         {
             Shoot();
         }
-        else if (enemyScript.sawPlayer == false)
+        
+        if (enemyScript.player == null)
         {
             transform.rotation = initialRotation;
         }
@@ -89,11 +97,11 @@ public class GunsEnemy : MonoBehaviour
 
     void FollowMouseRotation()
     {
-        // Se a arma estiver no Player.
-        if (enemyScript && enemyScript.player)
+        // Se o Player estiver na área do Inimigo.
+        if (enemyScript.player != null)
         {
             // Subtrair a posição do Player da posição da Arma.
-            Vector3 playerDirection = enemyScript.player.transform.position - transform.position;
+            Vector3 playerDirection = (enemyScript.player.transform.position - transform.position).normalized;
             
             // Calcular o ângulo em radianos e depois converter para graus.
             float angle = Mathf.Atan2(playerDirection.x, playerDirection.y) * Mathf.Rad2Deg;
@@ -101,13 +109,32 @@ public class GunsEnemy : MonoBehaviour
             // Rotacionar a arma em volta do Inimigo dependendo da posição do Player.
             if (enemyScript.dotProductRight > 0)
             {
-                if (enemyScript.dotProductRight > 0) transform.rotation = Quaternion.Euler(0, transform.rotation.y, -angle + 80);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.y, -angle + 80 + angleVariance);
             }
             else
             {
-                if (enemyScript.dotProductRight < 0) transform.rotation = Quaternion.Euler(180, transform.rotation.y, angle - 100);
+                transform.rotation = Quaternion.Euler(180, transform.rotation.y, angle - 100 + angleVariance);
             }
         }
     }
-    
+
+    private void DetectPlayer()
+    {
+        // Faz um raycast para identificar se o player está na frente do inimigo.
+        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
+        RaycastHit2D detect;
+        detect = Physics2D.Raycast(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), transform.right, Mathf.Infinity, ~ignoreLayermask);
+        Debug.DrawLine(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), detect.point);
+
+        if (detect && detect.collider.CompareTag("Player"))
+        {
+            sawPlayer = true;
+        }
+        else
+        {
+            sawPlayer = false;
+        }
+
+    }
+
 }

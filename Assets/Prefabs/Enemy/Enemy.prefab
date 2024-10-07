@@ -232,10 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4429867644762803864}
-  shoot: {fileID: 0}
-  delay: 0
   player: {fileID: 0}
   dotProductRight: 0
+  sawPlayer: 0
 --- !u!1 &3975358721332335920
 GameObject:
   m_ObjectHideFlags: 0

@@ -128,12 +128,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   fireParticle: {fileID: 9192957602193728531}
-  currentAmmo: 0
-  timePerBullet: 0
-  timeReloadPerBullet: 0
+  currentAmmo: 24
+  timePerBullet: 0.08
   bulletSpeed: 10
   canReload: 1
   isReloading: 0
+  angleVariance: 0
+  raycastInitialPosition: {x: 0, y: 0}
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0

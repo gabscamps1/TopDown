@@ -26,13 +26,13 @@ public class EnemyDetectPlayer : MonoBehaviour
     {
         if (player != null)
         {
-            DetectPlayer(); // Identifica quando o player entra na visão do inimigo.
+            Direction();
         }
         else
         {
             transform.rotation = initialRotation;
         }
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,25 +52,24 @@ public class EnemyDetectPlayer : MonoBehaviour
         }
     }
 
-    private void DetectPlayer()
+    /*private void DetectPlayer()
     {
         // Faz um raycast para identificar se o player está na frente do inimigo.
         LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
         RaycastHit2D detect;
-        detect = Physics2D.Raycast(transform.position + Vector3.right * 0.2f, transform.right, Mathf.Infinity, ~ignoreLayermask);
-        Debug.DrawLine(transform.position + Vector3.right * 0.2f, detect.point);
+        detect = Physics2D.Raycast(transform.position + transform.right * 0.2f, transform.right, Mathf.Infinity, ~ignoreLayermask);
+        Debug.DrawLine(transform.position + transform.right * 0.2f, detect.point);
 
-        if ( detect && detect.collider.CompareTag("Player"))
+        if (detect && detect.collider.CompareTag("Player"))
         {
             sawPlayer = true;
         }
-
-        if (sawPlayer == true)
+        else
         {
-            Direction();
+            sawPlayer = false;
         }
-        
-    }
+
+    }*/
 
     void Direction()
     {

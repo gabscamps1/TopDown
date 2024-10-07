@@ -175,14 +175,13 @@ MonoBehaviour:
   player: {fileID: 0}
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 6
-  timePerBullet: 0.6
-  timeReloadPerBullet: 0
-  bulletSpeed: 18
-  angleVariance: -1
+  timePerBullet: 1.2
+  bulletSpeed: 10
   canReload: 1
   isReloading: 0
   isHold: 0
   isAutomatic: 0
+  angleVariance: -1
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0

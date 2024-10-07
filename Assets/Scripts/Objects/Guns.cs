@@ -15,25 +15,29 @@ public class Guns : MonoBehaviour
     [Header("InfoGun")]
     public int currentAmmo; // Munição atual na arma.
     private int maxAmmo; // Quantidade máxima de munição da arma carregada.
-    public float timePerBullet = 0f; // Tempo entre cada saída de tiro.
+    public float timePerBullet; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
-    public float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
+    private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     public float bulletSpeed = 10f; // Velocidade do disparo.
-    public float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao mouse.
+    
 
     [Header("StateGun")]
     public bool canReload = true;
     public bool isReloading = false;
     public bool isHold;
     public bool isAutomatic;
+
+    [Header("PreconfigGun")]
+    public float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao mouse.
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         areaGun = GetComponent<Collider2D>();
 
-        maxAmmo = currentAmmo;
-        countTimePerBullet = timePerBullet;
-        timeReloadPerBullet = 2f/currentAmmo;
+        maxAmmo = currentAmmo; // Seta a munição total para o valor da munição atual. Isso permite a Arma recarregar somente até a munição que ela começou.
+        countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
+        timeReloadPerBullet = 2f/currentAmmo; // Seta o tempo de carregamento de cada munição.
 
         var mainFireParticle = fireParticle.main;
         mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
@@ -86,7 +90,7 @@ public class Guns : MonoBehaviour
     {
         fireParticle.Emit(1);
         currentAmmo--; // Reduz a munição ao disparar.
-        countTimePerBullet = timePerBullet;
+        countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
     }
 
     // Chama a função de Recarregar.
@@ -124,11 +128,11 @@ public class Guns : MonoBehaviour
             // Rotacionar a arma em volta do Player dependendo da posição do Mouse.
             if (playerScript.dotProductRight > 0)
             {
-                if (playerScript.dotProductRight > 0.3) transform.rotation = Quaternion.Euler(0, transform.rotation.y, angle + angleVariance);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.y, angle + angleVariance);
             }
             else
             {
-                if (playerScript.dotProductRight < -0.3) transform.rotation = Quaternion.Euler(180, transform.rotation.y, -angle + angleVariance);
+                transform.rotation = Quaternion.Euler(180, transform.rotation.y, -angle + angleVariance);
             }
         }
     }
