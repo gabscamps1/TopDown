@@ -7,25 +7,25 @@ using UnityEngine.UIElements;
 public class Guns : MonoBehaviour
 {
     [Header("References")]
-    public GameObject player; // Referência do Player.
-    public ParticleSystem fireParticle; // Referência da partícula do projétil a ser disparado.
+    public GameObject player; // Referência do Player. Configurado no código GunsPickUp.
+    [SerializeField] ParticleSystem fireParticle; // Referência da partícula do projétil a ser disparado.
     private Rigidbody2D rb; // Referência do Rigbody2D da arma.
     private Collider2D areaGun; // Referência do Collider2D da arma.
 
     [Header("InfoGun")]
-    public int currentAmmo; // Munição atual na arma.
+    [SerializeField] int currentAmmo; // Munição atual na arma.
     private int maxAmmo; // Quantidade máxima de munição da arma carregada.
-    public float timePerBullet; // Tempo entre cada saída de tiro.
+    [SerializeField] float timePerBullet; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
     private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
-    public float bulletSpeed = 10f; // Velocidade do disparo.
+    [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.
     
 
     [Header("StateGun")]
     // public bool canReload = true;
-    public bool isReloading = false; // Confere se a arma está recarregando
-    public bool isHold; // Confere se a arma está sendo segurada pelo Player.
-    public bool isAutomatic; // Confere se a arma é automática.
+    [SerializeField] bool isReloading = false; // Confere se a arma está recarregando
+    public bool isHold; // Confere se a arma está sendo segurada pelo Player. Configurado no código GunsPickUp.
+    [SerializeField] bool isAutomatic; // Confere se a arma é automática.
 
     [Header("PreconfigGun")]
     public float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao mouse.
@@ -55,6 +55,8 @@ public class Guns : MonoBehaviour
         if (isHold == true)
         {
             rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.
+
+
             FollowMouseRotation();
 
             // Intervalo entre os disparos da arma.

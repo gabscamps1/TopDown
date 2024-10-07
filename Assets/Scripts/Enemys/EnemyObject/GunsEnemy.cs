@@ -6,7 +6,6 @@ using UnityEngine;
 public class GunsEnemy : MonoBehaviour
 {
     [Header("References")]
-    public GameObject enemy;
     public ParticleSystem fireParticle; // Partícula do projétil a ser disparado.
     private EnemyDetectPlayer enemyScript;
 
@@ -121,7 +120,7 @@ public class GunsEnemy : MonoBehaviour
     private void DetectPlayer()
     {
         // Faz um raycast para identificar se o player está na frente do inimigo.
-        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
+        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast")  | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
         RaycastHit2D detect;
         detect = Physics2D.Raycast(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), transform.right, Mathf.Infinity, ~ignoreLayermask);
         Debug.DrawLine(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), detect.point);

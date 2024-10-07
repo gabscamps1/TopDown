@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2924577023372855754}
   - component: {fileID: 326798673094354150}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: GunPlaceholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_GameObject: {fileID: 845092672357563127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.28, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6613662134105500048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4429867644762803864}
+  player: {fileID: 8739493253982156035}
 --- !u!1 &2251778667827893488
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +57,7 @@ GameObject:
   - component: {fileID: 8453575323908489291}
   - component: {fileID: 2102998617938508288}
   - component: {fileID: 7835780923081350627}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: GunPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6613662134105500048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,7 +131,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.25
 --- !u!1 &3903222704392435275
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +212,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 598310868, guid: 3fc865039e65a2e4083ae71957df8cc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -240,6 +241,7 @@ MonoBehaviour:
   playerSpeed: 100
   runSpeed: 2
   dotProductRight: 0
+  dotProductUp: 0
 --- !u!50 &4795744522364625412
 Rigidbody2D:
   serializedVersion: 4
@@ -333,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3125789127219348761}
   - component: {fileID: 543696653579232941}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: PlayerShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +420,7 @@ GameObject:
   - component: {fileID: 3491523690261352906}
   - component: {fileID: 6629416755846065493}
   - component: {fileID: 1634956095844460332}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: ItensPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +438,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6613662134105500048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -486,4 +488,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 0.8

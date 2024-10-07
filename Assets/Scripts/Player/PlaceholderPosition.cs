@@ -5,46 +5,55 @@ using UnityEngine;
 public class PlaceholderPosition : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    Transform player;
+    [SerializeField] SpriteRenderer player;
     PlayerMovement playerScript;
+    AnimatorStateInfo playerState;
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponentInParent<Transform>();
-        playerScript = player.GetComponent<PlayerMovement>();
+        playerScript = GetComponentInParent<PlayerMovement>();
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        if (animator != null)
+        playerState = animator.GetCurrentAnimatorStateInfo(0);
+
+        if (playerState.IsName("Left"))
         {
-            if (animator.GetBool("Right") == true)
+            transform.localPosition = new Vector3(-0.03f, -0.28f, 0);
+            player.sortingOrder = 2;
+        }
+        else if (playerState.IsName("Right"))
+        {
+            transform.localPosition = new Vector3(0.03f, -0.28f, 0);
+            player.sortingOrder = 2;
+        }
+        else if (playerState.IsName("Up")) 
+        {
+            player.sortingOrder = 2;
+            if (playerScript.dotProductRight > 0)
             {
-                transform.position = new Vector3 (player.transform.position.x + 0.03f, transform.position.y - 0.28f, 0);
+                transform.localPosition = new Vector3(0.24f, -0.28f, 0);
             }
-            *//*else if (animator.GetBool("Left") == true)
+            else
             {
-                transform.position = new Vector3(player.transform.position.x - 0.03f, transform.position.y - 0.28f, 0);
-            }*//*
-
-            if (animator.GetBool("Up") == true)
-            {
-                if(playerScript.dotProductRight > 0) transform.position = new Vector3(player.transform.position.x + 0.24f, transform.position.y - 0.28f, 0);
-                else transform.position = new Vector3(player.transform.position.x - 0.24f, transform.position.y - 0.28f, 0);
-
-            }
-            else if (animator.GetBool("Down") == true)
-            {
-                if (playerScript.dotProductRight > 0)
-                {
-                    transform.position = new Vector3(player.transform.position.x + 0.24f, transform.position.y - 0.28f, 0);
-                }
-                else
-                {
-                    transform.position = new Vector3(player.transform.position.x - 0.24f, transform.position.y - 0.28f, 0);
-                }
+                transform.localPosition = new Vector3(-0.24f,  -0.28f, 0);
             }
         }
-    }*/
+        else if (playerState.IsName("Down"))
+        {
+            player.sortingOrder = 0;
+            if (playerScript.dotProductRight > 0)
+            {
+                transform.localPosition = new Vector3(0.24f, -0.28f, 0);
+            }
+            else
+            {
+                transform.localPosition = new Vector3(-0.24f, -0.28f, 0);
+            }
+        }
+    }
 }
+
+

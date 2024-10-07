@@ -129,7 +129,8 @@ public class GunsPickup : MonoBehaviour
         // Ativa o slot selecionado.
         if (inventory[selectGun] != null)
         {
-            inventory[selectGun].SetActive(true); 
+            inventory[selectGun].SetActive(true);
+            inventory[selectGun].transform.position = gunPlaceholder.position; // Coloca a arma no GunPlaceholder do Player.
         }
 
         // Desativa o slot não selecionado.

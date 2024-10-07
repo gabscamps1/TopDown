@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("InfoToGuns")]
     public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
-    private float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
+    public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
     private void FixedUpdate()
     {
@@ -73,18 +73,42 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 playerPositionPixels = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 mouseDirection = (Input.mousePosition - playerPositionPixels).normalized;
+
         dotProductRight = Vector3.Dot(Vector3.right, mouseDirection);
         dotProductUp = Vector3.Dot(Vector3.up, mouseDirection);
 
-        if (dotProductUp > 0.5) animator.SetBool("Up",true);
+        if (dotProductUp > 0.7) animator.SetBool("Up", true);
         else animator.SetBool("Up", false);
 
-        if (dotProductUp < -0.5) animator.SetBool("Down", true);
+        if (dotProductUp < -0.7) animator.SetBool("Down", true);
         else animator.SetBool("Down", false);
 
-        if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
-        else transform.rotation = Quaternion.Euler(0, 180, 0);
+        if (dotProductRight > 0.7) animator.SetBool("Right", true);
+        else animator.SetBool("Right", false);
+
+        if (dotProductRight < -0.7) animator.SetBool("Left", true);
+        else animator.SetBool("Left", false);
+
     }
+
+    /*private void OnDrawGizmos()
+    {
+        // Posição do jogador em mundo
+        Vector3 playerPosition = transform.position;
+
+        // Posição do mouse em mundo
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // Defina Z como 0 para 2D
+
+        // Direção do mouse
+        Vector3 mouseDirection = (mousePosition - playerPosition).normalized;
+
+        // Desenha a linha do jogador até a posição do mouse
+        Gizmos.color = Color.red; // Cor para a direção do mouse
+        Gizmos.DrawLine(playerPosition, mousePosition);
+
+
+    }*/
 
 }
 
