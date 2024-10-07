@@ -5,15 +5,11 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     public int moneyAmount;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Calcula a quantia de dinheiro.
         moneyAmount = Random.Range(3,6);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -7,10 +7,10 @@ using UnityEngine.UIElements;
 public class Guns : MonoBehaviour
 {
     [Header("References")]
-    public GameObject player;
-    public ParticleSystem fireParticle; // Partícula do projétil a ser disparado.
-    private Rigidbody2D rb;
-    private Collider2D areaGun;
+    public GameObject player; // Referência do Player.
+    public ParticleSystem fireParticle; // Referência da partícula do projétil a ser disparado.
+    private Rigidbody2D rb; // Referência do Rigbody2D da arma.
+    private Collider2D areaGun; // Referência do Collider2D da arma.
 
     [Header("InfoGun")]
     public int currentAmmo; // Munição atual na arma.
@@ -22,10 +22,10 @@ public class Guns : MonoBehaviour
     
 
     [Header("StateGun")]
-    public bool canReload = true;
-    public bool isReloading = false;
-    public bool isHold;
-    public bool isAutomatic;
+    // public bool canReload = true;
+    public bool isReloading = false; // Confere se a arma está recarregando
+    public bool isHold; // Confere se a arma está sendo segurada pelo Player.
+    public bool isAutomatic; // Confere se a arma é automática.
 
     [Header("PreconfigGun")]
     public float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao mouse.
@@ -39,8 +39,9 @@ public class Guns : MonoBehaviour
         countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
         timeReloadPerBullet = 2f/currentAmmo; // Seta o tempo de carregamento de cada munição.
 
+        // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
         var mainFireParticle = fireParticle.main;
-        mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
+        mainFireParticle.startSpeed = bulletSpeed; 
     }
 
     private void OnEnable()
@@ -53,12 +54,16 @@ public class Guns : MonoBehaviour
         // Pegar o item: Mover para a posição de segurar do jogador.
         if (isHold == true)
         {
-            rb.isKinematic = true; // Desabilita física enquanto o item é carregado.
+            rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.
             FollowMouseRotation();
 
+            // Intervalo entre os disparos da arma.
             countTimePerBullet -= Time.deltaTime;
+
+            // Confere se a arma é automática.
             if (isAutomatic)
             {
+                // Segurar para atirar.
                 if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
                     Shoot();
@@ -66,6 +71,7 @@ public class Guns : MonoBehaviour
             }
             else
             {
+                // Apertar para atirar.
                 if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
                     Shoot();
@@ -80,6 +86,7 @@ public class Guns : MonoBehaviour
         }
         else
         {
+            // Devolver a colisão da arma se ela não estiver com o Player.
             areaGun.enabled = true;
         }
             

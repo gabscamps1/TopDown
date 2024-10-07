@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class GunsPickup : MonoBehaviour
 {
-    public int selectGun; // Arma selecionada.
-    public float throwForce = 10f; // Força com que o item será arremessado.
-    public GameObject[] inventory; // Inventário das armas.
+    [SerializeField] int selectGun; // Arma selecionada.
+    [SerializeField] float throwForce = 10f; // Força com que o item será arremessado.
+    [SerializeField] GameObject[] inventory; // Inventário das armas.
+    [SerializeField] Transform gunPlaceholder; // Posição que as armas ficaram.
     List<GameObject> gunList = new List<GameObject>(); // Lista das armas que estão no chão dentro do collider do GameObject ItemPlaceholder.
 
     void Update()
@@ -38,25 +39,24 @@ public class GunsPickup : MonoBehaviour
         // Verificar se o jogador saiu de perto do item.
         if (collision.CompareTag("Gun"))
         {
-            gunList.Remove(collision.gameObject);
+            gunList.Remove(collision.gameObject); // Remove a arma da lista.
         }
     }
 
     // Procura a arma mais próxima do Player.
     void SearchNearestGun()
     {
-        // Encontra todas as armas na cena
-        GameObject nearestGun = null;
-        float nearestDistance = Mathf.Infinity;
+        GameObject nearestGun = null; // Arma mais próxima.
+        float nearestDistance = Mathf.Infinity; // Distância da arma mais próxima.
 
-        // Verifica a arma mais próxima
+        // Verifica a arma mais próxima.
         foreach (var gun in gunList)
         {
             float distance = Vector3.Distance(transform.position, gun.transform.position);
             if (distance < nearestDistance)
             {
                 nearestDistance = distance;
-                nearestGun = gun;
+                nearestGun = gun; // Seleciona a arma mais próxima.
             }
         }
 
@@ -71,7 +71,7 @@ public class GunsPickup : MonoBehaviour
     private void EquipGun(GameObject nearestGun)
     {
         inventory[selectGun] = nearestGun; // Coloca no inventário a arma mais próxima.
-        inventory[selectGun].transform.position = transform.position; // Coloca a arma no ItemPlaceholder do Player.
+        inventory[selectGun].transform.position = gunPlaceholder.position; // Coloca a arma no GunPlaceholder do Player.
         inventory[selectGun].transform.SetParent(transform); // Seta a arma como filha do Player.
         
         // Desativa a colisão da Arma.
