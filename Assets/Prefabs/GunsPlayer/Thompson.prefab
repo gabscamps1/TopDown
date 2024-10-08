@@ -177,6 +177,7 @@ MonoBehaviour:
   currentAmmo: 24
   timePerBullet: 0.08
   bulletSpeed: 10
+  damage: 2
   isReloading: 0
   isHold: 0
   isAutomatic: 1
@@ -194,7 +195,7 @@ GameObject:
   - component: {fileID: 4664549831817703183}
   m_Layer: 6
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3977,7 +3978,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

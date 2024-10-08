@@ -83,7 +83,7 @@ public class GunsPickup : MonoBehaviour
         gunList.Remove(inventory[selectGun]);
 
         // Altera váriaveis no código da arma que será equipada.
-        Guns scriptGun = inventory[selectGun].GetComponent<Guns>();
+        GunsPlayer scriptGun = inventory[selectGun].GetComponent<GunsPlayer>();
         if (scriptGun != null)
         {
             scriptGun.isHold = true; // Player está segurando a arma equipada.
@@ -103,7 +103,7 @@ public class GunsPickup : MonoBehaviour
             Vector2 throwDirection = (mousePosition - transform.position).normalized;
 
             // Altera váriaveis no código da arma que será tirada do inventário.
-            Guns scriptGun = inventory[selectGun].GetComponent<Guns>();
+            GunsPlayer scriptGun = inventory[selectGun].GetComponent<GunsPlayer>();
             if (scriptGun != null)
             {
                 scriptGun.isHold = false; // Player não está mais segurando a arma solta.

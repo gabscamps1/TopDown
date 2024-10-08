@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-public class Guns : MonoBehaviour
+public class GunsPlayer : MonoBehaviour
 {
     [Header("References")]
     public GameObject player; // Referência do Player. Configurado no código GunsPickUp.
@@ -19,7 +19,7 @@ public class Guns : MonoBehaviour
     private float countTimePerBullet;
     private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.
-    
+    public float damage;
 
     [Header("StateGun")]
     // public bool canReload = true;

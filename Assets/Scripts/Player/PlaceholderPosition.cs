@@ -4,29 +4,44 @@ using UnityEngine;
 
 public class PlaceholderPosition : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    [SerializeField] SpriteRenderer player;
-    PlayerMovement playerScript;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
+    // PlayerMovement playerScript;
     AnimatorStateInfo playerState;
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = GetComponentInParent<PlayerMovement>();
+        spriteRenderer = GetComponentInParent<SpriteRenderer>();
+        animator = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerState = animator.GetCurrentAnimatorStateInfo(0);
-
-        if (playerState.IsName("Left"))
+        if (spriteRenderer != null && animator != null)
         {
-            transform.localPosition = new Vector3(-0.03f, -0.28f, 0);
+            playerState = animator.GetCurrentAnimatorStateInfo(0);
+            if (playerState.IsName("Right") || playerState.IsName("Up"))
+            {
+                spriteRenderer.sortingOrder = 2;
+            }
+            else if (playerState.IsName("Down"))
+            {
+                spriteRenderer.sortingOrder = 0;
+            }
+        }
+        
+
+        // Não apagar função abaixo - Teste futuro
+
+        /*if (playerState.IsName("Left"))
+        {
+            transform.localPosition = new Vector3(-0.24f, -0.28f, 0);
             player.sortingOrder = 2;
         }
         else if (playerState.IsName("Right"))
         {
-            transform.localPosition = new Vector3(0.03f, -0.28f, 0);
+            transform.localPosition = new Vector3(0.24f, -0.28f, 0);
             player.sortingOrder = 2;
         }
         else if (playerState.IsName("Up")) 
@@ -52,7 +67,7 @@ public class PlaceholderPosition : MonoBehaviour
             {
                 transform.localPosition = new Vector3(-0.24f, -0.28f, 0);
             }
-        }
+        }*/
     }
 }
 

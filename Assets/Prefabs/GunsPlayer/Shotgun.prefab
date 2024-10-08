@@ -150,7 +150,7 @@ BoxCollider2D:
   m_Offset: {x: 0.6234522, y: 0.053460494}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.08747697, y: 0.3976877}
+    pivot: {x: 0.15853634, y: 0.44310924}
     oldSize: {x: 1.5625, y: 1}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
@@ -177,6 +177,7 @@ MonoBehaviour:
   currentAmmo: 6
   timePerBullet: 1.2
   bulletSpeed: 10
+  damage: 4
   isReloading: 0
   isHold: 0
   isAutomatic: 0
@@ -194,7 +195,7 @@ GameObject:
   - component: {fileID: 4664549831817703183}
   m_Layer: 6
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3977,7 +3978,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
