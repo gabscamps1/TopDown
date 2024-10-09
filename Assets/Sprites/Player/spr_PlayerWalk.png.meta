@@ -1,0 +1,1385 @@
+fileFormatVersion: 2
+guid: aaeb8c4ef9065a848910c7e9864e1025
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 293
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3252d02e2157da644bdf73e674396668
+      internalID: 1060638694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 293
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2411f365be3634dac92d162a46b3c5
+      internalID: -58710334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 293
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9f73feb84d82b48bcd53107c8e2870
+      internalID: -1704897728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 293
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d32f8491dad5074c9a5ee35096165ff
+      internalID: -917083069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 293
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26047603f2701064b996e41ca7538069
+      internalID: -1975065288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 293
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d837fcad210e94d8c176dbe0558847
+      internalID: -406412571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 293
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f156bb3c6213c7d4588b0dc6285d096a
+      internalID: 286149798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 260
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6391b3d3ff3b3748a44904ff617b3f0
+      internalID: -1873994597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 260
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d619780e78606c4da2638f3eb6fdedb
+      internalID: -291657260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 260
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a049dfd3ba41064aaace5b5cedc3845
+      internalID: -783624424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 260
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6935b539332d54843b60b3b282620a99
+      internalID: -431096678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 260
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1dfd0af73b2094eacc66c450aa3b3b
+      internalID: -136415284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 260
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514ea956da5222e458825eeb480dbb15
+      internalID: 838889201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 260
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee70afdc2a891b469b14372b77412c0
+      internalID: 1716189537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 226
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98b8b8c907411a469f2bbf70bd29882
+      internalID: 1443249477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 226
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2ee92f6d279a843a2d39b5665156e6
+      internalID: -572281633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 226
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a77652826a1463478fdcac1a08dd179
+      internalID: 1217541162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 226
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034dad67957652243acb85b73a2d28ab
+      internalID: 69404957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 226
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4253750ab07fe4bb13704043d84711
+      internalID: 1021835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_19
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 226
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887fc922f401a60488871eb910f2810c
+      internalID: -769751466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_20
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 226
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95daf1ad823e85468d4b9f05fd5ccce
+      internalID: 1995259081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 192
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f488ade54fbe04c9f27f99d8671c84
+      internalID: 711460223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_22
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 192
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce522f737d96024b85c9a052b5fd10a
+      internalID: 403986931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_23
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 192
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07b8017c8b7fcb4abd7a37e8fab73b5
+      internalID: 1560084324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 192
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557f4d41d0f7e3f4d80bc45f26dced7f
+      internalID: -88670513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_25
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 192
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909124c18030e0b43aa864605fb89d46
+      internalID: 1446702407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_26
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 192
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ab386208b28b469148c46c2b8a752
+      internalID: -87834141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_27
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 192
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7770d67974b3184a8eb19ed795ccfdd
+      internalID: 1569706518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 158
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62604fcad2980574582137d63a8c249d
+      internalID: 1066253273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 158
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fad2f9b3bbc49a41a9813b24ec9e370
+      internalID: -401491290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_30
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 158
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750b2cba9548bbe4e9502002f9293d44
+      internalID: -1253861861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_31
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 158
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df641b67c8de94489717550c80bebf
+      internalID: -808413585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_32
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 158
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835d915fb91dd6a4d94717ed085390b4
+      internalID: 1305620402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_33
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 158
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7044ad2bcaaa2b247aa667431bcb6edd
+      internalID: 149741197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_34
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 158
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27423dfb193c9434e9ddd1e5460903b6
+      internalID: 548645225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_35
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 124
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b523d8d87638a428251ab6e20fbc6f
+      internalID: 1259107964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_36
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 124
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea3daf378b3e3a44a72ac8b59acd4b9
+      internalID: 1088755462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_37
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 124
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70319f70147d10044bbf39a99b4d36b4
+      internalID: -2124300905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_38
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 124
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a90c85cac93444a9d9ee8cb831492d
+      internalID: -1376638842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_39
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 124
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075460d0ceff02e479244447a223ec7d
+      internalID: -315620779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_40
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 124
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d524a19955f144da1ac1c379480606
+      internalID: 1206246364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_41
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 124
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565d142052d3b6944b124aa475b6f8aa
+      internalID: -436227497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 89
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87a311d97b13a041936166f8215ef6d
+      internalID: 1908841922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_43
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 89
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ecbac5fd1ff6d42a75879eadd6651f
+      internalID: 819743026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_44
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 89
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b752398336577b43b6851d3974d9071
+      internalID: -1173174719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_45
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 89
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897c83c385172074a97121eb23a238a4
+      internalID: 2068769408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 89
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09da886cbef89e4b8566d3323c2cd8e
+      internalID: -2069353605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_47
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 89
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1c46aa472724f46816d29355c516ce
+      internalID: 1414122362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_48
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 89
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e739a9efee468d341b0f53284a208b1a
+      internalID: -2084417375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_49
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615f3f3eb0fda0d45aa4f30906c148c2
+      internalID: 1648235204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_50
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82788a50e29099e40b6af8d7a80a2242
+      internalID: 406220108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_51
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 53
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0865c730eb64a28428d20b117ec0e99d
+      internalID: -509114957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_52
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19e389daae6e254bb6d0559d6950ef7
+      internalID: 713028316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_53
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1133b890cdaa94c9387b8f5ba9362c
+      internalID: -383731835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_54
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 53
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8d1749580a66349b0a01ed58896c95
+      internalID: -1238906180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_player_andando-Sheet (1)_55
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 53
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47f4494893f55148b8cefbefab568de
+      internalID: -828677522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      new_player_andando-Sheet (1)_0: 1060638694
+      new_player_andando-Sheet (1)_1: -58710334
+      new_player_andando-Sheet (1)_10: -431096678
+      new_player_andando-Sheet (1)_11: -136415284
+      new_player_andando-Sheet (1)_12: 838889201
+      new_player_andando-Sheet (1)_13: 1716189537
+      new_player_andando-Sheet (1)_14: 1443249477
+      new_player_andando-Sheet (1)_15: -572281633
+      new_player_andando-Sheet (1)_16: 1217541162
+      new_player_andando-Sheet (1)_17: 69404957
+      new_player_andando-Sheet (1)_18: 1021835
+      new_player_andando-Sheet (1)_19: -769751466
+      new_player_andando-Sheet (1)_2: -1704897728
+      new_player_andando-Sheet (1)_20: 1995259081
+      new_player_andando-Sheet (1)_21: 711460223
+      new_player_andando-Sheet (1)_22: 403986931
+      new_player_andando-Sheet (1)_23: 1560084324
+      new_player_andando-Sheet (1)_24: -88670513
+      new_player_andando-Sheet (1)_25: 1446702407
+      new_player_andando-Sheet (1)_26: -87834141
+      new_player_andando-Sheet (1)_27: 1569706518
+      new_player_andando-Sheet (1)_28: 1066253273
+      new_player_andando-Sheet (1)_29: -401491290
+      new_player_andando-Sheet (1)_3: -917083069
+      new_player_andando-Sheet (1)_30: -1253861861
+      new_player_andando-Sheet (1)_31: -808413585
+      new_player_andando-Sheet (1)_32: 1305620402
+      new_player_andando-Sheet (1)_33: 149741197
+      new_player_andando-Sheet (1)_34: 548645225
+      new_player_andando-Sheet (1)_35: 1259107964
+      new_player_andando-Sheet (1)_36: 1088755462
+      new_player_andando-Sheet (1)_37: -2124300905
+      new_player_andando-Sheet (1)_38: -1376638842
+      new_player_andando-Sheet (1)_39: -315620779
+      new_player_andando-Sheet (1)_4: -1975065288
+      new_player_andando-Sheet (1)_40: 1206246364
+      new_player_andando-Sheet (1)_41: -436227497
+      new_player_andando-Sheet (1)_42: 1908841922
+      new_player_andando-Sheet (1)_43: 819743026
+      new_player_andando-Sheet (1)_44: -1173174719
+      new_player_andando-Sheet (1)_45: 2068769408
+      new_player_andando-Sheet (1)_46: -2069353605
+      new_player_andando-Sheet (1)_47: 1414122362
+      new_player_andando-Sheet (1)_48: -2084417375
+      new_player_andando-Sheet (1)_49: 1648235204
+      new_player_andando-Sheet (1)_5: -406412571
+      new_player_andando-Sheet (1)_50: 406220108
+      new_player_andando-Sheet (1)_51: -509114957
+      new_player_andando-Sheet (1)_52: 713028316
+      new_player_andando-Sheet (1)_53: -383731835
+      new_player_andando-Sheet (1)_54: -1238906180
+      new_player_andando-Sheet (1)_55: -828677522
+      new_player_andando-Sheet (1)_6: 286149798
+      new_player_andando-Sheet (1)_7: -1873994597
+      new_player_andando-Sheet (1)_8: -291657260
+      new_player_andando-Sheet (1)_9: -783624424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

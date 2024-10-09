@@ -44,6 +44,17 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("TesteScene");
         }
+
+        if (GetComponentInChildren<GunsPickup>().hasGun == true)
+        {
+            animator.SetLayerWeight(1, 1);
+            animator.SetLayerWeight(0, 0);
+        }
+        else
+        {
+            animator.SetLayerWeight(0, 1);
+            animator.SetLayerWeight(1, 0);
+        }
     }
     private void FixedUpdate()
     {

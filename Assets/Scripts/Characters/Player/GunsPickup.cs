@@ -9,6 +9,7 @@ public class GunsPickup : MonoBehaviour
     [SerializeField] float throwForce = 10f; // Força com que o item será arremessado.
     [SerializeField] GameObject[] inventory; // Inventário das armas.
     [SerializeField] Transform gunPlaceholder; // Posição que as armas ficaram.
+    public bool hasGun; // Confere se tem alguma arma no inventory. Usado para alterar animações no script de PlayerMovement.
     List<GameObject> gunList = new List<GameObject>(); // Lista das armas que estão no chão dentro do collider do GameObject ItemPlaceholder.
 
     void Update()
@@ -22,6 +23,8 @@ public class GunsPickup : MonoBehaviour
             DisarmGun();
             SearchNearestGun();
         }
+
+        hasGun = inventory[0] || inventory[1]; // Seta para true se tem alguma arma no inventory.
     }
 
     private void OnTriggerStay2D(Collider2D collision)
