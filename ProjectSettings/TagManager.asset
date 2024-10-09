@@ -5,9 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Gun
   - Money
   - Enemy
+  - GunPlayer
+  - GunEnemy
   layers:
   - Default
   - TransparentFX

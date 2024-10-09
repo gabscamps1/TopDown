@@ -15,8 +15,15 @@ public class Damage : MonoBehaviour
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag BulletPlayer acerte o Inimigo a função CallDamage é chamada.
-        if (particle.CompareTag("Gun")) CallDamage(particle.GetComponentInParent<GunsPlayer>().damage);
-        
+        if (particle.CompareTag("GunPlayer"))
+        {
+            CallDamage(particle.GetComponentInParent<GunsPlayer>().damage);
+        }
+
+        if (particle.CompareTag("GunEnemy"))
+        {
+            CallDamage(particle.GetComponentInParent<GunsEnemy>().damage);
+        }
     }
 
 

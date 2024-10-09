@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -692398133104118350}
   m_Layer: 6
   m_Name: ShotgunEnemy
-  m_TagString: Gun
+  m_TagString: GunEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9b7ba1264af7f9144945dcf3267f1729, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   currentAmmo: 6
   timePerBullet: 1.2
   bulletSpeed: 10
-  canReload: 1
+  damage: 1
   isReloading: 0
   angleVariance: 0
   raycastInitialPosition: {x: 0, y: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 4664549831817703183}
   m_Layer: 6
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: GunEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3930,7 +3930,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

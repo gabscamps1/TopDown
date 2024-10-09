@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2924577023372855754}
-  - component: {fileID: 326798673094354150}
   m_Layer: 9
   m_Name: GunPlaceholder
   m_TagString: Untagged
@@ -32,20 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6613662134105500048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &326798673094354150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845092672357563127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1360756ee99d10f42ac19d8b3eb0d1bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4429867644762803864}
-  player: {fileID: 8739493253982156035}
 --- !u!1 &2251778667827893488
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1341870191, guid: 3fc865039e65a2e4083ae71957df8cc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -238,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rdb: {fileID: 4795744522364625412}
   animator: {fileID: 4429867644762803864}
-  playerSpeed: 100
+  playerSpeed: 2.4
   runSpeed: 2
   dotProductRight: 0
   dotProductUp: 0
@@ -254,11 +239,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 4
-  m_LinearDrag: 5
+  m_Mass: 1
+  m_LinearDrag: 10
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8bcf9f0ea75abb046b0af2f6876e4702, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -314,7 +299,7 @@ Animator:
   m_GameObject: {fileID: 3903222704392435275}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b1dd3d0e91bed8044ba6dcc38c66c744, type: 2}
+  m_Controller: {fileID: 9100000, guid: 287b56176f3082144b9e42f3e0db4285, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -406,7 +391,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4361731431741232308

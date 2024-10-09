@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8643105875658685009}
   m_Layer: 6
   m_Name: ThompsonEnemy
-  m_TagString: Gun
+  m_TagString: GunEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c742e81aa579f9447b9eb7b2261917a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   currentAmmo: 24
   timePerBullet: 0.08
   bulletSpeed: 10
-  canReload: 1
+  damage: 1
   isReloading: 0
   angleVariance: 0
   raycastInitialPosition: {x: 0, y: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 4664549831817703183}
   m_Layer: 6
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: GunEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3930,7 +3930,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
