@@ -82,6 +82,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   gunPlaceholder: {fileID: 2924577023372855754}
+  hasGun: 0
 --- !u!58 &7835780923081350627
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -223,8 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rdb: {fileID: 4795744522364625412}
   animator: {fileID: 4429867644762803864}
-  playerSpeed: 2.4
-  runSpeed: 2
+  playerSpeed: 4.8
+  runSpeed: 1.5
   dotProductRight: 0
   dotProductUp: 0
 --- !u!50 &4795744522364625412
@@ -286,8 +287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0060411296, y: 0.018123588}
-  m_Size: {x: 0.8912591, y: 1.1904836}
+  m_Offset: {x: -0.0060411296, y: 0.00786221}
+  m_Size: {x: 0.63, y: 1.0094773}
   m_Direction: 0
 --- !u!95 &4429867644762803864
 Animator:

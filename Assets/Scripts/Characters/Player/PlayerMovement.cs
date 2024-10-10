@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        movement = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runSpeed;
+        movement = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
 
         if (moveHorizontal != 0 || moveVertical != 0)
         {

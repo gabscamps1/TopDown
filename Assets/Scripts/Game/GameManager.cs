@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameData gameData; // Referencia do GameData.
     public int money; // Recebe o valor do Player.
+   
 
     public static GameManager instance;
 
