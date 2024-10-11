@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aaeb8c4ef9065a848910c7e9864e1025
+guid: 7ea8f545e19127c49b856d27da374d3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_0
+      name: spr_PlayerWalk_0
       rect:
         serializedVersion: 2
         x: 3
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3252d02e2157da644bdf73e674396668
-      internalID: 1060638694
+      spriteID: 26f0ba5c046009947b11b6a72eb9b667
+      internalID: 2140139875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_1
+      name: spr_PlayerWalk_1
       rect:
         serializedVersion: 2
         x: 30
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2411f365be3634dac92d162a46b3c5
-      internalID: -58710334
+      spriteID: 782d64bb6b5ff584f98e5df27bd51bf0
+      internalID: 1240323753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_2
+      name: spr_PlayerWalk_2
       rect:
         serializedVersion: 2
         x: 57
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb9f73feb84d82b48bcd53107c8e2870
-      internalID: -1704897728
+      spriteID: b15c52afd9d086f4e9472e1bcd6bc9ad
+      internalID: -477071832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_3
+      name: spr_PlayerWalk_3
       rect:
         serializedVersion: 2
         x: 84
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d32f8491dad5074c9a5ee35096165ff
-      internalID: -917083069
+      spriteID: 71356833ffb6ff24f86b279a9673fb6f
+      internalID: 930371750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_4
+      name: spr_PlayerWalk_4
       rect:
         serializedVersion: 2
         x: 111
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26047603f2701064b996e41ca7538069
-      internalID: -1975065288
+      spriteID: c5f3630a238b3e84fbfaaa34d8f126a6
+      internalID: 373018728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_5
+      name: spr_PlayerWalk_5
       rect:
         serializedVersion: 2
         x: 138
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87d837fcad210e94d8c176dbe0558847
-      internalID: -406412571
+      spriteID: eccd7238bccc4d24f8f20dc3173b4289
+      internalID: -91383569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_6
+      name: spr_PlayerWalk_6
       rect:
         serializedVersion: 2
         x: 165
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f156bb3c6213c7d4588b0dc6285d096a
-      internalID: 286149798
+      spriteID: a3d91e9e081f70249b14024b6b62ab3c
+      internalID: -82979103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_7
+      name: spr_PlayerWalk_7
       rect:
         serializedVersion: 2
         x: 2
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6391b3d3ff3b3748a44904ff617b3f0
-      internalID: -1873994597
+      spriteID: 7f7f6c1a21bdede4dbfb1f454b6719c7
+      internalID: 748449964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_8
+      name: spr_PlayerWalk_8
       rect:
         serializedVersion: 2
         x: 29
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d619780e78606c4da2638f3eb6fdedb
-      internalID: -291657260
+      spriteID: dc4413e575f536646b12b32ea8ce2394
+      internalID: 1100283226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_9
+      name: spr_PlayerWalk_9
       rect:
         serializedVersion: 2
         x: 56
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a049dfd3ba41064aaace5b5cedc3845
-      internalID: -783624424
+      spriteID: 86cdd12373f5e2c4795f6acfe051bc76
+      internalID: 960376602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_10
+      name: spr_PlayerWalk_10
       rect:
         serializedVersion: 2
         x: 83
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6935b539332d54843b60b3b282620a99
-      internalID: -431096678
+      spriteID: c5d1f72a3e5365f45984881b4d6b1ee0
+      internalID: -1141913398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_11
+      name: spr_PlayerWalk_11
       rect:
         serializedVersion: 2
         x: 110
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f1dfd0af73b2094eacc66c450aa3b3b
-      internalID: -136415284
+      spriteID: f3fe379efb181de48a0b74238783be31
+      internalID: 2108256220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_12
+      name: spr_PlayerWalk_12
       rect:
         serializedVersion: 2
         x: 137
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 514ea956da5222e458825eeb480dbb15
-      internalID: 838889201
+      spriteID: 0f1fd333d03136641ae6efd62a8d8d4b
+      internalID: 1062833274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_13
+      name: spr_PlayerWalk_13
       rect:
         serializedVersion: 2
         x: 164
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ee70afdc2a891b469b14372b77412c0
-      internalID: 1716189537
+      spriteID: 5d530fbb38a580642a2817fa5ee00935
+      internalID: 1139683981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_14
+      name: spr_PlayerWalk_14
       rect:
         serializedVersion: 2
         x: 3
@@ -444,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a98b8b8c907411a469f2bbf70bd29882
-      internalID: 1443249477
+      spriteID: ffb79fe72ed5714469ba3c415f8e04a6
+      internalID: -314835782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_15
+      name: spr_PlayerWalk_15
       rect:
         serializedVersion: 2
         x: 30
@@ -465,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a2ee92f6d279a843a2d39b5665156e6
-      internalID: -572281633
+      spriteID: f5d23d57ae9383f4cae897841142cd0c
+      internalID: 1281051172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_16
+      name: spr_PlayerWalk_16
       rect:
         serializedVersion: 2
         x: 57
@@ -486,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a77652826a1463478fdcac1a08dd179
-      internalID: 1217541162
+      spriteID: 16d07dd60e044334988accc755f2f311
+      internalID: 1177648629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_17
+      name: spr_PlayerWalk_17
       rect:
         serializedVersion: 2
         x: 84
@@ -507,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 034dad67957652243acb85b73a2d28ab
-      internalID: 69404957
+      spriteID: 9d19238b9f7dc874f8b9736ef677b5e7
+      internalID: -704973816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_18
+      name: spr_PlayerWalk_18
       rect:
         serializedVersion: 2
         x: 111
@@ -528,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e4253750ab07fe4bb13704043d84711
-      internalID: 1021835
+      spriteID: 2ee2d6cbcb34069428d9667a6af39fd7
+      internalID: 757440442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_19
+      name: spr_PlayerWalk_19
       rect:
         serializedVersion: 2
         x: 138
@@ -549,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 887fc922f401a60488871eb910f2810c
-      internalID: -769751466
+      spriteID: 248c53d68dfaf1c4baf2b4a322b8613d
+      internalID: 575036383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_20
+      name: spr_PlayerWalk_20
       rect:
         serializedVersion: 2
         x: 165
@@ -570,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b95daf1ad823e85468d4b9f05fd5ccce
-      internalID: 1995259081
+      spriteID: ee5962bebce48924c97cc5844cab8610
+      internalID: 800067749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_21
+      name: spr_PlayerWalk_21
       rect:
         serializedVersion: 2
         x: 3
@@ -591,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06f488ade54fbe04c9f27f99d8671c84
-      internalID: 711460223
+      spriteID: 92a771ded7dfc6e4da4c3a335da60ada
+      internalID: 135781748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_22
+      name: spr_PlayerWalk_22
       rect:
         serializedVersion: 2
         x: 30
@@ -612,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce522f737d96024b85c9a052b5fd10a
-      internalID: 403986931
+      spriteID: 395b23cfe26517f42a337d0e76904e21
+      internalID: 814614556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_23
+      name: spr_PlayerWalk_23
       rect:
         serializedVersion: 2
         x: 57
@@ -633,14 +633,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a07b8017c8b7fcb4abd7a37e8fab73b5
-      internalID: 1560084324
+      spriteID: 077d06d69564a6a43aaff9522941baf0
+      internalID: -56042772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_24
+      name: spr_PlayerWalk_24
       rect:
         serializedVersion: 2
         x: 84
@@ -654,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 557f4d41d0f7e3f4d80bc45f26dced7f
-      internalID: -88670513
+      spriteID: 69e7f964a72377d4e8f65b92b011f4e9
+      internalID: 1052644185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_25
+      name: spr_PlayerWalk_25
       rect:
         serializedVersion: 2
         x: 111
@@ -675,14 +675,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 909124c18030e0b43aa864605fb89d46
-      internalID: 1446702407
+      spriteID: 804334c0358bbec428cd278bad2a7dc5
+      internalID: 790903171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_26
+      name: spr_PlayerWalk_26
       rect:
         serializedVersion: 2
         x: 138
@@ -696,14 +696,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f17ab386208b28b469148c46c2b8a752
-      internalID: -87834141
+      spriteID: 580d4818eb1429e4b9901c50b31a40b1
+      internalID: 1684419571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_27
+      name: spr_PlayerWalk_27
       rect:
         serializedVersion: 2
         x: 165
@@ -717,14 +717,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7770d67974b3184a8eb19ed795ccfdd
-      internalID: 1569706518
+      spriteID: cca2c800303067247881c83722c57045
+      internalID: 1648972006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_28
+      name: spr_PlayerWalk_28
       rect:
         serializedVersion: 2
         x: 2
@@ -738,14 +738,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62604fcad2980574582137d63a8c249d
-      internalID: 1066253273
+      spriteID: 6bb0638d5382d324486ed8f87fe1ba7a
+      internalID: -583077512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_29
+      name: spr_PlayerWalk_29
       rect:
         serializedVersion: 2
         x: 29
@@ -759,14 +759,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fad2f9b3bbc49a41a9813b24ec9e370
-      internalID: -401491290
+      spriteID: d0b572f4491a00945b7852eeacaec5e7
+      internalID: 1493145718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_30
+      name: spr_PlayerWalk_30
       rect:
         serializedVersion: 2
         x: 56
@@ -780,14 +780,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 750b2cba9548bbe4e9502002f9293d44
-      internalID: -1253861861
+      spriteID: 95955353da3c0144bba61a678cf29a4f
+      internalID: 1168342751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_31
+      name: spr_PlayerWalk_31
       rect:
         serializedVersion: 2
         x: 83
@@ -801,14 +801,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11df641b67c8de94489717550c80bebf
-      internalID: -808413585
+      spriteID: 2223c99060e6d71479280bbeaa697a2b
+      internalID: -1870614411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_32
+      name: spr_PlayerWalk_32
       rect:
         serializedVersion: 2
         x: 110
@@ -822,14 +822,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835d915fb91dd6a4d94717ed085390b4
-      internalID: 1305620402
+      spriteID: 760149f09c2d6934c9097fce1710a433
+      internalID: -2068083921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_33
+      name: spr_PlayerWalk_33
       rect:
         serializedVersion: 2
         x: 137
@@ -843,14 +843,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7044ad2bcaaa2b247aa667431bcb6edd
-      internalID: 149741197
+      spriteID: 48cec49f4348b8b41b952044906a1700
+      internalID: -693949196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_34
+      name: spr_PlayerWalk_34
       rect:
         serializedVersion: 2
         x: 164
@@ -864,14 +864,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27423dfb193c9434e9ddd1e5460903b6
-      internalID: 548645225
+      spriteID: 5a4582fe7a440b648a800ecf313345dc
+      internalID: -1953984771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_35
+      name: spr_PlayerWalk_35
       rect:
         serializedVersion: 2
         x: 3
@@ -885,14 +885,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98b523d8d87638a428251ab6e20fbc6f
-      internalID: 1259107964
+      spriteID: 432059ad8ab7b25428502dc9ea4415f6
+      internalID: 48682024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_36
+      name: spr_PlayerWalk_36
       rect:
         serializedVersion: 2
         x: 30
@@ -906,14 +906,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ea3daf378b3e3a44a72ac8b59acd4b9
-      internalID: 1088755462
+      spriteID: 5534522e603c63544a5a189b628225de
+      internalID: -265882587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_37
+      name: spr_PlayerWalk_37
       rect:
         serializedVersion: 2
         x: 57
@@ -927,14 +927,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70319f70147d10044bbf39a99b4d36b4
-      internalID: -2124300905
+      spriteID: 06e3a2a50670a164aacd8890f5d41b55
+      internalID: -1302026883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_38
+      name: spr_PlayerWalk_38
       rect:
         serializedVersion: 2
         x: 84
@@ -948,14 +948,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a90c85cac93444a9d9ee8cb831492d
-      internalID: -1376638842
+      spriteID: 9a3fb4c685c7f484a96d9294ec3e0451
+      internalID: -1299963623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_39
+      name: spr_PlayerWalk_39
       rect:
         serializedVersion: 2
         x: 111
@@ -969,14 +969,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 075460d0ceff02e479244447a223ec7d
-      internalID: -315620779
+      spriteID: 7616f64675d2faf40ab4d395c8569750
+      internalID: -156905952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_40
+      name: spr_PlayerWalk_40
       rect:
         serializedVersion: 2
         x: 138
@@ -990,14 +990,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74d524a19955f144da1ac1c379480606
-      internalID: 1206246364
+      spriteID: 4780db2c73c27924bb3f24a8286c30ef
+      internalID: 1886879902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_41
+      name: spr_PlayerWalk_41
       rect:
         serializedVersion: 2
         x: 165
@@ -1011,14 +1011,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 565d142052d3b6944b124aa475b6f8aa
-      internalID: -436227497
+      spriteID: feaa52e2a6f64ed46847366b3b5cfdaf
+      internalID: -893899612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_42
+      name: spr_PlayerWalk_42
       rect:
         serializedVersion: 2
         x: 2
@@ -1032,14 +1032,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87a311d97b13a041936166f8215ef6d
-      internalID: 1908841922
+      spriteID: 662d096e25cc7dd459c2785b20b93b04
+      internalID: -1842261113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_43
+      name: spr_PlayerWalk_43
       rect:
         serializedVersion: 2
         x: 29
@@ -1053,14 +1053,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10ecbac5fd1ff6d42a75879eadd6651f
-      internalID: 819743026
+      spriteID: 181b7ffdab60e1540965b7d631a29428
+      internalID: -249169140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_44
+      name: spr_PlayerWalk_44
       rect:
         serializedVersion: 2
         x: 56
@@ -1074,14 +1074,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b752398336577b43b6851d3974d9071
-      internalID: -1173174719
+      spriteID: 15f6c3abc8109ef45b77b03376aafc85
+      internalID: -2059076177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_45
+      name: spr_PlayerWalk_45
       rect:
         serializedVersion: 2
         x: 83
@@ -1095,14 +1095,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 897c83c385172074a97121eb23a238a4
-      internalID: 2068769408
+      spriteID: 770148bf76c44844e89c0a9e7d0260a9
+      internalID: 974460957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_46
+      name: spr_PlayerWalk_46
       rect:
         serializedVersion: 2
         x: 110
@@ -1116,14 +1116,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a09da886cbef89e4b8566d3323c2cd8e
-      internalID: -2069353605
+      spriteID: 5ba5560a4721de741b4eafa8efa468f3
+      internalID: -1443161714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_47
+      name: spr_PlayerWalk_47
       rect:
         serializedVersion: 2
         x: 137
@@ -1137,14 +1137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1c46aa472724f46816d29355c516ce
-      internalID: 1414122362
+      spriteID: bbe764252c339bc4f8c561b23ffb79b9
+      internalID: -1069557779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_48
+      name: spr_PlayerWalk_48
       rect:
         serializedVersion: 2
         x: 164
@@ -1158,14 +1158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e739a9efee468d341b0f53284a208b1a
-      internalID: -2084417375
+      spriteID: d8179530b71f37a42bc448623c68182f
+      internalID: 598925051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_49
+      name: spr_PlayerWalk_49
       rect:
         serializedVersion: 2
         x: 2
@@ -1179,14 +1179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 615f3f3eb0fda0d45aa4f30906c148c2
-      internalID: 1648235204
+      spriteID: 447eebee55f6b1f45821e9a9e14ddd2e
+      internalID: 468451478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_50
+      name: spr_PlayerWalk_50
       rect:
         serializedVersion: 2
         x: 29
@@ -1200,14 +1200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82788a50e29099e40b6af8d7a80a2242
-      internalID: 406220108
+      spriteID: 98ddd7a83fae18e428e4873bb5a727b4
+      internalID: -1314712697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_51
+      name: spr_PlayerWalk_51
       rect:
         serializedVersion: 2
         x: 56
@@ -1221,14 +1221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0865c730eb64a28428d20b117ec0e99d
-      internalID: -509114957
+      spriteID: 3368125893872e045b07aaa9c50a13b3
+      internalID: -979388325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_52
+      name: spr_PlayerWalk_52
       rect:
         serializedVersion: 2
         x: 83
@@ -1242,14 +1242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c19e389daae6e254bb6d0559d6950ef7
-      internalID: 713028316
+      spriteID: 6c12488393e35a0488b6c90175f1f4ac
+      internalID: -1255751376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_53
+      name: spr_PlayerWalk_53
       rect:
         serializedVersion: 2
         x: 110
@@ -1263,14 +1263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a1133b890cdaa94c9387b8f5ba9362c
-      internalID: -383731835
+      spriteID: 64a842b1748463e4ab0f685ce1b1f6ce
+      internalID: 1968141149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_54
+      name: spr_PlayerWalk_54
       rect:
         serializedVersion: 2
         x: 137
@@ -1284,14 +1284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f8d1749580a66349b0a01ed58896c95
-      internalID: -1238906180
+      spriteID: 5611cb4c9a1b8284d9698a2f6c2e64dc
+      internalID: 1693495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_andando-Sheet (1)_55
+      name: spr_PlayerWalk_55
       rect:
         serializedVersion: 2
         x: 164
@@ -1305,8 +1305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d47f4494893f55148b8cefbefab568de
-      internalID: -828677522
+      spriteID: 63541aa0cd007da46b772961de6158aa
+      internalID: -751622351
       vertices: []
       indices: 
       edges: []
@@ -1322,62 +1322,62 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new_player_andando-Sheet (1)_0: 1060638694
-      new_player_andando-Sheet (1)_1: -58710334
-      new_player_andando-Sheet (1)_10: -431096678
-      new_player_andando-Sheet (1)_11: -136415284
-      new_player_andando-Sheet (1)_12: 838889201
-      new_player_andando-Sheet (1)_13: 1716189537
-      new_player_andando-Sheet (1)_14: 1443249477
-      new_player_andando-Sheet (1)_15: -572281633
-      new_player_andando-Sheet (1)_16: 1217541162
-      new_player_andando-Sheet (1)_17: 69404957
-      new_player_andando-Sheet (1)_18: 1021835
-      new_player_andando-Sheet (1)_19: -769751466
-      new_player_andando-Sheet (1)_2: -1704897728
-      new_player_andando-Sheet (1)_20: 1995259081
-      new_player_andando-Sheet (1)_21: 711460223
-      new_player_andando-Sheet (1)_22: 403986931
-      new_player_andando-Sheet (1)_23: 1560084324
-      new_player_andando-Sheet (1)_24: -88670513
-      new_player_andando-Sheet (1)_25: 1446702407
-      new_player_andando-Sheet (1)_26: -87834141
-      new_player_andando-Sheet (1)_27: 1569706518
-      new_player_andando-Sheet (1)_28: 1066253273
-      new_player_andando-Sheet (1)_29: -401491290
-      new_player_andando-Sheet (1)_3: -917083069
-      new_player_andando-Sheet (1)_30: -1253861861
-      new_player_andando-Sheet (1)_31: -808413585
-      new_player_andando-Sheet (1)_32: 1305620402
-      new_player_andando-Sheet (1)_33: 149741197
-      new_player_andando-Sheet (1)_34: 548645225
-      new_player_andando-Sheet (1)_35: 1259107964
-      new_player_andando-Sheet (1)_36: 1088755462
-      new_player_andando-Sheet (1)_37: -2124300905
-      new_player_andando-Sheet (1)_38: -1376638842
-      new_player_andando-Sheet (1)_39: -315620779
-      new_player_andando-Sheet (1)_4: -1975065288
-      new_player_andando-Sheet (1)_40: 1206246364
-      new_player_andando-Sheet (1)_41: -436227497
-      new_player_andando-Sheet (1)_42: 1908841922
-      new_player_andando-Sheet (1)_43: 819743026
-      new_player_andando-Sheet (1)_44: -1173174719
-      new_player_andando-Sheet (1)_45: 2068769408
-      new_player_andando-Sheet (1)_46: -2069353605
-      new_player_andando-Sheet (1)_47: 1414122362
-      new_player_andando-Sheet (1)_48: -2084417375
-      new_player_andando-Sheet (1)_49: 1648235204
-      new_player_andando-Sheet (1)_5: -406412571
-      new_player_andando-Sheet (1)_50: 406220108
-      new_player_andando-Sheet (1)_51: -509114957
-      new_player_andando-Sheet (1)_52: 713028316
-      new_player_andando-Sheet (1)_53: -383731835
-      new_player_andando-Sheet (1)_54: -1238906180
-      new_player_andando-Sheet (1)_55: -828677522
-      new_player_andando-Sheet (1)_6: 286149798
-      new_player_andando-Sheet (1)_7: -1873994597
-      new_player_andando-Sheet (1)_8: -291657260
-      new_player_andando-Sheet (1)_9: -783624424
+      spr_PlayerWalk_0: 2140139875
+      spr_PlayerWalk_1: 1240323753
+      spr_PlayerWalk_10: -1141913398
+      spr_PlayerWalk_11: 2108256220
+      spr_PlayerWalk_12: 1062833274
+      spr_PlayerWalk_13: 1139683981
+      spr_PlayerWalk_14: -314835782
+      spr_PlayerWalk_15: 1281051172
+      spr_PlayerWalk_16: 1177648629
+      spr_PlayerWalk_17: -704973816
+      spr_PlayerWalk_18: 757440442
+      spr_PlayerWalk_19: 575036383
+      spr_PlayerWalk_2: -477071832
+      spr_PlayerWalk_20: 800067749
+      spr_PlayerWalk_21: 135781748
+      spr_PlayerWalk_22: 814614556
+      spr_PlayerWalk_23: -56042772
+      spr_PlayerWalk_24: 1052644185
+      spr_PlayerWalk_25: 790903171
+      spr_PlayerWalk_26: 1684419571
+      spr_PlayerWalk_27: 1648972006
+      spr_PlayerWalk_28: -583077512
+      spr_PlayerWalk_29: 1493145718
+      spr_PlayerWalk_3: 930371750
+      spr_PlayerWalk_30: 1168342751
+      spr_PlayerWalk_31: -1870614411
+      spr_PlayerWalk_32: -2068083921
+      spr_PlayerWalk_33: -693949196
+      spr_PlayerWalk_34: -1953984771
+      spr_PlayerWalk_35: 48682024
+      spr_PlayerWalk_36: -265882587
+      spr_PlayerWalk_37: -1302026883
+      spr_PlayerWalk_38: -1299963623
+      spr_PlayerWalk_39: -156905952
+      spr_PlayerWalk_4: 373018728
+      spr_PlayerWalk_40: 1886879902
+      spr_PlayerWalk_41: -893899612
+      spr_PlayerWalk_42: -1842261113
+      spr_PlayerWalk_43: -249169140
+      spr_PlayerWalk_44: -2059076177
+      spr_PlayerWalk_45: 974460957
+      spr_PlayerWalk_46: -1443161714
+      spr_PlayerWalk_47: -1069557779
+      spr_PlayerWalk_48: 598925051
+      spr_PlayerWalk_49: 468451478
+      spr_PlayerWalk_5: -91383569
+      spr_PlayerWalk_50: -1314712697
+      spr_PlayerWalk_51: -979388325
+      spr_PlayerWalk_52: -1255751376
+      spr_PlayerWalk_53: 1968141149
+      spr_PlayerWalk_54: 1693495
+      spr_PlayerWalk_55: -751622351
+      spr_PlayerWalk_6: -82979103
+      spr_PlayerWalk_7: 748449964
+      spr_PlayerWalk_8: 1100283226
+      spr_PlayerWalk_9: 960376602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
