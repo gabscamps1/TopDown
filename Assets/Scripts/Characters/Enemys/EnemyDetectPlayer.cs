@@ -34,8 +34,6 @@ public class EnemyDetectPlayer : MonoBehaviour
         {
             transform.rotation = initialRotation;
         }
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

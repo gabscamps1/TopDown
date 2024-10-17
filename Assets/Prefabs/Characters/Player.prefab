@@ -128,10 +128,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6613662134105500048}
   - component: {fileID: 8739493253982156035}
-  - component: {fileID: 1207549169966607347}
-  - component: {fileID: 4795744522364625412}
-  - component: {fileID: 7424764007817262866}
   - component: {fileID: 4429867644762803864}
+  - component: {fileID: 7424764007817262866}
+  - component: {fileID: 5001978082441795115}
+  - component: {fileID: 4795744522364625412}
+  - component: {fileID: 1207549169966607347}
+  - component: {fileID: -2748120478037486129}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -196,8 +198,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1442872551
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1341870191, guid: 3fc865039e65a2e4083ae71957df8cc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -210,52 +212,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1207549169966607347
-MonoBehaviour:
+--- !u!95 &4429867644762803864
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3903222704392435275}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11928223127511c46bfa3a4b277f56a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rdb: {fileID: 4795744522364625412}
-  animator: {fileID: 4429867644762803864}
-  playerSpeed: 4.8
-  runSpeed: 1.5
-  dotProductRight: 0
-  dotProductUp: 0
---- !u!50 &4795744522364625412
-Rigidbody2D:
-  serializedVersion: 4
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 287b56176f3082144b9e42f3e0db4285, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &7424764007817262866
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3903222704392435275}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 10
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 8bcf9f0ea75abb046b0af2f6876e4702, type: 2}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &7424764007817262866
+    m_Bits: 1024
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0060411296, y: 0.00786221}
+  m_Size: {x: 0.63, y: 1.0094773}
+  m_Direction: 0
+--- !u!70 &5001978082441795115
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,30 +300,68 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0060411296, y: 0.00786221}
-  m_Size: {x: 0.63, y: 1.0094773}
-  m_Direction: 0
---- !u!95 &4429867644762803864
-Animator:
-  serializedVersion: 5
+  m_Offset: {x: -0.002963433, y: -0.40734994}
+  m_Size: {x: 0.38284636, y: 0.18531117}
+  m_Direction: 1
+--- !u!50 &4795744522364625412
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903222704392435275}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 8bcf9f0ea75abb046b0af2f6876e4702, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1207549169966607347
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3903222704392435275}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 287b56176f3082144b9e42f3e0db4285, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11928223127511c46bfa3a4b277f56a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rdb: {fileID: 4795744522364625412}
+  animator: {fileID: 4429867644762803864}
+  playerSpeed: 4.8
+  runSpeed: 1.5
+  dotProductRight: 0
+  dotProductUp: 0
+--- !u!114 &-2748120478037486129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903222704392435275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7df7442d65585044b29131f4f6c554b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 5
+  explosion: {fileID: 0}
 --- !u!1 &3975358721332335920
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +520,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

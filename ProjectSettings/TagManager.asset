@@ -20,7 +20,7 @@ TagManager:
   - Enemy
   - Player
   - PlayerChildren
-  - 
+  - SceneObjects
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: SceneObjects
+    uniqueID: 1442872551
     locked: 0
