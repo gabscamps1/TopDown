@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
   - Money
   - Enemy
   - GunPlayer
   - GunEnemy
+  - WallTransparent
   layers:
   - Default
   - TransparentFX

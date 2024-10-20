@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraToMouse : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameManager.instance.player;
     }
 
     // Update is called once per frame

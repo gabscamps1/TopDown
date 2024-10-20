@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1442872551
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9b7ba1264af7f9144945dcf3267f1729, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,8 +132,8 @@ MonoBehaviour:
   bulletSpeed: 10
   damage: 1
   isReloading: 0
-  angleVariance: 0
-  raycastInitialPosition: {x: 0, y: 0}
+  angleVariance: 9
+  raycastInitialPosition: {x: 0.9, y: 0.08}
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,7 +3926,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 311
+      m_Bits: 1335
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4929,8 +4929,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1442872551
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0

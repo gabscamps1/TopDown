@@ -8,16 +8,14 @@ using UnityEngine.UIElements;
 public class EnemyDetectPlayer : MonoBehaviour
 {
     [Header("References")]
+
     [SerializeField] Animator animator; // Referência do animator do Inimigo.
-    [SerializeField] SpriteRenderer spriteRenderer; // Referência do SpriteRenderer do Inimigo.
     public GameObject player; // Referência do Player. Recebe a referência quando o Player entra no collider do Inimigo.
     
     [Header("InfoEnemy")]
-    public float dotProductRight;
-    Quaternion initialRotation; // Rotação inicial do Inimigo.
 
-    [Header("StateEnemy")]
-    public bool sawPlayer; // Permite o Inimigo rotacionar em direção ao PLayer.
+    [HideInInspector] public float dotProductRight; // Usado para rotação do Inimigo e rotação da arma do Inimigo no script GunsEnemy.
+    Quaternion initialRotation; // Rotação inicial do Inimigo.
 
     void Start()
     {
@@ -49,28 +47,8 @@ public class EnemyDetectPlayer : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player = null;
-            sawPlayer = false;
         }
     }
-
-    /*private void DetectPlayer()
-    {
-        // Faz um raycast para identificar se o player está na frente do inimigo.
-        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
-        RaycastHit2D detect;
-        detect = Physics2D.Raycast(transform.position + transform.right * 0.2f, transform.right, Mathf.Infinity, ~ignoreLayermask);
-        Debug.DrawLine(transform.position + transform.right * 0.2f, detect.point);
-
-        if (detect && detect.collider.CompareTag("Player"))
-        {
-            sawPlayer = true;
-        }
-        else
-        {
-            sawPlayer = false;
-        }
-
-    }*/
 
     void Direction()
     {

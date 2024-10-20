@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameData gameData; // Referencia do GameData.
-    public int money; // Recebe o valor do Player.
+    public GameData gameData; // Referência do GameData.
+    public GameObject player; // Referência do Player em cena.
+    public int money; // Recebe o valor do script ItensPickUp do Player.
    
 
     public static GameManager instance;

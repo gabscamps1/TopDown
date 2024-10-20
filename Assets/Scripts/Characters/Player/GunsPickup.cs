@@ -6,7 +6,8 @@ using UnityEngine;
 public class GunsPickup : MonoBehaviour
 {
     [SerializeField] int selectGun; // Arma selecionada.
-    [SerializeField] float throwForce = 10f; // Força com que o item será arremessado.
+    [SerializeField] float throwForce; // Força com que a arma será arremessada.
+    public float damage; // Dano que o impacto da arma causará quando arremessada.
     [SerializeField] GameObject[] inventory; // Inventário das armas.
     [SerializeField] Transform gunPlaceholder; // Posição que as armas ficaram.
     public bool hasGun; // Confere se tem alguma arma no inventory. Usado para alterar animações no script de PlayerMovement.
@@ -24,7 +25,7 @@ public class GunsPickup : MonoBehaviour
             SearchNearestGun();
         }
 
-        hasGun = inventory[0] || inventory[1]; // Seta para true se tem alguma arma no inventory.
+        hasGun = inventory[selectGun]; // Seta para true se tem alguma arma no inventory.
     }
 
     private void OnTriggerStay2D(Collider2D collision)

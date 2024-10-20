@@ -3,29 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
-public class Damage : MonoBehaviour
+public class PlayerDamage : MonoBehaviour
 {
     [SerializeField]
     private float lives;
 
-    [SerializeField]
-    ParticleSystem explosion;
-
     private void OnParticleCollision(GameObject particle)
     {
-        // Caso a particula com a Tag BulletPlayer acerte o Inimigo a função CallDamage é chamada.
-        if (particle.CompareTag("GunPlayer"))
-        {
-            CallDamage(particle.GetComponentInParent<GunsPlayer>().damage);
-        }
-
+        // Caso a particula com a Tag GunEnemy acerte o Player a função CallDamage é chamada.
         if (particle.CompareTag("GunEnemy"))
         {
             CallDamage(particle.GetComponentInParent<GunsEnemy>().damage);
         }
     }
-
 
     // Função que causa dano ao Inimigo.
     void CallDamage(float damage)
@@ -47,10 +39,8 @@ public class Damage : MonoBehaviour
         }
     }
 
-    
     IEnumerator Blink()
     {
-
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         if (!renderer)
         {
