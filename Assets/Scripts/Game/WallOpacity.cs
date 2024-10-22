@@ -21,7 +21,7 @@ public class WallOpacity : MonoBehaviour
             SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
             if (wallSprite != null && player != null)
             {
-                if (player.transform.position.y > wall.transform.position.y-0.48f)
+                if (player.transform.position.y > wall.transform.position.y)
                 {
                     wallSprite.color = transparenceColor;
                     wallSprite.sortingOrder = 2;

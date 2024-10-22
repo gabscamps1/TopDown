@@ -24,6 +24,7 @@ public class GunsEnemy : MonoBehaviour
 
     [Header("PreconfigGun")]
     [SerializeField] float angleVariance; // Diferença de ângulo entre armas para corrigir o posicionamento da arma em relação ao Player.
+    [SerializeField] float angleVarianceR;
     [SerializeField] Vector2 raycastInitialPosition; // Ajuste para a posição inicial do Raycast detect em relação do pivo da Arma.
     private Quaternion initialRotation; // Rotação inicial da Arma.
     
@@ -100,7 +101,7 @@ public class GunsEnemy : MonoBehaviour
         if (enemyScript.player != null)
         {
             // Subtrair a posição do Player da posição da Arma.
-            Vector3 playerDirection = (enemyScript.player.transform.position - transform.position).normalized;
+            Vector3 playerDirection = (enemyScript.player.transform.position + (Vector3.up * 0.5f) - transform.position).normalized;
             
             // Calcular o ângulo em radianos e depois converter para graus.
             float angle = Mathf.Atan2(playerDirection.x, playerDirection.y) * Mathf.Rad2Deg;
@@ -108,11 +109,11 @@ public class GunsEnemy : MonoBehaviour
             // Rotacionar a arma em volta do Inimigo dependendo da posição do Player.
             if (enemyScript.dotProductRight > 0)
             {
-                transform.rotation = Quaternion.Euler(0, transform.rotation.y, -angle + 80 + angleVariance);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.y, -angle + 90 + angleVarianceR);
             }
             else
             {
-                transform.rotation = Quaternion.Euler(180, transform.rotation.y, angle - 100 + angleVariance);
+                transform.rotation = Quaternion.Euler(180, transform.rotation.y, angle - 80 + angleVariance);
             }
         }
     }

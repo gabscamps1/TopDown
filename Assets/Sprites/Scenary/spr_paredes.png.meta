@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea6b7d4362ad6e447bbed4a40d7d9c0c
+guid: 6f308aa1e0bcd3d4b8cc886457a5c8ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,6 +94,32 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,190 +136,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paredes_buracos_0
+      name: spr_paredes_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37409f6ee8f11db4a85446f3237e676b
-      internalID: -1970184079
+      spriteID: a435eed9d56e9654d9dbdb6b5fe67e2e
+      internalID: -2049120445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_1
+      name: spr_paredes_1
       rect:
         serializedVersion: 2
         x: 43
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9801a16b2b31d574d92f8cb01a45242d
-      internalID: -809736465
+      spriteID: 4730a1e7a049eca429b81b3861478b99
+      internalID: 670317730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_2
+      name: spr_paredes_2
       rect:
         serializedVersion: 2
         x: 86
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b39b13efefbf8754a856ff72bd82fac2
-      internalID: 2099127168
+      spriteID: e30eb2798b4348749a72f67dcaa1bbf8
+      internalID: 1823567823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_3
+      name: spr_paredes_3
       rect:
         serializedVersion: 2
         x: 129
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd26753bf4842314fa96ffd964052774
-      internalID: 177116149
+      spriteID: a95de11701d6b1647a22a29a7f887bfd
+      internalID: 1842031918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_4
+      name: spr_paredes_4
       rect:
         serializedVersion: 2
         x: 172
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bd3f41721542194dab8917a340cca8a
-      internalID: 1298063412
+      spriteID: 44bd5d4f997d02d4eafb5d1e23e26d28
+      internalID: 2020326217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_5
+      name: spr_paredes_5
       rect:
         serializedVersion: 2
         x: 215
         y: 0
         width: 40
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b12cc855cd6f63947bff82dba34cc0d9
-      internalID: 1485922026
+      spriteID: 6548edb65b69b0b40b954825b8d69a7a
+      internalID: 2011994712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_6
+      name: spr_paredes_6
       rect:
         serializedVersion: 2
-        x: 276
+        x: 277
         y: 12
-        width: 5
+        width: 4
         height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb281e796b5494b4f85a99d4d4878e50
-      internalID: -1742400961
+      spriteID: 8bf8f6d147df63e45b40a3c1ab389b8d
+      internalID: 722123471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_7
+      name: spr_paredes_7
       rect:
         serializedVersion: 2
         x: 319
         y: 12
-        width: 5
+        width: 4
         height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 843f132c790fd7041bc87938f90336df
-      internalID: -509588859
+      spriteID: 56da1be498c171f4a87952a5a6d3e4d3
+      internalID: 1854542064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paredes_buracos_8
+      name: spr_paredes_8
       rect:
         serializedVersion: 2
         x: 342
         y: 29
         width: 40
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fa69d0e2c20f3e42b7ed07adbb5006e
-      internalID: -2110458075
+      spriteID: 8822c6415bb0d42419574262155ce6e5
+      internalID: -1883910183
       vertices: []
       indices: 
       edges: []
@@ -309,15 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      paredes_buracos_0: -1970184079
-      paredes_buracos_1: -809736465
-      paredes_buracos_2: 2099127168
-      paredes_buracos_3: 177116149
-      paredes_buracos_4: 1298063412
-      paredes_buracos_5: 1485922026
-      paredes_buracos_6: -1742400961
-      paredes_buracos_7: -509588859
-      paredes_buracos_8: -2110458075
+      spr_paredes_0: -2049120445
+      spr_paredes_1: 670317730
+      spr_paredes_2: 1823567823
+      spr_paredes_3: 1842031918
+      spr_paredes_4: 2020326217
+      spr_paredes_5: 2011994712
+      spr_paredes_6: 722123471
+      spr_paredes_7: 1854542064
+      spr_paredes_8: -1883910183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

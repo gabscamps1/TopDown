@@ -24,15 +24,23 @@ public class EnemyFollowPlayer : MonoBehaviour
 
             if (Mathf.Abs(transform.position.x - player.transform.position.x) < agent.stoppingDistance)
             {
-                KeepDistanceFromPlayer();
+                // KeepDistanceFromPlayer();
             }
             else
             {
-                //FollowPlayer();
+                FollowPlayer();
             }
         }
 
         
+    }
+
+    private void FixedUpdate()
+    {
+        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(transform.right, transform.right, Mathf.Infinity,~ignoreLayermask);
+        Debug.DrawLine(transform.right, hit.point);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
