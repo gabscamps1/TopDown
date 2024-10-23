@@ -9,6 +9,7 @@ TagManager:
   - GunPlayer
   - GunEnemy
   - WallTransparent
+  - SceneObject
   layers:
   - Default
   - TransparentFX

@@ -106,89 +106,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new_player_idle_comarma_0
+      name: spr_Player_GunIdle_0
       rect:
         serializedVersion: 2
         x: 4
         y: 2
         width: 22
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07eae5fd19949514abd286a266f9325b
-      internalID: -1565983411
+      spriteID: e54d109d84c1eea4f81258512b98ccb6
+      internalID: 2038564695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_idle_comarma_1
+      name: spr_Player_GunIdle_1
       rect:
         serializedVersion: 2
         x: 27
         y: 2
         width: 22
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f0d054dd11911844a3f509ee45e0550
-      internalID: -1261728145
+      spriteID: 8291e8f13df60814dbcfca3b3d9019d7
+      internalID: 967393897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_idle_comarma_2
+      name: spr_Player_GunIdle_2
       rect:
         serializedVersion: 2
         x: 51
         y: 2
         width: 20
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed71268c76d041e429251af8bb430ed4
-      internalID: -1165749368
+      spriteID: 9c66d9dfdf4445441a40b2abe03c2b3d
+      internalID: -2045966597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new_player_idle_comarma_3
+      name: spr_Player_GunIdle_3
       rect:
         serializedVersion: 2
         x: 76
         y: 2
         width: 20
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edd93ba6f84162c4c8c631e686438ca8
-      internalID: -10934259
+      spriteID: 0ea1da80d8e67c54cb062d8b624e1b38
+      internalID: -1491766249
       vertices: []
       indices: 
       edges: []
@@ -204,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new_player_idle_comarma_0: -1565983411
-      new_player_idle_comarma_1: -1261728145
-      new_player_idle_comarma_2: -1165749368
-      new_player_idle_comarma_3: -10934259
+      spr_Player_GunIdle_0: 2038564695
+      spr_Player_GunIdle_1: 967393897
+      spr_Player_GunIdle_2: -2045966597
+      spr_Player_GunIdle_3: -1491766249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
