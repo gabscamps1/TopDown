@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6f308aa1e0bcd3d4b8cc886457a5c8ad
+guid: 923667853af2a554ba93facf557c9d8b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,32 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -141,7 +115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -150,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a435eed9d56e9654d9dbdb6b5fe67e2e
-      internalID: -2049120445
+      spriteID: 78bc6120f85d9ce4aaedb214a1b58cd5
+      internalID: 429997708
       vertices: []
       indices: 
       edges: []
@@ -160,9 +134,9 @@ TextureImporter:
       name: spr_paredes_1
       rect:
         serializedVersion: 2
-        x: 43
+        x: 35
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -171,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4730a1e7a049eca429b81b3861478b99
-      internalID: 670317730
+      spriteID: 573e13308f2628a4196a313217fcbb20
+      internalID: 510403301
       vertices: []
       indices: 
       edges: []
@@ -181,9 +155,9 @@ TextureImporter:
       name: spr_paredes_2
       rect:
         serializedVersion: 2
-        x: 86
+        x: 70
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -192,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30eb2798b4348749a72f67dcaa1bbf8
-      internalID: 1823567823
+      spriteID: bc2dd2a668ba4344f95c1a00826824a7
+      internalID: 1720156810
       vertices: []
       indices: 
       edges: []
@@ -202,9 +176,9 @@ TextureImporter:
       name: spr_paredes_3
       rect:
         serializedVersion: 2
-        x: 129
+        x: 105
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -213,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a95de11701d6b1647a22a29a7f887bfd
-      internalID: 1842031918
+      spriteID: 700cfd59b311bb141b6442710dc61402
+      internalID: 1664269517
       vertices: []
       indices: 
       edges: []
@@ -223,9 +197,9 @@ TextureImporter:
       name: spr_paredes_4
       rect:
         serializedVersion: 2
-        x: 172
+        x: 140
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -234,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bd5d4f997d02d4eafb5d1e23e26d28
-      internalID: 2020326217
+      spriteID: 153744fd0f233eb4f875f2fe78dabf14
+      internalID: 1263428169
       vertices: []
       indices: 
       edges: []
@@ -244,9 +218,9 @@ TextureImporter:
       name: spr_paredes_5
       rect:
         serializedVersion: 2
-        x: 215
+        x: 175
         y: 0
-        width: 40
+        width: 32
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -255,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6548edb65b69b0b40b954825b8d69a7a
-      internalID: 2011994712
+      spriteID: f20b75b13c00f514ca9534a82b225274
+      internalID: -1651507154
       vertices: []
       indices: 
       edges: []
@@ -265,7 +239,7 @@ TextureImporter:
       name: spr_paredes_6
       rect:
         serializedVersion: 2
-        x: 277
+        x: 224
         y: 12
         width: 4
         height: 40
@@ -276,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bf8f6d147df63e45b40a3c1ab389b8d
-      internalID: 722123471
+      spriteID: feaf682baa6e64c44ac5c2da1f5df0b6
+      internalID: -1510954644
       vertices: []
       indices: 
       edges: []
@@ -286,7 +260,7 @@ TextureImporter:
       name: spr_paredes_7
       rect:
         serializedVersion: 2
-        x: 319
+        x: 240
         y: 12
         width: 4
         height: 40
@@ -297,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56da1be498c171f4a87952a5a6d3e4d3
-      internalID: 1854542064
+      spriteID: aa0d7bb5f3713c2478be8ef7c88132be
+      internalID: -1018799766
       vertices: []
       indices: 
       edges: []
@@ -307,8 +281,8 @@ TextureImporter:
       name: spr_paredes_8
       rect:
         serializedVersion: 2
-        x: 342
-        y: 29
+        x: 256
+        y: 27
         width: 40
         height: 4
       alignment: 7
@@ -318,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8822c6415bb0d42419574262155ce6e5
-      internalID: -1883910183
+      spriteID: a3fadd1abeeb6c44ca0b9f79ac7f01cd
+      internalID: -492559073
       vertices: []
       indices: 
       edges: []
@@ -335,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_paredes_0: -2049120445
-      spr_paredes_1: 670317730
-      spr_paredes_2: 1823567823
-      spr_paredes_3: 1842031918
-      spr_paredes_4: 2020326217
-      spr_paredes_5: 2011994712
-      spr_paredes_6: 722123471
-      spr_paredes_7: 1854542064
-      spr_paredes_8: -1883910183
+      spr_paredes_0: 429997708
+      spr_paredes_1: 510403301
+      spr_paredes_2: 1720156810
+      spr_paredes_3: 1664269517
+      spr_paredes_4: 1263428169
+      spr_paredes_5: -1651507154
+      spr_paredes_6: -1510954644
+      spr_paredes_7: -1018799766
+      spr_paredes_8: -492559073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

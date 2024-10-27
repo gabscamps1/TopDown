@@ -5,46 +5,67 @@ using UnityEngine.AI;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
-    GameObject player;
-    NavMeshAgent agent;
+    GameObject player; // Referêmcia do Player.
+    NavMeshAgent agent; // Referêmcia do NavMeshAgent.
+    Animator animator; // Referêmcia do Animator.
+    GunsEnemy gunScript; // Referêmcia do Script da arma.
+    bool canStartCoroutine; // Conferir se pode iniciar coroutine.
+    [SerializeField] float moveSpeed; // Velocidade do Inimigo
+    [SerializeField] float sideSpeed; // Velocidade do Inimigo recarregando.
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        agent.speed = moveSpeed;
+
+        animator = GetComponent<Animator>();
+
+        gunScript = GetComponentInChildren<GunsEnemy>();
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-       
-    }
-
-    private void FixedUpdate()
     {
         if (player != null)
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
             LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
             RaycastHit2D hit;
-            hit = Physics2D.Raycast(transform.position, direction, 8, ~ignoreLayermask);
-            Debug.DrawLine(transform.position, hit.point);
-            if (hit.collider != null)
+            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
+            Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
+            
+            if (gunScript != null)
             {
-                if (hit.collider.CompareTag("Player"))
+                if (!gunScript.isReloading)
                 {
-                    agent.SetDestination(transform.position);
+                    canStartCoroutine = true;
+
+                    if (hit.collider != null)
+                    {
+                        if (hit.collider.CompareTag("Player"))
+                        {
+                            agent.ResetPath();
+                            animator.SetBool("Walk", false);
+                        }
+                        else
+                        {
+                            FollowPlayer();
+                        }
+                    }
+                    else
+                    {
+                        FollowPlayer();
+                    }
+
                 }
-                else
+                else if (canStartCoroutine == true)
                 {
-                    agent.SetDestination(player.transform.position);
-                    print("oi");
+                    StartCoroutine(WalkSideways(direction));
                 }
-            }
-            else
-            {
-                agent.SetDestination(player.transform.position);
             }
         }
     }
@@ -60,6 +81,60 @@ public class EnemyFollowPlayer : MonoBehaviour
     void FollowPlayer()
     {
         agent.SetDestination(player.transform.position);
+        animator.SetBool("Walk", true);
+    }
+
+    IEnumerator WalkSideways(Vector2 direction)
+    {
+        canStartCoroutine = false; // Impede de chamar a coroutine novamente durante sua realização.
+
+        agent.ResetPath();
+
+        Vector3 perpendicularDirection = new Vector2(-direction.y,direction.x).normalized;
+
+        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+
+        // Move para o lado por um tempo definido.
+        float elapsedTime = 0f;
+        float duration = gunScript.reloadTime/4; // Duração da movimentação para um lado é a metade do tempo de recarga.
+
+        animator.SetBool("Walk", true);
+
+        while (gunScript.isReloading && elapsedTime < duration)
+        {
+            // Atualiza a posição continuamente.
+            transform.position += perpendicularDirection * sideSpeed * Time.deltaTime;
+
+            elapsedTime += Time.deltaTime; // Incrementa o tempo passado.
+            yield return null; // Espera até o próximo quadro.
+        }
+
+        // Volta para a posição original.
+        elapsedTime = 0f;
+
+        while (gunScript.isReloading && elapsedTime < duration*2)
+        {
+            // Atualiza a posição de volta
+            transform.position -= perpendicularDirection * sideSpeed * Time.deltaTime;
+
+            elapsedTime += Time.deltaTime; // Incrementa o tempo passado.
+            yield return null; // Espera até o próximo quadro.
+        }
+
+        // Volta para a posição original.
+        elapsedTime = 0f;
+
+        while (gunScript.isReloading && elapsedTime < duration)
+        {
+            // Atualiza a posição continuamente.
+            transform.position += perpendicularDirection * sideSpeed * Time.deltaTime;
+
+            elapsedTime += Time.deltaTime; // Incrementa o tempo passado.
+            yield return null; // Espera até o próximo quadro.
+        }
+
+        animator.SetBool("Walk", false);
+        
     }
 
 }

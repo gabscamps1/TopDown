@@ -130,6 +130,7 @@ MonoBehaviour:
   currentAmmo: 6
   timePerBullet: 0.6
   bulletSpeed: 10
+  reloadTime: 2
   damage: 1
   isReloading: 0
   angleVariance: -15

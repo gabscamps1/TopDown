@@ -14,12 +14,12 @@ public class GunsEnemy : MonoBehaviour
     private int maxAmmo; // Quantidade máxima de munição da arma carregada.
     [SerializeField] float timePerBullet = 0f; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
-    private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.
+    public float reloadTime;
     public float damage; // Dano causado no Player. É chamado pelo script Damage.
 
     [Header("StateGun")]
-    [SerializeField] bool isReloading = false;
+    public bool isReloading = false;
     private bool sawPlayer;
 
     [Header("PreconfigGun")]
@@ -33,7 +33,6 @@ public class GunsEnemy : MonoBehaviour
     {
         maxAmmo = currentAmmo;
         countTimePerBullet = timePerBullet;
-        timeReloadPerBullet = 2f / currentAmmo;
 
         var mainFireParticle = fireParticle.main;
         mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
@@ -82,16 +81,16 @@ public class GunsEnemy : MonoBehaviour
     // Chama a função de Recarregar.
     IEnumerator Recarregar()
     {
+        // Inicia o reloading.
         isReloading = true;
-        yield return new WaitForSeconds(timeReloadPerBullet * currentAmmo); // Espera o tempo total de recarga.
 
-        // Recarga progressiva
-        while (currentAmmo < maxAmmo)
-        {
-            currentAmmo++;
-            yield return new WaitForSeconds(timeReloadPerBullet);
-        }
+        // Tempo de reloading.
+        yield return new WaitForSeconds(reloadTime); // Espera o tempo de recarga.
 
+        // Recarrega.
+        currentAmmo = maxAmmo;
+
+        // Termina o reloading.
         isReloading = false;
     }
 

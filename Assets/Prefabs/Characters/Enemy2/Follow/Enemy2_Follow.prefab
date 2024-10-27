@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1416221328743699153}
   - component: {fileID: 4429867644762803864}
   - component: {fileID: 8418755487101310779}
-  - component: {fileID: -4469100993616334746}
   - component: {fileID: -1728508816938678944}
+  - component: {fileID: -4469100993616334746}
   - component: {fileID: 8802546437088174440}
   m_Layer: 7
   m_Name: Enemy2_Follow
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 1442872551
   m_SortingLayer: 1
   m_SortingOrder: 4
-  m_Sprite: {fileID: -465827717, guid: 48bab76fc9d4f09449d546efdf5c3e00, type: 3}
+  m_Sprite: {fileID: -1141015290, guid: 3b258565e4c0f8d448d49ebdb68c15a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 3903222704392435275}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3bf09260c9028c47aeeba20ed09fd33, type: 2}
+  m_Controller: {fileID: 9100000, guid: 45c06d722e8dcaa4bae1b76994a94d4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -227,18 +227,6 @@ MonoBehaviour:
   animator: {fileID: 4429867644762803864}
   player: {fileID: 0}
   dotProductRight: 0
---- !u!114 &-4469100993616334746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3903222704392435275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deb105f1530af7148a42141f3e845fba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1728508816938678944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +241,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageCollider: {fileID: 1416221328743699153}
   lives: 16
+--- !u!114 &-4469100993616334746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903222704392435275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb105f1530af7148a42141f3e845fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3.5
+  sideSpeed: 1.8
 --- !u!195 &8802546437088174440
 NavMeshAgent:
   m_ObjectHideFlags: 0

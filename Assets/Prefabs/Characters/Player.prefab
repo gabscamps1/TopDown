@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c9340baad03bb46b7671853202ff4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 5
+  lives: 1000
 --- !u!1 &3975358721332335920
 GameObject:
   m_ObjectHideFlags: 0

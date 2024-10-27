@@ -130,9 +130,11 @@ MonoBehaviour:
   currentAmmo: 24
   timePerBullet: 0.08
   bulletSpeed: 10
+  reloadTime: 2
   damage: 1
   isReloading: 0
   angleVariance: 0
+  angleVarianceR: 0
   raycastInitialPosition: {x: 0, y: 0}
 --- !u!1 &5737777433054080989
 GameObject:

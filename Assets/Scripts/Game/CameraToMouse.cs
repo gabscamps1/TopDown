@@ -18,8 +18,8 @@ public class CameraToMouse : MonoBehaviour
         if (player != null)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 distance = mousePosition - player.transform.position;
-            transform.position = new Vector3(player.transform.position.x + (distance.x / 8f), player.transform.position.y + (distance.y / 8), -10);
+            Vector3 distance = mousePosition - player.transform.position + (Vector3.up * 0.5f);
+            transform.position = new Vector3(player.transform.position.x + (distance.x / 8f), player.transform.position.y + 0.5f + (distance.y / 7), -10);
         }
     }
 }

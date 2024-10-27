@@ -37,6 +37,7 @@ public class WallOpacity : MonoBehaviour
                 {
                     wallSprite.sortingOrder = 0;
                 }
+
             }
         }
     }
