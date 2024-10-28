@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyFollowPlayer : MonoBehaviour
+public class ShooterFollow : MonoBehaviour
 {
     GameObject player; // Referêmcia do Player.
     NavMeshAgent agent; // Referêmcia do NavMeshAgent.
@@ -30,44 +30,41 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (player == null || gunScript == null) return;
+
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
+        Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
+
+        if (!gunScript.isReloading)
         {
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-            LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
-            RaycastHit2D hit;
-            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
-            Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
-            
-            if (gunScript != null)
+            canStartCoroutine = true;
+
+            if (hit.collider != null)
             {
-                if (!gunScript.isReloading)
+                if (hit.collider.CompareTag("Player"))
                 {
-                    canStartCoroutine = true;
-
-                    if (hit.collider != null)
-                    {
-                        if (hit.collider.CompareTag("Player"))
-                        {
-                            agent.ResetPath();
-                            animator.SetBool("Walk", false);
-                        }
-                        else
-                        {
-                            FollowPlayer();
-                        }
-                    }
-                    else
-                    {
-                        FollowPlayer();
-                    }
-
+                    agent.ResetPath();
+                    animator.SetBool("Walk", false);
                 }
-                else if (canStartCoroutine == true)
+                else
                 {
-                    StartCoroutine(WalkSideways(direction));
+                    FollowPlayer();
                 }
             }
+            else
+            {
+                FollowPlayer();
+            }
+
         }
+        else if (canStartCoroutine == true)
+        {
+            StartCoroutine(WalkSideways(direction));
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)

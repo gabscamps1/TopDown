@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,10 +11,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Rigidbody2D rdb; // Referência do Rigidbody2D.
     public Animator animator; // Referência do Animator.
+    [SerializeField] Collider2D playerCollider; // Collider do Player.
 
     [Header("InfoPlayer")]
-    public float playerSpeed = 10; // Velocidade do player.
-    public float runSpeed = 2; // Multiplicador da velocidade quando está correndo.
+    public float playerSpeed; // Velocidade do player.
+    public float runSpeed; // Multiplicador da velocidade quando está correndo.
+    [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
     private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
     private Vector3 movement;
 
@@ -21,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
     public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
+    bool nextTable;
+    Vector2 lookDirection;
     private void Update()
     {
         Movement();
@@ -87,14 +92,37 @@ public class PlayerMovement : MonoBehaviour
         dotProductRight = Vector3.Dot(Vector3.right, mouseDirection);
         dotProductUp = Vector3.Dot(Vector3.up, mouseDirection);
 
-        if (dotProductUp > 0.7) animator.SetBool("Up", true);
-        else if (dotProductUp < 0.6) animator.SetBool("Up", false);
+        if (dotProductUp > 0.7)
+        {
+            animator.SetBool("Up", true);
+            // lookDirection = Vector2.up;
+        }
+        else if (dotProductUp < 0.6)
+        {
+            animator.SetBool("Up", false);
+            // lookDirection = Vector2.right;
+        }
 
-        if (dotProductUp < -0.7) animator.SetBool("Down", true);
-        else if (dotProductUp > -0.6) animator.SetBool("Down", false);
+        if (dotProductUp < -0.7)
+        {
+            animator.SetBool("Down", true);
+            // lookDirection = Vector2.down;
+        }
+        else if (dotProductUp > -0.6)
+        {
+            animator.SetBool("Down", false);
+            // lookDirection = Vector2.right;
+        }
 
-        if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
-        else transform.rotation = Quaternion.Euler(0, 180, 0);
+        if (dotProductRight > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
 
 
     }
@@ -116,9 +144,35 @@ public class PlayerMovement : MonoBehaviour
         // Desenha a linha do jogador até a posição do mouse
         Gizmos.color = Color.red; // Cor para a direção do mouse
         Gizmos.DrawLine(playerPosition, mousePosition);
-
-
     }*/
 
+    void JumpTable(Vector2 tableSize)
+    {
+        if (!nextTable) return;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rdb.AddRelativeForce(new Vector2(jumpTableVelocity,0) * Time.deltaTime,ForceMode2D.Impulse);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("JumpableTable"))
+        {
+            nextTable = true;
+
+            RaycastHit2D hit;
+            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.right);
+
+            BoxCollider2D boxCollider2D = collision.gameObject.GetComponent<BoxCollider2D>();
+            if (boxCollider2D != null)
+                JumpTable(boxCollider2D.bounds.size);
+        }
+        else
+        {
+            nextTable = false;
+        }
+    }
 }
 

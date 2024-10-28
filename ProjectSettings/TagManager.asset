@@ -10,6 +10,7 @@ TagManager:
   - GunEnemy
   - WallTransparent
   - SceneObject
+  - JumpableTable
   layers:
   - Default
   - TransparentFX

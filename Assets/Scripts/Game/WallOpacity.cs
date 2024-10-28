@@ -25,7 +25,7 @@ public class WallOpacity : MonoBehaviour
                 if (player.transform.position.y > wall.transform.position.y && player.transform.position.y < wall.transform.position.y + 2)
                 {
                     wallSprite.color = transparenceColor;
-                    wallSprite.sortingOrder = 5;
+                    //wallSprite.sortingOrder = 5;
                 }
                 else
                 {
@@ -35,7 +35,7 @@ public class WallOpacity : MonoBehaviour
                 // A order da parede volta para 0 (Abaixo do Player) quando o player está na abaixo dela.
                 if (player.transform.position.y < wall.transform.position.y)
                 {
-                    wallSprite.sortingOrder = 0;
+                    //wallSprite.sortingOrder = 0;
                 }
 
             }

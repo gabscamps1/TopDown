@@ -21,7 +21,7 @@ public class SceneObjectOrder : MonoBehaviour
     {
         if (player == null) return; // Verifica se o jogador existe antes de continuar.
 
-        foreach (var obj in GameObject.FindGameObjectsWithTag("SceneObject"))
+        /*foreach (var obj in GameObject.FindGameObjectsWithTag("SceneObject"))
         {
             SpriteRenderer objSprite = obj.GetComponent<SpriteRenderer>();
             if (objSprite != null)
@@ -44,9 +44,9 @@ public class SceneObjectOrder : MonoBehaviour
                     objSprite.sortingOrder = objOrder;
                 }
             }
-        }
+        }*/
 
-        /*foreach (var wall in GameObject.FindGameObjectsWithTag("WallTransparent"))
+        foreach (var wall in GameObject.FindGameObjectsWithTag("WallTransparent"))
         {
             SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
             if (wallSprite != null && player != null)
@@ -114,7 +114,7 @@ public class SceneObjectOrder : MonoBehaviour
                     }
                 }
             }
-        }*/
+        }
 
 
     }
