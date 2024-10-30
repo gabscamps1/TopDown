@@ -345,8 +345,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rdb: {fileID: 4795744522364625412}
   animator: {fileID: 4429867644762803864}
+  playerCollider: {fileID: 0}
   playerSpeed: 4.8
   runSpeed: 1.5
+  jumpTableVelocity: 0
+  dodgeVelocity: 29
   dotProductRight: 0
   dotProductUp: 0
 --- !u!114 &5241981099960403969

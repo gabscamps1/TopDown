@@ -16,9 +16,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("InfoPlayer")]
     public float playerSpeed; // Velocidade do player.
     public float runSpeed; // Multiplicador da velocidade quando está correndo.
-    [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
     private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
+    [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
+    [SerializeField] float dodgeVelocity; // Velocidade do Dodge.
     private Vector3 movement;
+    private float moveHorizontal;
+    private float moveVertical;
 
     [Header("InfoToGuns")]
     public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
@@ -26,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool nextTable;
     Vector2 lookDirection;
+    bool isDodging;
+
+    
     private void Update()
     {
         Movement();
@@ -50,27 +56,39 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("TesteScene");
         }
 
-        if (GetComponentInChildren<GunsPickup>().hasGun == true)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetLayerWeight(1, 1);
-            animator.SetLayerWeight(0, 0);
+            StartCoroutine(Dodge());
         }
-        else
+
+        if (!isDodging)
         {
-            animator.SetLayerWeight(0, 1);
-            animator.SetLayerWeight(1, 0);
+            if (GetComponentInChildren<GunsPickup>().hasGun == true)
+            {
+                animator.SetLayerWeight(1, 1);
+                animator.SetLayerWeight(0, 0);
+            }
+            else
+            {
+                animator.SetLayerWeight(0, 1);
+                animator.SetLayerWeight(1, 0);
+            }
         }
+
     }
     private void FixedUpdate()
     {
-        rdb.velocity = new Vector2(movement.x, movement.y);
+        if (!isDodging)
+        {
+            rdb.velocity = new Vector2(movement.x, movement.y);
+        }
     }
 
-    void Movement() 
+    public void Movement() 
     {
 
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
         movement = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
 
         if (moveHorizontal != 0 || moveVertical != 0)
@@ -173,6 +191,40 @@ public class PlayerMovement : MonoBehaviour
         {
             nextTable = false;
         }
+    }
+
+   IEnumerator Dodge()
+    {
+        isDodging = true;
+
+        // Confere se o Player está em movimento.
+        float directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se o moveHorizontal for menor que 0.01 retorna 0, se não retorna +- 1.
+        float directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se o moveVertical for menor que 0.01 retorna 0, se não retorna +- 1.
+
+        animator.SetLayerWeight(2, 1);
+        animator.SetLayerWeight(1, 0);
+        animator.SetLayerWeight(0, 0);
+        
+        animator.SetFloat("WalkHorizontal", Mathf.Abs(directionHorizontal));
+        animator.SetFloat("WalkVertical", directionVertical);
+
+        // Confere se o Player está em movimento.
+        // float directionHorizontal = (Mathf.Abs(moveHorizontal) < 0.01) ? 0 : (int)Mathf.Sign(moveHorizontal); // Se o moveHorizontal for menor que 0.01 retorna 0, se não retorna +- 1.
+        // float directionVertical = (Mathf.Abs(moveVertical) < 0.01) ? 0 : (int)Mathf.Sign(moveVertical); // Se o moveVertical for menor que 0.01 retorna 0, se não retorna +- 1.
+
+        // Retorna a direção do movimento do Player.
+        Vector2 dodgeMovement = new Vector2(directionHorizontal, directionVertical);
+
+        // Aplica a força na direção do movimento do Player.
+        rdb.AddRelativeForce(dodgeMovement * dodgeVelocity, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(0.4f);
+
+        isDodging = false;
+
+        animator.SetLayerWeight(2, 0);
+
+        //animator.SetLayerWeight(2, 0);
     }
 }
 
