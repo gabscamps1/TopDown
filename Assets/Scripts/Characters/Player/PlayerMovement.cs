@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Rigidbody2D rdb; // Referência do Rigidbody2D.
     public Animator animator; // Referência do Animator.
-    [SerializeField] Collider2D playerCollider; // Collider do Player.
 
     [Header("InfoPlayer")]
     public float playerSpeed; // Velocidade do player.
@@ -207,10 +206,6 @@ public class PlayerMovement : MonoBehaviour
         
         animator.SetFloat("WalkHorizontal", Mathf.Abs(directionHorizontal));
         animator.SetFloat("WalkVertical", directionVertical);
-
-        // Confere se o Player está em movimento.
-        // float directionHorizontal = (Mathf.Abs(moveHorizontal) < 0.01) ? 0 : (int)Mathf.Sign(moveHorizontal); // Se o moveHorizontal for menor que 0.01 retorna 0, se não retorna +- 1.
-        // float directionVertical = (Mathf.Abs(moveVertical) < 0.01) ? 0 : (int)Mathf.Sign(moveVertical); // Se o moveVertical for menor que 0.01 retorna 0, se não retorna +- 1.
 
         // Retorna a direção do movimento do Player.
         Vector2 dodgeMovement = new Vector2(directionHorizontal, directionVertical);
