@@ -133,8 +133,8 @@ MonoBehaviour:
   reloadTime: 2
   damage: 1
   isReloading: 0
-  angleVariance: -15
-  angleVarianceR: -5
+  angleVariance: -12
+  angleVarianceR: -3
   raycastInitialPosition: {x: 0.65, y: 0.28}
 --- !u!1 &5737777433054080989
 GameObject:
