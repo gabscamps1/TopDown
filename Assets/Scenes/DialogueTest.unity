@@ -1651,7 +1651,7 @@ MonoBehaviour:
       npcImage: {fileID: 21300000, guid: 577fce2e0d459d24193875cfec736b8a, type: 3}
       sentences:
       - characterName: 
-        sentence: "Opa opa opa, se acha que vai passar por aqui est\xE1 muito enganado!"
+        sentence: "Opa opa opa, se acha que vai passar por aqui est\xE1 muito enganado!!"
         sentenceImage: {fileID: 21300000, guid: 577fce2e0d459d24193875cfec736b8a, type: 3}
         backgroundImage: {fileID: 21300000, guid: 50f53f43b02c9894a831862ca23feee3, type: 3}
       - characterName: 
