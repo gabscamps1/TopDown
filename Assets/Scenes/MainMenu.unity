@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: -7486628768289637952, guid: 8be6eeb0ef3635844aa741b77907cb5e, type: 2}
@@ -2823,7 +2823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LOGO DO JOGO
+  m_text: DON-OVER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start
+  m_text: 'Iniciar
 
 '
   m_isRightToLeft: 0
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No
+  m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
   m_sharedMaterial: {fileID: -4823629661248248761, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
@@ -4702,9 +4702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits
-
-'
+  m_text: "Cr\xE9ditos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -5498,7 +5496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes
+  m_text: Sim
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
   m_sharedMaterial: {fileID: -4823629661248248761, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
@@ -5805,9 +5803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
-
-'
+  m_text: Sair
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -6076,7 +6072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: "Op\xE7\xF5es"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -6382,9 +6378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure you want
-
-    to exit?'
+  m_text: Deseja sair do jogo?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
   m_sharedMaterial: {fileID: -4823629661248248761, guid: 7de033fd6099ad240a34614f0733a917, type: 2}
@@ -6518,7 +6512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6eeb0ef3635844aa741b77907cb5e, type: 2}
   m_sharedMaterial: {fileID: -7486628768289637952, guid: 8be6eeb0ef3635844aa741b77907cb5e, type: 2}
@@ -6860,7 +6854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: -7486628768289637952, guid: 8be6eeb0ef3635844aa741b77907cb5e, type: 2}
@@ -7316,7 +7310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Game
+  m_text: Novo Jogo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: -7486628768289637952, guid: 8be6eeb0ef3635844aa741b77907cb5e, type: 2}

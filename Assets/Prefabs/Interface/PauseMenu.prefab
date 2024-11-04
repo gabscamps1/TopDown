@@ -315,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTIONS
+  m_text: "OP\xC7\xD5ES"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No
+  m_text: "N\xE3o"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: "Op\xE7\xF5es"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Sair
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -2027,7 +2027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5170c5e3af8fc664d9ea037b6365a5e4, type: 2}
   m_sharedMaterial: {fileID: 1130300713355463378, guid: 5170c5e3af8fc664d9ea037b6365a5e4, type: 2}
@@ -2161,9 +2161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure you want
-
-    to exit?'
+  m_text: Deseja voltar ao menu principal?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
@@ -2242,7 +2240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4639354522104587040}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2689,7 +2687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yes
+  m_text: Sim
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -2900,7 +2898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAUSED
+  m_text: PAUSADO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
   m_sharedMaterial: {fileID: -4016539427444342838, guid: d0fb010f26597fc4fb62fa5b5ae5ae69, type: 2}
