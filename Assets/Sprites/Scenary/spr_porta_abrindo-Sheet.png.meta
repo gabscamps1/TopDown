@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 923667853af2a554ba93facf557c9d8b
+guid: b6a329999883ba1469b038961f479855
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,17 +119,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_paredes_0
+      name: spr_porta_abrindo-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 10
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78bc6120f85d9ce4aaedb214a1b58cd5
-      internalID: 429997708
+      spriteID: 5d29a35524cbc634e89a6f9db95d1d28
+      internalID: 1011553576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_1
+      name: spr_porta_abrindo-Sheet_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 50
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573e13308f2628a4196a313217fcbb20
-      internalID: 510403301
+      spriteID: 5e341a374e41ed941af380c98bd5594c
+      internalID: -2025941566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_2
+      name: spr_porta_abrindo-Sheet_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 90
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc2dd2a668ba4344f95c1a00826824a7
-      internalID: 1720156810
+      spriteID: 1fca57e6aece3de408f17e60d6d54772
+      internalID: 350696786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_3
+      name: spr_porta_abrindo-Sheet_3
       rect:
         serializedVersion: 2
-        x: 105
+        x: 130
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 700cfd59b311bb141b6442710dc61402
-      internalID: 1664269517
+      spriteID: eccd3e4fb5b67ff449343b85055e7880
+      internalID: -1812466409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_4
+      name: spr_porta_abrindo-Sheet_4
       rect:
         serializedVersion: 2
-        x: 140
+        x: 170
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 153744fd0f233eb4f875f2fe78dabf14
-      internalID: 1263428169
+      spriteID: 951f348913e1d3348b22ccf666ab66e9
+      internalID: 680532439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_5
+      name: spr_porta_abrindo-Sheet_5
       rect:
         serializedVersion: 2
-        x: 175
+        x: 210
         y: 0
-        width: 32
-        height: 56
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20b75b13c00f514ca9534a82b225274
-      internalID: -1651507154
+      spriteID: d33993bf6943b784883f2851d88d5442
+      internalID: 1830690211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_6
+      name: spr_porta_abrindo-Sheet_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 12
-        width: 4
-        height: 40
+        x: 250
+        y: 0
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feaf682baa6e64c44ac5c2da1f5df0b6
-      internalID: -1510954644
+      spriteID: 0701fb0e43fda6e48a75fbc40d06527d
+      internalID: 1880870212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_paredes_7
+      name: spr_porta_abrindo-Sheet_7
       rect:
         serializedVersion: 2
-        x: 240
-        y: 12
-        width: 4
-        height: 40
+        x: 290
+        y: 0
+        width: 20
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,29 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa0d7bb5f3713c2478be8ef7c88132be
-      internalID: -1018799766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_paredes_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 27
-        width: 40
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3fadd1abeeb6c44ca0b9f79ac7f01cd
-      internalID: -492559073
+      spriteID: 642638aa737af5740b86874e18f196d5
+      internalID: 285226320
       vertices: []
       indices: 
       edges: []
@@ -335,15 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_paredes_0: 429997708
-      spr_paredes_1: 510403301
-      spr_paredes_2: 1720156810
-      spr_paredes_3: 1664269517
-      spr_paredes_4: 1263428169
-      spr_paredes_5: -1651507154
-      spr_paredes_6: -1510954644
-      spr_paredes_7: -1018799766
-      spr_paredes_8: -492559073
+      spr_porta_abrindo-Sheet_0: 1011553576
+      spr_porta_abrindo-Sheet_1: -2025941566
+      spr_porta_abrindo-Sheet_2: 350696786
+      spr_porta_abrindo-Sheet_3: -1812466409
+      spr_porta_abrindo-Sheet_4: 680532439
+      spr_porta_abrindo-Sheet_5: 1830690211
+      spr_porta_abrindo-Sheet_6: 1880870212
+      spr_porta_abrindo-Sheet_7: 285226320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

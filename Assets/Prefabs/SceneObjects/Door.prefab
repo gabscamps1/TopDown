@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1823297178110594725}
   - component: {fileID: 212729089557224230}
   - component: {fileID: 952999269900011533}
+  - component: {fileID: 1314585725512811466}
   - component: {fileID: 8952344439937455126}
   m_Layer: 10
   m_Name: spr_porta
@@ -131,6 +132,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.624748, y: 0.24087161}
   m_EdgeRadius: 0
+--- !u!111 &1314585725512811466
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717167107741106752}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 67ebf2a52f333b04396a8edebcc6cf4d, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!208 &8952344439937455126
 NavMeshObstacle:
   m_ObjectHideFlags: 0

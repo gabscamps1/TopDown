@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
         Layers();
 
+        JumpTable();
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             runPressed = runSpeed;
@@ -69,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rdb.velocity = new Vector2(movement.x, movement.y);
         }
-        print(movement);
     }
 
     // Configura a Layer do Player no animator.
@@ -191,34 +192,29 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void JumpTable(Vector2 tableSize)
+    void JumpTable()
     {
-        if (!nextTable) return;
-
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rdb.AddRelativeForce(new Vector2(jumpTableVelocity, 0) * Time.deltaTime, ForceMode2D.Impulse);
         }
-    }
 
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("JumpableTable"))
-        {
-            bool canJump = (movement.x + movement.y) == 0 ? true : false;
-            nextTable = true;
+        Vector3 currentDirection = Vector3.zero;
+        currentDirection = (Input.GetKey(KeyCode.D) ? Vector3.right : currentDirection);
+        currentDirection = (Input.GetKey(KeyCode.A) ? Vector3.left : currentDirection);
+        currentDirection = (Input.GetKey(KeyCode.W) ? Vector3.up : currentDirection);
+        currentDirection = (Input.GetKey(KeyCode.S) ? Vector3.down : currentDirection);
 
-            RaycastHit2D hit;
-            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.right);
+        float currentDistance;
+        currentDistance = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ? 3f : 0);
+        currentDistance = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ? 3f : 0);
 
-            BoxCollider2D boxCollider2D = collision.gameObject.GetComponent<BoxCollider2D>();
-            if (boxCollider2D != null)
-                JumpTable(boxCollider2D.bounds.size);
-        }
-        else
-        {
-            nextTable = false;
-        }
+        RaycastHit2D jumpHit;
+        jumpHit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity);
+        Debug.DrawLine(transform.position, jumpHit.point);
+
+        print(jumpHit.point);
     }
 }
 
