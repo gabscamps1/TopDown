@@ -16,12 +16,14 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public Animator PortraitAnimation;
     public float timeDialogue;
+   
 
     [SerializeField] private Sprite defaultBackground; // Defina o sprite padrão no inspetor
 
     public Image backgroundImage; // Imagem de fundo no Canvas
 
     public DialogueEffects dialogueEffects;
+    public static bool isTalking;
 
     private Queue<SentenceData> sentences; // Armazena as sentenças com imagens e nomes
     private bool isTyping = false;
@@ -37,6 +39,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        isTalking = true;
         dialogueEffects?.ResetDialogPosition();
         dialogueEffects?.TriggerFadeOut();
         animator.SetBool("IsOpen", true);
@@ -51,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
+        Debug.Log(isTalking);
     }
 
     public void DisplayNextSentence()
@@ -244,7 +248,8 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-       
+        isTalking = false;
+        Debug.Log(isTalking);
         Debug.Log("End of Conversation");
         animator.SetBool("IsOpen", false);
         PortraitAnimation.SetBool("IsOpen", false);

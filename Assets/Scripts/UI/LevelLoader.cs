@@ -23,6 +23,14 @@ public class LevelLoader : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void NewGame()
+    {
+
+        SceneManager.LoadScene("Tutorial 1");
+        //
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     IEnumerator LoadLevel(int levelIndex) {
         //Toca animação
         transition.SetTrigger("Start");
