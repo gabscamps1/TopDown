@@ -52,6 +52,3 @@ TagManager:
   - name: SceneObjects
     uniqueID: 1442872551
     locked: 0
-  - name: FireParticle
-    uniqueID: 2042084677
-    locked: 0

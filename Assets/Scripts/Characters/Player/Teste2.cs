@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class PlayerMovement : MonoBehaviour
+public class Teste2 : MonoBehaviour
 {
     [Header("References")]
     public Rigidbody2D rdb; // Referência do Rigidbody2D.
@@ -16,28 +16,25 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed; // Velocidade do player.
     public float runSpeed; // Multiplicador da velocidade quando está correndo.
     private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
-    private Vector3 movement;
     [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
     [SerializeField] float dodgeVelocity; // Velocidade do Dodge.
-    private bool nextTable;
-    private Vector2 lookDirection;
+    private Vector3 movement;
+    private float moveHorizontal;
+    private float moveVertical;
 
     [Header("InfoToGuns")]
-    [HideInInspector] public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
-    [HideInInspector] public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
+    public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
+    public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
-    [Header("StatePlayer")]
-    private bool isDodging;
-    private enum PlayerState {Walk, WalkG, Dodge};
-    private PlayerState state = PlayerState.Walk;
+    bool nextTable;
+    Vector2 lookDirection;
+    bool isDodging;
 
     private void Update()
     {
         Movement();
 
         Direction();
-
-        Layers();
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -62,6 +59,20 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Dodge());
         }
 
+        if (!isDodging)
+        {
+            if (GetComponentInChildren<GunsPickup>().hasGun == true)
+            {
+                animator.SetLayerWeight(1, 1);
+                animator.SetLayerWeight(0, 0);
+            }
+            else
+            {
+                animator.SetLayerWeight(0, 1);
+                animator.SetLayerWeight(1, 0);
+            }
+        }
+
     }
     private void FixedUpdate()
     {
@@ -69,44 +80,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rdb.velocity = new Vector2(movement.x, movement.y);
         }
-        print(movement);
-    }
-
-    // Configura a Layer do Player no animator.
-    void Layers()
-    {
-        switch (state)
-        {
-            case PlayerState.Walk:
-                // Se o Player estiver com a arma na mão.
-                if (GetComponentInChildren<GunsPickup>().hasGun == true)
-                {
-                    // Altera para layer Armmed.
-                    animator.SetLayerWeight(1, 1);
-                    animator.SetLayerWeight(0, 0);
-                    animator.SetLayerWeight(2, 0);
-                }
-                else
-                {
-                    // Altera para layer Walk Unarmmed.
-                    animator.SetLayerWeight(0, 1);
-                    animator.SetLayerWeight(1, 0);
-                    animator.SetLayerWeight(2, 0);
-                }
-                break;
-
-            case PlayerState.Dodge:
-                animator.SetLayerWeight(2, 1);
-                animator.SetLayerWeight(0, 0);
-                animator.SetLayerWeight(1, 0);
-                break;
-        }
     }
 
     public void Movement()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
         movement = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
 
         if (moveHorizontal != 0 || moveVertical != 0)
@@ -117,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Walk", false);
         }
+
     }
 
     void Direction()
@@ -157,6 +138,57 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+
+
+
+    }
+
+    // Não apagar função abaixo - Teste futuro
+
+    /*private void OnDrawGizmos()
+    {
+        // Posição do jogador em mundo
+        Vector3 playerPosition = transform.position;
+
+        // Posição do mouse em mundo
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // Defina Z como 0 para 2D
+
+        // Direção do mouse
+        Vector3 mouseDirection = (mousePosition - playerPosition).normalized;
+
+        // Desenha a linha do jogador até a posição do mouse
+        Gizmos.color = Color.red; // Cor para a direção do mouse
+        Gizmos.DrawLine(playerPosition, mousePosition);
+    }*/
+
+    void JumpTable(Vector2 tableSize)
+    {
+        if (!nextTable) return;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rdb.AddRelativeForce(new Vector2(jumpTableVelocity, 0) * Time.deltaTime, ForceMode2D.Impulse);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("JumpableTable"))
+        {
+            nextTable = true;
+
+            RaycastHit2D hit;
+            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.right);
+
+            BoxCollider2D boxCollider2D = collision.gameObject.GetComponent<BoxCollider2D>();
+            if (boxCollider2D != null)
+                JumpTable(boxCollider2D.bounds.size);
+        }
+        else
+        {
+            nextTable = false;
+        }
     }
 
     IEnumerator Dodge()
@@ -165,11 +197,13 @@ public class PlayerMovement : MonoBehaviour
         isDodging = true;
 
         // Confere se o Player está em movimento.
-        float directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
-        float directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
+        float directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se o moveHorizontal for menor que 0.01 retorna 0, se não retorna +- 1.
+        float directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se o moveVertical for menor que 0.01 retorna 0, se não retorna +- 1.
 
         // Altera para a layer do Dodge.
-        state = PlayerState.Dodge;
+        animator.SetLayerWeight(2, 1);
+        animator.SetLayerWeight(1, 0);
+        animator.SetLayerWeight(0, 0);
 
         // Seta a animação de Dodge para ser chamada.
         animator.SetFloat("WalkHorizontal", Mathf.Abs(directionHorizontal));
@@ -186,39 +220,9 @@ public class PlayerMovement : MonoBehaviour
         isDodging = false;
 
         // Desativa a layer do Dodge.
-        state = PlayerState.Walk;
+        animator.SetLayerWeight(2, 0);
 
     }
 
-
-    void JumpTable(Vector2 tableSize)
-    {
-        if (!nextTable) return;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rdb.AddRelativeForce(new Vector2(jumpTableVelocity, 0) * Time.deltaTime, ForceMode2D.Impulse);
-        }
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("JumpableTable"))
-        {
-            bool canJump = (movement.x + movement.y) == 0 ? true : false;
-            nextTable = true;
-
-            RaycastHit2D hit;
-            hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.right);
-
-            BoxCollider2D boxCollider2D = collision.gameObject.GetComponent<BoxCollider2D>();
-            if (boxCollider2D != null)
-                JumpTable(boxCollider2D.bounds.size);
-        }
-        else
-        {
-            nextTable = false;
-        }
-    }
 }
 
