@@ -16,7 +16,9 @@ public class CameraToMouse : MonoBehaviour
     void Update()
     {
         if (!PauseMenu.isPaused) 
-        {
+        //if ((!PauseMenu.isPaused) || (!DialogueManager.isTalking)) 
+        if (!DialogueManager.isTalking)
+            {
             if (player != null)
             {
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
