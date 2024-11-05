@@ -71,10 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rdb.velocity = new Vector2(movement.x, movement.y);
         }
-<<<<<<< HEAD
-=======
-        //print(movement);
->>>>>>> 5ae49ed15900ba7075d304a4e4ac8ccc4a368cf8
+
     }
 
     // Configura a Layer do Player no animator.
