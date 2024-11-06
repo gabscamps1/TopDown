@@ -690,7 +690,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1040
       objectReference: {fileID: 0}
     - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 11190c1cdee92b844833792fe15cf598, type: 2}
+    - target: {fileID: 1621488953656099229, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1749108664707918725, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -784,13 +788,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3956094027169519603, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8804954236918332847, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8804954236918332847, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 992
+      value: 1013
       objectReference: {fileID: 0}
     - target: {fileID: 8804954236918332847, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2688,7 +2696,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'V 0.01
 
-    (C)2024 - tmp'
+    2024'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
   m_sharedMaterial: {fileID: 6269897833396249473, guid: a983bba097172574d83b0cf4a648cf33, type: 2}
@@ -7994,7 +8002,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1067165582}
-  - {fileID: 1383931957}
   - {fileID: 182053597}
+  - {fileID: 1383931957}
   - {fileID: 1059948354}
   - {fileID: 1860467504}

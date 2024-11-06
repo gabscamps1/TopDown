@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
 
             DisplayNextSentence();
             Debug.Log(isTalking);
+
             isTalking = true;
         }
     }
