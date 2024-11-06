@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class GunsPickup : MonoBehaviour
 {
-    [SerializeField] int selectGun; // Arma selecionada.
+    public int selectGun; // Arma selecionada.
     [SerializeField] float throwForce; // Força com que a arma será arremessada.
     public float damage; // Dano que o impacto da arma causará quando arremessada.
-    [SerializeField] GameObject[] inventory; // Inventário das armas.
+    public GameObject[] inventory; // Inventário das armas.
     [SerializeField] Transform gunPlaceholder; // Posição que as armas ficaram.
     public bool hasGun; // Confere se tem alguma arma no inventory. Usado para alterar animações no script de PlayerMovement.
     List<GameObject> gunList = new List<GameObject>(); // Lista das armas que estão no chão dentro do collider do GameObject ItemPlaceholder.

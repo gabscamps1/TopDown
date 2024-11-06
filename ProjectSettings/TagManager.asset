@@ -22,9 +22,9 @@ TagManager:
   - Gun
   - Enemy
   - Player
-  - PlayerChildren
+  - Invulnerability
   - SceneObjects
-  - Shot Through
+  - ShotThrough
   - NPC
   - 
   - 

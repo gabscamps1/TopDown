@@ -27,12 +27,18 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
     [Header("StatePlayer")]
-    private bool isDodging;
+    public bool isDodging;
     private bool canDodge = true;
     private bool isJumping;
     private Vector3 jumpDirection;
     private enum PlayerState {Walk, WalkG, Dodge};
     private PlayerState state = PlayerState.Walk;
+
+
+    private void Start()
+    {
+        
+    }
 
     private void Update()
     {
@@ -53,13 +59,13 @@ public class PlayerMovement : MonoBehaviour
             runPressed = 1;
         }
 
-        if (Input.GetKey(KeyCode.P))
-        {
-            SceneManager.LoadScene("TesteScene1");
-        }
         if (Input.GetKey(KeyCode.O))
         {
             SceneManager.LoadScene("TesteScene");
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            SceneManager.LoadScene("Tuorial 1");
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge)
@@ -141,23 +147,19 @@ public class PlayerMovement : MonoBehaviour
         if (dotProductUp > 0.7)
         {
             animator.SetBool("Up", true);
-            // lookDirection = Vector2.up;
         }
         else if (dotProductUp < 0.6)
         {
             animator.SetBool("Up", false);
-            // lookDirection = Vector2.right;
         }
 
         if (dotProductUp < -0.7)
         {
             animator.SetBool("Down", true);
-            // lookDirection = Vector2.down;
         }
         else if (dotProductUp > -0.6)
         {
             animator.SetBool("Down", false);
-            // lookDirection = Vector2.right;
         }
 
         if (dotProductRight > 0)
@@ -179,6 +181,14 @@ public class PlayerMovement : MonoBehaviour
         int directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
         int directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
 
+        // Desativa a arma.
+        GunsPickup gunsPickupScript = GetComponentInChildren<GunsPickup>();
+        if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null && (directionHorizontal != 0 || directionVertical != 0))
+        {
+            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(false);
+            gunsPickupScript.enabled = false;
+        }
+
         // Altera para a layer do Dodge.
         state = PlayerState.Dodge;
 
@@ -199,6 +209,12 @@ public class PlayerMovement : MonoBehaviour
         // Desativa a layer do Dodge.
         state = PlayerState.Walk;
 
+        // Ativa a arma.
+        if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null)
+        {
+            gunsPickupScript.enabled = true;
+            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true);
+        }
     }
 
 
@@ -227,10 +243,14 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+
+                // Inicia o Jump.
+                isJumping = true;
+
                 BoxCollider2D jumpCollider = jumpHit.collider.GetComponent<BoxCollider2D>();
                 Vector2 jumpSize = jumpCollider.bounds.size;
 
-                Vector2 targetPosition = (Vector2)transform.position + jumpSize * currentDirection;
+                Vector2 targetPosition = (Vector2)transform.position + jumpSize * currentDirection * 1.2f;
                 jumpDirection = (targetPosition - (Vector2)transform.position).normalized;
 
                 StartCoroutine(MoveToPosition(targetPosition));
@@ -245,16 +265,21 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator MoveToPosition(Vector2 targetPosition)
     {
         // Distância de erro para considerar que chegou ao destino.
-        while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.05f) 
+        while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.04f) 
         {
+            // Vai para Layer Invulnerability.
+            gameObject.layer = 9;
 
-            isJumping = true;
+           
 
-            yield return null; // Espera até o próximo frame
+            yield return null; // Espera até o próximo frame.
         }
 
-        // Quando o destino é alcançado, parar o movimento.
+        // Quando o destino é alcançado, para o Jump.
         isJumping = false;
+
+        // Quando o destino é alcançado, volta para Layer Player.
+        gameObject.layer = 8;
     }
 }
 

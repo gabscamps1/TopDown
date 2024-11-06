@@ -45,6 +45,7 @@ public class UnlockedDoors : MonoBehaviour
         if (doorAnimator != null)
         {
             doorAnimator.SetTrigger("Open");
+            this.enabled = false;
         }
 
     }
