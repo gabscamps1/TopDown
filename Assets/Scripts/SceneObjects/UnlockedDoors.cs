@@ -22,27 +22,29 @@ public class UnlockedDoors : MonoBehaviour
     void OpenDoor()
     {
         Transform doorTransform = transform.GetChild(0);
-        Collider2D doorCollider = doorTransform.GetComponent<Collider2D>();
-        NavMeshObstacle doorObstacle = doorTransform.GetComponent<NavMeshObstacle>();
 
         // Tira a porta como obstáculo.
+        NavMeshObstacle doorObstacle = doorTransform.GetComponent<NavMeshObstacle>();
+
         if (doorObstacle != null)
         {
             doorObstacle.enabled = false;
         }
-        
+
         // Tira a colisão da porta quando aberta.
+        Collider2D doorCollider = doorTransform.GetComponent<Collider2D>();
+
         if (doorCollider != null)
         {
             doorCollider.enabled = false;
         }
 
         // Toca a animação da porta abrindo.
-        Animation openDoorAnimation = GetComponentInChildren<Animation>();
+        Animator doorAnimator = GetComponentInChildren<Animator>();
 
-        if (openDoorAnimation != null)
+        if (doorAnimator != null)
         {
-            openDoorAnimation.Play("anim_OpeningDoor");
+            doorAnimator.SetTrigger("Open");
         }
 
     }

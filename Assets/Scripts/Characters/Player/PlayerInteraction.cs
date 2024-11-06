@@ -15,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         // Lançar o raycast na direção atual
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), currentDirection, raycastDistance, interactionLayer);
-        Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
+        // Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
             interactionIcon.SetActive(true);
@@ -41,7 +41,7 @@ public class PlayerInteraction : MonoBehaviour
     // Para visualizar o raycast na Scene
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + (Vector3)currentDirection * raycastDistance);
+        /*Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)currentDirection * raycastDistance);*/
     }
 }

@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("StatePlayer")]
     private bool isDodging;
+    private bool canDodge = true;
+    private bool isJumping;
+    private Vector3 jumpDirection;
     private enum PlayerState {Walk, WalkG, Dodge};
     private PlayerState state = PlayerState.Walk;
 
@@ -59,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("TesteScene");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isDodging)
+        if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge)
         {
             StartCoroutine(Dodge());
         }
@@ -67,14 +70,17 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!isDodging)
+        if (!isDodging && !isJumping)
         {
             rdb.velocity = new Vector2(movement.x, movement.y);
         }
-<<<<<<< HEAD
-=======
-        //print(movement);
->>>>>>> 5ae49ed15900ba7075d304a4e4ac8ccc4a368cf8
+
+        if (isJumping)
+        {
+            // Move o jogador suavemente até a posição
+            rdb.velocity = jumpDirection * playerSpeed;
+        }
+
     }
 
     // Configura a Layer do Player no animator.
@@ -170,15 +176,15 @@ public class PlayerMovement : MonoBehaviour
         isDodging = true;
 
         // Confere se o Player está em movimento.
-        float directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
-        float directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
+        int directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
+        int directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
 
         // Altera para a layer do Dodge.
         state = PlayerState.Dodge;
 
         // Seta a animação de Dodge para ser chamada.
-        animator.SetFloat("WalkHorizontal", Mathf.Abs(directionHorizontal));
-        animator.SetFloat("WalkVertical", directionVertical);
+        animator.SetInteger("WalkHorizontal", Mathf.Abs(directionHorizontal));
+        animator.SetInteger("WalkVertical", directionVertical);
 
         // Retorna a direção do movimento do Player.
         Vector2 dodgeMovement = new Vector2(directionHorizontal, directionVertical);
@@ -198,27 +204,57 @@ public class PlayerMovement : MonoBehaviour
 
     void JumpTable()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rdb.AddRelativeForce(new Vector2(jumpTableVelocity, 0) * Time.deltaTime, ForceMode2D.Impulse);
-        }
-
         Vector3 currentDirection = Vector3.zero;
         currentDirection = (Input.GetKey(KeyCode.D) ? Vector3.right : currentDirection);
         currentDirection = (Input.GetKey(KeyCode.A) ? Vector3.left : currentDirection);
         currentDirection = (Input.GetKey(KeyCode.W) ? Vector3.up : currentDirection);
         currentDirection = (Input.GetKey(KeyCode.S) ? Vector3.down : currentDirection);
 
-        float currentDistance;
-        currentDistance = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ? 3f : 0);
-        currentDistance = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ? 3f : 0);
+        float currentDistance = 0;
+        currentDistance = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ? 0.5f : currentDistance);
+        currentDistance = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ? 0.4f : currentDistance);
 
+        LayerMask jumpLayerMask = LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("ShotThrough");
         RaycastHit2D jumpHit;
-        jumpHit = Physics2D.Raycast(transform.position, transform.right, Mathf.Infinity);
-        Debug.DrawLine(transform.position, jumpHit.point);
+        jumpHit = Physics2D.Raycast(transform.position + Vector3.up * 0.5f, currentDirection, currentDistance, jumpLayerMask);
+        Debug.DrawLine(transform.position + Vector3.up * 0.5f, jumpHit.point);
 
-        print(jumpHit.point);
+        if(jumpHit.collider == null) return;
+
+        if (jumpHit.collider.CompareTag("JumpableTable"))
+        {
+            canDodge = false;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BoxCollider2D jumpCollider = jumpHit.collider.GetComponent<BoxCollider2D>();
+                Vector2 jumpSize = jumpCollider.bounds.size;
+
+                Vector2 targetPosition = (Vector2)transform.position + jumpSize * currentDirection;
+                jumpDirection = (targetPosition - (Vector2)transform.position).normalized;
+
+                StartCoroutine(MoveToPosition(targetPosition));
+            }
+        }
+        else
+        {
+            canDodge = true;
+        }
+    }
+
+    IEnumerator MoveToPosition(Vector2 targetPosition)
+    {
+        // Distância de erro para considerar que chegou ao destino.
+        while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.05f) 
+        {
+
+            isJumping = true;
+
+            yield return null; // Espera até o próximo frame
+        }
+
+        // Quando o destino é alcançado, parar o movimento.
+        isJumping = false;
     }
 }
 
