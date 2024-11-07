@@ -52,3 +52,6 @@ TagManager:
   - name: SceneObjects
     uniqueID: 1442872551
     locked: 0
+  - name: SceneObjectsTop
+    uniqueID: 2130173627
+    locked: 0

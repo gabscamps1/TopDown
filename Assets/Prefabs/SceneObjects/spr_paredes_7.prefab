@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7692336949989769522}
   - component: {fileID: 4033998539568872080}
   - component: {fileID: 9093693212105187743}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spr_paredes_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4627583677375744464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.577, y: 3.29, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1442872551
-  m_SortingLayer: 1
+  m_SortingLayerID: 2130173627
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 854346684, guid: 0a560dac00af685418dea12575cb7d1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
