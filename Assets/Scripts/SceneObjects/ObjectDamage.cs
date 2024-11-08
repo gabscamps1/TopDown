@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
-public class EnemyDamage : MonoBehaviour
+public class ObjectDamage : MonoBehaviour
 {
     [SerializeField] private Collider2D damageCollider;
     [SerializeField] private float lives;
@@ -44,13 +44,10 @@ public class EnemyDamage : MonoBehaviour
         }
     }
 
-
     // Função que causa dano ao Inimigo.
     void CallDamage(float damage)
     {
-        StartCoroutine(Blink());
-
-        // Diminui a vida do Inimigo.
+        // Diminui a vida do objeto.
         lives -= damage;
 
         // Destrói o Enemy quando lives é 0.
@@ -60,22 +57,6 @@ public class EnemyDamage : MonoBehaviour
         }
     }
 
-    // Pisca o Enemy em vermelho quando o Enemy recebe dano.
-    IEnumerator Blink()
-    {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (!renderer)
-        {
-            renderer = GetComponentInChildren<SpriteRenderer>();
-        }
-        renderer.color = new Color(1, 0, 0);
-
-        yield return new WaitForSeconds(0.1f);
-
-        renderer.color = new Color(1, 1, 1);
-
-        yield return new WaitForSeconds(0.1f);
-    }
 
 
 }

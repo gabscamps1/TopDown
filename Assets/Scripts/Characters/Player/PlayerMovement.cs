@@ -122,9 +122,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        movement = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
+        int moveHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
+        int moveVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
+
+        // Movimento quando o Player anda na Diagonal.
+        Vector2 moveDiagonal = new Vector2((Mathf.Sqrt(2) / 2) * moveHorizontal, (Mathf.Sqrt(2) / 2) * moveVertical) * playerSpeed * runPressed;
+
+        // Movimento quando o Player anda em só um Vetor.
+        Vector3 moveNormal = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
+
+        // Armazena o Movimento do Player.
+        movement = (moveHorizontal != 0 && moveVertical != 0) ? moveDiagonal : moveNormal;
 
         if (moveHorizontal != 0 || moveVertical != 0)
         {
@@ -134,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Walk", false);
         }
+        
     }
 
     void Direction()
