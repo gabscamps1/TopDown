@@ -8,7 +8,7 @@ using static UnityEngine.ParticleSystem;
 public class PlayerDamage : MonoBehaviour
 {
     [SerializeField]
-    private float lives;
+    public float lives;
 
     private void OnParticleCollision(GameObject particle)
     {
