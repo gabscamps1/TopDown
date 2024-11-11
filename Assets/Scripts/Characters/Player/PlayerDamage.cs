@@ -15,7 +15,7 @@ public class PlayerDamage : MonoBehaviour
         // Caso a particula com a Tag GunEnemy acerte o Player a função CallDamage é chamada.
         if (particle.CompareTag("GunEnemy"))
         {
-            CallDamage(particle.GetComponentInParent<GunsEnemy>().damage);
+            CallDamage(1);
         }
     }
 

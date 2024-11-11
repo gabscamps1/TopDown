@@ -186,6 +186,9 @@ public class PlayerMovement : MonoBehaviour
         // Impede ações durante o Dodge.
         isDodging = true;
 
+        // Vai para Layer Invulnerability.
+        gameObject.layer = 9;
+
         // Confere se o Player está em movimento.
         int directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
         int directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
@@ -224,6 +227,9 @@ public class PlayerMovement : MonoBehaviour
             gunsPickupScript.enabled = true;
             gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true);
         }
+
+        // volta para Layer Player.
+        gameObject.layer = 8;
     }
 
 
@@ -278,8 +284,6 @@ public class PlayerMovement : MonoBehaviour
         {
             // Vai para Layer Invulnerability.
             gameObject.layer = 9;
-
-           
 
             yield return null; // Espera até o próximo frame.
         }
