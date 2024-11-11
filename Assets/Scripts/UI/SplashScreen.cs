@@ -37,10 +37,10 @@ public class SplashScreen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             // Carrega a cena "MainMenu" ao pressionar a barra de espaço
             SceneManager.LoadScene("MainMenu");
-        }
+        }*/
     }
 }

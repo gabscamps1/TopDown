@@ -11,48 +11,40 @@ public class PauseMenu : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
+
         pauseMenu.SetActive(false);
         
-
     }
 
     // Update is called once per frame
     void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "MainMenu")
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isOpen)
-                {
-                    PopupOpen();
-                }
-                else
-                {
-                    PopupClose();
-                }
+        if (currentScene.name == "MainMenu"){
+            
+                if (Input.GetKeyDown(KeyCode.Escape)) {
 
-            }
+                    if (isOpen) {
+                        PopupOpen();
+                    } else {
+                        PopupClose();
+                    }
+
+                }
+            
+
+        }else{
+            if (!DialogueManager.isTalking){ 
+                if (Input.GetKeyDown(KeyCode.Escape)){
+                    if (isPaused){
+                        ResumeGame();
+                    }else{
+                        PauseGame();
+                    }
+                }
+             }
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isPaused)
-                {
-                    ResumeGame();
-                }
-                else
-                {
-                    PauseGame();
-                }
-
-            }
-        }
-
     }
 
     public void PopupOpen()
@@ -87,9 +79,9 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void GoToMainMenu() {
-        Time.timeScale = 1f;
-        isPaused = false;
-        SceneManager.LoadScene("MainMenu");
+        //Time.timeScale = 1f;
+        //isPaused = false;
+        //SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame() {
         Application.Quit();

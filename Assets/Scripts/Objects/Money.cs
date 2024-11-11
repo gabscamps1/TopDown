@@ -10,6 +10,6 @@ public class Money : MonoBehaviour
     void Start()
     {
         // Calcula a quantia de dinheiro.
-        moneyAmount = Random.Range(3,6);
+        moneyAmount = Random.Range(1,6);
     }
 }

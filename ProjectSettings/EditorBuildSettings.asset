@@ -20,10 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneB.unity
     guid: 771308c644025014181003c5fda37aad
-  - enabled: 0
-    path: Assets/Scenes/TesteScene.unity
-    guid: 36847af63c99e2e4e8ea8dc8203d7068
-  - enabled: 0
-    path: Assets/Scenes/TesteScene1.unity
-    guid: eba02f41652370d449f1ee270a20a31d
+  - enabled: 1
+    path: Assets/Scenes/DialogueRoom.unity
+    guid: e4739188fc1fdbc4d8013bc8ea4e04c4
   m_configObjects: {}
