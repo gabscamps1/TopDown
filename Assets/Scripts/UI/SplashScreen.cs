@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour
 {
@@ -33,14 +31,5 @@ public class SplashScreen : MonoBehaviour
             textComponent.color = color;
             yield return null;
         }
-    }
-
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Carrega a cena "MainMenu" ao pressionar a barra de espaço
-            SceneManager.LoadScene("MainMenu");
-        }*/
     }
 }
