@@ -19,12 +19,21 @@ public class CameraToMouse : MonoBehaviour
         //if ((!PauseMenu.isPaused) || (!DialogueManager.isTalking)) 
         if (!DialogueManager.isTalking)
             {
-            if (player != null)
-            {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 distance = mousePosition - player.transform.position + (Vector3.up * 0.5f);
-                transform.position = new Vector3(player.transform.position.x + (distance.x / 7f), player.transform.position.y + 0.5f + (distance.y / 3.5f), -10);
+                if (player != null)
+                {
+                    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector3 distance = mousePosition - player.transform.position + (Vector3.up * 0.5f);
+
+                    // Calcula a posição desejada
+                    Vector3 targetPosition = new Vector3(
+                        player.transform.position.x + (distance.x / 7f),
+                        player.transform.position.y + 0.5f + (distance.y / 3.5f),
+                        -10
+                    );
+
+                    // Interpola para a posição desejada usando Time.unscaledDeltaTime para ignorar o timeScale
+                    transform.position = Vector3.Lerp(transform.position, targetPosition, 5f * Time.unscaledDeltaTime);
+                }
             }
-        }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,68 +9,55 @@ public class PauseMenu : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         pauseMenu.SetActive(false);
         
-
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "MainMenu")
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isOpen)
-                {
-                    PopupOpen();
-                }
-                else
-                {
-                    PopupClose();
-                }
+        if (currentScene.name == "MainMenu"){
+            
+                if (Input.GetKeyDown(KeyCode.Escape)){
 
-            }
+                    if (isOpen) {
+                        PopupOpen();
+                    } else {
+                        PopupClose();
+                    }
+
+                }
+            
+
+        }else{
+            if (!DialogueManager.isTalking){ 
+                if (Input.GetKeyDown(KeyCode.Escape)){
+                    if (isPaused){
+                        ResumeGame();
+                    }else{
+                        PauseGame();
+                    }
+                }
+             }
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isPaused)
-                {
-                    ResumeGame();
-                }
-                else
-                {
-                    PauseGame();
-                }
-
-            }
-        }
-
     }
 
-    public void PopupOpen()
-    {
+    public void PopupOpen(){
         pauseMenu.SetActive(true);
 
-       
         isOpen = true;
     }
 
 
-    public void PopupClose()
-    {
+    public void PopupClose(){
         pauseMenu.SetActive(false);
         
         isOpen = false;
     }
 
 
-    public void PauseGame() {
+    public void PauseGame(){
         pauseMenu.SetActive(true);
        
         Time.timeScale = 0f;
@@ -80,20 +65,19 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    public void ResumeGame() {
+    public void ResumeGame(){
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
 
-    public void GoToMainMenu() {
-        Time.timeScale = 1f;
-        isPaused = false;
-        SceneManager.LoadScene("MainMenu");
+    public void GoToMainMenu(){
+        //Time.timeScale = 1f;
+        //isPaused = false;
+        //SceneManager.LoadScene("MainMenu");
     }
-    public void QuitGame() {
+    public void QuitGame(){
         Application.Quit();
-
     }
 
 }

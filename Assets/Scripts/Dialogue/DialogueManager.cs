@@ -39,26 +39,29 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-
-        if (isTalking == false) { 
-            dialogueEffects?.ResetDialogPosition();
-            dialogueEffects?.TriggerFadeOut();
-            animator.SetBool("IsOpen", true);
-            PortraitAnimation.SetBool("IsOpen", true);
-            nameText.text = dialogue.name;
-
-            sentences.Clear();
-
-            foreach (SentenceData sentenceData in dialogue.sentences)
+        if (!PauseMenu.isPaused)
+        {
+            if (isTalking == false)
             {
-                sentences.Enqueue(sentenceData);
+                dialogueEffects?.ResetDialogPosition();
+                dialogueEffects?.TriggerFadeOut();
+                animator.SetBool("IsOpen", true);
+                PortraitAnimation.SetBool("IsOpen", true);
+                nameText.text = dialogue.name;
+
+                sentences.Clear();
+
+                foreach (SentenceData sentenceData in dialogue.sentences)
+                {
+                    sentences.Enqueue(sentenceData);
+                }
+
+
+                DisplayNextSentence();
+                Debug.Log(isTalking);
+
+                isTalking = true;
             }
-
-
-            DisplayNextSentence();
-            Debug.Log(isTalking);
-
-            isTalking = true;
         }
     }
 
