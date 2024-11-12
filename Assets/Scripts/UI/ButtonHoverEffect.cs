@@ -5,20 +5,22 @@ using TMPro;
 public class ButtonHoverEffectTMP : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public TextMeshProUGUI buttonText; // O componente TextMeshProUGUI do botão
-    public TMP_FontAsset hoverFont;      // A fonte a ser usada no hover
-    public TMP_FontAsset defaultFont;    // A fonte padrão
+    //public TMP_FontAsset hoverFont;      // A fonte a ser usada no hover
+    //public TMP_FontAsset defaultFont;    // A fonte padrão
     private Color originalColor;
 
     void Start()
     {
+        RemoveUnderline();
         // Salva a cor original do texto
         originalColor = buttonText.color;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        RemoveUnderline();
         // Muda a fonte e a cor do texto
-        buttonText.font = hoverFont;
+        //buttonText.font = hoverFont;
         buttonText.color = Color.white; // Muda a cor do texto para vermelho
         AddUnderline();
     }
@@ -26,7 +28,7 @@ public class ButtonHoverEffectTMP : MonoBehaviour, IPointerEnterHandler, IPointe
     public void OnPointerExit(PointerEventData eventData)
     {
         // Restaura a fonte e a cor original do texto
-        buttonText.font = defaultFont;
+        //buttonText.font = defaultFont;
         buttonText.color = originalColor; // Restaura a cor original
         RemoveUnderline();
     }

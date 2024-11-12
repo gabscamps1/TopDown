@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameData gameData; // Referência do GameData.
     public GameObject player; // Referência do Player em cena.
+    public LevelLoader levelLoader; // Referência do Level Loader.
     public int money; // Recebe o valor do script ItensPickUp do Player.
    
 

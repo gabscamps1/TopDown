@@ -14,6 +14,23 @@ public class UIManager : MonoBehaviour
     private int secondaryMaxAmmo;
     [SerializeField] TMP_Text secondaryAmmo;
 
+    [Header("Weapons")]
+    [SerializeField] Image Slot1;
+    [SerializeField] Image Slot2;
+
+    [SerializeField] Sprite[] Weapon;
+
+        ///0 - Sem Arma 
+        ///1 - Pistola
+        ///2 - Thompson
+        ///3 - Escopeta
+        ///4 - M1917
+        ///5 - Revólver
+        ///6 - Soco Inglês
+        ///7 - Face 
+        ///8 - Pé de Cabra
+        ///9 
+
 
     [Header("ReloadIcon")]
 
@@ -51,6 +68,7 @@ public class UIManager : MonoBehaviour
                 GunsPlayer primaryGun = primarySlot.GetComponentInChildren<GunsPlayer>();
                 if (primaryGun != null)
                 {
+                    print(primaryGun.name);
                     primaryMaxAmmo = primaryGun.maxAmmo;
                     primaryCurrentAmmo = primaryGun.currentAmmo;
 
@@ -58,6 +76,7 @@ public class UIManager : MonoBehaviour
                 }
             }
             else {
+                Slot1.sprite = Weapon[0];
                 primaryAmmo.text = "";
             }
             
@@ -74,6 +93,7 @@ public class UIManager : MonoBehaviour
                 }
             }
             else {
+                Slot2.sprite = Weapon[0];
                 secondaryAmmo.text = "";
             }
 

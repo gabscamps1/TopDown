@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6a68ae47cf720346874e753adfbdf65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 871e7e84ae8a2bf4bbde08e5fe1ffbbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3638,6 +3638,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryAmmo: {fileID: 258915310}
   secondaryAmmo: {fileID: 504448144}
+  Slot1: {fileID: 1550185478}
+  Slot2: {fileID: 2117266032}
+  Weapon:
+  - {fileID: 21300000, guid: f6c41ae06a6cd3643b68d07c6c6bf4b0, type: 3}
+  - {fileID: 21300000, guid: 1beb59fb579d1de43bb0d1972a1d5f5a, type: 3}
+  - {fileID: 607672551, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: 1907197724, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: 1680835685, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: -1240727997, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: -749963454, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: -2126585620, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
+  - {fileID: 908704555, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
   NumberOfHearts: 3
   Hearts:
   - {fileID: 2003884969}

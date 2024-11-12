@@ -40,6 +40,14 @@ public class ObjectDamage : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Função que causa dano ao Inimigo.
     void CallDamage(float damage)
     {

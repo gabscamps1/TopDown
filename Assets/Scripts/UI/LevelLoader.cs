@@ -25,6 +25,11 @@ public class LevelLoader : MonoBehaviour
        StartCoroutine(LoadLevelInteger(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void LoadSpecificLevel(string levelName)
+    {
+        StartCoroutine(LoadLevelString(levelName));
+    }
+
     public void NewGame(){
         StartCoroutine(LoadLevelString("Tutorial 1"));
     }
