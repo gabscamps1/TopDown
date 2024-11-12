@@ -65,11 +65,14 @@ public class SceneObjectOrder : MonoBehaviour
         // Determina o sortingOrder do player com base na posição y em relação aos objetos
         foreach (GameObject obj in objects)
         {
-            float objY = obj.transform.position.y;
-
-            if (playerY < objY)
+            if (obj != null)
             {
-                sortingOrder -= 3; // Fica atrás de objetos mais altos
+                float objY = obj.transform.position.y;
+
+                if (playerY < objY)
+                {
+                    sortingOrder -= 3; // Fica atrás de objetos mais altos
+                }
             }
         }
 
@@ -111,11 +114,14 @@ public class SceneObjectOrder : MonoBehaviour
             // Determina o sortingOrder do player com base na posição y em relação aos objetos
             foreach (GameObject obj in objects)
             {
-                float objY = obj.transform.position.y;
-
-                if (enemyY < objY)
+                if (obj != null)
                 {
-                    sortingOrder -= 3; // Fica atrás de objetos mais altos
+                    float objY = obj.transform.position.y;
+
+                    if (enemyY < objY)
+                    {
+                        sortingOrder -= 3; // Fica atrás de objetos mais altos
+                    }
                 }
             }
 
