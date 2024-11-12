@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: spr_barril 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8359613365453135058, guid: 7d3fb4993113dea478690023b3b3aa7c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359613365453135058, guid: 7d3fb4993113dea478690023b3b3aa7c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2130173627
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
