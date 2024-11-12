@@ -4,7 +4,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float raycastDistance = 2f;
     public LayerMask interactionLayer;
-    public GameObject interactionIcon;
+
 
     private Vector2 currentDirection = Vector2.up; // Direção inicial, pode ser mudada pelo movimento do jogador.
 
@@ -15,7 +15,8 @@ public class PlayerInteraction : MonoBehaviour
         // Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
-            interactionIcon.SetActive(true);
+            //hit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(true);
+
 
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -25,7 +26,8 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            interactionIcon.SetActive(false);
+            //hit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(false);
+
         }
 
         // Exemplo de troca de direção com base na entrada
