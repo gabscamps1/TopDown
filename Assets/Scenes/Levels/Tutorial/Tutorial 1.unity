@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783fce52df85c05429235ddc4a3ea36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1714443426}
+  pauseMenu: {fileID: 1884039616}
 --- !u!1001 &251772950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3480,11 +3480,6 @@ Transform:
   - {fileID: 971531644}
   m_Father: {fileID: 114684445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1714443426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6315272753378884534, guid: dffa11d96e8b47348ab278c9c52f608d, type: 3}
-  m_PrefabInstance: {fileID: 1170589961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1715243636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2127156954885263241, guid: 24be0bc58719c864ba8b44cfae505bb4, type: 3}
@@ -3743,6 +3738,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e7f740c0e34e94cbb0f34f67541e5c, type: 3}
+--- !u!1 &1884039616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6920386841880784790, guid: dffa11d96e8b47348ab278c9c52f608d, type: 3}
+  m_PrefabInstance: {fileID: 1170589961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1898331953
 PrefabInstance:
   m_ObjectHideFlags: 0

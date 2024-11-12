@@ -20,6 +20,7 @@ public class GunsPlayer : MonoBehaviour
     private float timeReloadPerBullet; // Tempo para recarregar uma unidade de munição.
     [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.
     public float damage; // Dano causado no Inimigo. É chamado pelo script Damage.
+    public Sprite hudIcon; //Ícone da Arma que aparece na HUD.
 
     [Header("StateGun")]
     // public bool canReload = true;

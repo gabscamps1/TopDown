@@ -175,9 +175,11 @@ MonoBehaviour:
   player: {fileID: 0}
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 6
+  maxAmmo: 0
   timePerBullet: 1.2
   bulletSpeed: 10
   damage: 4
+  hudIcon: {fileID: 1907197724, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
   isReloading: 0
   isHold: 0
   isAutomatic: 0

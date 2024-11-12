@@ -14,11 +14,13 @@ public class UIManager : MonoBehaviour
     private int secondaryMaxAmmo;
     [SerializeField] TMP_Text secondaryAmmo;
 
-    [Header("Weapons")]
+    [Header("Weapon Icons")]
     [SerializeField] Image Slot1;
     [SerializeField] Image Slot2;
+    [SerializeField] Sprite noWeapon;
+    [SerializeField] Sprite unkwnownWeapon;
 
-    [SerializeField] Sprite[] Weapon;
+    /*[[SerializeField] Sprite[] Weapon;
 
         ///0 - Sem Arma 
         ///1 - Pistola
@@ -29,7 +31,7 @@ public class UIManager : MonoBehaviour
         ///6 - Soco Inglês
         ///7 - Face 
         ///8 - Pé de Cabra
-        ///9 
+        ///9 */
 
 
     [Header("ReloadIcon")]
@@ -72,11 +74,21 @@ public class UIManager : MonoBehaviour
                     primaryMaxAmmo = primaryGun.maxAmmo;
                     primaryCurrentAmmo = primaryGun.currentAmmo;
 
+                    if (!primaryGun.hudIcon)
+                    {
+                        Slot1.sprite = unkwnownWeapon;
+
+                    }
+                    else {
+                        Slot1.sprite = primaryGun.hudIcon;
+                    }
+                    
+
                     primaryAmmo.text = primaryCurrentAmmo.ToString() + "/<size=50%>" + primaryMaxAmmo.ToString();
                 }
             }
             else {
-                Slot1.sprite = Weapon[0];
+                Slot1.sprite = noWeapon;
                 primaryAmmo.text = "";
             }
             
@@ -89,11 +101,21 @@ public class UIManager : MonoBehaviour
                     secondaryMaxAmmo = SecondaryGun.maxAmmo;
                     secondaryCurrentAmmo = SecondaryGun.currentAmmo;
 
+                    if (!SecondaryGun.hudIcon)
+                    {
+                        Slot2.sprite = unkwnownWeapon;
+
+                    }
+                    else
+                    {
+                        Slot2.sprite = SecondaryGun.hudIcon;
+                    }
+
                     secondaryAmmo.text = secondaryCurrentAmmo.ToString() + "/<size=50%>" + secondaryMaxAmmo.ToString();
                 }
             }
             else {
-                Slot2.sprite = Weapon[0];
+                Slot2.sprite = noWeapon;
                 secondaryAmmo.text = "";
             }
 
