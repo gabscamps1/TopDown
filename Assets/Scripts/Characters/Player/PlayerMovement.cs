@@ -19,8 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movement;
     [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
     [SerializeField] float dodgeVelocity; // Velocidade do Dodge.
-    private bool nextTable;
-    private Vector2 lookDirection;
 
     [Header("InfoToGuns")]
     [HideInInspector] public float dotProductRight; // dotProduct para direita em relação ao ponteiro do mouse. O valor do dotProductRight é passado para o script Guns.
@@ -28,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("StatePlayer")]
     public bool isDodging;
-    private bool canDodge = true;
+    [SerializeField] bool canDodge = true;
     private bool isJumping;
     private Vector3 jumpDirection;
     private enum PlayerState {Walk, WalkG, Dodge};
@@ -42,11 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        States();
+
         Movement();
-
-        Direction();
-
-        Layers();
 
         JumpTable();
 
@@ -78,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDodging && !isJumping)
         {
-            rdb.velocity = new Vector2(movement.x, movement.y);
+            rdb.velocity = new Vector2(movement.x, movement.y) * playerSpeed * runPressed;
         }
 
         if (isJumping)
@@ -89,12 +85,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // Configura a Layer do Player no animator.
-    void Layers()
+    // Configura o Player de acordo com o State.
+    void States()
     {
         switch (state)
         {
             case PlayerState.Walk:
+
                 // Se o Player estiver com a arma na mão.
                 if (GetComponentInChildren<GunsPickup>().hasGun == true)
                 {
@@ -110,6 +107,8 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetLayerWeight(1, 0);
                     animator.SetLayerWeight(2, 0);
                 }
+
+                Direction(); // Jogador rotaciona na direção do Mouse.
                 break;
 
             case PlayerState.Dodge:
@@ -126,10 +125,10 @@ public class PlayerMovement : MonoBehaviour
         int moveVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
 
         // Movimento quando o Player anda na Diagonal.
-        Vector2 moveDiagonal = new Vector2((Mathf.Sqrt(2) / 2) * moveHorizontal, (Mathf.Sqrt(2) / 2) * moveVertical) * playerSpeed * runPressed;
+        Vector2 moveDiagonal = new Vector2((Mathf.Sqrt(2) / 2) * moveHorizontal, (Mathf.Sqrt(2) / 2) * moveVertical);
 
         // Movimento quando o Player anda em só um Vetor.
-        Vector3 moveNormal = new Vector2(moveHorizontal, moveVertical) * playerSpeed * runPressed;
+        Vector3 moveNormal = new Vector2(moveHorizontal, moveVertical);
 
         // Armazena o Movimento do Player.
         movement = (moveHorizontal != 0 && moveVertical != 0) ? moveDiagonal : moveNormal;
@@ -189,43 +188,44 @@ public class PlayerMovement : MonoBehaviour
         // Vai para Layer Invulnerability.
         gameObject.layer = 9;
 
+        // Coloca o Player na rotação inicial.
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
         // Confere se o Player está em movimento.
         int directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
         int directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
 
-        // Desativa a arma.
+        // Se o Player estiver em movimento durante a coroutine Dodge.
         GunsPickup gunsPickupScript = GetComponentInChildren<GunsPickup>();
         if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null && (directionHorizontal != 0 || directionVertical != 0))
         {
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(false);
-            gunsPickupScript.enabled = false;
+            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(false); // Desativa a arma.
+            gunsPickupScript.enabled = false; // Desativa o GunsPickup.
         }
 
         // Altera para a layer do Dodge.
         state = PlayerState.Dodge;
 
         // Seta a animação de Dodge para ser chamada.
-        animator.SetInteger("WalkHorizontal", Mathf.Abs(directionHorizontal));
+        animator.SetInteger("WalkHorizontal", directionHorizontal);
         animator.SetInteger("WalkVertical", directionVertical);
 
-        // Retorna a direção do movimento do Player.
-        Vector2 dodgeMovement = new Vector2(directionHorizontal, directionVertical);
-
         // Aplica a força na direção do movimento do Player.
-        rdb.AddRelativeForce(dodgeMovement * dodgeVelocity, ForceMode2D.Impulse);
-
-        yield return new WaitForSeconds(0.4f);
-
-        isDodging = false;
+        rdb.AddRelativeForce(movement * dodgeVelocity, ForceMode2D.Impulse);
+        
+        while (isDodging)
+        {
+            yield return new WaitForEndOfFrame();
+        }
 
         // Desativa a layer do Dodge.
         state = PlayerState.Walk;
 
-        // Ativa a arma.
+        // Se tiver arma na mão do Player.
         if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null)
         {
-            gunsPickupScript.enabled = true;
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true);
+            gunsPickupScript.enabled = true; // Ativa o GunsPickup.
+            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true); // Ativa a arma.
         }
 
         // volta para Layer Player.
@@ -247,10 +247,14 @@ public class PlayerMovement : MonoBehaviour
 
         LayerMask jumpLayerMask = LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("ShotThrough");
         RaycastHit2D jumpHit;
-        jumpHit = Physics2D.Raycast(transform.position + Vector3.up * 0.5f, currentDirection, currentDistance, jumpLayerMask);
-        Debug.DrawLine(transform.position + Vector3.up * 0.5f, jumpHit.point);
+        jumpHit = Physics2D.Raycast(transform.position + Vector3.up * 0.125f, currentDirection, currentDistance, jumpLayerMask);
+        Debug.DrawLine(transform.position + Vector3.up * 0.125f, jumpHit.point);
 
-        if(jumpHit.collider == null) return;
+        if (jumpHit.collider == null)
+        {
+            canDodge = true;
+            return;
+        }
 
         if (jumpHit.collider.CompareTag("JumpableTable"))
         {
@@ -279,11 +283,16 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator MoveToPosition(Vector2 targetPosition)
     {
+        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+
         // Distância de erro para considerar que chegou ao destino.
         while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.04f) 
         {
             // Vai para Layer Invulnerability.
-            gameObject.layer = 9;
+            gameObject.layer = 13;
+
+            // O Player fica sobre os Objetos no cenário.
+            playerSprite.sortingLayerName = "SceneObjectsTop";
 
             yield return null; // Espera até o próximo frame.
         }
@@ -293,6 +302,9 @@ public class PlayerMovement : MonoBehaviour
 
         // Quando o destino é alcançado, volta para Layer Player.
         gameObject.layer = 8;
+
+        // O Player volta a renderização padrão.
+        playerSprite.sortingLayerName = "SceneObjects";
     }
 }
 
