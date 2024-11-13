@@ -26,7 +26,7 @@ public class Fog : MonoBehaviour
     void Update()
     {
         // Se a fog estiver desativada, ative todos os objetos do dentro da Fog.
-       if (!isFogActive && countTimerToDesativeFog < 0)
+       if (!isFogActive && countTimerToDesativeFog <= 0)
         {
             foreach (var obj in objects)
             {

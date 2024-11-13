@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6778929871353616560}
   - component: {fileID: 2268108501449623833}
   - component: {fileID: 7737305345536815868}
-  m_Layer: 10
+  - component: {fileID: 5569307507910348461}
+  - component: {fileID: -8439885869078500129}
+  m_Layer: 2
   m_Name: spr_barril_explosivo
-  m_TagString: Breakable
+  m_TagString: SceneObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,3 +132,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.78704965, y: 0.5}
   m_EdgeRadius: 0
+--- !u!58 &5569307507910348461
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868928835821591222}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
+--- !u!114 &-8439885869078500129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868928835821591222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b374363d42db0be47af4a2e6462a0631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 2
+  areaExplosion: {fileID: 5569307507910348461}
+  damage: 100

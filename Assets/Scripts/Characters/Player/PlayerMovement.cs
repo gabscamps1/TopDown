@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("Tuorial 1");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge)
+        if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && (movement.x != 0 || movement.y != 0))
         {
             StartCoroutine(Dodge());
         }

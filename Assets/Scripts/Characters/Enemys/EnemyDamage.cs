@@ -5,7 +5,7 @@ using static UnityEngine.ParticleSystem;
 public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] private Collider2D damageCollider;
-    [SerializeField] private float lives;
+    public float lives;
 
     private void OnParticleCollision(GameObject particle)
     {
@@ -43,7 +43,7 @@ public class EnemyDamage : MonoBehaviour
 
 
     // Função que causa dano ao Inimigo.
-    void CallDamage(float damage)
+    public void CallDamage(float damage)
     {
         StartCoroutine(Blink());
 
