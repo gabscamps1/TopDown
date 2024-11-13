@@ -75,10 +75,6 @@ public class GunsPlayer : MonoBehaviour
                 // Segurar para atirar.
                 if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
-                    SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
-
-
-
                     Shoot();
                 }
             }
@@ -87,7 +83,6 @@ public class GunsPlayer : MonoBehaviour
                 // Apertar para atirar.
                 if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
-                    SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
                     Shoot();
                 }
             }

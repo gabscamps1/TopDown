@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 48bab76fc9d4f09449d546efdf5c3e00
+guid: 336be5e3104c67e4099a61cfa88492ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,41 +106,57 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_Enemy1_Idle_0
+      name: spr_Fighter_Attack_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
+        y: 67
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6d0ff683b9f3a46b90914e6c2d28b0
+      internalID: 840866536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 67
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1675668a69c8cbb4c90305f19e5365d8
+      internalID: 2044606254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 67
         width: 22
         height: 32
       alignment: 7
@@ -150,19 +166,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57b82a9a5fd21594da84b3038223d58b
-      internalID: 465258989
+      spriteID: 39b32f7df84b04a45add98124fa1bd7a
+      internalID: -1458029331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_Enemy1_Idle_1
+      name: spr_Fighter_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ba83c8a8a55a442950062474837e96
+      internalID: -1798618026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_4
       rect:
         serializedVersion: 2
         x: 24
-        y: 0
-        width: 22
+        y: 34
+        width: 23
         height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -171,18 +208,81 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e3645ea023a63d43b4cedd64cac91d9
-      internalID: -465827717
+      spriteID: dcb8a837eb8a34148b09e915a06f5bf8
+      internalID: 348386493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_Enemy1_Idle_2
+      name: spr_Fighter_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb9679c43f95d947923662ec06bbe94
+      internalID: -753255763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27e0b67ad2d4354e8022e039060abc3
+      internalID: -918430551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426ea317fb179c340b777d68fdead9a0
+      internalID: -722077812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_Fighter_Attack_8
       rect:
         serializedVersion: 2
         x: 47
-        y: 0
+        y: 1
         width: 23
         height: 32
       alignment: 7
@@ -192,29 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b098e19b312fc4daad95ba507c65dd
-      internalID: 1419823203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_Enemy1_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 0
-        width: 23
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fa06586bf4adcd4b8a0b843282553be
-      internalID: 686450974
+      spriteID: e9876477389a6f842aa96fa0fad3dc02
+      internalID: -1998617176
       vertices: []
       indices: 
       edges: []
@@ -230,10 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_Enemy1_Idle_0: 465258989
-      spr_Enemy1_Idle_1: -465827717
-      spr_Enemy1_Idle_2: 1419823203
-      spr_Enemy1_Idle_3: 686450974
+      spr_Fighter_Attack_0: 840866536
+      spr_Fighter_Attack_1: 2044606254
+      spr_Fighter_Attack_2: -1458029331
+      spr_Fighter_Attack_3: -1798618026
+      spr_Fighter_Attack_4: 348386493
+      spr_Fighter_Attack_5: -753255763
+      spr_Fighter_Attack_6: -918430551
+      spr_Fighter_Attack_7: -722077812
+      spr_Fighter_Attack_8: -1998617176
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

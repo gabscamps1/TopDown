@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Fog : MonoBehaviour
 {
-    private bool isFogActive = true; // Confere se a Fog está ativa.
     [SerializeField] BoxCollider2D areaFog; // Tamanho da área da Fog. Usado para desativar os Inimigos que estiverem dentro da área.
     [SerializeField] BoxCollider2D disableFog; // Área para desativar a Fog.
     private Collider2D[] objects; // Guarda os Inimigos que estiverem dentro da área da Fog.

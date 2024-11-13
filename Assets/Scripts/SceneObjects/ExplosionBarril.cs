@@ -49,7 +49,7 @@ public class ExplosionBarril : MonoBehaviour
             if (character.CompareTag("Player"))
             {
                 PlayerDamage playerScript = character.GetComponent<PlayerDamage>();
-                playerScript.lives--;
+                playerScript.CallDamage(1);
 
             }
 

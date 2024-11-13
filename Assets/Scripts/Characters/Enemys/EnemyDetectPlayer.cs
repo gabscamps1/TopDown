@@ -52,7 +52,7 @@ public class EnemyDetectPlayer : MonoBehaviour
 
     void Direction()
     {
-        Vector3 playerDirection = (player.transform.position - transform.position).normalized;
+        Vector3 playerDirection = (player.transform.position - transform.parent.position).normalized;
         dotProductRight = Vector3.Dot(Vector3.right, playerDirection);
         float dotProductUp = Vector3.Dot(Vector3.up, playerDirection);
 
@@ -62,8 +62,8 @@ public class EnemyDetectPlayer : MonoBehaviour
         if (dotProductUp < -0.5) animator.SetBool("Down", true);
         else animator.SetBool("Down", false);
 
-        if (dotProductRight > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
-        else transform.rotation = Quaternion.Euler(0, 180, 0);
+        if (dotProductRight > 0) transform.parent.rotation = Quaternion.Euler(0, 0, 0);
+        else transform.parent.rotation = Quaternion.Euler(0, 180, 0);
     }
 
 }

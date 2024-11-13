@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,7 +11,9 @@ public class FighterFollow : MonoBehaviour
     Animator animator; // Referêmcia do Animator.
     [SerializeField] float moveSpeed; // Velocidade do Inimigo
     [SerializeField] float stopSpeed; // Velocidade do Inimigo recarregando.
-
+    [SerializeField] Collider2D damageArea; // Área que causa dano ao Inimigo.
+    bool canCauseDamage;
+    bool stopEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,20 +29,56 @@ public class FighterFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (stopEnemy) return;
+
+        CalculateAction();
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player = collision.gameObject;
+        }
+
+        if (collision.CompareTag("Player") && collision.IsTouching(damageArea))
+        {
+            canCauseDamage = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.IsTouching(damageArea))
+        {
+            canCauseDamage = false;
+        }
+    }
+
+    void CalculateAction()
+    {
         if (player == null) return;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
+        LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject"); // Layers para serem detectadas no raycast.
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 0.4f, ~ignoreLayermask);
+        hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 1.3f, layermask);
         Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
 
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Player"))
             {
+                // Para o movimento do Inimigo.
                 agent.ResetPath();
+
+                // Para a animação de Walk.
                 animator.SetBool("Walk", false);
+
+                StartCoroutine(WaitToMove());
+
+                // Inicia a animação de Ataque.
+                animator.SetTrigger("Attack");
             }
             else
             {
@@ -52,17 +91,54 @@ public class FighterFollow : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player = collision.gameObject;
-        }
-    }
-
     void FollowPlayer()
     {
         agent.SetDestination(player.transform.position);
         animator.SetBool("Walk", true);
+    }
+
+    void Attack(string direction)
+    {
+        // Pega posição do Player em relação ao Inimigo.
+        Vector2 playerDirection = (player.transform.position - transform.position).normalized;
+
+        // Pega a direção do ataque do Inimigo.
+        Vector2 attackDirection = Vector2.zero;
+
+        switch (direction)
+        {
+            case "Up":
+                attackDirection = Vector2.up;
+                break;
+            case "Down":
+                attackDirection = Vector2.down;
+                break;
+            case "Right":
+                attackDirection = Vector2.right;
+                break;
+            case "Left":
+                attackDirection = Vector2.left;
+                break;
+        }
+
+        // Calcula o dotProduct da direção do player em relação a direção de ataque do Inimigo.
+        float dotProduct = Vector3.Dot(attackDirection, playerDirection);
+        
+        if (dotProduct >= 0.4 && canCauseDamage)
+        {
+            PlayerDamage playerScript = player.GetComponent<PlayerDamage>();
+            playerScript.CallDamage(1);
+        }
+
+        animator.ResetTrigger("Attack");
+    }
+
+    IEnumerator WaitToMove()
+    {
+        stopEnemy = true;
+
+        yield return new WaitForSeconds(stopSpeed);
+
+        stopEnemy = false;
     }
 }

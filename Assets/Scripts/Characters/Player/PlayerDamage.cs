@@ -21,7 +21,7 @@ public class PlayerDamage : MonoBehaviour
     }
 
     // Função que causa dano ao Inimigo.
-    void CallDamage(float damage)
+    public void CallDamage(float damage)
     {
         StartCoroutine(Blink());
         SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);

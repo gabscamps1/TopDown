@@ -37,8 +37,8 @@ public class GunsEnemy : MonoBehaviour
         var mainFireParticle = fireParticle.main;
         mainFireParticle.startSpeed = bulletSpeed; // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
 
-        // Pegar o código do Inimigo parent da Arma.
-        enemyScript = GetComponentInParent<EnemyDetectPlayer>();
+        // Pegar o código EnemyDetectPlayer do filho DetectPlayer do parent da Arma.
+        enemyScript = transform.parent.GetComponentInChildren<EnemyDetectPlayer>();
     }
 
     private void OnEnable()
@@ -108,10 +108,12 @@ public class GunsEnemy : MonoBehaviour
             // Rotacionar a arma em volta do Inimigo dependendo da posição do Player.
             if (enemyScript.dotProductRight > 0)
             {
+               
                 transform.rotation = Quaternion.Euler(0, transform.rotation.y, -angle + 90 + angleVarianceR);
             }
             else
             {
+
                 transform.rotation = Quaternion.Euler(180, transform.rotation.y, angle - 80 + angleVariance);
             }
         }
