@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7737305345536815868}
   - component: {fileID: 5569307507910348461}
   - component: {fileID: -8439885869078500129}
-  m_Layer: 2
+  m_Layer: 14
   m_Name: spr_barril_explosivo
   m_TagString: SceneObject
   m_Icon: {fileID: 0}

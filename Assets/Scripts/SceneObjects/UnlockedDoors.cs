@@ -48,5 +48,6 @@ public class UnlockedDoors : MonoBehaviour
             this.enabled = false;
         }
 
+        doorTransform.gameObject.layer = 11;
     }
 }

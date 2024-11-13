@@ -10,12 +10,12 @@ public class SceneObjectOrder : MonoBehaviour
     void Start()
     {
         player = GameManager.instance.player;
-        AdjustSortingOrder();
     }
 
     // Update is called once per frame
     void Update()
     {
+        AdjustSortingOrder();
         AdjustEnemySortingOrder();
         AdjustPlayerSortingOrder();
     }

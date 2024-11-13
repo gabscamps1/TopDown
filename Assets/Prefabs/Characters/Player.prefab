@@ -329,7 +329,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1207549169966607347
 MonoBehaviour:
@@ -345,13 +345,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rdb: {fileID: 4795744522364625412}
   animator: {fileID: 4429867644762803864}
-  playerCollider: {fileID: 0}
   playerSpeed: 4.8
   runSpeed: 1.5
   jumpTableVelocity: 0
   dodgeVelocity: 29
   dotProductRight: 0
   dotProductUp: 0
+  isDodging: 0
+  canDodge: 1
 --- !u!114 &5241981099960403969
 MonoBehaviour:
   m_ObjectHideFlags: 0

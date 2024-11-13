@@ -14,32 +14,11 @@ public class Fog : MonoBehaviour
     void Start()
     {
         // Pega todos os objetos dentro da Fog e coloca no array.
-        objects = Physics2D.OverlapBoxAll(transform.position, areaFog.size, 0);
-        foreach (var obj in objects)
-        {
-            if (obj.CompareTag("Enemy"))
-            {
-                obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
-            }
-        }
-    }
-    void Update()
-    {
-        // Se a fog estiver desativada, ative todos os objetos do dentro da Fog.
-       if (!isFogActive && countTimerToDesativeFog <= 0)
-        {
-            foreach (var obj in objects)
-            {
-                obj.gameObject.SetActive(true);   
-            }
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            countTimerToDesativeFog--;
-        }
+        objects = Physics2D.OverlapBoxAll(transform.position, transform.localScale, 0);
 
+        HideObjects();
     }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,7 +26,51 @@ public class Fog : MonoBehaviour
         if (collision.CompareTag("Player") && collision.IsTouching(disableFog))
         {
             countTimerToDesativeFog = timerToDesativeFog;
-            isFogActive = false;
+            AppearObjects();
+            
+        }
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Desativa a Fog se o Player entrar na area disableFog.
+        if (collision.CompareTag("Player") && !collision.IsTouching(disableFog))
+        {
+            HideObjects();
+        }
+        
+    }
+
+    void HideObjects()
+    {
+        
+        foreach (var obj in objects)
+        {
+            if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject"))
+            {
+                obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
+            }
+        }
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
+    }
+
+    void AppearObjects()
+    {
+
+        // Se a fog estiver desativada, ative todos os objetos do dentro da Fog.
+        if (countTimerToDesativeFog <= 0)
+        {
+            foreach (var obj in objects)
+            {
+                obj.gameObject.SetActive(true);
+            }
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
+        }
+        else
+        {
+            countTimerToDesativeFog--;
         }
     }
 }

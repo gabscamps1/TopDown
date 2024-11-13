@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 8d8164b384cb784419aef4ae344e432f, type: 2}
-  player: {fileID: 3903222704392435275, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
-  levelLoader: {fileID: 279711147244162356, guid: e621db93f3009e840bd613465f984cab, type: 3}
+  player: {fileID: 0}
+  levelLoader: {fileID: 0}
   money: 0
 --- !u!114 &5354852892208028282
 MonoBehaviour:
