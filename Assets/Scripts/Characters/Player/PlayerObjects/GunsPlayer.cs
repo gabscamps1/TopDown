@@ -22,6 +22,11 @@ public class GunsPlayer : MonoBehaviour
     public float damage; // Dano causado no Inimigo. É chamado pelo script Damage.
     public Sprite hudIcon; //Ícone da Arma que aparece na HUD.
 
+    [Header("Gun Sound")]
+    [SerializeField] private AudioClip gunShootSound;
+    
+
+
     [Header("StateGun")]
     // public bool canReload = true;
     [SerializeField] bool isReloading = false; // Confere se a arma está recarregando
@@ -33,6 +38,7 @@ public class GunsPlayer : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         areaGun = GetComponent<Collider2D>();
 
@@ -69,6 +75,10 @@ public class GunsPlayer : MonoBehaviour
                 // Segurar para atirar.
                 if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
+                    SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
+
+
+
                     Shoot();
                 }
             }
@@ -77,6 +87,7 @@ public class GunsPlayer : MonoBehaviour
                 // Apertar para atirar.
                 if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
                 {
+                    SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
                     Shoot();
                 }
             }
