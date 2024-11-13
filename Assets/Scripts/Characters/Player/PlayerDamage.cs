@@ -6,6 +6,10 @@ public class PlayerDamage : MonoBehaviour
 {
     [SerializeField]
     public float lives;
+    public GameObject deathScreen;
+
+    [Header("Player Sounds")]
+    [SerializeField] private AudioClip playerDamageSound;
 
     private void OnParticleCollision(GameObject particle)
     {
@@ -20,12 +24,14 @@ public class PlayerDamage : MonoBehaviour
     void CallDamage(float damage)
     {
         StartCoroutine(Blink());
-
+        SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
         lives -= damage;
 
         // Destrói o Player quando lives é 0.
         if (lives <= 0)
         {
+            //deathScreen.SetActive(true);
+
             Destroy(gameObject);
         }
     }
