@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
 
 
     [Header("ReloadIcon")]
+    [SerializeField] Slider ReloadSlider;
 
 
 
