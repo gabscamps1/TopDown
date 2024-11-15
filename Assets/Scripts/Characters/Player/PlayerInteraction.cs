@@ -2,26 +2,49 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float raycastDistance = 2f;
+    private float raycastDistance = 1.2f;
     public LayerMask interactionLayer;
+    public Vector2 currentDirection = Vector2.right; // Direção inicial, alterada usando dotProduct do PlayerMovement.
 
 
-    private Vector2 currentDirection = Vector2.up; // Direção inicial, pode ser mudada pelo movimento do jogador.
 
     void Update()
     {
+        // Pega a direção que o Player está olhando;
+        PlayerMovement playerMovementScript = GetComponent<PlayerMovement>();
+        if (playerMovementScript.dotProductUp > 0.7)
+        {
+            currentDirection = Vector2.up;
+        }
+        else if (playerMovementScript.dotProductUp < -0.7)
+        {
+            currentDirection = Vector2.down;
+        }
+        else if (playerMovementScript.dotProductUp < 0.6 && playerMovementScript.dotProductUp > -0.6)
+        {
+            currentDirection = transform.right;
+        }
+
         // Lançar o raycast na direção atual
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), currentDirection, raycastDistance, interactionLayer);
-        // Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
+        Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
-            //hit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(true);
+            // Dhit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(true);
 
 
             if (Input.GetKeyDown(KeyCode.F))
             {
+                
+                switch(hit.collider.gameObject.name)
+                {
+                    case "Barwoman":
+                        print("ola");
+                        break;
+                }
+
                 // Chama um método no script Trigger do objeto detectado
-                hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
+                // hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
             }
         }
         else
@@ -30,17 +53,8 @@ public class PlayerInteraction : MonoBehaviour
 
         }
 
-        // Exemplo de troca de direção com base na entrada
-        if (Input.GetKeyDown(KeyCode.W)) currentDirection = Vector2.up;
-        if (Input.GetKeyDown(KeyCode.S)) currentDirection = Vector2.down;
-        if (Input.GetKeyDown(KeyCode.A)) currentDirection = Vector2.left;
-        if (Input.GetKeyDown(KeyCode.D)) currentDirection = Vector2.right;
-    }
+       
 
-    // Para visualizar o raycast na Scene
-    private void OnDrawGizmos()
-    {
-        /*Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + (Vector3)currentDirection * raycastDistance);*/
+
     }
 }

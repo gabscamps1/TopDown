@@ -991,7 +991,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &515721796
@@ -1656,7 +1656,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &878352954
@@ -3349,6 +3349,7 @@ GameObject:
   - component: {fileID: 1638441626}
   - component: {fileID: 1638441625}
   - component: {fileID: 1638441624}
+  - component: {fileID: 1638441628}
   m_Layer: 12
   m_Name: NPC Tucano (1)
   m_TagString: SceneObject
@@ -3371,7 +3372,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -3462,8 +3463,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1442872551
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1179247890, guid: 726f0ee048af3e747b07d7aabf69364e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3493,6 +3494,41 @@ Transform:
   - {fileID: 355666857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1638441628
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638441623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0016381143, y: 0.17059858}
+  m_Size: {x: 0.7735232, y: 0.3665091}
+  m_Direction: 1
 --- !u!224 &1664491761 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8618533087049972994, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
@@ -3785,10 +3821,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f83567f85d73841a9e9fd1807beb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastDistance: 2
   interactionLayer:
     serializedVersion: 2
-    m_Bits: 4224
+    m_Bits: 4096
+  currentDirection: {x: 1, y: 0}
 --- !u!1 &1892068648
 GameObject:
   m_ObjectHideFlags: 0

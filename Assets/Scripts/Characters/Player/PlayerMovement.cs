@@ -33,11 +33,6 @@ public class PlayerMovement : MonoBehaviour
     private PlayerState state = PlayerState.Walk;
 
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         States();
@@ -154,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (dotProductUp > 0.7)
         {
-            animator.SetBool("Up", true);
+            animator.SetBool("Up", true);   
         }
         else if (dotProductUp < 0.6)
         {
@@ -164,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         if (dotProductUp < -0.7)
         {
             animator.SetBool("Down", true);
+            
         }
         else if (dotProductUp > -0.6)
         {

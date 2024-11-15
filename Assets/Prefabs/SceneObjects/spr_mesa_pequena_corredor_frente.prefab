@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1535484658958439563}
   - component: {fileID: 2650672310790782754}
   - component: {fileID: 5809579696550568096}
+  - component: {fileID: 6837809539954328807}
   m_Layer: 11
   m_Name: spr_mesa_pequena_corredor_frente
   m_TagString: SceneObject
@@ -130,3 +131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.75471497}
   m_EdgeRadius: 0
+--- !u!208 &6837809539954328807
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946517277110631244}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 0.563, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.39400002, z: 0}
+  m_TimeToStationary: 0.5

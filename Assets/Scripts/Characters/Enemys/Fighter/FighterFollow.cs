@@ -10,8 +10,8 @@ public class FighterFollow : MonoBehaviour
     NavMeshAgent agent; // Referêmcia do NavMeshAgent.
     Animator animator; // Referêmcia do Animator.
     [SerializeField] float moveSpeed; // Velocidade do Inimigo
-    [SerializeField] float stopSpeed; // Velocidade do Inimigo recarregando.
-    [SerializeField] Collider2D damageArea; // Área que causa dano ao Inimigo.
+    [SerializeField] float stopSpeed; // Velocidade do Inimigo recarregando o ataque.
+    [SerializeField] Collider2D damageArea; // Área que o Inimigo pode causar dano ao Player.
     bool canCauseDamage;
     bool stopEnemy;
     // Start is called before the first frame update
@@ -75,10 +75,11 @@ public class FighterFollow : MonoBehaviour
                 // Para a animação de Walk.
                 animator.SetBool("Walk", false);
 
-                StartCoroutine(WaitToMove());
-
                 // Inicia a animação de Ataque.
                 animator.SetTrigger("Attack");
+
+                // Tempo de espera entre os ataque de perto do Inimigo.
+                StartCoroutine(WaitToMove());
             }
             else
             {
@@ -91,12 +92,17 @@ public class FighterFollow : MonoBehaviour
         }
     }
 
+    // Função para seguir o Player.
     void FollowPlayer()
     {
+        // SubBoss se move até o Player.
         agent.SetDestination(player.transform.position);
+
+        // Seta a animação de andar para true.
         animator.SetBool("Walk", true);
     }
 
+    // Função de ataque. Chamada na animação de ataque do Inimigo.
     void Attack(string direction)
     {
         // Pega posição do Player em relação ao Inimigo.
@@ -104,7 +110,6 @@ public class FighterFollow : MonoBehaviour
 
         // Pega a direção do ataque do Inimigo.
         Vector2 attackDirection = Vector2.zero;
-
         switch (direction)
         {
             case "Up":
@@ -114,22 +119,19 @@ public class FighterFollow : MonoBehaviour
                 attackDirection = Vector2.down;
                 break;
             case "Right":
-                attackDirection = Vector2.right;
-                break;
-            case "Left":
-                attackDirection = Vector2.left;
+                attackDirection = transform.right;
                 break;
         }
 
         // Calcula o dotProduct da direção do player em relação a direção de ataque do Inimigo.
         float dotProduct = Vector3.Dot(attackDirection, playerDirection);
-        
         if (dotProduct >= 0.4 && canCauseDamage)
         {
             PlayerDamage playerScript = player.GetComponent<PlayerDamage>();
             playerScript.CallDamage(1);
         }
 
+        // Finaliza a animação de ataque.
         animator.ResetTrigger("Attack");
     }
 

@@ -71,7 +71,6 @@ public class UIManager : MonoBehaviour
                 GunsPlayer primaryGun = primarySlot.GetComponentInChildren<GunsPlayer>();
                 if (primaryGun != null)
                 {
-                    print(primaryGun.name);
                     primaryMaxAmmo = primaryGun.maxAmmo;
                     primaryCurrentAmmo = primaryGun.currentAmmo;
 

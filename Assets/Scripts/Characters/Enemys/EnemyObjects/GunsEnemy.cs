@@ -10,8 +10,8 @@ public class GunsEnemy : MonoBehaviour
     private EnemyDetectPlayer enemyScript;
 
     [Header("InfoGun")]
-    [SerializeField] int currentAmmo; // Munição atual na arma.
-    private int maxAmmo; // Quantidade máxima de munição da arma carregada.
+    public int currentAmmo; // Munição atual na arma.
+    [HideInInspector] public int maxAmmo; // Quantidade máxima de munição da arma carregada.
     [SerializeField] float timePerBullet = 0f; // Tempo entre cada saída de tiro.
     private float countTimePerBullet;
     [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.

@@ -89,8 +89,6 @@ public class ShooterFollow : MonoBehaviour
 
         Vector3 perpendicularDirection = new Vector2(-direction.y,direction.x).normalized;
 
-        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-
         // Move para o lado por um tempo definido.
         float elapsedTime = 0f;
         float duration = gunScript.reloadTime/4; // Duração da movimentação para um lado é a metade do tempo de recarga.
