@@ -180,7 +180,7 @@ MonoBehaviour:
   bulletSpeed: 10
   damage: 2
   hudIcon: {fileID: 607672551, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
-  gunShootSound: {fileID: 8300000, guid: 1e44fdcebd3e12342a35f8875cd707cf, type: 3}
+  gunShootSound: {fileID: 8300000, guid: ed3d5b35e671a54458a479cc81c06ad1, type: 3}
   isReloading: 0
   isHold: 0
   isAutomatic: 1

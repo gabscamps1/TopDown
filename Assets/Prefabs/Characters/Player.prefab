@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 4795744522364625412}
   - component: {fileID: 1207549169966607347}
   - component: {fileID: 5241981099960403969}
+  - component: {fileID: 3192959737674056327}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -367,9 +368,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 0}
-  lives: 1000
-  invulnerabilityTime: 0
+  lives: 3
+  invulnerabilityTime: 1.5
   playerDamageSound: {fileID: 8300000, guid: 9fa1926773d14e248ac80a487c14f3d7, type: 3}
+--- !u!114 &3192959737674056327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903222704392435275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f83567f85d73841a9e9fd1807beb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 4224
+  currentDirection: {x: 1, y: 0}
+  interactionIcon: {fileID: 8349287424691616818}
+  dialogueBubbleSound: {fileID: 8300000, guid: 93c1e819f7ae59b4db5268364ef826f7, type: 3}
 --- !u!1 &3975358721332335920
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965d37530062d1240a94163b2675c07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyPickupSound: {fileID: 0}
+  moneyPickupSound: {fileID: 8300000, guid: b1f2cd18062199e47973ccdf3ed17c8d, type: 3}
 --- !u!58 &1634956095844460332
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -561,8 +580,8 @@ Transform:
   m_GameObject: {fileID: 8349287424691616818}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.218, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: 0, y: 1.29, z: 0}
+  m_LocalScale: {x: 2.51, y: 2.51, z: 2.51}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6613662134105500048}
@@ -608,7 +627,7 @@ SpriteRenderer:
   m_SortingLayerID: 2130173627
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ebdbf0d2413362429810fe2336891ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05a2c214c117c0440b5d738ab93fd69b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public GameObject interactionIcon;
 
+    [SerializeField] public AudioClip dialogueBubbleSound;
+
 
     void Update()
     {
@@ -41,11 +43,12 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     case "Barwoman":
                         print("ola");
+                        hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
                         break;
                 }
 
                 // Chama um método no script Trigger do objeto detectado
-                // hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
+                // 
             }
         }
         else
@@ -61,6 +64,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (isDrawing) {
             interactionIcon.SetActive(true);
+            //SoundFXManager.instance.PlaySoundFXClip(dialogueBubbleSound, transform, 1f);
         }
         else
         {
