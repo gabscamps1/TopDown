@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: a78be64c61107704e943680048a6f136
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 27
+        width: 21
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c51e9c9b4d108446b69f88de21da4ee
+      internalID: 668571877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 24
+        width: 21
+        height: 36
+      alignment: 9
+      pivot: {x: 1, y: 0.0835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25219435d343324ca606609ce77aa7e
+      internalID: -1249897705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_2
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 21
+        width: 21
+        height: 39
+      alignment: 9
+      pivot: {x: 1, y: 0.1543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8448ec93b1b95e040b1bc7bb1e512498
+      internalID: -1530430054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 19
+        width: 21
+        height: 41
+      alignment: 9
+      pivot: {x: 1, y: 0.1957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac28b09e1d1f2c947a2847702c371aad
+      internalID: -843973422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_4
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 17
+        width: 21
+        height: 43
+      alignment: 9
+      pivot: {x: 1, y: 0.2328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cc314c3224c404798cd17767f93ad8
+      internalID: -1002024415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 16
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 1, y: 0.2493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d720c02af832c498070d5318f6dac9
+      internalID: -2047985815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 16
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 1, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ee41b335822fc46ab3922dfecfed62
+      internalID: -2046274193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 16
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 0.904, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f378886a8b0b14fa1e4bf5cf6ff724
+      internalID: 2057452612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_porta_abrindo_baixo_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 16
+        width: 21
+        height: 44
+      alignment: 9
+      pivot: {x: 0.6675, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cfcdab232029044970cf38642dce29
+      internalID: 1755002430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spr_porta_abrindo_baixo_0: 668571877
+      spr_porta_abrindo_baixo_1: -1249897705
+      spr_porta_abrindo_baixo_2: -1530430054
+      spr_porta_abrindo_baixo_3: -843973422
+      spr_porta_abrindo_baixo_4: -1002024415
+      spr_porta_abrindo_baixo_5: -2047985815
+      spr_porta_abrindo_baixo_6: -2046274193
+      spr_porta_abrindo_baixo_7: 2057452612
+      spr_porta_abrindo_baixo_8: 1755002430
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

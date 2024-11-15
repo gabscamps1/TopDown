@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: a3e5475424d56c44a985a99d7dda0f79
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: subchefe_walk_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 102
+        width: 24
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3235ac473310a49a7dc4df67b777d3
+      internalID: -417425660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_36
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 102
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbb62ad04f908b448591b6cfeb635b5
+      internalID: -945184987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_37
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 102
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd19c36c1a97c144ebea38dce2c97918
+      internalID: 420851914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_38
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 102
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b3379c388e06c4989469d93def35f1
+      internalID: 1805499057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_39
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 102
+        width: 24
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355012861b603fa4aac7862858d290a9
+      internalID: -1283132399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_40
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 102
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14744ecc59f7abd4a9e14379890efb89
+      internalID: -1210442526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_41
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 102
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d3be8ac2afa3140b52b70eba077025
+      internalID: -406729106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b34a04e65b624b9b872b2c5dc295d
+      internalID: 741432384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_43
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 62
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d109bf6532072e4aa0edf9a3b14c95e
+      internalID: -100250231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_44
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 62
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6092c4b377cd5bb41b0df46ffcd0b265
+      internalID: 1524322059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_45
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 62
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733c441377381bb4db96304b8640e708
+      internalID: 1538306837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 62
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9823e2d6d1bf12d46b2404bbb9ffccf9
+      internalID: -965429635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_47
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 62
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfdb7902caeeae4598263ea167df1e3
+      internalID: 87976682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_48
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 62
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d4d70939003614b850fadf4445bbd5
+      internalID: -660859180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_49
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 22
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc196aee7e184a4439d638692730a5a8
+      internalID: 1087110419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_50
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 22
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad721b03825f8d746931d4b3bf3002d2
+      internalID: -931047697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_51
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 22
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9df5e69d9868e642a6883228c4c35ab
+      internalID: 258825563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_52
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 22
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b17bf3639e54754781e35cd4a825871
+      internalID: 1871321612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_53
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 22
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1963fbb463269ff4a852b4364fc493c6
+      internalID: 523636949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_54
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 22
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cccde482a20f7846ace5e2382ca88d6
+      internalID: 663365711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_walk_55
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 22
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90af6d1ca8a8da4458a2814638206e9b
+      internalID: 1887341437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      subchefe_walk_0: -355318232
+      subchefe_walk_1: 1703345513
+      subchefe_walk_10: -551594514
+      subchefe_walk_11: 1511018970
+      subchefe_walk_12: -938784103
+      subchefe_walk_13: -870943600
+      subchefe_walk_14: -623304919
+      subchefe_walk_15: -243624260
+      subchefe_walk_16: -1641590203
+      subchefe_walk_17: 248669848
+      subchefe_walk_18: -1520533010
+      subchefe_walk_19: 1420433905
+      subchefe_walk_2: -430328894
+      subchefe_walk_20: 1996784157
+      subchefe_walk_21: 372752156
+      subchefe_walk_22: -870419775
+      subchefe_walk_23: -1974010571
+      subchefe_walk_24: -541392598
+      subchefe_walk_25: 558698937
+      subchefe_walk_26: -496167560
+      subchefe_walk_27: 1037770758
+      subchefe_walk_28: -34871043
+      subchefe_walk_29: -775065018
+      subchefe_walk_3: 594440085
+      subchefe_walk_30: -1404845387
+      subchefe_walk_31: -1887746025
+      subchefe_walk_32: 993491745
+      subchefe_walk_33: -794990104
+      subchefe_walk_34: -1557557599
+      subchefe_walk_35: -417425660
+      subchefe_walk_36: -945184987
+      subchefe_walk_37: 420851914
+      subchefe_walk_38: 1805499057
+      subchefe_walk_39: -1283132399
+      subchefe_walk_4: -1692965941
+      subchefe_walk_40: -1210442526
+      subchefe_walk_41: -406729106
+      subchefe_walk_42: 741432384
+      subchefe_walk_43: -100250231
+      subchefe_walk_44: 1524322059
+      subchefe_walk_45: 1538306837
+      subchefe_walk_46: -965429635
+      subchefe_walk_47: 87976682
+      subchefe_walk_48: -660859180
+      subchefe_walk_49: 1087110419
+      subchefe_walk_5: 918335541
+      subchefe_walk_50: -931047697
+      subchefe_walk_51: 258825563
+      subchefe_walk_52: 1871321612
+      subchefe_walk_53: 523636949
+      subchefe_walk_54: 663365711
+      subchefe_walk_55: 1887341437
+      subchefe_walk_6: 1238077664
+      subchefe_walk_7: -1618790667
+      subchefe_walk_8: -1634918549
+      subchefe_walk_9: 315398854
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

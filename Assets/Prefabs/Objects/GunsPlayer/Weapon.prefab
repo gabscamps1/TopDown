@@ -176,7 +176,7 @@ MonoBehaviour:
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 12
   maxAmmo: 0
-  timePerBullet: 0.3
+  timePerBullet: 0.2
   bulletSpeed: 10
   damage: 4
   hudIcon: {fileID: 21300000, guid: 1beb59fb579d1de43bb0d1972a1d5f5a, type: 3}

@@ -108,7 +108,7 @@ public class SubBoss_Attack : MonoBehaviour
     void LongeRangeAttack()
     {
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject"); // Layers para serem detectadas no raycast.
+        LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, layermask);
         Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
 

@@ -4,9 +4,12 @@ using static UnityEngine.ParticleSystem;
 
 public class PlayerDamage : MonoBehaviour
 {
-    [SerializeField]
-    public float lives;
+    [Header("References")]
     public GameObject deathScreen;
+
+    [Header("InfoDamagePlayer")]
+    public float lives;
+    [SerializeField] float invulnerabilityTime;
 
     [Header("Player Sounds")]
     [SerializeField] private AudioClip playerDamageSound;
@@ -23,8 +26,16 @@ public class PlayerDamage : MonoBehaviour
     // Função que causa dano ao Inimigo.
     public void CallDamage(float damage)
     {
+        // Inicia a coroutine de piscar o Player em vermelho.
         StartCoroutine(Blink());
+
+        // Chama o Som de receber dano.
         SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
+
+        // Torna o Player invulneravel durante determinado tempo.
+        StartCoroutine(Invulnerability());
+
+        // Diminui a vida do Player.
         lives -= damage;
 
         // Destrói o Player quando lives é 0.
@@ -51,6 +62,16 @@ public class PlayerDamage : MonoBehaviour
         renderer.color = new Color(1, 1, 1);
 
         yield return new WaitForSeconds(0.1f);
+    }
+
+    // Torna o PLayer invulneravel durante determinado tempo.
+    IEnumerator Invulnerability()
+    {
+        gameObject.layer = 9;
+
+        yield return new WaitForSeconds(invulnerabilityTime);
+
+        gameObject.layer = 8;
     }
 
 

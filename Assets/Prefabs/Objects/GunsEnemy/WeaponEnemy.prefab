@@ -128,7 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 12
-  timePerBullet: 0.3
+  maxAmmo: 0
+  timePerBullet: 0.2
   bulletSpeed: 10
   reloadTime: 2
   damage: 1
