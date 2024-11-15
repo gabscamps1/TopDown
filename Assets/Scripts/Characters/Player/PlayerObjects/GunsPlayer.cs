@@ -90,6 +90,7 @@ public class GunsPlayer : MonoBehaviour
             // Inicia o processo de recarga se a munição for zero e não estiver reloading.
             if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading)
             {
+
                 StartCoroutine(Recarregar());
             }
         }
@@ -104,6 +105,7 @@ public class GunsPlayer : MonoBehaviour
     // Chama a função de Tiro.
     void Shoot()
     {
+        SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
         fireParticle.Emit(1);
         currentAmmo--; // Reduz a munição ao disparar.
         countTimePerBullet = timePerBullet; // Reseta o delay para atirar.

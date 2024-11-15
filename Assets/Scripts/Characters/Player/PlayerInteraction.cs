@@ -6,6 +6,7 @@ public class PlayerInteraction : MonoBehaviour
     public LayerMask interactionLayer;
     public Vector2 currentDirection = Vector2.right; // Direção inicial, alterada usando dotProduct do PlayerMovement.
 
+    public GameObject interactionIcon;
 
 
     void Update()
@@ -30,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
-            // Dhit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(true);
+            DrawInteractionIcon(true);
 
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -49,11 +50,24 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            //hit.collider.gameObject.GetComponent<DialogueTrigger>().DrawInteractionIcon(false);
+            DrawInteractionIcon(false);
 
         }
 
-       
+    }
+
+    
+    public void DrawInteractionIcon(bool isDrawing)
+    {
+        if (isDrawing) {
+            interactionIcon.SetActive(true);
+        }
+        else
+        {
+            interactionIcon.SetActive(false);
+
+        }
+
 
 
     }

@@ -24,7 +24,7 @@ public class PlayerDamage : MonoBehaviour
     public void CallDamage(float damage)
     {
         StartCoroutine(Blink());
-        
+        SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
         lives -= damage;
 
         // Destrói o Player quando lives é 0.

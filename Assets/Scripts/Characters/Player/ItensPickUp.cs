@@ -6,11 +6,15 @@ using UnityEngine;
 
 public class ItensPickUp : MonoBehaviour
 {
+    [SerializeField] private AudioClip moneyPickupSound;
+
     // Chama a função quando algum GameObject entra no cenário.
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Money"))
         {
+            SoundFXManager.instance.PlaySoundFXClip(moneyPickupSound, transform, 1f);
+
             Money moneyObject = collision.GetComponent<Money>(); // Pega o Script do Money
 
             if (GameManager.instance != null)
