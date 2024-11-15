@@ -1,9 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 
 public class PlayerDamage : MonoBehaviour
 {
+<<<<<<< HEAD
     [Header("References")]
     public GameObject deathScreen;
 
@@ -11,9 +13,14 @@ public class PlayerDamage : MonoBehaviour
     public float lives;
     [SerializeField] float invulnerabilityTime;
 
+=======
+    [SerializeField]
+    public float lives;
+   
+>>>>>>> 0c355c755bc32c287ad0a10c0fa793a4add31eeb
     [Header("Player Sounds")]
     [SerializeField] private AudioClip playerDamageSound;
-
+  
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunEnemy acerte o Player a função CallDamage é chamada.
@@ -41,8 +48,6 @@ public class PlayerDamage : MonoBehaviour
         // Destrói o Player quando lives é 0.
         if (lives <= 0)
         {
-            //deathScreen.SetActive(true);
-
             Destroy(gameObject);
         }
     }
@@ -63,6 +68,7 @@ public class PlayerDamage : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
     }
+<<<<<<< HEAD
 
     // Torna o PLayer invulneravel durante determinado tempo.
     IEnumerator Invulnerability()
@@ -75,4 +81,6 @@ public class PlayerDamage : MonoBehaviour
     }
 
 
+=======
+>>>>>>> 0c355c755bc32c287ad0a10c0fa793a4add31eeb
 }

@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class UIManager : MonoBehaviour
 {
     [Header("WeaponGauge")]
@@ -20,24 +19,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Sprite noWeapon;
     [SerializeField] Sprite unkwnownWeapon;
 
-    /*[[SerializeField] Sprite[] Weapon;
-
-        ///0 - Sem Arma 
-        ///1 - Pistola
-        ///2 - Thompson
-        ///3 - Escopeta
-        ///4 - M1917
-        ///5 - Revólver
-        ///6 - Soco Inglês
-        ///7 - Face 
-        ///8 - Pé de Cabra
-        ///9 */
-
-
     [Header("ReloadIcon")]
     [SerializeField] Slider ReloadSlider;
-
-
 
     [Header("Health")]
     [SerializeField] int NumberOfHearts;
@@ -46,17 +29,33 @@ public class UIManager : MonoBehaviour
     [SerializeField] Sprite emptyHealth;
     [SerializeField] float health;
 
+    [Header("Low Health")]
+    public GameObject lowHealthImage;
+    public GameObject hudElement;
+    [SerializeField] private AudioClip playerHeartbeat;
+    private bool isHeartbeatPlaying = false;
+    private Image heartImage;
+    private Color heartOriginalColor;
+
     [Header("Money")]
     [SerializeField] int playerMoney;
     [SerializeField] TMP_Text moneyText;
 
+    public GameObject deathScreen;
 
     GameObject player;
     void Start()
     {
-
         player = GameObject.Find("Player");
 
+        if (hudElement != null)
+        {
+            heartImage = hudElement.GetComponent<Image>();
+            if (heartImage != null)
+            {
+                heartOriginalColor = heartImage.color; // Salva a cor original
+            }
+        }
     }
 
     void Update()
@@ -79,19 +78,21 @@ public class UIManager : MonoBehaviour
                         Slot1.sprite = unkwnownWeapon;
 
                     }
-                    else {
+                    else
+                    {
                         Slot1.sprite = primaryGun.hudIcon;
                     }
-                    
+
 
                     primaryAmmo.text = primaryCurrentAmmo.ToString() + "/<size=50%>" + primaryMaxAmmo.ToString();
                 }
             }
-            else {
+            else
+            {
                 Slot1.sprite = noWeapon;
                 primaryAmmo.text = "";
             }
-            
+
             GameObject SecondarySlot = gunsPickupPlayer.inventory[(gunsPickupPlayer.selectGun + 1) % 2];
             if (SecondarySlot != null)
             {
@@ -114,26 +115,38 @@ public class UIManager : MonoBehaviour
                     secondaryAmmo.text = secondaryCurrentAmmo.ToString() + "/<size=50%>" + secondaryMaxAmmo.ToString();
                 }
             }
-            else {
+            else
+            {
                 Slot2.sprite = noWeapon;
                 secondaryAmmo.text = "";
             }
 
             PlayerDamage playerInfo = player.GetComponent<PlayerDamage>();
             health = playerInfo.lives;
-        }
-        else
-        {
-            health = 0;
 
+            UpdateHealth();
+            UpdateMoney();
         }
-
-        UpdateHealth();
-        UpdateMoney();
     }
 
     void UpdateHealth()
     {
+        if (health == 1 && !isHeartbeatPlaying)
+        {
+            lowHealthImage.SetActive(true);
+            StartHeartbeat();
+
+        }
+        else if (health > 1 && isHeartbeatPlaying)
+        {
+            lowHealthImage.SetActive(false);
+            StopHeartbeat();
+
+        }
+        else if (health <= 0)
+        {
+            //deathScreen.SetActive(true);}
+        }
 
         if (health > NumberOfHearts)
         {
@@ -163,8 +176,37 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void UpdateMoney()
-    {
+    void UpdateMoney() {
         moneyText.text = "x" + GameManager.instance.gameData.money.ToString("D3");
+    }
+
+    void StartHeartbeat(){
+        isHeartbeatPlaying = true;
+        InvokeRepeating(nameof(PlayHeartbeatSound), 0f, 1f); //repete a cada um segundo
+        if (heartImage != null)
+        {
+            InvokeRepeating(nameof(FlashHUD), 0f, 0.5f); // pisca o icone de coração
+        }
+    }
+
+    void StopHeartbeat(){
+        isHeartbeatPlaying = false;
+        CancelInvoke(nameof(PlayHeartbeatSound));
+        if (heartImage != null)
+        {
+            CancelInvoke(nameof(FlashHUD));
+            heartImage.color = heartOriginalColor; 
+        }
+    }
+
+    void PlayHeartbeatSound(){
+        SoundFXManager.instance.PlaySoundFXClip(playerHeartbeat, transform, 1f);
+    }
+
+    void FlashHUD(){
+        if (heartImage != null)
+        {
+            heartImage.color = heartImage.color == heartOriginalColor ? Color.red : heartOriginalColor;
+        }
     }
 }
