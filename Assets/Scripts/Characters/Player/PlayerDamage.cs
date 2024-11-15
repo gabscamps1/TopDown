@@ -1,16 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 
 public class PlayerDamage : MonoBehaviour
 {
     [SerializeField]
     public float lives;
-    public GameObject deathScreen;
-
+   
     [Header("Player Sounds")]
     [SerializeField] private AudioClip playerDamageSound;
-
+  
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunEnemy acerte o Player a função CallDamage é chamada.
@@ -30,8 +30,6 @@ public class PlayerDamage : MonoBehaviour
         // Destrói o Player quando lives é 0.
         if (lives <= 0)
         {
-            //deathScreen.SetActive(true);
-
             Destroy(gameObject);
         }
     }
@@ -52,6 +50,4 @@ public class PlayerDamage : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
     }
-
-
 }
