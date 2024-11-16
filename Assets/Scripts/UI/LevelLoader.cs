@@ -35,7 +35,7 @@ public class LevelLoader : MonoBehaviour
     }
 
     public void Continue(){
-        StartCoroutine(LoadLevelString("DialogueRoom"));
+        StartCoroutine(LoadLevelString("SoundTest"));
     }
 
     public void MainMenu(){
