@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transition;
+    public Animator animatorTransition;
     public float transitionTime = 1f;
 
     // Update is called once per frame
@@ -25,28 +25,29 @@ public class LevelLoader : MonoBehaviour
        StartCoroutine(LoadLevelInteger(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void LoadSpecificLevel(string levelName)
+    public void LoadSpecificLevel(string levelName, string transition)
     {
-        StartCoroutine(LoadLevelString(levelName));
+        StartCoroutine(LoadLevelString(levelName,transition));
     }
 
     public void NewGame(){
-        StartCoroutine(LoadLevelString("Tutorial 1"));
+        StartCoroutine(LoadLevelString("Tutorial 1", "Wipe"));
     }
 
     public void Continue(){
-        StartCoroutine(LoadLevelString("SoundTest"));
+        StartCoroutine(LoadLevelString("SoundTest","Wipe"));
     }
 
     public void MainMenu(){
         Time.timeScale = 1f;
         PauseMenu.isPaused = false;
-        StartCoroutine(LoadLevelString("MainMenu"));
+        StartCoroutine(LoadLevelString("MainMenu","Wipe"));
     }
 
-    IEnumerator LoadLevelString(string levelIndexString){
+    IEnumerator LoadLevelString(string levelIndexString, string transition){
         //Toca animação
-        transition.SetTrigger("Start");
+        if(transition != null)
+            animatorTransition.SetTrigger(transition);
 
         //Espera
         yield return new WaitForSeconds(transitionTime);
@@ -58,7 +59,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevelInteger(int levelIndexInt){
         //Toca animação
-        transition.SetTrigger("Start");
+        animatorTransition.SetTrigger("Start");
 
         //Espera
         yield return new WaitForSeconds(transitionTime);

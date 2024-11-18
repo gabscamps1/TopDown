@@ -10,6 +10,12 @@ public class CheckConditionPassScene : MonoBehaviour
     enum Levels { Tutorial1, Tutorial2, Tutorial3, Level1 }
     [SerializeField] Levels levels;
 
+    GameObject[] enemy;
+
+    private void Awake()
+    {
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +35,6 @@ public class CheckConditionPassScene : MonoBehaviour
             switch (change)
             {
                 case Condition.AllEnemys:
-                    var enemy = GameObject.FindGameObjectsWithTag("Enemy");
                     if (enemy.Length == 0)
                     {
                         PassScene();
@@ -65,6 +70,6 @@ public class CheckConditionPassScene : MonoBehaviour
         }
 
         LevelLoader levelLoader = GameManager.instance.levelLoader;
-        levelLoader.LoadSpecificLevel(levelName);
+        levelLoader.LoadSpecificLevel(levelName,"Wipe");
     }
 }

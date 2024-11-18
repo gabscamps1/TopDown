@@ -45,10 +45,11 @@ public class Fog : MonoBehaviour
         
         foreach (var obj in objects)
         {
-            if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject"))
-            {
-                obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
-            }
+            if (obj != null)
+                if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject"))
+                {
+                    obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
+                }
         }
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = true;
@@ -62,7 +63,8 @@ public class Fog : MonoBehaviour
         {
             foreach (var obj in objects)
             {
-                obj.gameObject.SetActive(true);
+                if(obj != null)
+                    obj.gameObject.SetActive(true);
             }
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.enabled = false;
