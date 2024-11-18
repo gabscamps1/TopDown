@@ -42,7 +42,14 @@ public class PlayerDamage : MonoBehaviour
         // Destrói o Player quando lives é 0.
         if (lives <= 0)
         {
-            Destroy(gameObject);
+            if (GameManager.instance != null)
+            {
+
+                GameManager.instance.deaths =+ 1; // Pega a quantia de dinheiro que está no GameObject Money e coloca no GameManager.
+                Destroy(gameObject);
+                
+            }
+            
         }
     }
 

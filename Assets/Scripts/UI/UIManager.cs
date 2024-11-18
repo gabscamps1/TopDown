@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [Header("WeaponGauge")]
+    [SerializeField] GameObject hudWeapons;
     private int primaryCurrentAmmo;
     private int primaryMaxAmmo;
     [SerializeField] TMP_Text primaryAmmo;
@@ -21,8 +22,10 @@ public class UIManager : MonoBehaviour
 
     [Header("ReloadIcon")]
     [SerializeField] Slider ReloadSlider;
+    [SerializeField] Image ReloadIcon;
 
     [Header("Health")]
+    [SerializeField] GameObject hudHealth;
     [SerializeField] int NumberOfHearts;
     [SerializeField] Image[] Hearts;
     [SerializeField] Sprite fullHealth;
@@ -38,10 +41,15 @@ public class UIManager : MonoBehaviour
     private Color heartOriginalColor;
 
     [Header("Money")]
+    [SerializeField] GameObject hudMoney;
     [SerializeField] int playerMoney;
     [SerializeField] TMP_Text moneyText;
 
+    [Header("Death")]
     public GameObject deathScreen;
+    public TMP_Text deathCount;
+    public TMP_Text deathMoneyText;
+    public static bool isInDeathScreen;
 
     GameObject player;
     void Start()
@@ -126,6 +134,7 @@ public class UIManager : MonoBehaviour
 
             UpdateHealth();
             UpdateMoney();
+
         }
     }
 
@@ -145,7 +154,13 @@ public class UIManager : MonoBehaviour
         }
         else if (health <= 0)
         {
-            //deathScreen.SetActive(true);}
+           PauseMenu.CanPause = false;
+           deathScreen.SetActive(true);
+           deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
+           deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+           hudHealth.SetActive(false);
+           hudMoney.SetActive(false);
+           hudWeapons.SetActive(false);
         }
 
         if (health > NumberOfHearts)

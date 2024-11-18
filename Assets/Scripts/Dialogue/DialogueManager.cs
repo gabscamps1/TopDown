@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
                 DisplayNextSentence();
                 Debug.Log(isTalking);
 
+                PauseMenu.CanPause = false;
                 isTalking = true;
             }
         }
@@ -256,6 +257,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        PauseMenu.CanPause = true;
         isTalking = false;
         Debug.Log(isTalking);
         Debug.Log("End of Conversation");

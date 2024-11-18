@@ -14,18 +14,20 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         // Pega a direção que o Player está olhando;
-        PlayerMovement playerMovementScript = GetComponent<PlayerMovement>();
-        if (playerMovementScript.dotProductUp > 0.7)
-        {
-            currentDirection = Vector2.up;
-        }
-        else if (playerMovementScript.dotProductUp < -0.7)
-        {
-            currentDirection = Vector2.down;
-        }
-        else if (playerMovementScript.dotProductUp < 0.6 && playerMovementScript.dotProductUp > -0.6)
-        {
-            currentDirection = transform.right;
+        if (!DialogueManager.isTalking) { 
+            PlayerMovement playerMovementScript = GetComponent<PlayerMovement>();
+            if (playerMovementScript.dotProductUp > 0.7)
+            {
+                currentDirection = Vector2.up;
+            }
+            else if (playerMovementScript.dotProductUp < -0.7)
+            {
+                currentDirection = Vector2.down;
+            }
+            else if (playerMovementScript.dotProductUp < 0.6 && playerMovementScript.dotProductUp > -0.6)
+            {
+                currentDirection = transform.right;
+            }
         }
 
         // Lançar o raycast na direção atual
@@ -33,7 +35,13 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
-            DrawInteractionIcon(true);
+            if (!DialogueManager.isTalking)
+            {
+                DrawInteractionIcon(true);
+            }
+            else {
+                DrawInteractionIcon(false);
+            }
 
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -42,7 +50,7 @@ public class PlayerInteraction : MonoBehaviour
                 switch(hit.collider.gameObject.name)
                 {
                     case "Barwoman":
-                        print("ola");
+                        //print("ola");
                         hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
                         break;
                 }

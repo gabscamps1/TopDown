@@ -6,11 +6,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     public static bool isPaused;
     public static bool isOpen;
+    public static bool CanPause;
 
 
     // Start is called before the first frame update
     void Start(){
         pauseMenu.SetActive(false);
+        CanPause = true;
         
     }
 
@@ -29,9 +31,8 @@ public class PauseMenu : MonoBehaviour
 
                 }
             
-
         }else{
-            if (!DialogueManager.isTalking){ 
+            if (CanPause){ 
                 if (Input.GetKeyDown(KeyCode.Escape)){
                     if (isPaused){
                         ResumeGame();

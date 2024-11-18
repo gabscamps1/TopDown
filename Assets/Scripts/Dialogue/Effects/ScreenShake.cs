@@ -15,7 +15,7 @@ public class ScreenShake : MonoBehaviour
     {
         if (cameraTransform == null)
         {
-            Debug.LogError("Câmera não atribuída! Arraste a Transform da câmera no inspetor.");
+            Debug.LogError("Arraste a câmera no Screenshake do DialogueManager");
             return;
         }
 

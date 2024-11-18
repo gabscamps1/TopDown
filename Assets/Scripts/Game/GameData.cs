@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     public int money;
+
+    public int deaths;
     // Start is called before the first frame update
     void Start()
     {

@@ -20,7 +20,7 @@ public class SentenceData
 public class Dialogue
 {
     public string name;
-    public Sprite npcImage;
+    //public Sprite npcImage;
     public List<SentenceData> sentences;
 }
 
