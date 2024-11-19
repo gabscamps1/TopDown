@@ -18,29 +18,36 @@ public class WallOpacity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject[] wallsInGame = GameObject.FindGameObjectsWithTag("WallTransparent");
+        if (player == null) return;
         
-        Collider2D[] objsCollider = Physics2D.OverlapBoxAll(player.transform.position, size, 0);
+        GameObject[] allwalls = GameObject.FindGameObjectsWithTag("WallTransparent");
+        
+        Collider2D[] allObjectsInArea = Physics2D.OverlapBoxAll(player.transform.position, size, 0);
 
-        GameObject[] walls = wallsInGame.Where(wall => objsCollider.Any(collider => collider.gameObject == wall)).ToArray();
+        GameObject[] wallsInArea = allwalls.Where(wall => allObjectsInArea.Any(collider => collider.gameObject == wall)).ToArray();
        
-        foreach (var wall in walls)
+        foreach (var wall in wallsInArea)
         {
             SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
-            if (wallSprite != null && player != null)
+            if (wallSprite != null)
             {
                 // A parede perde opacidade e sua order fica em 5 (Acima do Player) enquanto o player está dentro dela.
                 if (player.transform.position.y > wall.transform.position.y && player.transform.position.y < wall.transform.position.y + 2)
                 {
                     wallSprite.color = transparenceColor;
                 }
+                else
+                {
+                    wallSprite.color = Color.white; // Restaura a cor original (opacidade total)
+                }
+
             }
         }
 
         // Para todas as paredes que não estão dentro da área de colisão, restaura a opacidade
-        foreach (var wall in wallsInGame)
+        foreach (var wall in allwalls)
         {
-            if (!walls.Contains(wall)) // Verifica se a parede não está na lista das paredes em colisão
+            if (!wallsInArea.Contains(wall)) // Verifica se a parede não está na lista das paredes em colisão
             {
                 SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
                 if (wallSprite != null)

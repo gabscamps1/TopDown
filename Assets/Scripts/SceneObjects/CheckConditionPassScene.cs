@@ -10,11 +10,10 @@ public class CheckConditionPassScene : MonoBehaviour
     enum Levels { Tutorial1, Tutorial2, Tutorial3, Level1 }
     [SerializeField] Levels levels;
 
-    GameObject[] enemy;
-
+    
     private void Awake()
-    {
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+    {   
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -35,7 +34,20 @@ public class CheckConditionPassScene : MonoBehaviour
             switch (change)
             {
                 case Condition.AllEnemys:
-                    if (enemy.Length == 0)
+                    GameObject[] allObject = GameObject.FindObjectsOfType<GameObject>(true);
+                    List<GameObject> enemies = new List<GameObject>();
+
+                    foreach (GameObject obj in allObject)
+                    {
+                        if (obj != null)
+                        {
+                            if (obj.CompareTag("Enemy"))
+                            {
+                                enemies.Add(obj);
+                            }
+                        }
+                    }
+                    if (enemies.Count == 0)
                     {
                         PassScene();
                     }

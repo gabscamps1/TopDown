@@ -46,7 +46,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevelString(string levelIndexString, string transition){
         //Toca animação
-        if(transition != null)
+        if (transition != null)
             animatorTransition.SetTrigger(transition);
 
         //Espera
