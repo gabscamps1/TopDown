@@ -100,7 +100,6 @@ public class GunsPickup : MonoBehaviour
         // Verificar se o jogador está perto e apertou o botão direito do mouse.
         if (inventory[selectGun] != null)
         {
-            print("teste2");
             // Calcular a posição do mouse no mundo e a direção para arremessar.
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 throwDirection = (mousePosition - transform.position).normalized;
@@ -124,7 +123,6 @@ public class GunsPickup : MonoBehaviour
 
             inventory[selectGun].transform.SetParent(null);  // Remove a arma como filho do Player.
             inventory[selectGun] = null; // Tira o GameObject da arma do inventário.
-            print("teste5");
         }
     }
 

@@ -38,9 +38,11 @@ public class ExplosionBarril : MonoBehaviour
 
     private void Explosion()
     {
+        isExploding = false;
+
         Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, areaExplosion.radius * 1.5f);
 
-        HashSet<GameObject> damagedEnemies = new HashSet<GameObject>();
+        HashSet<GameObject> damagedCharacter = new HashSet<GameObject>();
 
         foreach (var obj in objects)
         {
@@ -48,23 +50,25 @@ public class ExplosionBarril : MonoBehaviour
 
             if (character.CompareTag("Player"))
             {
+                if (damagedCharacter.Contains(character)) return;
+
                 PlayerDamage playerScript = character.GetComponent<PlayerDamage>();
                 playerScript.CallDamage(1);
 
+                damagedCharacter.Add(character);
             }
 
             if (character.CompareTag("Enemy"))
             {
-                if (damagedEnemies.Contains(character)) return;
+                if (damagedCharacter.Contains(character)) return;
 
                 EnemyDamage enemyScript = character.GetComponent<EnemyDamage>();
                 enemyScript.CallDamage(damage);
 
-                damagedEnemies.Add(character);
+                damagedCharacter.Add(character);
             }
         }
 
-        isExploding = false;
     }
 
     void OnDrawGizmos()

@@ -7,7 +7,7 @@ public class CheckConditionPassScene : MonoBehaviour
     enum Condition { AllEnemys, Key, Coordinates }
     [SerializeField] Condition change;
 
-    enum Levels { Tutorial1, Tutorial2, Tutorial3, Level1 }
+    enum Levels { Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
     [SerializeField] Levels levels;
 
     
@@ -76,9 +76,20 @@ public class CheckConditionPassScene : MonoBehaviour
             case Levels.Tutorial3:
                 levelName = "Tutorial 3";
                 break;
-            case Levels.Level1:
+            case Levels.Hub:
+                levelName = "Hub";
+                break;
+            case Levels.Level1_1:
                 levelName = "Level 1-1";
                 break;
+            case Levels.Level1_2:
+                levelName = "Level 1-2";
+                break;
+            case Levels.Level1_4:
+                levelName = "Level 1-4";
+                break;
+            default:
+                return;
         }
 
         LevelLoader levelLoader = GameManager.instance.levelLoader;

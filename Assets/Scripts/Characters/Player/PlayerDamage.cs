@@ -27,14 +27,14 @@ public class PlayerDamage : MonoBehaviour
     // Função que causa dano ao Inimigo.
     public void CallDamage(float damage)
     {
+        // Torna o Player invulneravel durante determinado tempo.
+        StartCoroutine(Invulnerability());
+
         // Inicia a coroutine de piscar o Player em vermelho.
         StartCoroutine(Blink());
 
         // Chama o Som de receber dano.
         SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
-
-        // Torna o Player invulneravel durante determinado tempo.
-        StartCoroutine(Invulnerability());
 
         // Diminui a vida do Player.
         lives -= damage;
@@ -44,10 +44,8 @@ public class PlayerDamage : MonoBehaviour
         {
             if (GameManager.instance != null)
             {
-
                 GameManager.instance.deaths =+ 1; // Pega a quantia de dinheiro que está no GameObject Money e coloca no GameManager.
                 Destroy(gameObject);
-                
             }
             
         }

@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: -1518265279274526008}
   m_Layer: 10
   m_Name: Door 1
-  m_TagString: WallTransparent
+  m_TagString: SceneObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
