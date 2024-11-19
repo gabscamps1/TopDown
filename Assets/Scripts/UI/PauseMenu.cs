@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused;
     public static bool isOpen;
     public static bool CanPause;
-
+    [SerializeField] private AudioClip popupOpenSound;
 
     // Start is called before the first frame update
     void Start(){
@@ -24,9 +24,11 @@ public class PauseMenu : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Escape)){
 
                     if (isOpen) {
+                        //SoundFXManager.instance.PlaySoundFXClip(popupOpenSound, transform, 1f);
                         PopupOpen();
                     } else {
-                        PopupClose();
+                    //SoundFXManager.instance.PlaySoundFXClip(popupOpenSound, transform, 1f);
+                    PopupClose();
                     }
 
                 }
@@ -34,9 +36,12 @@ public class PauseMenu : MonoBehaviour
         }else{
             if (CanPause){ 
                 if (Input.GetKeyDown(KeyCode.Escape)){
+                    //SoundFXManager.instance.PlaySoundFXClip(popupOpenSound, transform, 1f);
                     if (isPaused){
+                        SoundFXManager.instance.PlaySoundFXClip(popupOpenSound, transform, 1f);
                         ResumeGame();
                     }else{
+                        SoundFXManager.instance.PlaySoundFXClip(popupOpenSound, transform, 1f);
                         PauseGame();
                     }
                 }
@@ -45,6 +50,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PopupOpen(){
+        
         pauseMenu.SetActive(true);
 
         isOpen = true;

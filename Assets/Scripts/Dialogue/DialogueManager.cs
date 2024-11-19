@@ -16,7 +16,10 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public Animator PortraitAnimation;
     public float timeDialogue;
-   
+    [SerializeField] private AudioClip nextDialogueSound;
+    [SerializeField]
+    private AudioClip startDialogueSound;
+
 
     [SerializeField] private Sprite defaultBackground; // Defina o sprite padrão no inspetor
 
@@ -43,6 +46,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (isTalking == false)
             {
+                SoundFXManager.instance.PlaySoundFXClip(startDialogueSound, transform, 1f);
                 dialogueEffects?.ResetDialogPosition();
                 dialogueEffects?.TriggerFadeOut();
                 animator.SetBool("IsOpen", true);
@@ -70,7 +74,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (isTyping)
         {
-            dialogueText.text = currentSentence;
+            //dialogueText.text = currentSentence;
             isTyping = false;
         }
         else if (sentences.Count == 0)
@@ -89,7 +93,9 @@ public class DialogueManager : MonoBehaviour
 
             PortraitAnimation.SetBool("IsOpen", false);
             PortraitAnimation.SetBool("IsOpen", true);
-            
+
+            SoundFXManager.instance.PlaySoundFXClip(nextDialogueSound, transform, 1f);
+
 
             StopAllCoroutines();
             StartCoroutine(TypeSentence(currentSentence));

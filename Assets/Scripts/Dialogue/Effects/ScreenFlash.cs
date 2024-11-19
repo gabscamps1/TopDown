@@ -7,6 +7,8 @@ public class ScreenFlash : MonoBehaviour
     public Image flashImage;  // A imagem de overlay branca que cobrirá a tela
     public float flashDuration = 0.5f;  // Duração do flash
     public float maxAlpha = 1f;  // O valor máximo de opacidade
+    [SerializeField] private AudioClip flashScreenSound;
+
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class ScreenFlash : MonoBehaviour
 
         // Fase 2: Diminuir a opacidade (voltar ao normal)
         time = 0;
+
+        SoundFXManager.instance.PlaySoundFXClip(flashScreenSound, transform, 1f);
         while (time < flashDuration / 2)
         {
             time += Time.deltaTime;

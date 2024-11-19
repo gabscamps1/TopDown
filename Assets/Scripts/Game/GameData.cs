@@ -13,6 +13,16 @@ public class GameData : ScriptableObject
 
     public string currentLevel = "level1"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
 
+<<<<<<< HEAD
+=======
+    public int deaths;
+
+    public int globalFlag;
+
+    public int BarWomanFlag;
+
+
+>>>>>>> 7aebd6de4af611aad499a63126c12be32e98054b
     // Start is called before the first frame update
     void Start()
     {

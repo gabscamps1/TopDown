@@ -35,6 +35,8 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
         if (hit.collider != null && hit.collider.gameObject.GetComponent<DialogueTrigger>() != null)
         {
+            
+
             if (!DialogueManager.isTalking)
             {
                 DrawInteractionIcon(true);
@@ -46,17 +48,28 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                
-                switch(hit.collider.gameObject.name)
+                //SoundFXManager.instance.PlaySoundFXClip(dialogueBubbleSound, transform, 1f);
+                switch (hit.collider.gameObject.name)
                 {
                     case "Barwoman":
+                        if  (GameManager.instance.gameData.BarWomanFlag == 0){
+                            hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
+                            GameManager.instance.gameData.BarWomanFlag = 1;
+
+                        }if (GameManager.instance.gameData.BarWomanFlag == 1)
+                        {
+                            hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("1");
+                        }
+
+
+                            break;
+
+                    case "TutorialBoard":
                         //print("ola");
                         hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
                         break;
                 }
 
-                // Chama um método no script Trigger do objeto detectado
-                // 
             }
         }
         else

@@ -8,6 +8,8 @@ public class GunsPickup : MonoBehaviour
     [SerializeField] float throwForce; // Força com que a arma será arremessada.
     public float damage; // Dano que o impacto da arma causará quando arremessada.
     public GameObject[] inventory; // Inventário das armas.
+
+    [SerializeField] private AudioClip gunPickupSound;
     [SerializeField] Transform gunPlaceholder; // Posição que as armas ficaram.
     public bool hasGun; // Confere se tem alguma arma no inventory. Usado para alterar animações no script de PlayerMovement.
     List<GameObject> gunList = new List<GameObject>(); // Lista das armas que estão no chão dentro do collider do GameObject ItemPlaceholder.
@@ -73,6 +75,7 @@ public class GunsPickup : MonoBehaviour
     // Pega a arma do chão.
     private void EquipGun(GameObject nearestGun)
     {
+        SoundFXManager.instance.PlaySoundFXClip(gunPickupSound, transform, 1f);
         inventory[selectGun] = nearestGun; // Coloca no inventário a arma mais próxima.
         inventory[selectGun].transform.position = gunPlaceholder.position; // Coloca a arma no GunPlaceholder do Player.
         inventory[selectGun].transform.SetParent(transform); // Seta a arma como filha do Player.

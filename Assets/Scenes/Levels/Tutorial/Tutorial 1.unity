@@ -956,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 244733954760005109, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 279711147244162356, guid: e621db93f3009e840bd613465f984cab, type: 3}
       propertyPath: m_Enabled
@@ -2787,6 +2787,14 @@ PrefabInstance:
     - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077498121911217311, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 178735961}
+    - target: {fileID: 6077498121911217311, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 6451061030324449759, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_AnchorMax.x
