@@ -7,21 +7,16 @@ public class CheckConditionPassScene : MonoBehaviour
 {
     enum Condition { AllEnemys, Key, Coordinates, DeadCharacter }
     [SerializeField] Condition condition;
+    // AllEnemys - Quando todos os Inimigos estão mortos na cena, o Player consegue passar pela porta.
+    // Key - Quando o Player consegue uma chave, o Player consegue passar pela porta.
+    // Coordinate -O Player consegue passar pela porta sem precisar de nada.
+    // DeadCharacter - Quando um Inimigo especifico for morto, o Player consegue passar de fase.
 
     enum Levels {currentLevel, Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
     [SerializeField] Levels levels;
 
-    [SerializeField] GameObject character;
+    [SerializeField] GameObject character; // Mêcanica do DeadCharacter - Inimigo específico a ser morto.
     
-    private void Awake()
-    {   
-        
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +24,8 @@ public class CheckConditionPassScene : MonoBehaviour
         switch (condition)
         {
             case Condition.DeadCharacter:
+
+                if (character == null) return;
 
                 if (character.IsDestroyed())
                 {
