@@ -55,8 +55,6 @@ public class PlayerInteraction : MonoBehaviour
                         break;
                 }
 
-                // Chama um método no script Trigger do objeto detectado
-                // 
             }
         }
         else

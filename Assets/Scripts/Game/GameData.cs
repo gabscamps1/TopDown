@@ -8,6 +8,12 @@ public class GameData : ScriptableObject
     public int money;
 
     public int deaths;
+
+    public int globalFlag;
+
+    public int BarWomanFlag;
+
+
     // Start is called before the first frame update
     void Start()
     {

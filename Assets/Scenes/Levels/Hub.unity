@@ -1522,6 +1522,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1905584534}
+    - target: {fileID: -9192046104923445714, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 279711147244162356, guid: e621db93f3009e840bd613465f984cab, type: 3}
     - target: {fileID: 2752807044789232464, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.44703
@@ -1920,7 +1924,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3903222704392435275, guid: 026a7cc46a7ecb34fad5a2db26f69a71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 787295864}
   m_SourcePrefab: {fileID: 100100000, guid: 026a7cc46a7ecb34fad5a2db26f69a71, type: 3}
 --- !u!1001 &456343438
 PrefabInstance:
@@ -2760,6 +2767,145 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.625, y: 0.6198251}
   m_EdgeRadius: 0
+--- !u!1 &787295863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3903222704392435275, guid: 026a7cc46a7ecb34fad5a2db26f69a71, type: 3}
+  m_PrefabInstance: {fileID: 441628485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &787295864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787295863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f573deb330f77ff419153dd2e9bad4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogosPorFlag:
+  - flag: 0
+    dialogueData:
+      name: Primeira vez no Hub
+      sentences:
+      - characterName: Bartender
+        sentence: "Wow, t\xE1 a\xED algo que eu n\xE3o esperava."
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "Voc\xEA voltar intacto."
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "S\xE9rio? Voc\xEA estava esperando que eu morresse?"
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "Bom, n\xE3o \xE9 que eu estava esperando, mas eu j\xE1 tinha me
+          conformado com isso.\r\n"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "\xC9, eu acho que parte de mim tamb\xE9m."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: Vai querer alguma coisa pra acalmar os nervos?
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "N\xE3o, obrigado."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 1
+    dialogueData:
+      name: Depois de falar com o vendedor
+      sentences:
+      - characterName: Bartender
+        sentence: "J\xE1 est\xE1 saindo, Johnny?\r\n"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "J\xE1, o chefe j\xE1 me deu mais coisa pra fazer.\r"
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "E voc\xEA vai ficar com essa cara de pateta a\xED?"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: Bota mais marra nesse olhar, precisa assustar os inimigos.
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "\xC0s vezes eu n\xE3o entendo o que voc\xEA fala.\r\n"
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 2
+    dialogueData:
+      name: Primeira Morte
+      sentences:
+      - characterName: Bartender
+        sentence: "J\xE1 est\xE1 saindo, Johnny:"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "Eu? H\xE2n? T\xF4 sim."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "V\xEA se troca essa cara de pateta, precisa botar medo nos inimigos."
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: Ah sim, vou tentar.
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 3
+    dialogueData:
+      name: Segunda morte
+      sentences:
+      - characterName: Bartender
+        sentence: "J\xE1 est\xE1 saindo, Johnny?"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "J\xE1."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "V\xEA se troca essa cara de pateta, precisa botar medo nos inimigos.\r"
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "T\xE1."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: Nossa, deve ter ficado mal.
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 4
+    dialogueData:
+      name: Terceira morte
+      sentences:
+      - characterName: Johnny
+        sentence: "Sim, t\xF4 saindo."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: <call:FlashScreen>Sim, vou mudar o rosto.
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: ...
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Bartender
+        sentence: "T\xE1 bom."
+        sentenceImage: {fileID: 21300000, guid: ee9789a96ca47bb429a5d3acddccc995, type: 3}
+        backgroundImage: {fileID: 0}
 --- !u!1001 &795918661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4400,6 +4546,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1155622448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1252506316416698564, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_Name
+      value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678283499766940492, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077498121911217311, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1662617604}
+    - target: {fileID: 6077498121911217311, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451061030324449759, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451061030324449759, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
 --- !u!1001 &1194170566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5342,6 +5601,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a2150d552f54204abcc28a48f8855c2, type: 3}
+--- !u!1001 &1662617603
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65398320992339263, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749108664707918725, guid: e621db93f3009e840bd613465f984cab, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e621db93f3009e840bd613465f984cab, type: 3}
+--- !u!114 &1662617604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 279711147244162356, guid: e621db93f3009e840bd613465f984cab, type: 3}
+  m_PrefabInstance: {fileID: 1662617603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ec0007976105e43865f027c115fcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1694762607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6268,7 +6595,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1784628098971838065, guid: 516cdfe7475f6054e9b2d97331179369, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6499996
+      value: -3.66
       objectReference: {fileID: 0}
     - target: {fileID: 1784628098971838065, guid: 516cdfe7475f6054e9b2d97331179369, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7212,6 +7539,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 2103317075}
   - {fileID: 332884851}
+  - {fileID: 1662617603}
+  - {fileID: 1155622448}
   - {fileID: 958538209}
   - {fileID: 542410553}
   - {fileID: 152861974}

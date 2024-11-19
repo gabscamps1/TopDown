@@ -34,14 +34,21 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevelString("Tutorial 1", "Wipe"));
     }
 
-    public void Continue(){
-        StartCoroutine(LoadLevelString("SoundTest","Wipe"));
+    public void Continue()
+    {
+        StartCoroutine(LoadLevelString("SoundTest", "Wipe"));
     }
 
-    public void MainMenu(){
+    public void Death()
+    {
+        StartCoroutine(LoadLevelString("Hub", "Death"));
+    }
+
+    public void MainMenu()
+    {
         Time.timeScale = 1f;
         PauseMenu.isPaused = false;
-        StartCoroutine(LoadLevelString("MainMenu","Wipe"));
+        StartCoroutine(LoadLevelString("MainMenu", "Wipe"));
     }
 
     IEnumerator LoadLevelString(string levelIndexString, string transition){
