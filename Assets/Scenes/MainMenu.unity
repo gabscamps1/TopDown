@@ -7529,6 +7529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1960352212}
+  popupOpenSound: {fileID: 0}
 --- !u!4 &1860467504
 Transform:
   m_ObjectHideFlags: 0
