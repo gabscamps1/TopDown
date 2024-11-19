@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CheckConditionPassScene : MonoBehaviour
 {
-    enum Condition { AllEnemys, Key, Coordinates }
-    [SerializeField] Condition change;
+    enum Condition { AllEnemys, Key, Coordinates, DeadCharacter }
+    [SerializeField] Condition condition;
 
-    enum Levels { Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
+    enum Levels {currentLevel, Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
     [SerializeField] Levels levels;
 
+    [SerializeField] GameObject character;
     
     private void Awake()
     {   
@@ -24,41 +26,54 @@ public class CheckConditionPassScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        switch (condition)
+        {
+            case Condition.DeadCharacter:
+
+                if (character.IsDestroyed())
+                {
+                    PassScene();
+                }
+                break;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            switch (change)
-            {
-                case Condition.AllEnemys:
-                    GameObject[] allObject = GameObject.FindObjectsOfType<GameObject>(true);
-                    List<GameObject> enemies = new List<GameObject>();
+        if (!collision.CompareTag("Player")) return;
 
-                    foreach (GameObject obj in allObject)
+        switch (condition)
+        {
+            case Condition.AllEnemys:
+
+                GameObject[] allObject = GameObject.FindObjectsOfType<GameObject>(true);
+                List<GameObject> enemies = new List<GameObject>();
+
+                foreach (GameObject obj in allObject)
+                {
+                    if (obj != null)
                     {
-                        if (obj != null)
+                        if (obj.CompareTag("Enemy"))
                         {
-                            if (obj.CompareTag("Enemy"))
-                            {
-                                enemies.Add(obj);
-                            }
+                            enemies.Add(obj);
                         }
                     }
-                    if (enemies.Count == 0)
-                    {
-                        PassScene();
-                    }
-                    break;
-                case Condition.Key:
-                    break;
-                case Condition.Coordinates:
+                }
+                if (enemies.Count == 0)
+                {
                     PassScene();
-                    break;
-            }
+                }
+
+                break;
+
+            case Condition.Key:
+                break;
+
+            case Condition.Coordinates:
+                PassScene();
+                break;
         }
+
     }
 
     void PassScene()
@@ -67,6 +82,8 @@ public class CheckConditionPassScene : MonoBehaviour
 
         switch (levels)
         {
+            case Levels.currentLevel:
+                break;
             case Levels.Tutorial1:
                 levelName = "Tutorial 1";
                 break;

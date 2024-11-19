@@ -5,13 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewGameData", menuName = "Game Data")]
 public class GameData : ScriptableObject
 {
-    public int money;
+    public int money; // Dinheiro do Player.
 
-    public int deaths;
+    public int deaths; // Número de mortes de um jogador.
+    private int deaths_ant;
+    public bool died; // Player morreu?
+
+    public string currentLevel = "level1"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+    void Update()
+    {
+        if (deaths != deaths_ant)
+        {
+            died = true;
+            deaths_ant = deaths;
+        }
     }
 
 }
