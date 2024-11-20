@@ -864,7 +864,6 @@ MonoBehaviour:
   - flag: 0
     dialogueData:
       name: Johnny e Rodrigo
-      npcImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
       sentences:
       - characterName: Johnny
         sentence: Bom dia Rodrigo.
@@ -889,7 +888,6 @@ MonoBehaviour:
   - flag: 1
     dialogueData:
       name: Johnny e Rodrigo
-      npcImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
       sentences:
       - characterName: Johnny
         sentence: "Rodrigo... Voc\xEA me ama?"
@@ -1592,7 +1590,6 @@ MonoBehaviour:
   - flag: 0
     dialogueData:
       name: Tucano
-      npcImage: {fileID: 21300000, guid: 577fce2e0d459d24193875cfec736b8a, type: 3}
       sentences:
       - characterName: 
         sentence: "Opa opa opa, se acha que vai passar por aqui est\xE1 muito enganado!!"
@@ -1610,7 +1607,6 @@ MonoBehaviour:
   - flag: 1
     dialogueData:
       name: Tucano
-      npcImage: {fileID: 21300000, guid: 577fce2e0d459d24193875cfec736b8a, type: 3}
       sentences:
       - characterName: 
         sentence: <call:ScreenShake>*ugh*
@@ -1782,7 +1778,6 @@ MonoBehaviour:
   - flag: 0
     dialogueData:
       name: 
-      npcImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
       sentences:
       - characterName: 
         sentence: '<call:MiddleDialog><size=125%>*CUIDADO: PISO MOLHADO*'
@@ -1842,6 +1837,8 @@ MonoBehaviour:
   animator: {fileID: 1891393663787269865}
   PortraitAnimation: {fileID: 8491493425807767541}
   timeDialogue: 0.01
+  nextDialogueSound: {fileID: 8300000, guid: fd5924d1e16aa454e919849e526892eb, type: 3}
+  startDialogueSound: {fileID: 8300000, guid: eb9cde3049ad7314a81c007a8ceef212, type: 3}
   defaultBackground: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
   backgroundImage: {fileID: 500987962407038126}
   dialogueEffects: {fileID: 7180931988065110312}
@@ -1895,6 +1892,7 @@ MonoBehaviour:
   flashImage: {fileID: 1484108226706226770}
   flashDuration: 0.1
   maxAlpha: 1
+  flashScreenSound: {fileID: 8300000, guid: 9535ca230520eb24da36fdd8d41b7a9d, type: 3}
 --- !u!1 &7494765592743836376
 GameObject:
   m_ObjectHideFlags: 0

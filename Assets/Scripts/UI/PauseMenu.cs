@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PopupOpen(){
         
+
         pauseMenu.SetActive(true);
 
         isOpen = true;

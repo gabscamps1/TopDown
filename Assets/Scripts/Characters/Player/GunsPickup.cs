@@ -22,8 +22,10 @@ public class GunsPickup : MonoBehaviour
         // Input para pegar armas no chão.
         if (Input.GetKeyDown(KeyCode.F))
         {
-            DisarmGun();
-            SearchNearestGun();
+            if (!DialogueManager.isTalking) { 
+                DisarmGun();
+                SearchNearestGun();
+            }
         }
 
         hasGun = inventory[selectGun]; // Seta para true se tem alguma arma no inventory.

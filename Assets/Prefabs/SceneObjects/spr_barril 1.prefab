@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageCollider: {fileID: -8621405851553492483}
   lives: 1
+  objectDestroySound: {fileID: 8300000, guid: 657d855914a3bc049882a6fbfff57eb5, type: 3}

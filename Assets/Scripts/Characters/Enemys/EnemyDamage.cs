@@ -7,6 +7,9 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private Collider2D damageCollider;
     public float lives;
 
+    [Header("Enemy Sounds")]
+    [SerializeField] private AudioClip enemyDamageSound;
+
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunPlayer acerte o Inimigo a função CallDamage é chamada.
@@ -49,6 +52,10 @@ public class EnemyDamage : MonoBehaviour
 
         // Diminui a vida do Inimigo.
         lives -= damage;
+
+        // Chama o Som de receber dano.
+        if (SoundFXManager.instance != null && enemyDamageSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(enemyDamageSound, transform, 1f);
 
         // Destrói o Enemy quando lives é 0.
         if (lives <= 0)

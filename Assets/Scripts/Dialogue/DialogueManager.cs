@@ -46,7 +46,9 @@ public class DialogueManager : MonoBehaviour
         {
             if (isTalking == false)
             {
-                SoundFXManager.instance.PlaySoundFXClip(startDialogueSound, transform, 1f);
+                if (SoundFXManager.instance != null && startDialogueSound != null)
+                    SoundFXManager.instance.PlaySoundFXClip(startDialogueSound, transform, 1f);
+
                 dialogueEffects?.ResetDialogPosition();
                 dialogueEffects?.TriggerFadeOut();
                 animator.SetBool("IsOpen", true);
@@ -94,7 +96,8 @@ public class DialogueManager : MonoBehaviour
             PortraitAnimation.SetBool("IsOpen", false);
             PortraitAnimation.SetBool("IsOpen", true);
 
-            SoundFXManager.instance.PlaySoundFXClip(nextDialogueSound, transform, 1f);
+            if (SoundFXManager.instance != null && nextDialogueSound != null)
+                SoundFXManager.instance.PlaySoundFXClip(nextDialogueSound, transform, 1f);
 
 
             StopAllCoroutines();

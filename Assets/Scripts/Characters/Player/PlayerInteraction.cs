@@ -46,7 +46,7 @@ public class PlayerInteraction : MonoBehaviour
             }
 
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //SoundFXManager.instance.PlaySoundFXClip(dialogueBubbleSound, transform, 1f);
                 switch (hit.collider.gameObject.name)
@@ -59,6 +59,9 @@ public class PlayerInteraction : MonoBehaviour
                         }if (GameManager.instance.gameData.BarWomanFlag == 1)
                         {
                             hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("1");
+                        }
+                        else { 
+                        
                         }
 
 

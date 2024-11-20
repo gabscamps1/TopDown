@@ -10,6 +10,7 @@ public class PlayerDamage : MonoBehaviour
 
     [Header("InfoDamagePlayer")]
     public float lives;
+    public bool isDead = false;
     [SerializeField] float invulnerabilityTime;
 
     [Header("Player Sounds")]
@@ -34,7 +35,8 @@ public class PlayerDamage : MonoBehaviour
         StartCoroutine(Blink());
 
         // Chama o Som de receber dano.
-        SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
+        if (SoundFXManager.instance != null && playerDamageSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(playerDamageSound, transform, 1f);
 
         // Diminui a vida do Player.
         lives -= damage;
@@ -44,6 +46,7 @@ public class PlayerDamage : MonoBehaviour
         {
             if (GameManager.instance != null)
             {
+                isDead = true;
                 GameManager.instance.deaths =+ 1; // Pega a quantia de dinheiro que está no GameObject Money e coloca no GameManager.
                 Destroy(gameObject);
             }

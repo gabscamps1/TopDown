@@ -5,6 +5,7 @@ public class ObjectDamage : MonoBehaviour
 {
     [SerializeField] private Collider2D damageCollider;
     [SerializeField] private float lives;
+    [SerializeField] public AudioClip objectDestroySound;
 
     private void OnParticleCollision(GameObject particle)
     {
@@ -57,6 +58,8 @@ public class ObjectDamage : MonoBehaviour
         // Destrói o Enemy quando lives é 0.
         if (lives <= 0)
         {
+            if (SoundFXManager.instance != null && objectDestroySound != null)
+                SoundFXManager.instance.PlaySoundFXClip(objectDestroySound, transform, 1f);
             Destroy(gameObject);
         }
     }

@@ -82,7 +82,7 @@ MonoBehaviour:
   inventory:
   - {fileID: 0}
   - {fileID: 0}
-  gunPickupSound: {fileID: 0}
+  gunPickupSound: {fileID: 8300000, guid: 71ffa4aec24b1d84eb83ed30886eb457, type: 3}
   gunPlaceholder: {fileID: 2924577023372855754}
   hasGun: 0
 --- !u!58 &7835780923081350627

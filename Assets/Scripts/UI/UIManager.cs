@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Sprite fullHealth;
     [SerializeField] Sprite emptyHealth;
     [SerializeField] float health;
+    [SerializeField] bool isDead;
 
     [Header("Low Health")]
     public GameObject lowHealthImage;
@@ -130,7 +131,17 @@ public class UIManager : MonoBehaviour
             }
 
             PlayerDamage playerInfo = player.GetComponent<PlayerDamage>();
-            health = playerInfo.lives;
+
+            if (playerInfo != null)
+            {
+                health = playerInfo.lives;
+                isDead = playerInfo.isDead;
+
+            }
+            else {
+                //health = 0;
+            }
+            
 
             UpdateHealth();
             UpdateMoney();
@@ -152,8 +163,10 @@ public class UIManager : MonoBehaviour
             StopHeartbeat();
 
         }
-        else if (health <= 0)
-        {
+
+        if (isDead == true) {
+        //else if (health <= 0)
+        //{
            PauseMenu.CanPause = false;
            if (deathScreen != null) deathScreen.SetActive(true);
            deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
@@ -161,6 +174,7 @@ public class UIManager : MonoBehaviour
            hudHealth.SetActive(false);
            hudMoney.SetActive(false);
            hudWeapons.SetActive(false);
+            //}
         }
 
         if (health > NumberOfHearts)

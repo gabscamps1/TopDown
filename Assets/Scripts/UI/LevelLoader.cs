@@ -22,7 +22,7 @@ public class LevelLoader : MonoBehaviour
     }
 
     public void LoadNextLevel() {
-       StartCoroutine(LoadLevelInteger(SceneManager.GetActiveScene().buildIndex + 1));
+       StartCoroutine(LoadLevelInteger(SceneManager.GetActiveScene().buildIndex + 1, "Wipe"));
     }
 
     public void LoadSpecificLevel(string levelName, string transition)
@@ -64,9 +64,9 @@ public class LevelLoader : MonoBehaviour
 
     }
 
-    IEnumerator LoadLevelInteger(int levelIndexInt){
-        //Toca animação
-        animatorTransition.SetTrigger("Start");
+    IEnumerator LoadLevelInteger(int levelIndexInt, string transition){
+        if (transition != null)
+            animatorTransition.SetTrigger(transition);
 
         //Espera
         yield return new WaitForSeconds(transitionTime);

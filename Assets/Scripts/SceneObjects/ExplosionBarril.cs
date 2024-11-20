@@ -10,6 +10,7 @@ public class ExplosionBarril : MonoBehaviour
     [SerializeField] CircleCollider2D areaExplosion;
     [SerializeField] float damage;
     bool isExploding;
+    [SerializeField] AudioClip barrelExplosionSound;
 
     private void OnParticleCollision(GameObject other)
     {
@@ -38,6 +39,9 @@ public class ExplosionBarril : MonoBehaviour
 
     private void Explosion()
     {
+        if (SoundFXManager.instance != null && barrelExplosionSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(barrelExplosionSound, transform, 1f);
+
         isExploding = false;
 
         Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, areaExplosion.radius * 1.5f);

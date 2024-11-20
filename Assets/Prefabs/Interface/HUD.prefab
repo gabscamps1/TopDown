@@ -5233,8 +5233,8 @@ MonoBehaviour:
   animator: {fileID: 931541682095580576}
   PortraitAnimation: {fileID: 7135334561493691580}
   timeDialogue: 0.01
-  nextDialogueSound: {fileID: 0}
-  startDialogueSound: {fileID: 0}
+  nextDialogueSound: {fileID: 8300000, guid: fd5924d1e16aa454e919849e526892eb, type: 3}
+  startDialogueSound: {fileID: 8300000, guid: eb9cde3049ad7314a81c007a8ceef212, type: 3}
   defaultBackground: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
   backgroundImage: {fileID: 502183199194880894}
   dialogueEffects: {fileID: 8463916427310289505}
@@ -5272,7 +5272,7 @@ MonoBehaviour:
   flashImage: {fileID: 165094062800446747}
   flashDuration: 0.1
   maxAlpha: 1
-  flashScreenSound: {fileID: 0}
+  flashScreenSound: {fileID: 8300000, guid: 9535ca230520eb24da36fdd8d41b7a9d, type: 3}
 --- !u!114 &6559153412881186016
 MonoBehaviour:
   m_ObjectHideFlags: 0

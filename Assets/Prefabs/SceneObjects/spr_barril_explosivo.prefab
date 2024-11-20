@@ -182,3 +182,4 @@ MonoBehaviour:
   life: 1
   areaExplosion: {fileID: 5569307507910348461}
   damage: 100
+  barrelExplosionSound: {fileID: 8300000, guid: aac2b5790da31d34e8510a4bf0540cfd, type: 3}

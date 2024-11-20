@@ -13,7 +13,8 @@ public class ItensPickUp : MonoBehaviour
     {
         if (collision.CompareTag("Money"))
         {
-            SoundFXManager.instance.PlaySoundFXClip(moneyPickupSound, transform, 1f);
+            if (SoundFXManager.instance != null && moneyPickupSound != null)
+                SoundFXManager.instance.PlaySoundFXClip(moneyPickupSound, transform, 1f);
 
             Money moneyObject = collision.GetComponent<Money>(); // Pega o Script do Money
 

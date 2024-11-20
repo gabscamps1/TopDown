@@ -35,33 +35,39 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        States();
-
-        Movement();
-
-        TryJumpTable();
-
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (!DialogueManager.isTalking)
         {
-            runPressed = runSpeed;
+            States();
+
+            Movement();
+
+            TryJumpTable();
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                runPressed = runSpeed;
+            }
+            else
+            {
+                runPressed = 1;
+            }
+
+            if (Input.GetKey(KeyCode.O))
+            {
+                SceneManager.LoadScene("TesteScene");
+            }
+            if (Input.GetKey(KeyCode.P))
+            {
+                SceneManager.LoadScene("Tuorial 1");
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && (movement.x != 0 || movement.y != 0))
+            {
+                StartCoroutine(Dodge());
+            }
         }
-        else
-        {
-            runPressed = 1;
-        }
-
-        if (Input.GetKey(KeyCode.O))
-        {
-            SceneManager.LoadScene("TesteScene");
-        }
-        if (Input.GetKey(KeyCode.P))
-        {
-            SceneManager.LoadScene("Tuorial 1");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && (movement.x != 0 || movement.y != 0))
-        {
-            StartCoroutine(Dodge());
+        else {
+            animator.SetBool("Walk", false);
         }
 
     }

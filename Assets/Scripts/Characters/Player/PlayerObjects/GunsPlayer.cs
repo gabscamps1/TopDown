@@ -59,51 +59,53 @@ public class GunsPlayer : MonoBehaviour
     void Update()
     {
         // Pegar o item: Mover para a posição de segurar do jogador.
-        if (isHold == true)
-        {
-            rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.
-
-
-            FollowMouseRotation();
-
-            // Intervalo entre os disparos da arma.
-            countTimePerBullet -= Time.deltaTime;
-
-            // Confere se a arma é automática.
-            if (isAutomatic)
+        if (!DialogueManager.isTalking) { 
+            if (isHold == true)
             {
-                // Segurar para atirar.
-                if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.
+
+
+                FollowMouseRotation();
+
+                // Intervalo entre os disparos da arma.
+                countTimePerBullet -= Time.deltaTime;
+
+                // Confere se a arma é automática.
+                if (isAutomatic)
                 {
-                    Shoot();
+                    // Segurar para atirar.
+                    if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                    {
+                        Shoot();
+                    }
+                }
+                else
+                {
+                    // Apertar para atirar.
+                    if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                    {
+                        Shoot();
+                    }
+                }
+
+                // Inicia o processo de recarga se a munição for zero e não estiver reloading.
+                if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading)
+                {
+
+                    StartCoroutine(Recarregar());
                 }
             }
             else
             {
-                // Apertar para atirar.
-                if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                // Devolver a colisão da arma se ela não estiver com o Player.
+                foreach (var collider in areaGun)
                 {
-                    Shoot();
+                    collider.enabled = true;
                 }
-            }
-
-            // Inicia o processo de recarga se a munição for zero e não estiver reloading.
-            if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading)
-            {
-
-                StartCoroutine(Recarregar());
+            
             }
         }
-        else
-        {
-            // Devolver a colisão da arma se ela não estiver com o Player.
-            foreach (var collider in areaGun)
-            {
-                collider.enabled = true;
-            }
-            
-        }
-            
+
     }
 
     // Chama a função de Tiro.
