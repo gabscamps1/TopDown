@@ -10,11 +10,7 @@ public class SaveData : MonoBehaviour
     {
         if (GameManager.instance.gameData != null)
             gameData = GameManager.instance.gameData;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         if (gameData.died)
         {
             SaveGameDeath();
@@ -24,10 +20,14 @@ public class SaveData : MonoBehaviour
         {
             SaveGame();
         }
+
+        LoadGame();
     }
 
     public void SaveGame()
     {
+        if (gameData == null) return;
+
         PlayerPrefs.SetString("currentLevel", gameData.currentLevel);
         PlayerPrefs.SetInt("deaths", gameData.deaths);
         PlayerPrefs.SetInt("money", gameData.money);
@@ -40,8 +40,24 @@ public class SaveData : MonoBehaviour
 
     public void LoadGame()
     {
-        gameData.currentLevel = PlayerPrefs.GetString("currrentLevel");
-        gameData.deaths = PlayerPrefs.GetInt("deaths");
-        gameData.money = PlayerPrefs.GetInt("money");
+        if (gameData == null) return;
+
+        if(PlayerPrefs.HasKey("currrentLevel"))
+            gameData.currentLevel = PlayerPrefs.GetString("currrentLevel");
+
+        if (PlayerPrefs.HasKey("deaths"))
+            gameData.deaths = PlayerPrefs.GetInt("deaths");
+
+        if (PlayerPrefs.HasKey("money"))
+            gameData.money = PlayerPrefs.GetInt("money");
+    }
+
+    public void NewGame()
+    {
+        if (gameData == null) return;
+
+        gameData.currentLevel = "Tutorial 1";
+        gameData.deaths = 0;
+        gameData.money = 0;
     }
 }

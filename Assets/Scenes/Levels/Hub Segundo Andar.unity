@@ -1110,24 +1110,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 516cdfe7475f6054e9b2d97331179369, type: 3}
---- !u!1 &793802269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3042158575321875088, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
-  m_PrefabInstance: {fileID: 873327548}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &793802274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793802269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783fce52df85c05429235ddc4a3ea36f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1513771255}
 --- !u!1001 &812242671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1360,13 +1342,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5721703669300762884, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1513771255}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3042158575321875088, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 793802274}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
 --- !u!1001 &891322030
 PrefabInstance:
@@ -2986,8 +2969,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 600356857}
-  - {fileID: 1118366925}
   - {fileID: 873327548}
+  - {fileID: 1118366925}
   - {fileID: 891720144}
   - {fileID: 891322030}
   - {fileID: 1572402493}

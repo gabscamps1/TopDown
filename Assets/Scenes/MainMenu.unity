@@ -3205,6 +3205,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1860467506}
+        m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &714442895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4379,7 +4391,7 @@ GameObject:
   - component: {fileID: 1101919043}
   - component: {fileID: 1101919044}
   m_Layer: 5
-  m_Name: NewGame
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7509,6 +7521,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1860467504}
   - component: {fileID: 1860467503}
+  - component: {fileID: 1860467506}
+  - component: {fileID: 1860467505}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7545,6 +7559,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860467505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860467502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1610aa49de09f488a3eb2f83def1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: 8d8164b384cb784419aef4ae344e432f, type: 2}
+  player: {fileID: 0}
+  levelLoader: {fileID: 0}
+  money: 0
+  deaths: 0
+--- !u!114 &1860467506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860467502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c305a1d23ae1e8f4fadee3daa50f3c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920319751
 GameObject:
   m_ObjectHideFlags: 0

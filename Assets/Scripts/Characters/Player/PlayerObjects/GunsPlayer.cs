@@ -10,7 +10,7 @@ public class GunsPlayer : MonoBehaviour
     public GameObject player; // Referência do Player. Configurado no código GunsPickUp.
     [SerializeField] ParticleSystem fireParticle; // Referência da partícula do projétil a ser disparado.
     private Rigidbody2D rb; // Referência do Rigbody2D da arma.
-    private Collider2D areaGun; // Referência do Collider2D da arma.
+    private Collider2D[] areaGun; // Referência do Collider2D da arma.
 
     [Header("InfoGun")]
     public int currentAmmo; // Munição atual na arma.
@@ -40,7 +40,7 @@ public class GunsPlayer : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
-        areaGun = GetComponent<Collider2D>();
+        areaGun = GetComponents<Collider2D>();
 
         maxAmmo = currentAmmo; // Seta a munição total para o valor da munição atual. Isso permite a Arma recarregar somente até a munição que ela começou.
         countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
@@ -97,7 +97,11 @@ public class GunsPlayer : MonoBehaviour
         else
         {
             // Devolver a colisão da arma se ela não estiver com o Player.
-            areaGun.enabled = true;
+            foreach (var collider in areaGun)
+            {
+                collider.enabled = true;
+            }
+            
         }
             
     }
@@ -105,8 +109,10 @@ public class GunsPlayer : MonoBehaviour
     // Chama a função de Tiro.
     void Shoot()
     {
-        SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f);
-        fireParticle.Emit(1);
+        if (SoundFXManager.instance != null && gunShootSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f); // Toca o som do tiro.
+
+        fireParticle.Emit(1); // Emite o tiro.
         currentAmmo--; // Reduz a munição ao disparar.
         countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
     }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b80e2387350b544939ee9003dafeab, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  money: 20
-  deaths: 4
-  globalFlag: 0
+  money: 0
+  deaths: 0
+  died: 0
+  currentLevel: Tutorial 1
   BarWomanFlag: 1

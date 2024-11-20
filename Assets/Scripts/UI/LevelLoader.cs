@@ -36,7 +36,7 @@ public class LevelLoader : MonoBehaviour
 
     public void Continue()
     {
-        StartCoroutine(LoadLevelString("SoundTest", "Wipe"));
+        StartCoroutine(LoadLevelString("Hub", "Wipe"));
     }
 
     public void Death()

@@ -75,15 +75,21 @@ public class GunsPickup : MonoBehaviour
     // Pega a arma do chão.
     private void EquipGun(GameObject nearestGun)
     {
-        SoundFXManager.instance.PlaySoundFXClip(gunPickupSound, transform, 1f);
+        if(SoundFXManager.instance != null && gunPickupSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(gunPickupSound, transform, 1f); // Toca o som de pegar uma arma.
+
         inventory[selectGun] = nearestGun; // Coloca no inventário a arma mais próxima.
         inventory[selectGun].transform.position = gunPlaceholder.position; // Coloca a arma no GunPlaceholder do Player.
         inventory[selectGun].transform.SetParent(transform); // Seta a arma como filha do Player.
         
         // Desativa a colisão da Arma.
-        Collider2D colliderGun = inventory[selectGun].GetComponent<Collider2D>();
-        if (colliderGun != null) 
-            colliderGun.enabled = false;
+        Collider2D[] colliderGun = inventory[selectGun].GetComponents<Collider2D>();
+        foreach (var collider in colliderGun)
+        {
+            if (collider != null)
+                collider.enabled = false;
+        }
+        
 
         // Remove a arma coletada da lista de armas que estão no chão.
         gunList.Remove(inventory[selectGun]);

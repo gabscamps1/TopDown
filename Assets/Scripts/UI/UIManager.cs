@@ -155,7 +155,7 @@ public class UIManager : MonoBehaviour
         else if (health <= 0)
         {
            PauseMenu.CanPause = false;
-           deathScreen.SetActive(true);
+           if (deathScreen != null) deathScreen.SetActive(true);
            deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
            deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
            hudHealth.SetActive(false);

@@ -11,7 +11,7 @@ public class GameData : ScriptableObject
     private int deaths_ant;
     public bool died; // Player morreu?
 
-    public string currentLevel = "level1"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
+    public string currentLevel = "Tutorial"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
 
     public int BarWomanFlag;
 

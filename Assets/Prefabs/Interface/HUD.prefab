@@ -5233,6 +5233,8 @@ MonoBehaviour:
   animator: {fileID: 931541682095580576}
   PortraitAnimation: {fileID: 7135334561493691580}
   timeDialogue: 0.01
+  nextDialogueSound: {fileID: 0}
+  startDialogueSound: {fileID: 0}
   defaultBackground: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
   backgroundImage: {fileID: 502183199194880894}
   dialogueEffects: {fileID: 8463916427310289505}
@@ -5270,6 +5272,7 @@ MonoBehaviour:
   flashImage: {fileID: 165094062800446747}
   flashDuration: 0.1
   maxAlpha: 1
+  flashScreenSound: {fileID: 0}
 --- !u!114 &6559153412881186016
 MonoBehaviour:
   m_ObjectHideFlags: 0

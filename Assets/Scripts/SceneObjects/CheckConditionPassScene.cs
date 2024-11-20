@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class CheckConditionPassScene : MonoBehaviour
 {
+    enum WhenCallToPass { InArea, Global }
+    [SerializeField] WhenCallToPass whenCallToPass;
+    // InArea - A cena será passada se a Condition selecionada for comprida e o Player entrar na área do Objeto com este Script.
+    // Global - A cena será passada automáticamente se a Condition selecionada for comprida.
+
     enum Condition { AllEnemys, Key, Coordinates, DeadCharacter }
     [SerializeField] Condition condition;
     // AllEnemys - Quando todos os Inimigos estão mortos na cena, o Player consegue passar pela porta.
@@ -15,30 +20,40 @@ public class CheckConditionPassScene : MonoBehaviour
     enum Levels {currentLevel, Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
     [SerializeField] Levels levels;
 
-    [SerializeField] GameObject character; // Mêcanica do DeadCharacter - Inimigo específico a ser morto.
-    
+    enum Achievements {None, Tutorial, Level1}
+    [SerializeField] Achievements achievements;
 
+    [SerializeField] GameObject character; // Mêcanica do DeadCharacter - Inimigo específico a ser morto.
+    GameData gameData;
+
+    private void Start()
+    {
+        if (GameManager.instance.gameData != null)
+            gameData = GameManager.instance.gameData;
+
+    }
     // Update is called once per frame
     void Update()
     {
-        switch (condition)
+        if (whenCallToPass == WhenCallToPass.Global)
         {
-            case Condition.DeadCharacter:
-
-                if (character == null) return;
-
-                if (character.IsDestroyed())
-                {
-                    PassScene();
-                }
-                break;
+            CallCondition();
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
+        
+        if (whenCallToPass == WhenCallToPass.InArea)
+        {
+            CallCondition();
+        }
 
+    }
+
+    void CallCondition()
+    {
         switch (condition)
         {
             case Condition.AllEnemys:
@@ -56,21 +71,51 @@ public class CheckConditionPassScene : MonoBehaviour
                         }
                     }
                 }
+
                 if (enemies.Count == 0)
                 {
                     PassScene();
+                    ChooseAchievements();
                 }
 
-                break;
+            break;
 
             case Condition.Key:
-                break;
+            break;
 
             case Condition.Coordinates:
+
                 PassScene();
+                ChooseAchievements();
+
+            break;
+
+            case Condition.DeadCharacter:
+
+                if (character.IsDestroyed())
+                {
+                    PassScene();
+                    ChooseAchievements();
+                }
+
+            break;
+        }
+    }
+
+    void ChooseAchievements()
+    {
+        if (gameData == null) return;
+
+        switch (achievements)
+        {
+            case Achievements.Tutorial:
+                GameManager.instance.gameData.currentLevel = "Tutorial 1";
+                break;
+
+            case Achievements.Level1:
+                GameManager.instance.gameData.currentLevel = "Level 1-1";
                 break;
         }
-
     }
 
     void PassScene()
@@ -80,6 +125,8 @@ public class CheckConditionPassScene : MonoBehaviour
         switch (levels)
         {
             case Levels.currentLevel:
+                if (gameData != null)
+                levelName = gameData.currentLevel;
                 break;
             case Levels.Tutorial1:
                 levelName = "Tutorial 1";
