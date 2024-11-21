@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 596185088844708718}
   m_Layer: 10
   m_Name: spr_mesa_jantar
-  m_TagString: JumpableTable
+  m_TagString: SceneObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
