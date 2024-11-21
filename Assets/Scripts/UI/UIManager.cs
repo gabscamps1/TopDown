@@ -169,8 +169,13 @@ public class UIManager : MonoBehaviour
         //{
            PauseMenu.CanPause = false;
            if (deathScreen != null) deathScreen.SetActive(true);
-           deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
-           deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+
+           if (GameManager.instance != null)
+           {
+                deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
+                deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+           }
+           
            hudHealth.SetActive(false);
            hudMoney.SetActive(false);
            hudWeapons.SetActive(false);
@@ -206,7 +211,7 @@ public class UIManager : MonoBehaviour
     }
 
     void UpdateMoney() {
-        moneyText.text = "x" + GameManager.instance.gameData.money.ToString("D3");
+        if (GameManager.instance != null) moneyText.text = "x" + GameManager.instance.gameData.money.ToString("D3");
     }
 
     void StartHeartbeat(){

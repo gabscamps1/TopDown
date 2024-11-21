@@ -268,8 +268,6 @@ public class DialogueManager : MonoBehaviour
     {
         PauseMenu.CanPause = true;
         isTalking = false;
-        Debug.Log(isTalking);
-        Debug.Log("End of Conversation");
         animator.SetBool("IsOpen", false);
         PortraitAnimation.SetBool("IsOpen", false);
         //dialogueEffects?.ResetDialogPosition();

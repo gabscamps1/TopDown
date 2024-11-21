@@ -52,25 +52,21 @@ public class ExplosionBarril : MonoBehaviour
         {
             GameObject character = obj.gameObject;
 
+            if (damagedCharacter.Contains(character)) continue;
+
             if (character.CompareTag("Player"))
             {
-                if (damagedCharacter.Contains(character)) return;
-
                 PlayerDamage playerScript = character.GetComponent<PlayerDamage>();
                 playerScript.CallDamage(1);
-
-                damagedCharacter.Add(character);
             }
 
             if (character.CompareTag("Enemy"))
             {
-                if (damagedCharacter.Contains(character)) return;
-
                 EnemyDamage enemyScript = character.GetComponent<EnemyDamage>();
                 enemyScript.CallDamage(damage);
-
-                damagedCharacter.Add(character);
             }
+
+            damagedCharacter.Add(character);
         }
 
     }

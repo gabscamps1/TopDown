@@ -1265,6 +1265,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2954df15f9491e4d8bfd18afd10c646, type: 3}
+--- !u!1 &498346847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3759364688153583907, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+  m_PrefabInstance: {fileID: 1333864689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &498346854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498346847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419987b03c6653e4ba03edaf4b2bce8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whenCallToPass: 1
+  condition: 3
+  levels: 2
+  achievements: 0
+  character: {fileID: 1229194296}
 --- !u!1001 &578080526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2853,7 +2875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241981099960403969, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: lives
-      value: 3
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6613662134105500048, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: m_LocalScale.x
@@ -3411,7 +3433,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3759364688153583907, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 498346854}
   m_SourcePrefab: {fileID: 100100000, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
 --- !u!1001 &1334079756
 PrefabInstance:

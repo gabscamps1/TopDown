@@ -2769,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1114108605537357622, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5504006326723906579, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
       propertyPath: m_Name
       value: paredes_pedra_3
@@ -4930,6 +4934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3652587618511506079, guid: 610314e8b8d75f74bb6b6c140792e444, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5745160928300063760, guid: 610314e8b8d75f74bb6b6c140792e444, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.363

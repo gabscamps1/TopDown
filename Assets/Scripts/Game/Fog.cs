@@ -9,7 +9,7 @@ public class Fog : MonoBehaviour
     private Collider2D[] objects; // Guarda os Inimigos que estiverem dentro da área da Fog.
     [SerializeField] float timerToDesativeFog; // Tempo para a desativação da Fog depois do Player passar pela colisão.
     private float countTimerToDesativeFog;
-
+    bool isFogActive;
     void Start()
     {
         // Pega todos os objetos dentro da Fog e coloca no array.
@@ -17,32 +17,25 @@ public class Fog : MonoBehaviour
 
         HideObjects();
     }
-    
 
+    void Update()
+    {
+        if (isFogActive) AppearObjects();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Desativa a Fog se o Player entrar na area disableFog.
         if (collision.CompareTag("Player") && collision.IsTouching(disableFog))
         {
             countTimerToDesativeFog = timerToDesativeFog;
-            AppearObjects();
+            isFogActive = true;
             
         }
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        // Desativa a Fog se o Player entrar na area disableFog.
-        if (collision.CompareTag("Player") && !collision.IsTouching(disableFog))
-        {
-            HideObjects();
-        }
-        
-    }
 
     void HideObjects()
-    {
-        
+    {   
         foreach (var obj in objects)
         {
             if (obj != null)
@@ -51,13 +44,10 @@ public class Fog : MonoBehaviour
                     obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
                 }
         }
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.enabled = true;
     }
 
     void AppearObjects()
     {
-
         // Se a fog estiver desativada, ative todos os objetos do dentro da Fog.
         if (countTimerToDesativeFog <= 0)
         {
@@ -66,8 +56,7 @@ public class Fog : MonoBehaviour
                 if(obj != null)
                     obj.gameObject.SetActive(true);
             }
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.enabled = false;
+            gameObject.SetActive(false);
         }
         else
         {
