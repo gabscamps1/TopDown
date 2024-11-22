@@ -13,7 +13,13 @@ public class GameData : ScriptableObject
 
     public string currentLevel = "Tutorial"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
 
+
+    [Header("NPC FLAGS")]
     public int BarWomanFlag;
+    public int SellerFlag;
+    public bool TALKED_TO_BOSS;
+    public bool TALKED_TO_SELLER;
+
 
     // Start is called before the first frame update
     void Start()

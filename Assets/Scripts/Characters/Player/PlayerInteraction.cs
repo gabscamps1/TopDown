@@ -9,7 +9,14 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionIcon;
 
     [SerializeField] public AudioClip dialogueBubbleSound;
-
+    GameData gameData;
+    private void Start()
+    {
+        if (GameManager.instance != null)
+        {
+            gameData = GameManager.instance.gameData;
+        }
+    }
 
     void Update()
     {
@@ -48,24 +55,55 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (gameData == null) return;
+                DialogueTrigger dialogueTrigger = hit.collider.gameObject.GetComponent<DialogueTrigger>();
+                
                 //SoundFXManager.instance.PlaySoundFXClip(dialogueBubbleSound, transform, 1f);
                 switch (hit.collider.gameObject.name)
                 {
+                    
                     case "Barwoman":
-                        if  (GameManager.instance.gameData.BarWomanFlag == 0){
-                            hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("0");
-                            GameManager.instance.gameData.BarWomanFlag = 1;
+                        ChooseFlag(gameData.BarWomanFlag);
 
-                        }if (GameManager.instance.gameData.BarWomanFlag == 1)
+                        if (gameData.BarWomanFlag == 0 && (gameData.TALKED_TO_SELLER == false)) {
+                            dialogueTrigger.TriggerDialogue("0");
+                            
+                        } else if ((gameData.BarWomanFlag == 0) && (gameData.TALKED_TO_SELLER)) {
+                            dialogueTrigger.TriggerDialogue("1");
+
+                            gameData.BarWomanFlag = 1;
+
+                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 1)){
+                            dialogueTrigger.TriggerDialogue("2");
+
+                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 2))
                         {
-                            hit.collider.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue("1");
+                            dialogueTrigger.TriggerDialogue("3");
+                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths >= 3))
+                        {
+                            dialogueTrigger.TriggerDialogue("4");
                         }
-                        else { 
-                        
+
+                        //ChooseFlag(gameData.BarWomanFlag);
+
+                        break;
+
+                    case "Vendedor":
+                        if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS == false))
+                        {
+                            dialogueTrigger.TriggerDialogue("0");
+
+                        }else if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS))
+                        {
+                            dialogueTrigger.TriggerDialogue("1");
+                            gameData.SellerFlag = 1;
+
                         }
 
 
-                            break;
+                        //ChooseFlag(gameData.BarWomanFlag);
+
+                        break;
 
                     case "TutorialBoard":
                         //print("ola");
@@ -98,5 +136,27 @@ public class PlayerInteraction : MonoBehaviour
 
 
 
+    }
+
+    void ChooseFlag(int flag)
+    {
+        switch (GameManager.instance.gameData.currentLevel)
+        {
+            case "Level1":
+                switch (GameManager.instance.gameData.deaths)
+                {
+                    case 0:
+                        flag = 0;
+                        break;
+                    case 1:
+                        flag = 1;
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+                break;
+        }
     }
 }

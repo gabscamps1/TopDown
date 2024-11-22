@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetMasterVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 4852782281333292083, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5200297763723761795, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_RaycastTarget
       value: 0

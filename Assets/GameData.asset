@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b80e2387350b544939ee9003dafeab, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  money: 0
-  deaths: 0
+  money: 8
+  deaths: 4
   died: 0
   currentLevel: Tutorial 1
   BarWomanFlag: 1
+  SellerFlag: 1
+  TALKED_TO_BOSS: 1
+  TALKED_TO_SELLER: 1

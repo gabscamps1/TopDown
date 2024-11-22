@@ -128,10 +128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 24
+  maxAmmo: 0
   timePerBullet: 0.08
   bulletSpeed: 10
   reloadTime: 2
   damage: 1
+  gunShootSound: {fileID: 8300000, guid: ed3d5b35e671a54458a479cc81c06ad1, type: 3}
   isReloading: 0
   angleVariance: 0
   angleVarianceR: 0

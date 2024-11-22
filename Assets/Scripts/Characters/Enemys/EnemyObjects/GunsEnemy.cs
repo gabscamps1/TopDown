@@ -17,6 +17,7 @@ public class GunsEnemy : MonoBehaviour
     [SerializeField] float bulletSpeed = 10f; // Velocidade do disparo.
     public float reloadTime;
     public float damage; // Dano causado no Player. É chamado pelo script Damage.
+    [SerializeField] public AudioClip gunShootSound;
 
     [Header("StateGun")]
     public bool isReloading = false;
@@ -73,6 +74,8 @@ public class GunsEnemy : MonoBehaviour
     // Chama a função de Tiro.
     void Shoot()
     {
+        if (SoundFXManager.instance != null && gunShootSound != null)
+            SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f); // Toca o som do tiro.
         fireParticle.Emit(1);
         currentAmmo--; // Reduz a munição ao disparar.
         countTimePerBullet = timePerBullet;
