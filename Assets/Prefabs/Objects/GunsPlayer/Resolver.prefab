@@ -222,9 +222,9 @@ MonoBehaviour:
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 6
   maxAmmo: 0
-  timePerBullet: 0.6
+  timePerBullet: 0.3
   bulletSpeed: 10
-  damage: 6
+  damage: 10
   hudIcon: {fileID: -1240727997, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
   gunShootSound: {fileID: 8300000, guid: 99db52fbafe5f164c975fbbec1787ad8, type: 3}
   isReloading: 0
@@ -5008,7 +5008,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f40c9acb132c40640b65bdb2f8b4bf02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5026,8 +5026,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1442872551
-  m_SortingLayer: 1
+  m_SortingLayerID: 2130173627
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0

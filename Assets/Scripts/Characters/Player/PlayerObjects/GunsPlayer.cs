@@ -114,7 +114,7 @@ public class GunsPlayer : MonoBehaviour
         if (SoundFXManager.instance != null && gunShootSound != null)
             SoundFXManager.instance.PlaySoundFXClip(gunShootSound, transform, 1f); // Toca o som do tiro.
 
-        fireParticle.Emit(1); // Emite o tiro.
+        fireParticle.Emit(20); // Emite o tiro.
         currentAmmo--; // Reduz a munição ao disparar.
         countTimePerBullet = timePerBullet; // Reseta o delay para atirar.
     }

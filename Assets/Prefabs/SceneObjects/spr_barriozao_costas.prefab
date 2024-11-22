@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7810823298650090007}
   - component: {fileID: 3710714633642559550}
   - component: {fileID: 5858499954883508231}
+  - component: {fileID: 6561590391511984974}
   m_Layer: 10
   m_Name: spr_barriozao_costas
   m_TagString: SceneObject
@@ -130,3 +131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.1655953}
   m_EdgeRadius: 0
+--- !u!114 &6561590391511984974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469328000184120222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

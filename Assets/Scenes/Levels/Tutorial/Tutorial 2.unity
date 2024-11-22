@@ -1808,6 +1808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 402678983710524781, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
+      propertyPath: currentAmmo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3903222704392435275, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -1970,6 +1974,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 402678983710524781, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
+      propertyPath: currentAmmo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3903222704392435275, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
       propertyPath: m_Name
       value: Enemy

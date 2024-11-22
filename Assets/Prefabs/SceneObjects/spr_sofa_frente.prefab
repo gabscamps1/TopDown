@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 130669255803477592}
   - component: {fileID: 1066950061546810047}
   - component: {fileID: 1374712761693364253}
+  - component: {fileID: 6345518712622342687}
   m_Layer: 11
   m_Name: spr_sofa_frente
   m_TagString: JumpableTable
@@ -130,3 +131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4761696, y: 0.47948313}
   m_EdgeRadius: 0
+--- !u!114 &6345518712622342687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775345718590754166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
