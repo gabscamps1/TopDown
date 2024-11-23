@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageCollider: {fileID: 1416221328743699153}
-  lives: 16
+  lives: 10
   enemyDamageSound: {fileID: 8300000, guid: 9fa1926773d14e248ac80a487c14f3d7, type: 3}
 --- !u!114 &-4469100993616334746
 MonoBehaviour:

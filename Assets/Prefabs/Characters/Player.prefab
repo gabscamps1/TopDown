@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectGun: 0
   throwForce: 30
-  damage: 4
+  damage: 5
   inventory:
   - {fileID: 0}
   - {fileID: 0}
@@ -370,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 0}
   lives: 3
+  isDead: 0
   invulnerabilityTime: 1.5
   playerDamageSound: {fileID: 8300000, guid: 9fa1926773d14e248ac80a487c14f3d7, type: 3}
 --- !u!114 &3192959737674056327
