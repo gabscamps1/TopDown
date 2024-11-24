@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    private float raycastDistance = 1.2f;
+    private float raycastDistance = 2f;
     public LayerMask interactionLayer;
     public Vector2 currentDirection = Vector2.right; // Direção inicial, alterada usando dotProduct do PlayerMovement.
 
@@ -97,6 +97,23 @@ public class PlayerInteraction : MonoBehaviour
                         {
                             dialogueTrigger.TriggerDialogue("1");
                             gameData.SellerFlag = 1;
+
+                        }
+
+                        break;
+
+                    case "Puxachefe":
+                        if (gameData.BossHandyFlag == 0)
+                        {
+                            dialogueTrigger.TriggerDialogue("0");
+                            gameData.BossHandyFlag = 1;
+                            gameData.TALKED_TO_BOSS = true;
+
+                        }
+                        else if (gameData.BossHandyFlag == 1)
+                        {
+                            dialogueTrigger.TriggerDialogue("1");
+                            //gameData.SellerFlag = 1;
 
                         }
 

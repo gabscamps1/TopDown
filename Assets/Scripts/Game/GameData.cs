@@ -17,6 +17,7 @@ public class GameData : ScriptableObject
     [Header("NPC FLAGS")]
     public int BarWomanFlag;
     public int SellerFlag;
+    public int BossHandyFlag;
     public bool TALKED_TO_BOSS;
     public bool TALKED_TO_SELLER;
 
