@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8359613365453135058}
   - component: {fileID: -8621405851553492483}
   - component: {fileID: -4731211284573020826}
+  - component: {fileID: 5451699585484600185}
   m_Layer: 10
   m_Name: spr_barril 1
   m_TagString: SceneObject
@@ -136,3 +137,20 @@ MonoBehaviour:
   damageCollider: {fileID: -8621405851553492483}
   lives: 1
   objectDestroySound: {fileID: 8300000, guid: 657d855914a3bc049882a6fbfff57eb5, type: 3}
+  Madeira_Quebrada: {fileID: 8362619772383443967, guid: 07a1efbd56d8b084fb22d36add9d11aa, type: 3}
+--- !u!114 &5451699585484600185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386579320518573973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8342cdea6f0f2df4abab45e997ab3fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensDrop:
+  - {fileID: 7389839762856018531, guid: 0f774818db493304e8937e6b704cb194, type: 3}
+  itenChance: 64000000
+  money: {fileID: 0}
