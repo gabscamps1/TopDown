@@ -133,7 +133,7 @@ MonoBehaviour:
   bulletSpeed: 10
   reloadTime: 2
   damage: 1
-  gunShootSound: {fileID: 8300000, guid: 99db52fbafe5f164c975fbbec1787ad8, type: 3}
+  gunShootSound: {fileID: 8300000, guid: 9123e36e834ad4b40afc108c08ef070d, type: 3}
   isReloading: 0
   angleVariance: -12
   angleVarianceR: -3
