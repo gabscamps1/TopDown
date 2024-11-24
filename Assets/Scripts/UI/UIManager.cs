@@ -55,7 +55,7 @@ public class UIManager : MonoBehaviour
     GameObject player;
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameManager.instance.player;
 
         if (hudElement != null)
         {
@@ -135,18 +135,18 @@ public class UIManager : MonoBehaviour
             if (playerInfo != null)
             {
                 health = playerInfo.lives;
-                isDead = playerInfo.isDead;
+            }
 
-            }
-            else {
-                //health = 0;
-            }
-            
 
             UpdateHealth();
             UpdateMoney();
 
         }
+        else
+        {
+            PlayerDied();
+        }
+
     }
 
     void UpdateHealth()
@@ -162,24 +162,6 @@ public class UIManager : MonoBehaviour
             lowHealthImage.SetActive(false);
             StopHeartbeat();
 
-        }
-
-        if (isDead == true) {
-        //else if (health <= 0)
-        //{
-           PauseMenu.CanPause = false;
-           if (deathScreen != null) deathScreen.SetActive(true);
-
-           if (GameManager.instance != null)
-           {
-                deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
-                deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
-           }
-           
-           hudHealth.SetActive(false);
-           hudMoney.SetActive(false);
-           hudWeapons.SetActive(false);
-            //}
         }
 
         if (health > NumberOfHearts)
@@ -208,6 +190,22 @@ public class UIManager : MonoBehaviour
                 Hearts[i].enabled = false;
             }
         }
+    }
+
+    void PlayerDied()
+    {
+        PauseMenu.CanPause = false;
+        if (deathScreen != null) deathScreen.SetActive(true);
+
+        if (GameManager.instance != null)
+        {
+            deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
+            deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+        }
+
+        hudHealth.SetActive(false);
+        hudMoney.SetActive(false);
+        hudWeapons.SetActive(false);
     }
 
     void UpdateMoney() {

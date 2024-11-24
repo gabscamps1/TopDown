@@ -10,11 +10,11 @@ public class Dropper : MonoBehaviour
     
     private void Start()
     {
-        Destroy(gameObject,2f);
+        
     }
     private void OnDestroy()
     {
-        DropChance(); // Chama a função de calculo de drop quando o Objecto é destruido.
+        if (itensDrop.Length > 0 && itenChance.Length > 0)  DropChance(); // Chama a função de calculo de drop quando o Objecto é destruido.
         if (money != null) DropMoney();
     }
 

@@ -6,6 +6,9 @@ public class ObjectDamage : MonoBehaviour
     [SerializeField] private Collider2D damageCollider;
     [SerializeField] private float lives;
     [SerializeField] public AudioClip objectDestroySound;
+    [SerializeField] private ParticleSystem Madeira_Quebrada;
+
+    private ParticleSystem Madeira_QuebradaInstance;
 
     private void OnParticleCollision(GameObject particle)
     {
@@ -49,6 +52,11 @@ public class ObjectDamage : MonoBehaviour
         }
     }
 
+    private void Particulas()
+    {
+        Madeira_QuebradaInstance = Instantiate(Madeira_Quebrada, transform.position, Quaternion.identity);
+    }
+
     // Função que causa dano ao Inimigo.
     void CallDamage(float damage)
     {
@@ -60,6 +68,7 @@ public class ObjectDamage : MonoBehaviour
         {
             if (SoundFXManager.instance != null && objectDestroySound != null)
                 SoundFXManager.instance.PlaySoundFXClip(objectDestroySound, transform, 1f);
+            Particulas();
             Destroy(gameObject);
         }
     }

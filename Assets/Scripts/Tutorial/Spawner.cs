@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -8,21 +10,16 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] 
     List<EnemyList> enemyList = new List<EnemyList>();
-    
-    
-
-    // Start is called before the first frame update
-   /* [SerializeField] GameObject enemyFighter;
-    [SerializeField] int amountEnemyFighter;
-
-    [SerializeField] GameObject enemyShooter;
-    [SerializeField] int amountEnemyShooter;
-
-    GameObject[] enemys;*/
 
     [SerializeField] float delayToSpawn;
     float countDelaySpawn;
-   
+
+    Collider2D areaToSpawn;
+
+    void Start()
+    {
+        areaToSpawn = GetComponent<Collider2D>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -82,7 +79,7 @@ public class Spawner : MonoBehaviour
                     if (enemyList[i].spawnPerTime[n] > 0)
                     {
                         // Chama a função para spawnar os inimigos.
-                        SpawnEnemys(enemyList[i].enemy, enemyList[i].spawnPerTime[n]);
+                        StartCoroutine(SpawnEnemys(enemyList[i].enemy, enemyList[i].spawnPerTime[n]));
 
                         // Diminui a quantidade total de inimigos pela quantidade de inimigos spawnados.
                         enemyList[i].maxQuantity -= enemyList[i].spawnPerTime[n];
@@ -99,7 +96,7 @@ public class Spawner : MonoBehaviour
                 if (enemyList[i].spawnPerTime[enemyList[i].spawnPerTime.Length - 1] > thisMaxQuantity)
                 {
                     // Gera a quantidade de inimigos restante dessa lista.
-                    SpawnEnemys(enemyList[i].enemy, thisMaxQuantity);
+                    StartCoroutine(SpawnEnemys(enemyList[i].enemy, thisMaxQuantity));
 
                     // Diminui a quantidade total de inimigos dessa lista.
                     enemyList[i].maxQuantity = 0;
@@ -107,7 +104,7 @@ public class Spawner : MonoBehaviour
                 else
                 {
                     // Gera a quantidade de inimigos estabelecidos.
-                    SpawnEnemys(enemyList[i].enemy, enemyList[i].spawnPerTime[enemyList[i].spawnPerTime.Length - 1]);
+                    StartCoroutine(SpawnEnemys(enemyList[i].enemy, enemyList[i].spawnPerTime[enemyList[i].spawnPerTime.Length - 1]));
 
                     // Diminui a quantidade total de inimigos dessa lista.
                     enemyList[i].maxQuantity -= enemyList[i].spawnPerTime[enemyList[i].spawnPerTime.Length - 1];
@@ -119,15 +116,35 @@ public class Spawner : MonoBehaviour
     }
 
     // Função para gerar Inimigos.
-    void SpawnEnemys(GameObject enemy, int quantitty)
+    IEnumerator SpawnEnemys(GameObject enemy, int quantitty)
     {
         // Gera o número de inimigos solicitados.
         for (int i = 0; i < quantitty; i++)
-        {   
-            Instantiate(enemy, transform.position, Quaternion.identity, transform);
+        {
+            bool isValidPosition = false;
+            Vector2 position = transform.position;
+
+            while (!isValidPosition)
+            {
+                position = (Vector2)transform.position - ((Vector2)areaToSpawn.bounds.size / 2) + new Vector2(Random.Range(0, areaToSpawn.bounds.size.x), Random.Range(0, areaToSpawn.bounds.size.y));
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.1f);
+
+                foreach (Collider2D collider in colliders)
+                {
+                    if (!collider.isTrigger)
+                    {
+                        yield return new WaitForNextFrameUnit();
+                    }
+                }
+
+                isValidPosition = true;
+            }
+            
+            Instantiate(enemy, position, Quaternion.identity, transform);
         }
-        
+
     }
+
 }
 
 [System.Serializable]
