@@ -146,8 +146,14 @@ public class CheckConditionPassScene : MonoBehaviour
             case Levels.Level1_2:
                 levelName = "Level 1-2";
                 break;
+            case Levels.Level1_3:
+                levelName = "Level 1-3";
+                break;
             case Levels.Level1_4:
                 levelName = "Level 1-4";
+                break;
+            case Levels.Level1_5:
+                levelName = "Level 1-5";
                 break;
             default:
                 return;

@@ -1721,6 +1721,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 99
       objectReference: {fileID: 0}
+    - target: {fileID: 3064497797461507271, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 3548397301668087589, guid: c40d5853ae3935a4fb655d73ac6cb4f1, type: 3}
     - target: {fileID: 3884404971035210816, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 5

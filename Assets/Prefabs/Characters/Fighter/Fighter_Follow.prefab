@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 4429867644762803864}
   - component: {fileID: -1728508816938678944}
   - component: {fileID: 4493399742784038082}
-  - component: {fileID: 3871755683930646695}
+  - component: {fileID: 1206825137079133130}
   - component: {fileID: 8802546437088174440}
   m_Layer: 7
   m_Name: Fighter_Follow
@@ -393,7 +393,7 @@ MonoBehaviour:
   moveSpeed: 3.5
   stopSpeed: 1
   damageArea: {fileID: 1612456040817761085}
---- !u!114 &3871755683930646695
+--- !u!114 &1206825137079133130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,10 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8342cdea6f0f2df4abab45e997ab3fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itensDrop:
-  - {fileID: 0}
-  itenChance: 00000000
-  money: {fileID: 0}
+  itensDrop: []
+  itenChance: 
+  money: {fileID: 3548397301668087589, guid: c40d5853ae3935a4fb655d73ac6cb4f1, type: 3}
 --- !u!195 &8802546437088174440
 NavMeshAgent:
   m_ObjectHideFlags: 0

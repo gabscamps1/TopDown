@@ -98,8 +98,9 @@ GameObject:
   - component: {fileID: -7680352475863962900}
   - component: {fileID: 4429867644762803864}
   - component: {fileID: -1728508816938678944}
+  - component: {fileID: 3064497797461507271}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Shooter_Resolver
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,6 +309,22 @@ MonoBehaviour:
   damageCollider: {fileID: 1416221328743699153}
   lives: 10
   enemyDamageSound: {fileID: 8300000, guid: 9fa1926773d14e248ac80a487c14f3d7, type: 3}
+--- !u!114 &3064497797461507271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903222704392435275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8342cdea6f0f2df4abab45e997ab3fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensDrop:
+  - {fileID: 0}
+  itenChance: 00000000
+  money: {fileID: 3548397301668087589, guid: c40d5853ae3935a4fb655d73ac6cb4f1, type: 3}
 --- !u!1 &5302761147311039241
 GameObject:
   m_ObjectHideFlags: 0
