@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 65a84b7ee0998da4b91891b62b63456f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 81
+        width: 26
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b750f4b2d4cfab247adc7ffa28e6799b
+      internalID: 1564428299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 80
+        width: 27
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b3eaa52eac3a34fa67dc4c61132d5e
+      internalID: -451526514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 27
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a52ac109665fc74e99dba845f915121
+      internalID: 1744488288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 80
+        width: 27
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e9be28d01127f4cae72568c810e095
+      internalID: 395601000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 81
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f60c2d59d04c194aa7c24557a677021
+      internalID: -879777379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 81
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70506351705f6149b6dc200beb88d36
+      internalID: -1161120792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 46
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbd71004272bc24eb9dc514c199e144
+      internalID: 455117614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 46
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b276c1e9d8c9f3469311230f7a1dac8
+      internalID: -1428873555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_8
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 46
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8687b0c71b7818b40be2c58914e88be3
+      internalID: -1676068016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 46
+        width: 29
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c75b68929c05d4cb7539c43ce00a70
+      internalID: -1211141659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_10
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 46
+        width: 25
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b744ad70a0ba8d945bd6a483aa67a55d
+      internalID: 1860698270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_11
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 46
+        width: 24
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04f7ef5d5ca62f41a425be81c557452
+      internalID: -785025088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 23
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c8263e90fc837469e38010d46830b7
+      internalID: 1735388837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 10
+        width: 26
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0b3abcee712af4fbd11c9de6fec838
+      internalID: -1524809588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_14
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 10
+        width: 26
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b2beba4aa6b47418efb3288a252c29
+      internalID: -1006822483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_15
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 10
+        width: 25
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507136d01e0bda142a308a14c329b4f0
+      internalID: 1747335462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 10
+        width: 25
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfddfb67cd7644f49969e60637e601c6
+      internalID: -734342842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo1_ataque_comArma_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 10
+        width: 25
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2532ce3ff58d04aa5998955ee7abe8
+      internalID: -1558755189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      inimigo1_ataque_comArma_0: 1564428299
+      inimigo1_ataque_comArma_1: -451526514
+      inimigo1_ataque_comArma_10: 1860698270
+      inimigo1_ataque_comArma_11: -785025088
+      inimigo1_ataque_comArma_12: 1735388837
+      inimigo1_ataque_comArma_13: -1524809588
+      inimigo1_ataque_comArma_14: -1006822483
+      inimigo1_ataque_comArma_15: 1747335462
+      inimigo1_ataque_comArma_16: -734342842
+      inimigo1_ataque_comArma_17: -1558755189
+      inimigo1_ataque_comArma_2: 1744488288
+      inimigo1_ataque_comArma_3: 395601000
+      inimigo1_ataque_comArma_4: -879777379
+      inimigo1_ataque_comArma_5: -1161120792
+      inimigo1_ataque_comArma_6: 455117614
+      inimigo1_ataque_comArma_7: -1428873555
+      inimigo1_ataque_comArma_8: -1676068016
+      inimigo1_ataque_comArma_9: -1211141659
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 18b3ca1fae2c8b94ca7b36358a59d526
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 89
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9059b2d3a909445b03b5a77257930d
+      internalID: 2041946184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 89
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2719b955f33552845b10af0ddfb3d7bd
+      internalID: 1599541897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 89
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd3b619ee8f2d2428b638fca9ef34bb
+      internalID: 95060684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 89
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbdaf01af16f14478559abf2ac30b72
+      internalID: -554548313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 89
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1b6341b18f62f43bb39af33e53c38f
+      internalID: -700961765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 89
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8db71621b13ef49a09e8e10b3b9cdb
+      internalID: -1041071696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94fa288dbfb8fb469548451df3c1144
+      internalID: 1419905868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 48
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aebbe092426b5d46a8ec501b1660510
+      internalID: -1181341188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_8
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 48
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0a65a4faf6c1b46ac01948778141a6
+      internalID: 1854627011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 48
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6873f234949aa46b762b1cb80b0692
+      internalID: 261818539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_10
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 48
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629380970e0063242ae81ab4edc31a72
+      internalID: -148033062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 22
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4bd592567e7794d99f7a45192a4c59
+      internalID: 1869165842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06acd1ed9c4ee2449b7c3cdfc96b0265
+      internalID: -1117303648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04a6ad0736827d4a83cd8c01e02cb11
+      internalID: 1291271543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_14
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea95e5f59d2f0f4fb99aaffd580b35e
+      internalID: -506239751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb6dc399884ce24098e560d2dd43846
+      internalID: 551619915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_16
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cd5fe4fa56923458a875cebc6d2158
+      internalID: 127790189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: subchefe_atacando_comArma_17
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 9
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5403fa2e188578042b7694fea89dbdaf
+      internalID: 1056019968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      subchefe_atacando_comArma_0: 2041946184
+      subchefe_atacando_comArma_1: 1599541897
+      subchefe_atacando_comArma_10: -148033062
+      subchefe_atacando_comArma_11: 1869165842
+      subchefe_atacando_comArma_12: -1117303648
+      subchefe_atacando_comArma_13: 1291271543
+      subchefe_atacando_comArma_14: -506239751
+      subchefe_atacando_comArma_15: 551619915
+      subchefe_atacando_comArma_16: 127790189
+      subchefe_atacando_comArma_17: 1056019968
+      subchefe_atacando_comArma_2: 95060684
+      subchefe_atacando_comArma_3: -554548313
+      subchefe_atacando_comArma_4: -700961765
+      subchefe_atacando_comArma_5: -1041071696
+      subchefe_atacando_comArma_6: 1419905868
+      subchefe_atacando_comArma_7: -1181341188
+      subchefe_atacando_comArma_8: 1854627011
+      subchefe_atacando_comArma_9: 261818539
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
