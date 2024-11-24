@@ -60,6 +60,13 @@ public class EnemyDamage : MonoBehaviour
         // Destrói o Enemy quando lives é 0.
         if (lives <= 0)
         {
+            if (GetComponent<Dropper>())
+            {
+                GetComponent<Dropper>().DropChance(); // Chama a função de calculo de drop quando o Objecto é destruido.
+                GetComponent<Dropper>().DropMoney(); // Chama a função de dinheiro.
+            }
+
+            // Destrói o Inimigo.
             Destroy(gameObject);
         }
     }

@@ -7,20 +7,12 @@ public class Dropper : MonoBehaviour
     [SerializeField] GameObject[] itensDrop; // Itens que podem ser dropados pelos inimigos.
     [SerializeField] int[] itenChance; // Porcentagem de chance de drop de cada item - N° do array corresponde ao N° do array do itensDrop.
     [SerializeField] GameObject money; // GameObject do dinheiro.
-    
-    private void Start()
-    {
-        
-    }
-    private void OnDestroy()
-    {
-        if (itensDrop.Length > 0 && itenChance.Length > 0)  DropChance(); // Chama a função de calculo de drop quando o Objecto é destruido.
-        if (money != null) DropMoney();
-    }
 
     // Calcula a chance de drop de cada item.
-    private void DropChance()
+    public void DropChance()
     {
+        if (itensDrop.Length <= 0 && itenChance.Length <= 0) return;
+
         // Calcula o item que será selecionado para o drop.
         int aleatoryDrop = Random.Range(0, itensDrop.Length); 
 
@@ -41,9 +33,9 @@ public class Dropper : MonoBehaviour
         }
     }
 
-    // Fuñção de drop do dinheiro.
-    private void DropMoney()
+    // Função de drop do dinheiro.
+    public void DropMoney()
     {
-        Instantiate(money, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360))); // Instância o GameObject do dinheiro no cenário.
+        if (money != null) Instantiate(money, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360))); // Instância o GameObject do dinheiro no cenário.
     }
 }

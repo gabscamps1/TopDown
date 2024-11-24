@@ -68,6 +68,13 @@ public class ObjectDamage : MonoBehaviour
         {
             if (SoundFXManager.instance != null && objectDestroySound != null)
                 SoundFXManager.instance.PlaySoundFXClip(objectDestroySound, transform, 1f);
+
+            if (GetComponent<Dropper>())
+            {
+                GetComponent<Dropper>().DropChance(); // Chama a função de calculo de drop quando o Objecto é destruido.
+                GetComponent<Dropper>().DropMoney(); // Chama a função de dinheiro.
+            }
+
             Particulas();
             Destroy(gameObject);
         }
