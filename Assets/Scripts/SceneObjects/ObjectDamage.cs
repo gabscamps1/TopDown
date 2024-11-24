@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
@@ -8,14 +9,13 @@ public class ObjectDamage : MonoBehaviour
     [SerializeField] public AudioClip objectDestroySound;
     [SerializeField] private ParticleSystem Madeira_Quebrada;
 
-    private ParticleSystem Madeira_QuebradaInstance;
 
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunPlayer acerte o Inimigo a função CallDamage é chamada.
-        if (particle.CompareTag("GunPlayer"))
+        if (particle.CompareTag("GunPlayer") || particle.CompareTag("GunEnemy"))
         {
-            CallDamage(particle.GetComponentInParent<GunsPlayer>().damage);
+            CallDamage(1);
         }
     }
 
@@ -35,7 +35,7 @@ public class ObjectDamage : MonoBehaviour
                 if (player != null)
                 {
                     // Pega o Dano que o objeto arremessado causa no Script do GunsPickup que fica no Prefab do Player.
-                    CallDamage(player.GetComponentInChildren<GunsPickup>().damage);
+                    CallDamage(1);
 
                     // Destrói o Objeto arremessado.
                     Destroy(collider.gameObject);
@@ -46,15 +46,16 @@ public class ObjectDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            print("teste");
+            CallDamage(1);
         }
     }
 
     private void Particulas()
     {
-        Madeira_QuebradaInstance = Instantiate(Madeira_Quebrada, transform.position, Quaternion.identity);
+        Instantiate(Madeira_Quebrada, transform.position, Quaternion.identity);
     }
 
     // Função que causa dano ao Inimigo.

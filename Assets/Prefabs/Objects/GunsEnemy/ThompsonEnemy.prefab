@@ -135,8 +135,8 @@ MonoBehaviour:
   damage: 1
   gunShootSound: {fileID: 8300000, guid: 11434c22e03dfe94c9bdb29da94f4803, type: 3}
   isReloading: 0
-  angleVariance: 0
-  angleVarianceR: 0
+  angleVariance: -13.5
+  angleVarianceR: -3
   raycastInitialPosition: {x: 0, y: 0}
 --- !u!1 &5737777433054080989
 GameObject:
