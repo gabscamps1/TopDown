@@ -40,7 +40,7 @@ public class BeerBarrel : MonoBehaviour
     IEnumerator DelayToAttack()
     {
         // Espera 1 segundo para iniciar a animação de ataque.
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         animator.SetTrigger("Attack");
     }
 

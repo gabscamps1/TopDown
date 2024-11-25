@@ -20,7 +20,7 @@ public class GunsPickup : MonoBehaviour
         SelectSlot(); // Inputs para trocar de slot.
 
         // Input para pegar armas no chão.
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             if (!DialogueManager.isTalking) { 
                 DisarmGun();
@@ -159,16 +159,21 @@ public class GunsPickup : MonoBehaviour
 
     void SelectSlot()
     {
+        // Scroll para trocar entre Slots.
         float scroll = Input.GetAxis("Mouse ScrollWheel"); // Recebe a direção do scroll do mouse.
+        if (Mathf.Abs(scroll) > 0)
+        {
+            selectGun = (selectGun + 1) % 2;
+        }
 
         // Input para o 1° Slot.
-        if (Input.GetKeyDown(KeyCode.Alpha1) || scroll > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectGun = 0;
         }
 
         // Input para o 2° Slot.
-        if (Input.GetKeyDown(KeyCode.Alpha2) || scroll < 0)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selectGun = 1;
         }

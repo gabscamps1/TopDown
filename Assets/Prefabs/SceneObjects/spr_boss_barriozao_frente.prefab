@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5053715147850222298}
   - component: {fileID: 8257937268756534609}
   - component: {fileID: 8518831671647693587}
-  - component: {fileID: 6940552875893665215}
   - component: {fileID: 7701469741891289464}
   - component: {fileID: 5618025787354350515}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spr_boss_barriozao_frente
   m_TagString: SceneObject
   m_Icon: {fileID: 0}
@@ -149,7 +148,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -179,22 +178,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.360627}
   m_EdgeRadius: 0
---- !u!114 &6940552875893665215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7955491484583600529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!114 &7701469741891289464
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("InfoPlayer")]
     public float playerSpeed; // Velocidade do player.
-    public float runSpeed; // Multiplicador da velocidade quando está correndo.
-    private float runPressed = 1; // Pega o valor do runSpeed e usa no Movement().
     private Vector3 movement;
     [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
     [SerializeField] float dodgeVelocity; // Velocidade do Dodge.
@@ -25,9 +24,10 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float dotProductUp; // dotProduct para cima em relação ao ponteiro do mouse.
 
     [Header("StatePlayer")]
-    public bool isDodging;
-    [SerializeField] bool canDodge = true;
-    private bool isJumping;
+    public bool isDodging; // Confere se o Player está durante o Dodge.
+    [SerializeField] bool canDodge = true; // Confere se o Player consegue realizar o Dodge.
+    bool tryJump; // Confere se o Player está tentando realizar o Jump.
+    private bool isJumping; // Confere se o Player está durante o Jump.
     private Vector3 jumpDirection;
     private enum PlayerState {Walk, Dodge, JumpTable};
     private PlayerState state = PlayerState.Walk;
@@ -43,15 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
             TryJumpTable();
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                runPressed = runSpeed;
-            }
-            else
-            {
-                runPressed = 1;
-            }
-
             if (Input.GetKey(KeyCode.O))
             {
                 SceneManager.LoadScene("TesteScene");
@@ -61,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene("Tuorial 1");
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && (movement.x != 0 || movement.y != 0))
+            if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && !tryJump && (movement.x != 0 || movement.y != 0))
             {
                 StartCoroutine(Dodge());
             }
@@ -75,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDodging && !isJumping)
         {
-            rdb.velocity = new Vector2(movement.x, movement.y) * playerSpeed * runPressed;
+            rdb.velocity = new Vector2(movement.x, movement.y) * playerSpeed;
         }
 
         if (isJumping)
@@ -198,6 +189,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Impede ações durante o Dodge.
         isDodging = true;
+        canDodge = false;
 
         // Vai para Layer Invulnerability.
         gameObject.layer = 9;
@@ -244,6 +236,10 @@ public class PlayerMovement : MonoBehaviour
 
         // volta para Layer Player.
         gameObject.layer = 8;
+
+        yield return new WaitForSeconds(0.3f);
+
+        canDodge = true;
     }
 
 
@@ -262,17 +258,16 @@ public class PlayerMovement : MonoBehaviour
         LayerMask jumpLayerMask = LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("ShotThrough");
         RaycastHit2D jumpHit;
         jumpHit = Physics2D.Raycast(transform.position + Vector3.up * 0.125f, currentDirection, currentDistance, jumpLayerMask);
-        Debug.DrawLine(transform.position + Vector3.up * 0.125f, jumpHit.point);
 
         if (jumpHit.collider == null)
         {
-            canDodge = true;
+            tryJump = false;
             return;
         }
 
         if (jumpHit.collider.CompareTag("JumpableTable"))
         {
-            canDodge = false;
+            tryJump = true;
 
             if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
             {
@@ -287,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            canDodge = true;
+            tryJump = false;
         }
     }
 

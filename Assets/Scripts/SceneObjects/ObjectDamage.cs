@@ -48,7 +48,6 @@ public class ObjectDamage : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player")|| collision.collider.CompareTag("Enemy"))
         {
-            print("teste");
             CallDamage(1);
         }
     }

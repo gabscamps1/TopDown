@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_idle_0
+      name: spr_Boss_Idle_0
       rect:
         serializedVersion: 2
         x: 1
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee8dff52ef2a2684096a01ca44052596
-      internalID: 1733724220
+      spriteID: 729f42d1838833440b174979b80b0ce9
+      internalID: -1685790880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_idle_1
+      name: spr_Boss_Idle_1
       rect:
         serializedVersion: 2
         x: 24
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 684987c7cb11d284480c4b8d4fed53b8
-      internalID: -395418622
+      spriteID: 090947d1f3af8f64db477dd90b63d285
+      internalID: -2133893962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_idle_2
+      name: spr_Boss_Idle_2
       rect:
         serializedVersion: 2
         x: 47
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80c6ef53b228e274bb1a97a968b41dfb
-      internalID: -2046657238
+      spriteID: 7810e7f95ed50024f8164e77da442abf
+      internalID: 1253949240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_idle_3
+      name: spr_Boss_Idle_3
       rect:
         serializedVersion: 2
         x: 68
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05b3cc2c38f47724698fa279e2101446
-      internalID: -107542461
+      spriteID: 25f1a4ebf9d7c28449b3cc53e0409e82
+      internalID: 1256111471
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boss_idle_0: 1733724220
-      boss_idle_1: -395418622
-      boss_idle_2: -2046657238
-      boss_idle_3: -107542461
+      spr_Boss_Idle_0: -1685790880
+      spr_Boss_Idle_1: -2133893962
+      spr_Boss_Idle_2: 1253949240
+      spr_Boss_Idle_3: 1256111471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
