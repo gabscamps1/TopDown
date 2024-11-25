@@ -18,5 +18,6 @@ MonoBehaviour:
   currentLevel: Tutorial 1
   BarWomanFlag: 0
   SellerFlag: 0
-  TALKED_TO_BOSS: 0
+  BossHandyFlag: 1
+  TALKED_TO_BOSS: 1
   TALKED_TO_SELLER: 0
