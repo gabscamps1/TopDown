@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7737305345536815868}
   - component: {fileID: 5569307507910348461}
   - component: {fileID: -8439885869078500129}
+  - component: {fileID: -27685346732018939}
   m_Layer: 14
   m_Name: spr_barril_explosivo
   m_TagString: SceneObject
@@ -184,3 +185,24 @@ MonoBehaviour:
   damage: 100
   barrelExplosionSound: {fileID: 8300000, guid: aac2b5790da31d34e8510a4bf0540cfd, type: 3}
   "Explos\xE3o": {fileID: 8362619772383443967, guid: fdd63f5ff961b714e86b3e740d3c157c, type: 3}
+--- !u!95 &-27685346732018939
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868928835821591222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be01202a454b71547be5a968ae598108, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

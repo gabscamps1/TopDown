@@ -10,8 +10,8 @@ public class ExplosionBarril : MonoBehaviour
     [SerializeField] CircleCollider2D areaExplosion;
     [SerializeField] float damage;
     bool isExploding;
+    bool canExplode;
     [SerializeField] AudioClip barrelExplosionSound;
-    [SerializeField] private ParticleSystem Explosão;
 
 
     private void OnParticleCollision(GameObject other)
@@ -27,31 +27,28 @@ public class ExplosionBarril : MonoBehaviour
 
                 areaExplosion.enabled = false;
 
-                Particulas();
-
-                isExploding = true;
+                canExplode = true;
             }
         }
     }
 
-    private void Particulas()
-    {
-        ParticleSystem Particle = Instantiate(Explosão, transform.position, Quaternion.identity);
-        Particle.Clear();
-        Particle.Play(true);
-    }
+    
 
     private void FixedUpdate()
     {
-        if (isExploding) Explosion();
+        if (canExplode) StartCoroutine(Explosion());
     }
 
-    private void Explosion()
+    IEnumerator Explosion()
     {
+        canExplode = false;
+
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("Explosion");
+        transform.localScale *= 1.5f;
+
         if (SoundFXManager.instance != null && barrelExplosionSound != null)
             SoundFXManager.instance.PlaySoundFXClip(barrelExplosionSound, transform, 1f);
-
-        isExploding = false;
 
         Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, areaExplosion.radius * 1.5f);
 
@@ -77,6 +74,8 @@ public class ExplosionBarril : MonoBehaviour
 
             damagedCharacter.Add(character);
         }
+
+        yield return new WaitForSeconds(0.45f);
 
         Destroy(gameObject);
     }
