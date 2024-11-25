@@ -47,8 +47,12 @@ public class GunsPlayer : MonoBehaviour
         timeReloadPerBullet = 2f/currentAmmo; // Seta o tempo de carregamento de cada munição.
 
         // Altera a velocidade da partícula de tiro para o valor da bulletSpeed do Inspetor.
-        var mainFireParticle = fireParticle.main;
-        mainFireParticle.startSpeed = bulletSpeed; 
+        if (fireParticle != null)
+        {
+            var mainFireParticle = fireParticle.main;
+            mainFireParticle.startSpeed = bulletSpeed;
+        }
+        
     }
 
     private void OnEnable()
@@ -74,7 +78,7 @@ public class GunsPlayer : MonoBehaviour
                 if (isAutomatic)
                 {
                     // Segurar para atirar.
-                    if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                    if (Input.GetMouseButton(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0 && fireParticle != null)
                     {
                         Shoot();
                     }
@@ -82,14 +86,14 @@ public class GunsPlayer : MonoBehaviour
                 else
                 {
                     // Apertar para atirar.
-                    if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0)
+                    if (Input.GetMouseButtonDown(0) && currentAmmo > 0 && !isReloading && countTimePerBullet <= 0 && fireParticle != null)
                     {
                         Shoot();
                     }
                 }
 
                 // Inicia o processo de recarga se a munição for zero e não estiver reloading.
-                if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading)
+                if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading && fireParticle != null)
                 {
 
                     StartCoroutine(Recarregar());

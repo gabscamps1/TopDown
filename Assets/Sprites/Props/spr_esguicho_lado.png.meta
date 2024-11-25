@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_esguicho_lado_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794ccdeb7feb96c4f867cfcff6319346
+      internalID: 1709109416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7479b649d9839478cb2b59575584ee
+      internalID: -1877508615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95feb42a4e6d9214290403c5af63bc20
+      internalID: 119428361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e063ddb636cd4be40a724ed0cd2a2943
+      internalID: -98585247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_4
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc60cf1162082e94a827b27524e6b278
+      internalID: 1196182573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43f06ed53120e143adb892da4ebf467
+      internalID: -1505227511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_lado_6
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 70
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99692906fd7c249448206fc6776d0f37
+      internalID: -1721271511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_esguicho_lado_0: 1709109416
+      spr_esguicho_lado_1: -1877508615
+      spr_esguicho_lado_2: 119428361
+      spr_esguicho_lado_3: -98585247
+      spr_esguicho_lado_4: 1196182573
+      spr_esguicho_lado_5: -1505227511
+      spr_esguicho_lado_6: -1721271511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

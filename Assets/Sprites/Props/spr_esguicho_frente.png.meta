@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_esguicho_frente_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbbc2e3c1d1dff41abf994ace2ff767
+      internalID: 884102983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09b0772b2a006945993c425b5125146
+      internalID: 1392237469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60ce4284817ace4fbea66a1258bbaa5
+      internalID: -2064481754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7f4730c6bdae9419fe04d5b0407e20
+      internalID: -1123349931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1401668fdfde6614d9e3e9780daa9d1d
+      internalID: -391674279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ddc3dbec332c946a57b0dde1a07d46
+      internalID: -813178609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_esguicho_frente_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4
+        width: 40
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.64492756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d0424593a7c98478b2c7e355f41cc6
+      internalID: 1413753929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_esguicho_frente_0: -1123349931
+      spr_esguicho_frente_1: -2064481754
+      spr_esguicho_frente_3: 1392237469
+      spr_esguicho_frente_4: 884102983
+      spr_esguicho_frente_5: -391674279
+      spr_esguicho_frente_6: -813178609
+      spr_esguicho_frente_7: 1413753929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

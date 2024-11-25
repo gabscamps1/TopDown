@@ -33,7 +33,7 @@ public class ShooterFollow : MonoBehaviour
         if (player == null || gunScript == null) return;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("PlayerChildren"); // Layers para não serem detectadas no raycast.
+        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
         RaycastHit2D hit;
         hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
         Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
