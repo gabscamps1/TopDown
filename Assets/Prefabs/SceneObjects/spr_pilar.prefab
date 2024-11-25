@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8045395338169816196}
   - component: {fileID: 3684149923014585309}
-  - component: {fileID: 4327104528999732117}
+  - component: {fileID: 9132962963713849271}
   m_Layer: 10
   m_Name: spr_pilar
   m_TagString: SceneObject
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4327104528999732117
-BoxCollider2D:
+--- !u!70 &9132962963713849271
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,16 +117,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.35491613}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 2.71875}
-    newSize: {x: 1, y: 2.71875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.70983225}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.29857537}
+  m_Size: {x: 0.99350417, y: 0.597166}
+  m_Direction: 1

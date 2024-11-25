@@ -84,6 +84,7 @@ public class PlayerInteraction : MonoBehaviour
                             dialogueTrigger.TriggerDialogue("4");
                         }
 
+
                         //ChooseFlag(gameData.BarWomanFlag);
 
                         break;

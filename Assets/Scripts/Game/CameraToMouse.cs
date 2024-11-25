@@ -25,11 +25,7 @@ public class CameraToMouse : MonoBehaviour
                     Vector3 distance = mousePosition - player.transform.position + (Vector3.up * 0.5f);
 
                     // Calcula a posição desejada
-                    Vector3 targetPosition = new Vector3(
-                        player.transform.position.x + (distance.x / 7f),
-                        player.transform.position.y + 0.5f + (distance.y / 3.5f),
-                        -10
-                    );
+                    Vector3 targetPosition = new Vector3(player.transform.position.x + (distance.x / 7f), player.transform.position.y + 0.5f + (distance.y / 3.5f), -10);
 
                     // Interpola para a posição desejada usando Time.unscaledDeltaTime para ignorar o timeScale
                     transform.position = Vector3.Lerp(transform.position, targetPosition, 5f * Time.unscaledDeltaTime);

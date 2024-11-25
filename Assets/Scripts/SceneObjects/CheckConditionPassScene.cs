@@ -17,7 +17,7 @@ public class CheckConditionPassScene : MonoBehaviour
     // Coordinate -O Player consegue passar pela porta sem precisar de nada.
     // DeadCharacter - Quando um Inimigo especifico for morto, o Player consegue passar de fase.
 
-    enum Levels {currentLevel, Tutorial1, Tutorial2, Tutorial3, Hub, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
+    enum Levels {currentLevel, Tutorial1, Tutorial2, Tutorial3, Hub, Hub_2, Level1_1, Level1_2, Level1_3, Level1_4, Level1_5}
     [SerializeField] Levels levels;
 
     enum Achievements {None, Tutorial, Level1}
@@ -139,6 +139,9 @@ public class CheckConditionPassScene : MonoBehaviour
                 break;
             case Levels.Hub:
                 levelName = "Hub";
+                break;
+            case Levels.Hub_2:
+                levelName = "Hub 2";
                 break;
             case Levels.Level1_1:
                 levelName = "Level 1-1";

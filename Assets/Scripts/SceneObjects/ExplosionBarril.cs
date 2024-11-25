@@ -13,6 +13,7 @@ public class ExplosionBarril : MonoBehaviour
     [SerializeField] AudioClip barrelExplosionSound;
     [SerializeField] private ParticleSystem Explosão;
 
+
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("GunPlayer") || other.CompareTag("GunEnemy"))
@@ -21,22 +22,23 @@ public class ExplosionBarril : MonoBehaviour
 
             if (life <= 0)
             {
-                SpriteRenderer barril = GetComponent<SpriteRenderer>();
-                barril.enabled = false;
-
-                isExploding = true;
+                /*SpriteRenderer barril = GetComponent<SpriteRenderer>();
+                barril.enabled = false;*/
 
                 areaExplosion.enabled = false;
 
                 Particulas();
-                Destroy(gameObject, 2f);
+
+                isExploding = true;
             }
         }
     }
 
     private void Particulas()
     {
-        Instantiate(Explosão, transform.position, Quaternion.identity);
+        ParticleSystem Particle = Instantiate(Explosão, transform.position, Quaternion.identity);
+        Particle.Clear();
+        Particle.Play(true);
     }
 
     private void FixedUpdate()
@@ -48,8 +50,6 @@ public class ExplosionBarril : MonoBehaviour
     {
         if (SoundFXManager.instance != null && barrelExplosionSound != null)
             SoundFXManager.instance.PlaySoundFXClip(barrelExplosionSound, transform, 1f);
-
-
 
         isExploding = false;
 
@@ -78,6 +78,7 @@ public class ExplosionBarril : MonoBehaviour
             damagedCharacter.Add(character);
         }
 
+        Destroy(gameObject);
     }
 
     void OnDrawGizmos()
