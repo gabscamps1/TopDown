@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832984403636278359}
   - component: {fileID: 7970370689079189768}
+  - component: {fileID: 7204127484000484499}
   m_Layer: 11
   m_Name: JumpSize
   m_TagString: JumpableTable
@@ -77,6 +78,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94445395, y: 3.0058055}
   m_EdgeRadius: 0
+--- !u!114 &7204127484000484499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262310005221864831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &4283923845746806021
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5503667816398353691}
   - component: {fileID: 74498556511924555}
-  - component: {fileID: 4893448914374327578}
   m_Layer: 10
   m_Name: spr_balcao
   m_TagString: JumpableTable
@@ -164,22 +180,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!208 &4893448914374327578
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4283923845746806021}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.25, y: 1.6, z: 0.1}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: -1.41, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &7860286749354207398
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5101827415135356964}
   - component: {fileID: 2838861428919470015}
+  - component: {fileID: 2507305340250047927}
   m_Layer: 11
   m_Name: JumpSize (1)
   m_TagString: JumpableTable
@@ -257,3 +258,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5851607, y: 0.6884865}
   m_EdgeRadius: 0
+--- !u!114 &2507305340250047927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860286749354207398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
