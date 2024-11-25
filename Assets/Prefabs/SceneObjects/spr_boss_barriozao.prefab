@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1122935830563672463}
   - component: {fileID: 7569844068544484616}
   m_Layer: 10
-  m_Name: spr_barriozao
+  m_Name: spr_boss_barriozao
   m_TagString: SceneObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
