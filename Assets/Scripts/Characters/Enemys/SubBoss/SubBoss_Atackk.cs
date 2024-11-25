@@ -110,7 +110,7 @@ public class SubBoss_Attack : MonoBehaviour
         Vector2 direction = (player.transform.position - transform.position).normalized;
         // LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
         LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 16, ~ignoreLayermask);
         Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
 
         if (!gunScript.isReloading)

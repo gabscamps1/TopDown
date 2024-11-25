@@ -11,6 +11,7 @@ public class ExplosionBarril : MonoBehaviour
     [SerializeField] float damage;
     bool isExploding;
     [SerializeField] AudioClip barrelExplosionSound;
+    [SerializeField] private ParticleSystem Explosão;
 
     private void OnParticleCollision(GameObject other)
     {
@@ -27,9 +28,15 @@ public class ExplosionBarril : MonoBehaviour
 
                 areaExplosion.enabled = false;
 
+                Particulas();
                 Destroy(gameObject, 2f);
             }
         }
+    }
+
+    private void Particulas()
+    {
+        Instantiate(Explosão, transform.position, Quaternion.identity);
     }
 
     private void FixedUpdate()
@@ -41,6 +48,8 @@ public class ExplosionBarril : MonoBehaviour
     {
         if (SoundFXManager.instance != null && barrelExplosionSound != null)
             SoundFXManager.instance.PlaySoundFXClip(barrelExplosionSound, transform, 1f);
+
+
 
         isExploding = false;
 
