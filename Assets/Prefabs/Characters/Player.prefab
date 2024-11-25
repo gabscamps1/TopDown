@@ -350,7 +350,7 @@ MonoBehaviour:
   animator: {fileID: 4429867644762803864}
   playerSpeed: 4.8
   runSpeed: 1.5
-  jumpTableVelocity: 0
+  jumpTableVelocity: 1.5
   dodgeVelocity: 29
   dotProductRight: 0
   dotProductUp: 0

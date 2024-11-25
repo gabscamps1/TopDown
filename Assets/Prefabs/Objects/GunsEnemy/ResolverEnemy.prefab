@@ -129,7 +129,7 @@ MonoBehaviour:
   fireParticle: {fileID: 9192957602193728531}
   currentAmmo: 6
   maxAmmo: 0
-  timePerBullet: 0.6
+  timePerBullet: 0.8
   bulletSpeed: 10
   reloadTime: 2
   damage: 1
