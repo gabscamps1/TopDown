@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8952344439937455126}
   m_Layer: 10
   m_Name: spr_porta
-  m_TagString: SceneObject
+  m_TagString: DoorRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: -1518265279274526008}
   m_Layer: 10
   m_Name: Door_Right
-  m_TagString: SceneObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2130173627
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 93fbccf80ba1a8246a3ef1e3ee1246cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -9,7 +9,7 @@ public class Boss : MonoBehaviour
     NavMeshAgent agent; // Referêmcia do NavMeshAgent.
     Animator animator; // Referêmcia do Animator.
     GunsEnemy gunScript;
-    LayerMask ignoreLayermask;
+    LayerMask layermask;
     [SerializeField] float moveSpeed; // Velocidade do Boss
     [SerializeField] float timeToBossRun;
     [SerializeField] GameObject[] localPoints; // Pontos no cenário em que o Boss caminha entre eles.
@@ -27,7 +27,7 @@ public class Boss : MonoBehaviour
 
         gunScript = GetComponentInChildren<GunsEnemy>();
 
-        ignoreLayermask = LayerMask.GetMask("GunEnemy") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast") | LayerMask.GetMask("Default") | LayerMask.GetMask("ShotThrough");
+        layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
 
         countTimeToBossRun = timeToBossRun;
     }
@@ -38,7 +38,7 @@ public class Boss : MonoBehaviour
         if (player == null) return;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, Mathf.Infinity, ~ignoreLayermask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, Mathf.Infinity, layermask);
         // Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
 
         if (hit.collider != null)
@@ -53,6 +53,7 @@ public class Boss : MonoBehaviour
                 if (countTimeToBossRun < 0)
                 {
                     RemoveNearestPointFromPlayer();
+                    countTimeToBossRun = timeToBossRun;
                 }
             }
         }
@@ -131,7 +132,7 @@ public class Boss : MonoBehaviour
 
         foreach (var point in localPoints)
         {
-            if (point.gameObject.activeSelf)
+            if (point.activeSelf)
             {
                 float distance = Vector3.Distance(transform.position, point.transform.position);
                 if (distance < nearestDistance)
@@ -142,11 +143,9 @@ public class Boss : MonoBehaviour
             }
             
         }
-
+        print(nearestPointFromBoss);
         agent.SetDestination(nearestPointFromBoss.transform.position);
         animator.SetBool("Walk", true);
-
-        countTimeToBossRun = timeToBossRun;
     }
 
     void SearchAgain()

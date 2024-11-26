@@ -12,7 +12,7 @@ public class ShooterFollow : MonoBehaviour
     bool canStartCoroutine; // Conferir se pode iniciar coroutine.
     [SerializeField] float moveSpeed; // Velocidade do Inimigo
     [SerializeField] float sideSpeed; // Velocidade do Inimigo recarregando.
-
+    LayerMask layermask;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,7 @@ public class ShooterFollow : MonoBehaviour
 
         gunScript = GetComponentInChildren<GunsEnemy>();
 
+        layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
     }
 
     // Update is called once per frame
@@ -33,26 +34,17 @@ public class ShooterFollow : MonoBehaviour
         if (player == null || gunScript == null) return;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        LayerMask ignoreLayermask = LayerMask.GetMask("GunEnemy") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast"); // Layers para não serem detectadas no raycast.
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, ~ignoreLayermask);
-        Debug.DrawLine(transform.position + (Vector3.up * 0.6f), hit.point);
+        hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 8, layermask);
 
         if (!gunScript.isReloading)
         {
             canStartCoroutine = true;
 
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
-                if (hit.collider.CompareTag("Player"))
-                {
-                    agent.ResetPath();
-                    animator.SetBool("Walk", false);
-                }
-                else
-                {
-                    FollowPlayer();
-                }
+                agent.ResetPath();
+                animator.SetBool("Walk", false);
             }
             else
             {

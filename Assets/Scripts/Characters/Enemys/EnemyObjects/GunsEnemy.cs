@@ -125,10 +125,10 @@ public class GunsEnemy : MonoBehaviour
     private void DetectPlayer()
     {
         // Faz um raycast para identificar se o player está na frente do inimigo.
-        LayerMask hitLayermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects"); // Layers para serem detectadas no raycast.
+        LayerMask hitLayermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
         RaycastHit2D detect;
         detect = Physics2D.Raycast(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), transform.right, Mathf.Infinity, hitLayermask);
-        Debug.DrawLine(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), detect.point);
+        // Debug.DrawLine(transform.position + (transform.right * raycastInitialPosition.x) + (transform.up * raycastInitialPosition.y), detect.point);
 
         if (detect && detect.collider.CompareTag("Player"))
         {

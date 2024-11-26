@@ -66,6 +66,16 @@ public class EnemyDamage : MonoBehaviour
                 GetComponent<Dropper>().DropMoney(); // Chama a função de dinheiro.
             }
 
+            ParticleSystem firePartycle = GetComponentInChildren<GunsEnemy>().GetComponentInChildren<ParticleSystem>();
+            // Coloca a particula como filha da Hierarchy para evitar de as partículas geradas serem destruidas.
+            firePartycle.transform.SetParent(transform.parent);
+
+            // Deixa a partícula no mesmo tamanho.
+            firePartycle.transform.localScale *= 1.5f;
+
+            // Destrói a partícula.
+            Destroy(firePartycle.gameObject, 2f);
+
             // Destrói o Inimigo.
             Destroy(gameObject);
         }

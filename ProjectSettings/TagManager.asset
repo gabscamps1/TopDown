@@ -12,6 +12,7 @@ TagManager:
   - SceneObject
   - JumpableTable
   - Breakable
+  - DoorRight
   layers:
   - Default
   - TransparentFX

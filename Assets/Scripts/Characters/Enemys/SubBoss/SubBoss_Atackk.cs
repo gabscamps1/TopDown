@@ -18,11 +18,14 @@ public class SubBoss_Attack : MonoBehaviour
     bool closeRangeAttack; // Confere se o SubBoss ira atacar de perto.
     [SerializeField] Collider2D damageArea; // área que o SubBoss pode causar dano ao Player.
     bool canCauseDamage;
+    bool canAttackClose = true;
     bool stopEnemy;
     [SerializeField] float stopSpeed; // Velocidade do SubBoss recarregando o ataque.
+
     [SerializeField] float timerCloseAttack; // Tempo para o SubBoss realizar o ataque de perto, caso não consiga, volta para o ataque a distância.
+    bool inTimerCloseAttack; // Confere se está durante a coroutine de Timer.
 
-
+    LayerMask layermask;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,8 @@ public class SubBoss_Attack : MonoBehaviour
         animator = GetComponent<Animator>();
 
         gunScript = GetComponentInChildren<GunsEnemy>();
+
+        layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
     }
 
     // Update is called once per frame
@@ -108,24 +113,15 @@ public class SubBoss_Attack : MonoBehaviour
     void LongeRangeAttack()
     {
         Vector2 direction = (player.transform.position - transform.position).normalized;
-        // LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
-        LayerMask ignoreLayermask = LayerMask.GetMask("Gun") | LayerMask.GetMask("Enemy") | LayerMask.GetMask("Ignore Raycast");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 16, ~ignoreLayermask);
-        Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 6, layermask);
+        // Debug.DrawLine(transform.position + (Vector3.up * 0.5f), hit.point);
 
         if (!gunScript.isReloading)
         {
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
-                if (hit.collider.CompareTag("Player"))
-                {
-                    agent.ResetPath();
-                    animator.SetBool("Walk", false);
-                }
-                else
-                {
-                    FollowPlayer();
-                }
+                agent.ResetPath();
+                animator.SetBool("Walk", false);
             }
             else
             {
@@ -145,16 +141,14 @@ public class SubBoss_Attack : MonoBehaviour
         gunScript.gameObject.SetActive(false);
 
         // Inicia a coroutine que calcula o tempo que o SubBoss tem para atacar.
-        StartCoroutine(TimerCloseAttack());
+        if(!inTimerCloseAttack) StartCoroutine(TimerCloseAttack());
 
-        Vector2 direction = (player.transform.position - transform.position).normalized;
-        LayerMask layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObject"); // Layers para serem detectadas no raycast.
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, 1.3f, layermask);
-
-        if (hit.collider != null)
+        if (canCauseDamage)
         {
-            if (hit.collider.CompareTag("Player"))
+            if (canAttackClose)
             {
+                canAttackClose = false;
+
                 // Para o movimento do SubBoss.
                 agent.ResetPath();
 
@@ -167,15 +161,12 @@ public class SubBoss_Attack : MonoBehaviour
                 // Tempo de espera após o ataque de perto do SubBoss, para iniciar o ataque à distância.
                 StartCoroutine(WaitToMove());
             }
-            else
-            {
-                FollowPlayer();
-            }
         }
-        else
+        else if(!stopEnemy)
         {
             FollowPlayer();
         }
+
     }
 
     // Função de ataque. Chamada na animação de ataque do SubBoss.
@@ -215,14 +206,19 @@ public class SubBoss_Attack : MonoBehaviour
     // Função que calcula o tempo de espera após o ataque de perto do SubBoss, para iniciar o ataque à distância.
     IEnumerator WaitToMove()
     {
+        // Para o SubBoss.
         stopEnemy = true;
 
         yield return new WaitForSeconds(stopSpeed);
 
+        // Libera o SubBoss.
         stopEnemy = false;
 
         // Termina o ataque de perto.
         closeRangeAttack = false;
+
+        // Pode tentar o ataque de perto na próxima vez.
+        canAttackClose = true;
 
         // Chama a função de puxar a arma.
         PickGun();
@@ -231,6 +227,9 @@ public class SubBoss_Attack : MonoBehaviour
     // Função que calcula o tempo que o SubBoss tem para atacar.
     IEnumerator TimerCloseAttack()
     {
+        // Durante o Timer.
+        inTimerCloseAttack = true;
+
         yield return new WaitForSeconds(timerCloseAttack);
 
         // Termina o ataque de perto.
@@ -238,6 +237,9 @@ public class SubBoss_Attack : MonoBehaviour
 
         // Chama a função de puxar a arma.
         PickGun();
+
+        // Saiu do Timer.
+        inTimerCloseAttack = false;
     }
 
 
