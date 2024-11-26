@@ -201,12 +201,19 @@ public class PlayerMovement : MonoBehaviour
         int directionHorizontal = (Input.GetKey(KeyCode.A) ? -1 : 0) + (Input.GetKey(KeyCode.D) ? 1 : 0); // Se a tecla D ou A for pressionada, retorna +- 1.
         int directionVertical = (Input.GetKey(KeyCode.S) ? -1 : 0) + (Input.GetKey(KeyCode.W) ? 1 : 0); // Se a tecla W ou S for pressionada, retorna +- 1.
 
-        // Se o Player estiver em movimento durante a coroutine Dodge.
+        // Desativa a arma que está na mão do Player.
         GunsPickup gunsPickupScript = GetComponentInChildren<GunsPickup>();
-        if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null && (directionHorizontal != 0 || directionVertical != 0))
+        if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null  )
         {
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(false); // Desativa a arma.
-            gunsPickupScript.enabled = false; // Desativa o GunsPickup.
+            // Desativa a arma.
+            GameObject gun = gunsPickupScript.inventory[gunsPickupScript.selectGun]; // Pega a arma que está na mão do Player.
+
+            gun.GetComponentInChildren<SpriteRenderer>().enabled = false; // Desativa o sprite da arma.
+
+            if(gun.GetComponentInChildren<GunsPlayer>()) gun.GetComponentInChildren<GunsPlayer>().enabled = false; // Desativa o código da arma.
+
+            // Desativa o GunsPickup.
+            gunsPickupScript.enabled = false; 
         }
 
         // Altera para a layer do Dodge.
@@ -227,11 +234,18 @@ public class PlayerMovement : MonoBehaviour
         // Desativa a layer do Dodge.
         state = PlayerState.Walk;
 
-        // Se tiver arma na mão do Player.
+        // Ativa a arma que está na mão do Player.
         if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null)
         {
-            gunsPickupScript.enabled = true; // Ativa o GunsPickup.
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true); // Ativa a arma.
+            // Ativa o GunsPickup.
+            gunsPickupScript.enabled = true; 
+
+            // Ativa a arma.
+            GameObject gun = gunsPickupScript.inventory[gunsPickupScript.selectGun]; // Pega a arma que está na mão do Player.
+
+            gun.GetComponentInChildren<SpriteRenderer>().enabled = true; // Ativa o sprite da arma.
+
+            if (gun.GetComponentInChildren<GunsPlayer>()) gun.GetComponentInChildren<GunsPlayer>().enabled = true; // Ativa o código da arma.
         }
 
         // volta para Layer Player.
@@ -297,12 +311,19 @@ public class PlayerMovement : MonoBehaviour
         // Coloca o Player na rotação inicial.
         transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        // Se o Player estiver em movimento durante a coroutine Jump.
+        // Desativa a arma que está na mão do Player.
         GunsPickup gunsPickupScript = GetComponentInChildren<GunsPickup>();
         if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null)
         {
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(false); // Desativa a arma.
-            gunsPickupScript.enabled = false; // Desativa o GunsPickup.
+            // Desativa a arma.
+            GameObject gun = gunsPickupScript.inventory[gunsPickupScript.selectGun]; // Pega a arma que está na mão do Player.
+
+            gun.GetComponentInChildren<SpriteRenderer>().enabled = false; // Desativa o sprite da arma.
+
+            if (gun.GetComponentInChildren<GunsPlayer>()) gun.GetComponentInChildren<GunsPlayer>().enabled = false; // Desativa o código da arma.
+
+            // Desativa o GunsPickup.
+            gunsPickupScript.enabled = false;
         }
 
         // Altera para a layer do Dodge.
@@ -327,11 +348,18 @@ public class PlayerMovement : MonoBehaviour
         // Altera para a layer do Dodge.
         state = PlayerState.Walk;
 
-        // Se tiver arma na mão do Player.
+        // Ativa a arma que está na mão do Player.
         if (gunsPickupScript.inventory[gunsPickupScript.selectGun] != null)
         {
-            gunsPickupScript.enabled = true; // Ativa o GunsPickup.
-            gunsPickupScript.inventory[gunsPickupScript.selectGun].SetActive(true); // Ativa a arma.
+            // Ativa o GunsPickup.
+            gunsPickupScript.enabled = true;
+
+            // Ativa a arma.
+            GameObject gun = gunsPickupScript.inventory[gunsPickupScript.selectGun]; // Pega a arma que está na mão do Player.
+
+            gun.GetComponentInChildren<SpriteRenderer>().enabled = true; // Ativa o sprite da arma.
+
+            if (gun.GetComponentInChildren<GunsPlayer>()) gun.GetComponentInChildren<GunsPlayer>().enabled = true; // Ativa o código da arma.
         }
 
         // Quando o destino é alcançado, volta para Layer Player.

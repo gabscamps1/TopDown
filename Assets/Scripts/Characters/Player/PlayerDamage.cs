@@ -12,10 +12,11 @@ public class PlayerDamage : MonoBehaviour
     public float lives;
     public bool isDead = false;
     [SerializeField] float invulnerabilityTime;
+    bool inInvulnerability;
 
     [Header("Player Sounds")]
     [SerializeField] private AudioClip playerDamageSound;
-  
+    
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunEnemy acerte o Player a função CallDamage é chamada.
@@ -28,6 +29,9 @@ public class PlayerDamage : MonoBehaviour
     // Função que causa dano ao Inimigo.
     public void CallDamage(float damage)
     {
+        // Retorna o código se o Player estiver invulnerável.
+        if (inInvulnerability) return;
+
         // Torna o Player invulneravel durante determinado tempo.
         StartCoroutine(Invulnerability());
 
@@ -48,6 +52,7 @@ public class PlayerDamage : MonoBehaviour
             {
                 isDead = true;
                 GameManager.instance.deaths =+ 1; // Pega a quantia de dinheiro que está no GameObject Money e coloca no GameManager.
+                GameManager.instance.gameData.died = true;
                 Destroy(gameObject);
             }
             
@@ -71,13 +76,34 @@ public class PlayerDamage : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
     }
 
-    // Torna o PLayer invulneravel durante determinado tempo.
+        // Torna o PLayer invulneravel durante determinado tempo.
     IEnumerator Invulnerability()
     {
-        gameObject.layer = 9;
+        inInvulnerability = true; // Torna o Player invulnerável.
 
-        yield return new WaitForSeconds(invulnerabilityTime);
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        if (!renderer)
+        {
+            renderer = GetComponentInChildren<SpriteRenderer>();
+        }
 
-        gameObject.layer = 8;
+        // Duração do efeito de piscar
+        float blinkTime = 0f;
+
+        // Continua a piscar enquanto a invulnerabilidade estiver ativa
+        while (blinkTime < invulnerabilityTime)
+        {
+            // Piscando o sprite
+            renderer.color = new Color(1, 1, 1, 0.7f); // Torna o sprite semi-transparente
+            yield return new WaitForSeconds(0.15f);
+
+            renderer.color = new Color(1, 1, 1, 1); // Restaura a cor original
+            yield return new WaitForSeconds(0.15f);
+
+            // Acumulando o tempo de invulnerabilidade.
+            blinkTime += 0.3f; // 0.2f para cada mudança de cor, 2 mudanças por ciclo.
+        }
+
+        inInvulnerability = false; // Torna o Player vulnerável.
     }
 }

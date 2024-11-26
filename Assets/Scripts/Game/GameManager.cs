@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject player; // Referência do Player em cena.
     public LevelLoader levelLoader; // Referência do Level Loader.
     public int money; // Recebe o valor do script ItensPickUp do Player.
+    int currentMoney; // Dinheiro atual da fase.
     public int deaths; // Recebe o valor do script Damage do player.
 
 
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         if (money != 0)
         {
             gameData.money += money; // Passa o valor do dinheiro atual para o GameData, para esse valor se manter durante as cenas.
+            currentMoney += money;
             money = 0; // Volta o money para 0 depois de alterar o valor no GameData.
         }
 
@@ -39,6 +41,10 @@ public class GameManager : MonoBehaviour
             deaths = 0; // Volta o money para 0 depois de alterar o valor no GameData.
         }
 
-
+        if (gameData.died)
+        {
+            gameData.money -= currentMoney;
+            currentMoney = 0;
+        }
     }
 }

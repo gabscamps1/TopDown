@@ -42,7 +42,7 @@ public class Fog : MonoBehaviour
         foreach (var obj in objects)
         {
             if (obj != null)
-                if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject"))
+                if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject") || obj.CompareTag("GunPlayer"))
                 {
                     obj.gameObject.SetActive(false); // Desativa todos os objetos do array com a tag Enemy.
                 }
@@ -57,7 +57,7 @@ public class Fog : MonoBehaviour
             foreach (var obj in objects)
             {
                 if(obj != null)
-                    if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject"))
+                    if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject") || obj.CompareTag("GunPlayer"))
                     {
                         obj.gameObject.SetActive(true); // Ativa todos os objetos do array com a tag Enemy.
                     }

@@ -6,6 +6,7 @@ public class SaveData : MonoBehaviour
 {
     // Start is called before the first frame update
     GameData gameData;
+    bool hasSave;
     void Start()
     {
         if (GameManager.instance.gameData != null)
@@ -23,6 +24,8 @@ public class SaveData : MonoBehaviour
 
         LoadGame();
     }
+
+    
 
     public void SaveGame()
     {
@@ -56,8 +59,12 @@ public class SaveData : MonoBehaviour
     {
         if (gameData == null) return;
 
+        // Cria um novo save.
         gameData.currentLevel = "Tutorial 1";
         gameData.deaths = 0;
         gameData.money = 0;
+
+        PlayerPrefs.DeleteAll(); // Salva as informações de um novo jogo.
     }
+
 }
