@@ -230,6 +230,10 @@ public class DialogueManager : MonoBehaviour
                 GameObject.Find("DialogueManager").GetComponent<ScreenFlash>().FlashScreen();
                 break;
 
+            case "OpenStore":
+                GameObject.Find("HUD").GetComponent<UIManager>().OpenStore();
+                break;
+
             case "ScreenShake":
                 GameObject.Find("DialogueManager").GetComponent<ScreenShake>().TriggerShake();
                 break;
@@ -257,6 +261,8 @@ public class DialogueManager : MonoBehaviour
             case "ResetDialog":
                 dialogueEffects?.ResetDialogPosition();
                 break;
+
+            
 
             default:
                 Debug.LogWarning("Comando não reconhecido: " + command);
