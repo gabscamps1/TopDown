@@ -333,6 +333,7 @@ MonoBehaviour:
   disableFog1: {fileID: 4079373587497555676}
   disableFog2: {fileID: 2115002863669338746}
   timerToDesativeFog: 0
+  removeFog: 1
 --- !u!1 &9201231496426737695
 GameObject:
   m_ObjectHideFlags: 0

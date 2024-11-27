@@ -27,6 +27,8 @@ public class SceneObjectOrder : MonoBehaviour
         GameObject[] sceneObjects = GameObject.FindGameObjectsWithTag("SceneObject");
         GameObject[] wallTransparentObjects = GameObject.FindGameObjectsWithTag("WallTransparent");
         GameObject[] doorsOrder = GameObject.FindGameObjectsWithTag("DoorRight");
+        GameObject[] gunPlayer = GameObject.FindGameObjectsWithTag("GunPlayer");
+        GameObject[] money = GameObject.FindGameObjectsWithTag("Money");
 
         // Cria uma lista para armazenar os objetos combinados
         List<GameObject> combinedObjects = new List<GameObject>();
@@ -34,11 +36,17 @@ public class SceneObjectOrder : MonoBehaviour
         // Adiciona os objetos do array sceneObjects.
         combinedObjects.AddRange(sceneObjects);
 
-        // Adiciona os objetos do  array wallTransparentObjects.
+        // Adiciona as objetos do  array wallTransparentObjects.
         combinedObjects.AddRange(wallTransparentObjects);
 
         // Adiciona os objetos do  array wallTransparentObjects.
         combinedObjects.AddRange(doorsOrder);
+
+        // Adiciona os objetos do  array wallTransparentObjects.
+        combinedObjects.AddRange(gunPlayer);
+
+        // Adiciona os objetos do  array wallTransparentObjects.
+        combinedObjects.AddRange(money);
 
         // Converter a lista de volta para um array.
         objects = combinedObjects.ToArray();

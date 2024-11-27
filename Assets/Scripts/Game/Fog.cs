@@ -13,6 +13,7 @@ public class Fog : MonoBehaviour
     [SerializeField] float timerToDesativeFog; // Tempo para a desativação da Fog depois do Player passar pela colisão.
     private float countTimerToDesativeFog;
     bool isFogActive;
+    [SerializeField] bool removeFog; // Confere se o LevelDesign deseja remover o sprite da Fog.
     void Start()
     {
         // Pega todos os objetos dentro da Fog e coloca no array.
@@ -56,13 +57,18 @@ public class Fog : MonoBehaviour
         {
             foreach (var obj in objects)
             {
-                if(obj != null)
-                    if (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject") || obj.CompareTag("GunPlayer"))
-                    {
-                        obj.gameObject.SetActive(true); // Ativa todos os objetos do array com a tag Enemy.
-                    }
+                if (obj != null && (obj.CompareTag("Enemy") || obj.CompareTag("SceneObject") || obj.CompareTag("GunPlayer")))
+                {
+                    obj.gameObject.SetActive(true); // Ativa todos os objetos do array com a tag Enemy.
+                }
             }
-            gameObject.SetActive(false);
+
+            if (removeFog)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+                enabled = false;
         }
         else
         {
