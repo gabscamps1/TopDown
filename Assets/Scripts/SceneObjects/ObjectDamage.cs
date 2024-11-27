@@ -58,7 +58,7 @@ public class ObjectDamage : MonoBehaviour
     }
 
     // Função que causa dano ao Inimigo.
-    void CallDamage(float damage)
+    public void CallDamage(float damage)
     {
         // Diminui a vida do objeto.
         lives -= damage;

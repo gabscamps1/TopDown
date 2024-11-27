@@ -131,7 +131,6 @@ public class UIManager : MonoBehaviour
             }
 
             PlayerDamage playerInfo = player.GetComponent<PlayerDamage>();
-
             if (playerInfo != null)
             {
                 health = playerInfo.lives;

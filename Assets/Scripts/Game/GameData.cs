@@ -7,7 +7,6 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     public int money; // Dinheiro do Player.
-
     public int deaths; // Número de mortes de um jogador.
     public bool died; // Player morreu?
 

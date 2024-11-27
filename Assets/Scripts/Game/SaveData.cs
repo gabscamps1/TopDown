@@ -6,26 +6,25 @@ public class SaveData : MonoBehaviour
 {
     // Start is called before the first frame update
     GameData gameData;
-    bool hasSave;
+    [SerializeField] bool canSave;
     void Start()
     {
         if (GameManager.instance.gameData != null)
             gameData = GameManager.instance.gameData;
 
-        if (gameData.died)
+        if (canSave)
         {
-            SaveGameDeath();
-            gameData.died = false;
+            if (gameData.died)
+            {
+                SaveGameDeath();
+                gameData.died = false;
+            }
+            else
+            {
+                SaveGame();
+            }
         }
-        else
-        {
-            SaveGame();
-        }
-
-        LoadGame();
     }
-
-    
 
     public void SaveGame()
     {
@@ -41,12 +40,22 @@ public class SaveData : MonoBehaviour
         PlayerPrefs.SetInt("deaths", gameData.deaths);
     }
 
+    public bool HasSave()
+    {
+        bool hasSave = 
+            PlayerPrefs.HasKey("currentLevel") && 
+            PlayerPrefs.HasKey("deaths") &&
+            PlayerPrefs.HasKey("money");
+
+        return hasSave;
+    }
+
     public void LoadGame()
     {
         if (gameData == null) return;
 
-        if(PlayerPrefs.HasKey("currrentLevel"))
-            gameData.currentLevel = PlayerPrefs.GetString("currrentLevel");
+        if(PlayerPrefs.HasKey("currentLevel"))
+            gameData.currentLevel = PlayerPrefs.GetString("currentLevel");
 
         if (PlayerPrefs.HasKey("deaths"))
             gameData.deaths = PlayerPrefs.GetInt("deaths");

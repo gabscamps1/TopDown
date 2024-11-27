@@ -6,37 +6,62 @@ using UnityEngine;
 public class WallOpacity : MonoBehaviour
 {
     GameObject player;
-    Color transparenceColor;
-    [SerializeField] Vector2 size;
-    GameObject[] wallsInArea;
-    // bool inArea;
+    Collider2D playerCollision;
+    bool playerTouching;
 
+    Color transparenceColor;
+
+    [SerializeField] Vector2 size;
+
+    GameObject[] wallsInArea;
+    Collider2D[] allObjectsInArea;
+    
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager.instance.player; // Pega a referência do Player do GameManager.
         transparenceColor = new Color(1, 1, 1, 0.5f); // Cor de transparência da parede.
+
+        foreach (var collision in player.GetComponents<Collider2D>())
+        {
+            if (!collision.isTrigger)
+            {
+                playerCollision = collision;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (player == null) return;
 
+        allObjectsInArea = Physics2D.OverlapBoxAll(player.transform.position, size, 0);
         
+        foreach (var wallInArea in allObjectsInArea)
+        {
+            if (!wallInArea.CompareTag("WallTransparent")) continue;
+            
+            if (!wallInArea.isTrigger) continue;
+
+            if (wallInArea.IsTouching(playerCollision))
+            {
+                playerTouching = true;
+                break;
+            }
+            else
+            {
+                playerTouching = false;
+            }
+        }
 
         GameObject[] allwalls = GameObject.FindGameObjectsWithTag("WallTransparent");
-        
-        Collider2D[] allObjectsInArea = Physics2D.OverlapBoxAll(player.transform.position, size, 0);
 
-        wallsInArea = allwalls.Where(wall => allObjectsInArea.Any(collider => collider.gameObject == wall)).ToArray();
-
-        PlayerInWallArea();
-
-        //if (inArea == true)
-        //{
-            foreach (var wall in wallsInArea)
+        if (playerTouching)
+        {
+            foreach (var wall in allObjectsInArea)
             {
+                if (!wall.CompareTag("WallTransparent")) continue;
+
                 SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
                 if (wallSprite != null)
                 {
@@ -52,63 +77,56 @@ public class WallOpacity : MonoBehaviour
 
                 }
             }
-
-            // Para todas as paredes que não estão dentro da área de colisão, restaura a opacidade
+        }
+        else
+        {
             foreach (var wall in allwalls)
             {
-                if (!wallsInArea.Contains(wall)) // Verifica se a parede não está na lista das paredes em colisão
+                SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
+                if (wallSprite != null)
                 {
-                    SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
-                    if (wallSprite != null)
-                    {
-                        wallSprite.color = Color.white; // Restaura a cor original (opacidade total)
-                    }
+                    wallSprite.color = Color.white; // Restaura a cor original (opacidade total)
                 }
             }
-        //}
-
-
-
-        void PlayerInWallArea()
-        {
-            GameObject[] allwalls = GameObject.FindGameObjectsWithTag("WallTransparent");
-
-            foreach (var wall in wallsInArea)
-            {
-                if (player.GetComponent<Collider2D>().IsTouching(wall.GetComponent<BoxCollider2D>()))
-                {
-                    // inArea = true;
-                    return;
-                }
-            }
-
         }
 
-
-
-        /*foreach (var wall in GameObject.FindGameObjectsWithTag("WallTransparent"))
+        wallsInArea = allwalls.Where(wall => allObjectsInArea.Any(collider => collider.gameObject == wall)).ToArray();
+        // Para todas as paredes que não estão dentro da área de colisão, restaura a opacidade
+        foreach (var wall in allwalls)
         {
-            SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
-            if (wallSprite != null && player != null)
+            if (!wallsInArea.Contains(wall)) // Verifica se a parede não está na lista das paredes em colisão
             {
-                // A parede perde opacidade e sua order fica em 5 (Acima do Player) enquanto o player está dentro dela.
-                if (player.transform.position.y > wall.transform.position.y && player.transform.position.y < wall.transform.position.y + 2)
+                SpriteRenderer wallSprite = wall.GetComponent<SpriteRenderer>();
+                if (wallSprite != null)
                 {
-                    wallSprite.color = transparenceColor;
-                    //wallSprite.sortingOrder = 5;
+                    wallSprite.color = Color.white; // Restaura a cor original (opacidade total)
                 }
-                else
-                {
-                    wallSprite.color = Color.white;
-                }
-
-                // A order da parede volta para 0 (Abaixo do Player) quando o player está na abaixo dela.
-                if (player.transform.position.y < wall.transform.position.y)
-                {
-                    //wallSprite.sortingOrder = 0;
-                }
-
             }
-        }*/
+        }
     }
+
+    /*void OnDrawGizmos()
+    {
+        // Ensure there's a player object reference
+        if (player != null)
+        {
+            // Draw a wireframe box in the scene view
+            Gizmos.color = Color.red;  // Set the color of the Gizmo
+            Gizmos.DrawWireCube(player.transform.position, size);
+
+            // Now perform the OverlapBoxAll to detect colliders in the area
+            allObjectsInArea = Physics2D.OverlapBoxAll(player.transform.position, size, 0);
+
+            // Optionally, visualize the colliders within the area
+            Gizmos.color = Color.green;  // Set color for detected objects
+            foreach (var collider in allObjectsInArea)
+            {
+                if (collider != null)
+                {
+                    // Draw a sphere at the position of each detected object
+                    Gizmos.DrawSphere(collider.transform.position, 0.2f);
+                }
+            }
+        }
+    }*/
 }
