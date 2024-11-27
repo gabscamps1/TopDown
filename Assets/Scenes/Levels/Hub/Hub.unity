@@ -2229,6 +2229,41 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3418829}
   m_SourcePrefab: {fileID: 100100000, guid: df484a8737fac5f40ad6b9db3e908de4, type: 3}
+--- !u!1 &541466748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541466749}
+  m_Layer: 5
+  m_Name: Store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &541466749
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541466748}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2128292491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &542410551
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,10 +3783,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 8798173985050797612, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      propertyPath: hudStore
+      value: 
+      objectReference: {fileID: 541466748}
     m_RemovedComponents:
     - {fileID: 4422564194544708724, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2710176335361036272, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 541466749}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3759364688153583907, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       insertIndex: -1
@@ -7703,6 +7745,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17e19e1ed153c6428fab148b263323c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2128292491 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2710176335361036272, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+  m_PrefabInstance: {fileID: 927647210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133338475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8041843473425901809, guid: edeccb14d0a70924796e86a9a8dc80ad, type: 3}
@@ -8178,7 +8225,7 @@ MonoBehaviour:
         sentenceImage: {fileID: 21300000, guid: 1ffd148c9b74cec42ae81c17b18410ef, type: 3}
         backgroundImage: {fileID: 0}
       - characterName: Vendedor de armas
-        sentence: "Pegue uma do ch\xE3o."
+        sentence: '<call: OpenStore>'
         sentenceImage: {fileID: 21300000, guid: 1ffd148c9b74cec42ae81c17b18410ef, type: 3}
         backgroundImage: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

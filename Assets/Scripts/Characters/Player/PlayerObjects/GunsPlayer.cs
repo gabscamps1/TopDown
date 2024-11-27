@@ -63,7 +63,7 @@ public class GunsPlayer : MonoBehaviour
     void Update()
     {
         // Pegar o item: Mover para a posição de segurar do jogador.
-        if (!DialogueManager.isTalking) { 
+        if (!DialogueManager.isTalking || !PauseMenu.isPaused) { 
             if (isHold == true)
             {
                 rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.

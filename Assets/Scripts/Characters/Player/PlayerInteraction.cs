@@ -96,7 +96,7 @@ public class PlayerInteraction : MonoBehaviour
 
                         }else if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS))
                         {
-                            dialogueTrigger.TriggerDialogue("1");
+                            dialogueTrigger.TriggerDialogue("0");
                             gameData.SellerFlag = 1;
 
                         }

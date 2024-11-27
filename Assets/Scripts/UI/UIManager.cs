@@ -52,6 +52,10 @@ public class UIManager : MonoBehaviour
     public TMP_Text deathMoneyText;
     public static bool isInDeathScreen;
 
+    [Header("Store")]
+    [SerializeField]GameObject hudStore;
+
+
     GameObject player;
     void Start()
     {
@@ -136,7 +140,16 @@ public class UIManager : MonoBehaviour
                 health = playerInfo.lives;
             }
 
-
+            if (!DialogueManager.isTalking)
+            {
+                hudHealth.SetActive(false);
+                hudMoney.SetActive(false);
+                hudWeapons.SetActive(false);
+                //hudStore.SetActive(true);
+            }
+            else { 
+            
+            }
             UpdateHealth();
             UpdateMoney();
 
@@ -209,6 +222,21 @@ public class UIManager : MonoBehaviour
 
     void UpdateMoney() {
         if (GameManager.instance != null) moneyText.text = "x" + GameManager.instance.gameData.money.ToString("D3");
+    }
+
+    public void OpenStore()
+    {
+        hudHealth.SetActive(false);
+        hudMoney.SetActive(false);
+        hudWeapons.SetActive(false);
+        hudStore.SetActive(true);
+    }
+
+    public void CloseStore() {
+        hudHealth.SetActive(true);
+        hudMoney.SetActive(true);
+        hudWeapons.SetActive(true);
+        hudStore.SetActive(false);
     }
 
     void StartHeartbeat(){
