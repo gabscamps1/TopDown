@@ -15,6 +15,7 @@ public class Boss : MonoBehaviour
     [SerializeField] GameObject[] localPoints; // Pontos no cenário em que o Boss caminha entre eles.
     float countTimeToBossRun;
     bool isBossRunning;
+    bool bossStarted;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +31,24 @@ public class Boss : MonoBehaviour
         layermask = LayerMask.GetMask("Player") | LayerMask.GetMask("SceneObjects") | LayerMask.GetMask("Invulnerability"); // Layers para serem detectadas no raycast.
 
         countTimeToBossRun = timeToBossRun;
+
+        BossStart();
+    }
+
+    // Diz quando o Boss começa a funcionar.
+    void BossStart()
+    {
+        int aleatoryPoint = Random.Range(0, 2) * 2;
+        agent.SetDestination(localPoints[aleatoryPoint].transform.position);
+        animator.SetBool("Walk", true);
+        bossStarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null) return;
+        // Retorna o código se o Player não estiver em cena ou se o Boss ainda não foi iniciado.
+        if (player == null || !bossStarted) return;
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, Mathf.Infinity, layermask);
@@ -45,25 +58,21 @@ public class Boss : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
+                // Se o Boss estiver no ponto determinado e o Player estiver olhando para ele, o temporizador para o Boss correr inicia.
                 if (!isBossRunning)
                 {
                     countTimeToBossRun -= Time.fixedDeltaTime;
                 }
                 
+                // Se o temporizador for menor que 0 o Boss procura um novo ponto para ir.
                 if (countTimeToBossRun < 0)
                 {
                     RemoveNearestPointFromPlayer();
-                    countTimeToBossRun = timeToBossRun;
+                    countTimeToBossRun = timeToBossRun; // Reseta o temporizador.
                 }
             }
         }
-        SearchAgain();
-
-    }
-
-    private void FixedUpdate()
-    {
-        
+        SearchAgain(); // Confere quando o Boss chega ao ponto determinado.
 
     }
 

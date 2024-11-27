@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator; // Referência do Animator.
 
     [Header("InfoPlayer")]
+    [SerializeField] float timeToStartPlayer;
+    bool playerStarted;
     public float playerSpeed; // Velocidade do player.
     private Vector3 movement;
     [SerializeField] float jumpTableVelocity; // Velocidade durante o pulo na mesa.
@@ -32,9 +34,24 @@ public class PlayerMovement : MonoBehaviour
     private enum PlayerState {Walk, Dodge, JumpTable};
     private PlayerState state = PlayerState.Walk;
 
+    private void Start()
+    {
+        // Diz quando o Player é iniciado.
+        StartCoroutine(PlayerStart());
+    }
+
+    // Diz quando o Player é iniciado.
+    IEnumerator PlayerStart()
+    {
+        animator.SetBool("Up", true);
+        yield return new WaitForSeconds(timeToStartPlayer);
+        playerStarted = true; // Player iniciado.
+    }
 
     private void Update()
     {
+        if (!playerStarted) return;
+
         if (!DialogueManager.isTalking)
         {
             States();
@@ -42,15 +59,6 @@ public class PlayerMovement : MonoBehaviour
             Movement();
 
             TryJumpTable();
-
-            if (Input.GetKey(KeyCode.O))
-            {
-                SceneManager.LoadScene("TesteScene");
-            }
-            if (Input.GetKey(KeyCode.P))
-            {
-                SceneManager.LoadScene("Tuorial 1");
-            }
 
             if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && !tryJump && (movement.x != 0 || movement.y != 0))
             {
