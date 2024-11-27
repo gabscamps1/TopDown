@@ -67,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else {
             animator.SetBool("Walk", false);
+            movement.x = 0;
         }
 
     }

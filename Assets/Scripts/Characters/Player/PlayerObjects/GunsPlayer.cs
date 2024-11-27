@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,10 +61,29 @@ public class GunsPlayer : MonoBehaviour
         isReloading = false; // Seta o reloading como falso, quando o código da arma é ativado.
     }
 
+    public bool canShoot;
+
     void Update()
     {
+
+        //Fiz isso da forma mais vagabunda possível depois eu arrumo - gabriel
+
+        if (PauseMenu.isPaused == false)
+        {
+            if (DialogueManager.isTalking)
+            {
+                canShoot = false;
+            }
+            else {
+                canShoot = true;
+            }
+        }
+        else {
+            canShoot = false;
+        }
+
         // Pegar o item: Mover para a posição de segurar do jogador.
-        if (!DialogueManager.isTalking || !PauseMenu.isPaused) { 
+        if (canShoot) { 
             if (isHold == true)
             {
                 rb.isKinematic = true; // Desabilita física da arma enquanto o item é carregado.

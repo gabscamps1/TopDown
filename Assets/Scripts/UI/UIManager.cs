@@ -140,15 +140,18 @@ public class UIManager : MonoBehaviour
                 health = playerInfo.lives;
             }
 
-            if (!DialogueManager.isTalking)
+            if (DialogueManager.isTalking)
             {
                 hudHealth.SetActive(false);
                 hudMoney.SetActive(false);
                 hudWeapons.SetActive(false);
                 //hudStore.SetActive(true);
             }
-            else { 
-            
+            else {
+                hudHealth.SetActive(true);
+                hudMoney.SetActive(true);
+                hudWeapons.SetActive(true);
+                //hudStore.SetActive(true);
             }
             UpdateHealth();
             UpdateMoney();
@@ -226,6 +229,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenStore()
     {
+        print("LojaAberta");
         hudHealth.SetActive(false);
         hudMoney.SetActive(false);
         hudWeapons.SetActive(false);
@@ -233,7 +237,9 @@ public class UIManager : MonoBehaviour
     }
 
     public void CloseStore() {
+        PauseMenu.CanPause = true;
         hudHealth.SetActive(true);
+        DialogueManager.isTalking = false;
         hudMoney.SetActive(true);
         hudWeapons.SetActive(true);
         hudStore.SetActive(false);
