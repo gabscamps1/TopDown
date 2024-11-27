@@ -232,6 +232,7 @@ public class DialogueManager : MonoBehaviour
 
             case "OpenStore":
                 GameObject.Find("HUD").GetComponent<UIManager>().OpenStore();
+                EndDialogueStore();
                 break;
 
             case "ScreenShake":
@@ -274,6 +275,15 @@ public class DialogueManager : MonoBehaviour
     {
         PauseMenu.CanPause = true;
         isTalking = false;
+        animator.SetBool("IsOpen", false);
+        PortraitAnimation.SetBool("IsOpen", false);
+        //dialogueEffects?.ResetDialogPosition();
+    }
+
+    void EndDialogueStore()
+    {
+        PauseMenu.CanPause = false;
+        //isTalking = false;
         animator.SetBool("IsOpen", false);
         PortraitAnimation.SetBool("IsOpen", false);
         //dialogueEffects?.ResetDialogPosition();
