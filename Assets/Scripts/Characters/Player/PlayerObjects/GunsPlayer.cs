@@ -25,7 +25,8 @@ public class GunsPlayer : MonoBehaviour
 
     [Header("Gun Sound")]
     [SerializeField] private AudioClip gunShootSound;
-    
+    [SerializeField] private AudioClip weaponBreak;
+
 
 
     [Header("StateGun")]
@@ -185,5 +186,10 @@ public class GunsPlayer : MonoBehaviour
                 transform.rotation = Quaternion.Euler(180, transform.rotation.y, -angle + angleVariance);
             }
         }
+    }
+
+    public void PlayBreakSound() {
+        if (SoundFXManager.instance != null && weaponBreak != null)
+            SoundFXManager.instance.PlaySoundFXClip(weaponBreak, transform, 1f); // Toca o som do tiro.
     }
 }

@@ -33,6 +33,15 @@ public class SaveData : MonoBehaviour
         PlayerPrefs.SetString("currentLevel", gameData.currentLevel);
         PlayerPrefs.SetInt("deaths", gameData.deaths);
         PlayerPrefs.SetInt("money", gameData.money);
+
+
+        PlayerPrefs.SetInt("BarWomanFlag", gameData.BarWomanFlag);
+        PlayerPrefs.SetInt("SellerFlag", gameData.SellerFlag);
+        PlayerPrefs.SetInt("BossHandyFlag", gameData.BossHandyFlag);
+
+
+        PlayerPrefs.SetInt("TALKED_TO_BOSS", gameData.TALKED_TO_BOSS);
+        PlayerPrefs.SetInt("TALKED_TO_SELLER", gameData.TALKED_TO_SELLER);
     }
 
     public void SaveGameDeath()
@@ -62,6 +71,26 @@ public class SaveData : MonoBehaviour
 
         if (PlayerPrefs.HasKey("money"))
             gameData.money = PlayerPrefs.GetInt("money");
+
+
+
+        if (PlayerPrefs.HasKey("BarWomanFlag"))
+            gameData.BarWomanFlag = PlayerPrefs.GetInt("BarWomanFlag");
+
+        if (PlayerPrefs.HasKey("SellerFlag"))
+            gameData.SellerFlag = PlayerPrefs.GetInt("SellerFlag");
+
+        if (PlayerPrefs.HasKey("BossHandyFlag"))
+            gameData.BarWomanFlag = PlayerPrefs.GetInt("BossHandyFlag");
+
+
+
+        if (PlayerPrefs.HasKey("TALKED_TO_BOSS"))
+            gameData.TALKED_TO_BOSS = PlayerPrefs.GetInt("TALKED_TO_BOSS");
+
+        if (PlayerPrefs.HasKey("TALKED_TO_SELLER"))
+            gameData.TALKED_TO_SELLER = PlayerPrefs.GetInt("TALKED_TO_SELLER");
+
     }
 
     public void NewGame()
@@ -73,7 +102,32 @@ public class SaveData : MonoBehaviour
         gameData.deaths = 0;
         gameData.money = 0;
 
+        //Flags e Triggers
+        gameData.BarWomanFlag = 0;
+        gameData.SellerFlag = 0;
+        gameData.BossHandyFlag = 0;
+
+        gameData.TALKED_TO_BOSS = 0;
+        gameData.TALKED_TO_SELLER = 0;
+
         PlayerPrefs.DeleteAll(); // Salva as informações de um novo jogo.
+    }
+
+    //Converte as flags bool para int e vice versa
+    int boolToInt(bool val)
+    {
+        if (val)
+            return 1;
+        else
+            return 0;
+    }
+
+    bool intToBool(int val)
+    {
+        if (val != 0)
+            return true;
+        else
+            return false;
     }
 
 }

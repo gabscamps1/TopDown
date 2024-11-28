@@ -65,10 +65,10 @@ public class PlayerInteraction : MonoBehaviour
                     case "Barwoman":
                         ChooseFlag(gameData.BarWomanFlag);
 
-                        if (gameData.BarWomanFlag == 0 && (gameData.TALKED_TO_SELLER == false)) {
+                        if (gameData.BarWomanFlag == 0 && (gameData.TALKED_TO_SELLER == 0)) {
                             dialogueTrigger.TriggerDialogue("0");
                             
-                        } else if ((gameData.BarWomanFlag == 0) && (gameData.TALKED_TO_SELLER)) {
+                        } else if ((gameData.BarWomanFlag == 0) && (gameData.TALKED_TO_SELLER == 1)) {
                             dialogueTrigger.TriggerDialogue("1");
 
                             gameData.BarWomanFlag = 1;
@@ -90,15 +90,20 @@ public class PlayerInteraction : MonoBehaviour
                         break;
 
                     case "Vendedor":
-                        if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS == false))
+                        if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS == 0))
                         {
                             dialogueTrigger.TriggerDialogue("0");
 
-                        }else if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS))
+                        }
+                        else if (gameData.SellerFlag == 0 && (gameData.TALKED_TO_BOSS == 1))
                         {
-                            dialogueTrigger.TriggerDialogue("0");
+                            dialogueTrigger.TriggerDialogue("1");
+                            gameData.TALKED_TO_SELLER = 1;
                             gameData.SellerFlag = 1;
 
+                        }
+                        else if (gameData.SellerFlag == 1) {
+                            dialogueTrigger.TriggerDialogue("2");
                         }
 
                         break;
@@ -108,13 +113,13 @@ public class PlayerInteraction : MonoBehaviour
                         {
                             dialogueTrigger.TriggerDialogue("0");
                             gameData.BossHandyFlag = 1;
-                            gameData.TALKED_TO_BOSS = true;
+                            gameData.TALKED_TO_BOSS = 1;
 
                         }
                         else if (gameData.BossHandyFlag == 1)
                         {
                             dialogueTrigger.TriggerDialogue("1");
-                            //gameData.SellerFlag = 1;
+                            
 
                         }
 

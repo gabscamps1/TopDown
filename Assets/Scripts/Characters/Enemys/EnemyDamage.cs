@@ -37,6 +37,9 @@ public class EnemyDamage : MonoBehaviour
                     // Pega o Dano que o objeto arremessado causa no Script do GunsPickup que fica no Prefab do Player.
                     CallDamage(player.GetComponentInChildren<GunsPickup>().damage);
 
+                   
+                    collider.gameObject.GetComponent<GunsPlayer>().PlayBreakSound(); //Toca o som da arma ou object quebrando
+
                     // Destrói o Objeto arremessado.
                     Destroy(collider.gameObject);
                 }

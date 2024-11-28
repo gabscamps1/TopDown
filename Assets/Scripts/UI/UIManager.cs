@@ -227,6 +227,19 @@ public class UIManager : MonoBehaviour
         if (GameManager.instance != null) moneyText.text = "x" + GameManager.instance.gameData.money.ToString("D3");
     }
 
+    public void HideHud() {
+        hudHealth.SetActive(false);
+        hudMoney.SetActive(false);
+        hudWeapons.SetActive(false);
+    }
+
+    public void ShowHud() {
+        hudWeapons.SetActive(true);
+        hudHealth.SetActive(true);
+        hudMoney.SetActive(true);
+
+    }
+
     public void OpenStore()
     {
         print("LojaAberta");

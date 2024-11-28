@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraCutscene : MonoBehaviour
 {
     GameObject player;
+    public GameObject hudObject;
 
     [SerializeField] float stoppedTime; // Tempo que a câmera fica parado no ponto inicial.
     [SerializeField] float transitionTime; // Tempo que a câmera leva para sair do ponto inical e chegar no ponto final.
@@ -34,8 +35,16 @@ public class CameraCutscene : MonoBehaviour
         
         if (inTransition)
         {
+
+            if (hudObject != null)
+            {
+                UIManager hudComponent = hudObject.GetComponent<UIManager>();
+                hudComponent.HideHud();
+            }
+
             transform.position += moveVelocity * Time.deltaTime;
         }
+        
     }
 
     IEnumerator Cutscene()
@@ -49,6 +58,14 @@ public class CameraCutscene : MonoBehaviour
         inTransition = false;
 
         yield return new WaitForSeconds(finalTime);
+
+
+        if (hudObject != null)
+        {
+            UIManager hudComponent = hudObject.GetComponent<UIManager>();
+
+            hudComponent.ShowHud();
+        }
 
         if (GetComponent<CameraToMouse>())
         {

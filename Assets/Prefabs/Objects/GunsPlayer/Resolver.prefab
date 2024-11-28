@@ -226,11 +226,12 @@ MonoBehaviour:
   bulletSpeed: 10
   damage: 10
   hudIcon: {fileID: -1240727997, guid: 3979658554c8c584586a9d4c8499a21e, type: 3}
-  gunShootSound: {fileID: 8300000, guid: 9123e36e834ad4b40afc108c08ef070d, type: 3}
+  gunShootSound: {fileID: 8300000, guid: f2a77fd279916ce4aa83d442d4478979, type: 3}
   isReloading: 0
   isHold: 0
   isAutomatic: 0
   angleVariance: -4
+  canShoot: 0
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0

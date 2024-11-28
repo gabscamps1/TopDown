@@ -59,11 +59,13 @@ public class GunsPickup : MonoBehaviour
         // Verifica a arma mais próxima.
         foreach (var gun in gunList)
         {
-            float distance = Vector3.Distance(transform.position, gun.transform.position);
-            if (distance < nearestDistance)
-            {
-                nearestDistance = distance;
-                nearestGun = gun; // Seleciona a arma mais próxima.
+            if (gun != null){ 
+                float distance = Vector3.Distance(transform.position, gun.transform.position);
+                if (distance < nearestDistance)
+                {
+                    nearestDistance = distance;
+                    nearestGun = gun; // Seleciona a arma mais próxima.
+                }
             }
         }
 

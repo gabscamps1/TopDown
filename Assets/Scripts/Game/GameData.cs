@@ -17,6 +17,8 @@ public class GameData : ScriptableObject
     public int BarWomanFlag;
     public int SellerFlag;
     public int BossHandyFlag;
-    public bool TALKED_TO_BOSS;
-    public bool TALKED_TO_SELLER;
+
+    //Não usar bool por conta do save game
+    public int TALKED_TO_BOSS;
+    public int TALKED_TO_SELLER;
 }
