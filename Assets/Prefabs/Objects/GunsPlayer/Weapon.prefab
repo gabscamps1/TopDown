@@ -231,6 +231,7 @@ MonoBehaviour:
   isHold: 0
   isAutomatic: 0
   angleVariance: -3
+  canShoot: 0
 --- !u!1 &5737777433054080989
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,22 +52,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!playerStarted) return;
 
-        if (!DialogueManager.isTalking)
+        if (DialogueManager.isTalking)
         {
-            States();
-
-            Movement();
-
-            TryJumpTable();
-
-            if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && !tryJump && (movement.x != 0 || movement.y != 0))
-            {
-                StartCoroutine(Dodge());
-            }
-        }
-        else {
             animator.SetBool("Walk", false);
             movement.x = 0;
+            return;
+        }
+
+        States();
+
+        Movement();
+
+        TryJumpTable();
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isDodging && canDodge && !tryJump && (movement.x != 0 || movement.y != 0))
+        {
+            StartCoroutine(Dodge());
         }
 
     }
