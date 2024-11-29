@@ -16,10 +16,10 @@ MonoBehaviour:
   deaths: 0
   died: 0
   currentLevel: Tutorial 1
-  masterVolume: 0
-  soundFXVolume: 1
+  masterVolume: 1
+  soundFXVolume: 0
   musicVolume: 0
-  BarWomanFlag: 1
+  BarWomanFlag: 0
   SellerFlag: 1
   BossHandyFlag: 0
   SabeTudoFlag: 1
