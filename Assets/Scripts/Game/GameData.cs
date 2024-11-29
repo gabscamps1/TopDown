@@ -12,11 +12,16 @@ public class GameData : ScriptableObject
 
     public string currentLevel = "Tutorial"; // Level do jogo em que o Jogador parou. Não necessáriamente a scene que está no momento.
 
+    public float masterVolume;
+    public float soundFXVolume;
+    public float musicVolume;
+
 
     [Header("NPC FLAGS")]
     public int BarWomanFlag;
     public int SellerFlag;
     public int BossHandyFlag;
+    public int SabeTudoFlag;
 
     //Não usar bool por conta do save game
     public int TALKED_TO_BOSS;

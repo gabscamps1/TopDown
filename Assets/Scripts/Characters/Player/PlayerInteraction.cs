@@ -65,23 +65,81 @@ public class PlayerInteraction : MonoBehaviour
                     case "Barwoman":
                         ChooseFlag(gameData.BarWomanFlag);
 
-                        if (gameData.BarWomanFlag == 0 && (gameData.TALKED_TO_SELLER == 0)) {
+                        if (gameData.BarWomanFlag == 0 && (gameData.TALKED_TO_SELLER == 0))
+                        {
                             dialogueTrigger.TriggerDialogue("0");
-                            
-                        } else if ((gameData.BarWomanFlag == 0) && (gameData.TALKED_TO_SELLER == 1)) {
+
+                        }
+                        else if ((gameData.BarWomanFlag == 0) && (gameData.TALKED_TO_SELLER == 1))
+                        {
                             dialogueTrigger.TriggerDialogue("1");
 
                             gameData.BarWomanFlag = 1;
 
-                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 1)){
+
+                        }
+                        else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 0))
+                        {
                             dialogueTrigger.TriggerDialogue("2");
 
-                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 2))
+                        }
+                        else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 1))
+                        {
+                            dialogueTrigger.TriggerDialogue("2");
+
+                        }
+                        else if ((gameData.BarWomanFlag == 1) && (gameData.deaths == 2))
                         {
                             dialogueTrigger.TriggerDialogue("3");
-                        }else if ((gameData.BarWomanFlag == 1) && (gameData.deaths >= 3))
+                        }
+                        else if ((gameData.BarWomanFlag == 1) && (gameData.deaths >= 3))
                         {
                             dialogueTrigger.TriggerDialogue("4");
+                        }
+                        else {
+                            dialogueTrigger.TriggerDialogue("999");
+                        }
+
+
+                        //ChooseFlag(gameData.BarWomanFlag);
+
+                        break;
+
+                    case "SabeTudo":
+                        ChooseFlag(gameData.SabeTudoFlag);
+
+                        if (gameData.SabeTudoFlag == 0 && (gameData.TALKED_TO_SELLER == 0))
+                        {
+                            dialogueTrigger.TriggerDialogue("0");
+
+                        }
+                        else if ((gameData.SabeTudoFlag == 0) && (gameData.TALKED_TO_SELLER == 1))
+                        {
+                            dialogueTrigger.TriggerDialogue("1");
+
+                            gameData.SabeTudoFlag = 1;
+
+                        }
+                        else if ((gameData.SabeTudoFlag == 1) && (gameData.deaths == 1))
+                        {
+                            dialogueTrigger.TriggerDialogue("1");
+
+                        }
+                        else if ((gameData.SabeTudoFlag == 1) && (gameData.deaths == 1))
+                        {
+                            dialogueTrigger.TriggerDialogue("2");
+
+                        }
+                        else if ((gameData.SabeTudoFlag == 1) && (gameData.deaths == 2))
+                        {
+                            dialogueTrigger.TriggerDialogue("3");
+                        }
+                        else if ((gameData.SabeTudoFlag == 1) && (gameData.deaths >= 3))
+                        {
+                            dialogueTrigger.TriggerDialogue("4");
+                        }
+                        else {
+                            dialogueTrigger.TriggerDialogue("999");
                         }
 
 

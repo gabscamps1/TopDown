@@ -143,7 +143,7 @@ public class UIManager : MonoBehaviour
             if (DialogueManager.isTalking)
             {
                 hudHealth.SetActive(false);
-                hudMoney.SetActive(false);
+                //hudMoney.SetActive(false);
                 hudWeapons.SetActive(false);
                 //hudStore.SetActive(true);
             }
@@ -244,12 +244,13 @@ public class UIManager : MonoBehaviour
     {
         print("LojaAberta");
         hudHealth.SetActive(false);
-        hudMoney.SetActive(false);
+        hudMoney.SetActive(true);
         hudWeapons.SetActive(false);
         hudStore.SetActive(true);
     }
 
     public void CloseStore() {
+        
         PauseMenu.CanPause = true;
         hudHealth.SetActive(true);
         DialogueManager.isTalking = false;

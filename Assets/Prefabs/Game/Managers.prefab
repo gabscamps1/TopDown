@@ -34,6 +34,81 @@ Transform:
   - {fileID: 2870806500140414320}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8957199446036412046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5044549130155222507}
+  - component: {fileID: 7260647142981954827}
+  - component: {fileID: 7789040792960949248}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5044549130155222507
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957199446036412046}
+  m_LocalRotation: {x: 0, y: 0, z: 0.012391558, w: 0.9999232}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2089518018152035319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.42}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43.1, y: -12}
+  m_SizeDelta: {x: 423, y: 63}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7260647142981954827
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957199446036412046}
+  m_CullTransparentMesh: 1
+--- !u!114 &7789040792960949248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957199446036412046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ce05b351e65b5674a9026ae3040948bf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &1627937321306770620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,6 +124,10 @@ PrefabInstance:
     - target: {fileID: 384787889591016356, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_Value
       value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 384787889591016356, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_MinValue
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 384787889591016356, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -121,6 +200,10 @@ PrefabInstance:
     - target: {fileID: 2368217862730623032, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_Value
       value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2368217862730623032, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_MinValue
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2368217862730623032, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -267,6 +350,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4624752132768633171, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      propertyPath: m_MinValue
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624752132768633171, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2939185129374349857}
@@ -344,7 +431,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 750110812591210315, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 5044549130155222507}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
 --- !u!114 &1423298914398148376 stripped
@@ -358,6 +448,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2089518018152035319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 750110812591210315, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
+  m_PrefabInstance: {fileID: 1627937321306770620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2428762474997291626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3973066317825857238, guid: 374fbfed1cc3b1a4b9105017bab9dcf9, type: 3}
@@ -458,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 3951358996115708306, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
       propertyPath: musicSlider
       value: 
-      objectReference: {fileID: 3911941180868027524}
+      objectReference: {fileID: 1423298914398148376}
     - target: {fileID: 3951358996115708306, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
       propertyPath: masterSlider
       value: 
@@ -466,7 +561,7 @@ PrefabInstance:
     - target: {fileID: 3951358996115708306, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
       propertyPath: soundFXSlider
       value: 
-      objectReference: {fileID: 1423298914398148376}
+      objectReference: {fileID: 3911941180868027524}
     - target: {fileID: 5721703669300762884, guid: 9277ec824ab856e4988b7460c3b5c14e, type: 3}
       propertyPath: pauseMenu
       value: 

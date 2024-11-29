@@ -38,6 +38,7 @@ public class SaveData : MonoBehaviour
         PlayerPrefs.SetInt("BarWomanFlag", gameData.BarWomanFlag);
         PlayerPrefs.SetInt("SellerFlag", gameData.SellerFlag);
         PlayerPrefs.SetInt("BossHandyFlag", gameData.BossHandyFlag);
+        PlayerPrefs.SetInt("SabeTudoFlag", gameData.SabeTudoFlag);
 
 
         PlayerPrefs.SetInt("TALKED_TO_BOSS", gameData.TALKED_TO_BOSS);
@@ -83,6 +84,11 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey("BossHandyFlag"))
             gameData.BarWomanFlag = PlayerPrefs.GetInt("BossHandyFlag");
 
+        if (PlayerPrefs.HasKey("SabeTudoFlag"))
+            gameData.SabeTudoFlag = PlayerPrefs.GetInt("SabeTudoFlag");
+
+     
+
 
 
         if (PlayerPrefs.HasKey("TALKED_TO_BOSS"))
@@ -106,6 +112,7 @@ public class SaveData : MonoBehaviour
         gameData.BarWomanFlag = 0;
         gameData.SellerFlag = 0;
         gameData.BossHandyFlag = 0;
+        gameData.SabeTudoFlag = 0;
 
         gameData.TALKED_TO_BOSS = 0;
         gameData.TALKED_TO_SELLER = 0;
