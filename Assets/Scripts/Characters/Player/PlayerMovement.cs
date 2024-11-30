@@ -32,12 +32,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping; // Confere se o Player está durante o Jump.
     private Vector3 jumpDirection;
     private enum PlayerState {Walk, Dodge, JumpTable};
+    float currentSpeed;
     private PlayerState state = PlayerState.Walk;
 
     private void Start()
     {
         // Diz quando o Player é iniciado.
         StartCoroutine(PlayerStart());
+        currentSpeed = playerSpeed;
     }
 
     // Diz quando o Player é iniciado.
@@ -56,7 +58,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Walk", false);
             movement.x = 0;
+            playerSpeed = 0;
             return;
+        }
+        else {
+            playerSpeed = currentSpeed;
         }
 
         States();

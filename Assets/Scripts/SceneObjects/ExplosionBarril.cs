@@ -108,9 +108,10 @@ public class ExplosionBarril : MonoBehaviour
             }
 
         }
-
+        GameObject.FindObjectOfType<ShakeScreenEffect>().Shake(0.4f, 0.1f);
         yield return new WaitForSeconds(0.45f);
 
+        
         Destroy(gameObject);
     }
 

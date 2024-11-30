@@ -29,6 +29,7 @@ public class PlayerDamage : MonoBehaviour
     // Função que causa dano ao Inimigo.
     public void CallDamage(float damage)
     {
+        GameObject.FindObjectOfType<ShakeScreenEffect>().Shake(0.1f, 0.1f);
         // Retorna o código se o Player estiver invulnerável.
         if (inInvulnerability) return;
 
@@ -53,6 +54,7 @@ public class PlayerDamage : MonoBehaviour
                 isDead = true;
                 GameManager.instance.deaths =+ 1; // Pega a quantia de dinheiro que está no GameObject Money e coloca no GameManager.
                 GameManager.instance.gameData.died = true;
+                
                 Destroy(gameObject);
             }
             
