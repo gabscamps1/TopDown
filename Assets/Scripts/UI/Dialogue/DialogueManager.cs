@@ -239,6 +239,11 @@ public class DialogueManager : MonoBehaviour
                 GameObject.Find("DialogueManager").GetComponent<ScreenShake>().TriggerShake();
                 break;
 
+            case "NextLevel":
+                EndDialogue();
+                GameObject.Find("LevelLoader").GetComponent<LevelLoader>().NewGame();
+                break;
+
             /*case "ScreenShake":
                 dialogueEffects?.TriggerShake();
                 break;*/

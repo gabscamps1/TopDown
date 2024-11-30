@@ -1,5 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
+
+
+using System.Collections; // Necessário para corrotinas
 using UnityEngine;
 
 public class IntroCutscene : MonoBehaviour
@@ -8,6 +10,12 @@ public class IntroCutscene : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(DelayedStart());
+    }
+
+    IEnumerator DelayedStart()
+    {
+        yield return new WaitForSeconds(0.2f); // Aguarda 1 segundo
         if (otherScript != null)
         {
             otherScript.TriggerDialogue("0"); // Chama o método no outro script
@@ -18,3 +26,4 @@ public class IntroCutscene : MonoBehaviour
         }
     }
 }
+

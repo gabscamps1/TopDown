@@ -11440,9 +11440,9 @@ MonoBehaviour:
         sentence: Vou sim.
         sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
         backgroundImage: {fileID: 0}
-      - characterName: 
-        sentence: <call:OpenStore>
-        sentenceImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
+      - characterName: Vendedor de Armas
+        sentence: "Pega elas a\xED no ch\xE3o."
+        sentenceImage: {fileID: 21300000, guid: 1ffd148c9b74cec42ae81c17b18410ef, type: 3}
         backgroundImage: {fileID: 0}
   - flag: 2
     dialogueData:
@@ -11451,10 +11451,6 @@ MonoBehaviour:
       - characterName: Vendedor de Armas
         sentence: Mais alguma coisa?
         sentenceImage: {fileID: 21300000, guid: 1ffd148c9b74cec42ae81c17b18410ef, type: 3}
-        backgroundImage: {fileID: 0}
-      - characterName: ' '
-        sentence: <call:OpenStore>
-        sentenceImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
         backgroundImage: {fileID: 0}
 --- !u!1 &8665219277566321489
 GameObject:

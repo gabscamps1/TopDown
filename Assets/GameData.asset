@@ -17,11 +17,11 @@ MonoBehaviour:
   died: 0
   currentLevel: Tutorial 1
   masterVolume: 1
-  soundFXVolume: 0
+  soundFXVolume: -7.187577
   musicVolume: 0
   BarWomanFlag: 0
-  SellerFlag: 1
+  SellerFlag: 0
   BossHandyFlag: 0
-  SabeTudoFlag: 1
-  TALKED_TO_BOSS: 1
-  TALKED_TO_SELLER: 1
+  SabeTudoFlag: 0
+  TALKED_TO_BOSS: 0
+  TALKED_TO_SELLER: 0

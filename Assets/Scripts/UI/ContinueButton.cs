@@ -17,7 +17,7 @@ public class ContinueButton : MonoBehaviour
             bool hasSave = GameObject.Find("GameManager").GetComponent<SaveData>().HasSave();
             if (!hasSave)
             {
-                continueButton.interactable = false;
+                //continueButton.interactable = false;
 
                 Color corPersonalizada = new Color(1, 1, 1f, 0.5f);
                 continueButton.GetComponent<ButtonHoverEffectTMP>().enabled = false;

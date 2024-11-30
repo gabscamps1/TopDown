@@ -5129,8 +5129,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572517070281141154, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: dialogosPorFlag.Array.data[0].dialogueData.sentences.Array.data[0].sentence
-      value: <call:MiddleDialog>Use <color=#FFFF00>[RMB]</color> para arremessar
-        armas.
+      value: "<call:MiddleDialog>Use <color=#FFFF00>o bot\xE3o direito do mouse</color>
+        para arremessar armas."
       objectReference: {fileID: 0}
     - target: {fileID: 8416084099099644889, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: m_SortingLayer
