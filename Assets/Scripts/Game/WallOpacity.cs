@@ -22,11 +22,13 @@ public class WallOpacity : MonoBehaviour
         player = GameManager.instance.player; // Pega a referência do Player do GameManager.
         transparenceColor = new Color(1, 1, 1, 0.5f); // Cor de transparência da parede.
 
-        foreach (var collision in player.GetComponents<Collider2D>())
-        {
-            if (!collision.isTrigger)
+        if (player != null) { 
+            foreach (var collision in player.GetComponents<Collider2D>())
             {
-                playerCollision = collision;
+                if (!collision.isTrigger)
+                {
+                    playerCollision = collision;
+                }
             }
         }
     }

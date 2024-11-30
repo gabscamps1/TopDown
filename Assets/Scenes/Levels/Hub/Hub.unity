@@ -4913,7 +4913,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d5161ef74cae3794c85c414edded0736, type: 3}
     - target: {fileID: 3507846114673243598, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5362452819791336125, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       propertyPath: m_LocalPosition.x

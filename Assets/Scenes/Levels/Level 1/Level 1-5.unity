@@ -3852,12 +3852,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1728508816938678944, guid: ef88cea151b1ace488296aacd3b77dfc, type: 3}
+      propertyPath: lives
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -1728508816938678944, guid: ef88cea151b1ace488296aacd3b77dfc, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 991638710}
     - target: {fileID: -1728508816938678944, guid: ef88cea151b1ace488296aacd3b77dfc, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7664804331141582, guid: ef88cea151b1ace488296aacd3b77dfc, type: 3}
       propertyPath: m_LocalPosition.y

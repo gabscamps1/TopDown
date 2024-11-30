@@ -156,15 +156,43 @@ public class UIManager : MonoBehaviour
 
             if (DialogueManager.isTalking)
             {
-                hudHealth.SetActive(false);
-                //hudMoney.SetActive(false);
-                hudWeapons.SetActive(false);
+                if (hudHealth != null)
+                {
+                    hudHealth.SetActive(false);
+                }
+
+                if (hudMoney != null)
+                {
+                    //hudMoney.SetActive(false);
+                }
+
+                if (hudWeapons != null)
+                {
+                    hudWeapons.SetActive(false);
+                }
+
+                
+    
+              
                 //hudStore.SetActive(true);
             }
             else {
-                hudHealth.SetActive(true);
-                hudMoney.SetActive(true);
-                hudWeapons.SetActive(true);
+                if (hudHealth != null)
+                {
+                    hudHealth.SetActive(true);
+                }
+
+                if (hudMoney != null)
+                {
+                    hudMoney.SetActive(true);
+                }
+
+                if (hudWeapons != null)
+                {
+                    hudWeapons.SetActive(true);
+                }
+
+              
                 //hudStore.SetActive(true);
                 //animator.SetTrigger("Play");
             }
@@ -229,17 +257,27 @@ public class UIManager : MonoBehaviour
 
         if (GameManager.instance != null)
         {
-            deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
-            deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+            if (deathScreen != null) {
+                deathCount.text = "<size=50%>x</size>" + GameManager.instance.gameData.deaths.ToString("D2");
+                deathMoneyText.text = "<size=50%>x</size>" + GameManager.instance.gameData.money.ToString("D3");
+            }
+            
+        }
+        if (hudHealth != null) {
+            hudHealth.SetActive(false);
         }
 
-        hudHealth.SetActive(false);
-        hudMoney.SetActive(false);
-        hudWeapons.SetActive(false);
+        if (hudMoney != null)
+        {
+            hudMoney.SetActive(false);
+        }
 
-        if (bossHealthBar != null){
+        if (bossHealthBar != null)
+        {
             bossHealthBar.SetActive(false);
         }
+
+   
         
     }
 
@@ -248,9 +286,20 @@ public class UIManager : MonoBehaviour
     }
 
     public void HideHud() {
-        hudHealth.SetActive(false);
-        hudMoney.SetActive(false);
-        hudWeapons.SetActive(false);
+        if (hudHealth != null)
+        {
+            hudHealth.SetActive(false);
+        }
+
+        if (hudMoney != null)
+        {
+            hudMoney.SetActive(false);
+        }
+
+        if (hudWeapons != null)
+        {
+            hudWeapons.SetActive(false);
+        }
 
         if (bossHealthBar != null)
         {
@@ -259,9 +308,21 @@ public class UIManager : MonoBehaviour
     }
 
     public void ShowHud() {
-        hudWeapons.SetActive(true);
-        hudHealth.SetActive(true);
-        hudMoney.SetActive(true);
+        if (hudHealth != null)
+        {
+            hudHealth.SetActive(true);
+        }
+
+        if (hudMoney != null)
+        {
+            hudMoney.SetActive(true);
+        }
+
+        if (hudWeapons != null)
+        {
+            hudWeapons.SetActive(true);
+        }
+
         //animator.SetTrigger("Play");
         if (bossHealthBar != null)
         {
