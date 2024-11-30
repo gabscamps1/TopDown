@@ -1407,6 +1407,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenPassArea: {fileID: 296789881}
+  otherScript: {fileID: 296789888}
+  hasActionOccurred: 0
 --- !u!61 &296789881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1457,6 +1459,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 20438133691496329, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
   m_PrefabInstance: {fileID: 480713715}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &296789888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296789873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f573deb330f77ff419153dd2e9bad4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogosPorFlag:
+  - flag: 0
+    dialogueData:
+      name: Primeira Vez
+      sentences:
+      - characterName: Denis Van Wayne
+        sentence: Ora ora ora, o que temos aqui?
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "N\xE3o acredito que algu\xE9m como voc\xEA passou pelos meus capangas. "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "Mas n\xE3o se engane, eu n\xE3o vou ser t\xE3o f\xE1cil assim
+          de derrotar, afinal eu estou al\xE9m de um ser humano comum. "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 1
+    dialogueData:
+      name: Segunda Vez
+      sentences:
+      - characterName: Denis Van Wayne
+        sentence: Ora ora ora, o que temos aqui?
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "N\xE3o acredito que algu\xE9m como voc\xEA passou pelos meus capangas. "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "Pois \xE9 n\xE9, completamente fora do comum."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "Ah, sim! Voc\xEA deve ser um homem de capacidades extraordin\xE1rias,
+          que \xF3timo, vai ser melhor quando eu matar voc\xEA. "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 2
+    dialogueData:
+      name: Terceira Vez
+      sentences:
+      - characterName: Denis Van Wayne
+        sentence: Ora ora ora, o que temos aqui?
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "N\xE3o acredito que algu\xE9m como voc\xEA passou pelos meus capangas. "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "Sim, j\xE1 fiz isso v\xE1rias vezes. "
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "H\xE1! Pois me certificarei de que esta ser\xE1 a \xFAltima.  "
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: 'Por favor. '
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+  - flag: 3
+    dialogueData:
+      name: Quarta pra sempre
+      sentences:
+      - characterName: Denis Van Wayne
+        sentence: Ora-
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "N\xE3o."
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Denis Van Wayne
+        sentence: "N\xE3o? N\xE3o o que?"
+        sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: Johnny
+        sentence: "N\xE3o"
+        sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
 --- !u!1001 &301142510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2791,7 +2888,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 5504006326723906579, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
       propertyPath: m_Name
-      value: paredes_pedra_3 (7)
+      value: PAREDE TRIGGER CUTSCENE
       objectReference: {fileID: 0}
     - target: {fileID: 5522034496501323355, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
       propertyPath: m_Size.x
@@ -2811,6 +2908,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5504006326723906579, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
       insertIndex: -1
       addedObject: {fileID: 296789881}
+    - targetCorrespondingSourceObject: {fileID: 5504006326723906579, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 296789888}
   m_SourcePrefab: {fileID: 100100000, guid: 232d08d64bb70cc44855d6852938a915, type: 3}
 --- !u!1 &480773954
 GameObject:
@@ -3993,6 +4093,7 @@ MonoBehaviour:
   stoppedTime: 0
   transitionTime: 2
   finalTime: 0
+  otherScript: {fileID: 0}
 --- !u!114 &696461441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6920,7 +7021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1207549169966607347, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: timeToStartPlayer
-      value: 4.3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3903222704392435275, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: m_Name
@@ -8457,6 +8558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeWhenPassArea: {fileID: 1452020708}
+  otherScript: {fileID: 0}
+  hasActionOccurred: 0
 --- !u!61 &1452020708
 BoxCollider2D:
   m_ObjectHideFlags: 0

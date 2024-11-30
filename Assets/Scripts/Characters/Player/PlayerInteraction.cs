@@ -9,7 +9,9 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionIcon;
 
     [SerializeField] public AudioClip dialogueBubbleSound;
+
     GameData gameData;
+
     private void Start()
     {
         if (GameManager.instance != null)

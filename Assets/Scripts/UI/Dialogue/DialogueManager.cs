@@ -235,6 +235,11 @@ public class DialogueManager : MonoBehaviour
                 EndDialogueStore();
                 break;
 
+            case "RevealBoss":
+                GameObject.Find("HUD").GetComponent<UIManager>().RevealBossName();
+                EndDialogue();
+                break;
+
             case "ScreenShake":
                 GameObject.Find("DialogueManager").GetComponent<ScreenShake>().TriggerShake();
                 break;

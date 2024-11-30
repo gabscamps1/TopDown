@@ -10,6 +10,11 @@ public class CameraCutscene : MonoBehaviour
     [SerializeField] float stoppedTime; // Tempo que a câmera fica parado no ponto inicial.
     [SerializeField] float transitionTime; // Tempo que a câmera leva para sair do ponto inical e chegar no ponto final.
     [SerializeField] float finalTime; // Tempo que a câmera leva para sair do sair do modo Cutscene e ir para CameraToMouse.
+
+    public DialogueTrigger otherScript; // Referência ao outro script
+
+
+
     bool inTransition;
     Vector3 moveVelocity;
     // Start is called before the first frame update
@@ -26,6 +31,8 @@ public class CameraCutscene : MonoBehaviour
 
         if (GameManager.instance != null)
             player = GameManager.instance.player;
+
+
 
         if (player == null) return;
 

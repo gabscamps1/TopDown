@@ -326,6 +326,16 @@ public class UIManager : MonoBehaviour
         //animator.SetTrigger("Play");
         if (bossHealthBar != null)
         {
+            //bossHealthBar.SetActive(true);
+        }
+
+    }
+
+    public void RevealBossName()
+    {
+
+        if (bossHealthBar != null)
+        {
             bossHealthBar.SetActive(true);
         }
 
