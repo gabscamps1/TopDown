@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+
+    private Animator animator;
     [Header("WeaponGauge")]
     [SerializeField] GameObject hudWeapons;
     private int primaryCurrentAmmo;
@@ -55,8 +57,18 @@ public class UIManager : MonoBehaviour
     [Header("Store")]
     [SerializeField]GameObject hudStore;
 
+    [Header("BossHealthBar")]
+    [SerializeField] GameObject bossHealthBar;
+
 
     GameObject player;
+
+    private void Awake()
+    {
+        // Obtém o componente Animator
+        animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
         player = GameManager.instance.player;
@@ -70,6 +82,8 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    
 
     void Update()
     {
@@ -152,6 +166,7 @@ public class UIManager : MonoBehaviour
                 hudMoney.SetActive(true);
                 hudWeapons.SetActive(true);
                 //hudStore.SetActive(true);
+                //animator.SetTrigger("Play");
             }
             UpdateHealth();
             UpdateMoney();
@@ -221,6 +236,11 @@ public class UIManager : MonoBehaviour
         hudHealth.SetActive(false);
         hudMoney.SetActive(false);
         hudWeapons.SetActive(false);
+
+        if (bossHealthBar != null){
+            bossHealthBar.SetActive(false);
+        }
+        
     }
 
     void UpdateMoney() {
@@ -231,12 +251,22 @@ public class UIManager : MonoBehaviour
         hudHealth.SetActive(false);
         hudMoney.SetActive(false);
         hudWeapons.SetActive(false);
+
+        if (bossHealthBar != null)
+        {
+            bossHealthBar.SetActive(false);
+        }
     }
 
     public void ShowHud() {
         hudWeapons.SetActive(true);
         hudHealth.SetActive(true);
         hudMoney.SetActive(true);
+        //animator.SetTrigger("Play");
+        if (bossHealthBar != null)
+        {
+            bossHealthBar.SetActive(true);
+        }
 
     }
 
@@ -256,6 +286,7 @@ public class UIManager : MonoBehaviour
         DialogueManager.isTalking = false;
         hudMoney.SetActive(true);
         hudWeapons.SetActive(true);
+        animator.SetTrigger("Play");
         hudStore.SetActive(false);
     }
 

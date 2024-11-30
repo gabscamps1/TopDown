@@ -6,10 +6,19 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] private Collider2D damageCollider;
     public float lives;
+    public float maxHealth;
+
+    public HealthBar healthBar;
 
     [Header("Enemy Sounds")]
     [SerializeField] private AudioClip enemyDamageSound;
 
+    void Start() {
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxHealth);
+        }
+    }
     private void OnParticleCollision(GameObject particle)
     {
         // Caso a particula com a Tag GunPlayer acerte o Inimigo a função CallDamage é chamada.
@@ -54,6 +63,10 @@ public class EnemyDamage : MonoBehaviour
         StartCoroutine(Blink());
 
         // Diminui a vida do Inimigo.
+        if (healthBar != null) {
+            healthBar.SetHealth(lives);
+        }
+        
         lives -= damage;
 
         // Chama o Som de receber dano.

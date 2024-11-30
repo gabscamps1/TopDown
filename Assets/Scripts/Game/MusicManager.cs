@@ -44,6 +44,6 @@ public class MusicManager : MonoBehaviour
         currentAudioSource.loop = true; // Garante o loop
         currentAudioSource.Play();
 
-        Debug.Log($"Tocando nova música: {newAudioSource.clip.name}");
+        //Debug.Log($"Tocando nova música: {newAudioSource.clip.name}");
     }
 }

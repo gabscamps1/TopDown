@@ -15,6 +15,12 @@ public class CameraCutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (hudObject != null)
+        {
+            UIManager hudComponent = hudObject.GetComponent<UIManager>();
+            hudComponent.HideHud();
+        }
+
         if (GetComponent<CameraToMouse>() != null)
             GetComponent<CameraToMouse>().enabled = false;
 
