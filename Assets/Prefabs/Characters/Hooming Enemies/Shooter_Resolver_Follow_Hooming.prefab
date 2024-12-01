@@ -227,7 +227,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageCollider: {fileID: 8813952117242465400}
   lives: 10
+  maxHealth: 0
+  healthBar: {fileID: 0}
   enemyDamageSound: {fileID: 8300000, guid: 9fa1926773d14e248ac80a487c14f3d7, type: 3}
+  Arma_Quebrada: {fileID: 8362619772383443967, guid: c11ae58b76d3161408e8412468ab0e03, type: 3}
+  Desintegrando: {fileID: 5205734617872340030, guid: e077e954d3da8a64791279b2054092c8, type: 3}
 --- !u!114 &3476713325295785895
 MonoBehaviour:
   m_ObjectHideFlags: 0

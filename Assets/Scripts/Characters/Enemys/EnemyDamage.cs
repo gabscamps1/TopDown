@@ -12,6 +12,8 @@ public class EnemyDamage : MonoBehaviour
 
     [Header("Enemy Sounds")]
     [SerializeField] private AudioClip enemyDamageSound;
+    [SerializeField] private ParticleSystem Arma_Quebrada;
+    [SerializeField] private ParticleSystem Desintegrando;
 
     void Start() {
         if (healthBar != null)
@@ -26,6 +28,16 @@ public class EnemyDamage : MonoBehaviour
         {
             CallDamage(particle.GetComponentInParent<GunsPlayer>().damage);
         }
+    }
+
+    private void Particulas()
+    {
+        Instantiate(Arma_Quebrada, transform.position, Quaternion.identity);
+    }
+
+    private void Morrer()
+    {
+        Instantiate(Desintegrando, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -48,6 +60,8 @@ public class EnemyDamage : MonoBehaviour
 
                    
                     collider.gameObject.GetComponent<GunsPlayer>().PlayBreakSound(); //Toca o som da arma ou object quebrando
+
+                    Particulas();
 
                     // Destrói o Objeto arremessado.
                     Destroy(collider.gameObject);
@@ -94,7 +108,9 @@ public class EnemyDamage : MonoBehaviour
                 // Destrói a partícula.
                 Destroy(firePartycle.gameObject, 2f);
             }
-            
+
+            Morrer();
+
             // Destrói o Inimigo.
             Destroy(gameObject);
         }
