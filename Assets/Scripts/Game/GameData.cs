@@ -6,7 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewGameData", menuName = "Game Data")]
 public class GameData : ScriptableObject
 {
-    public int money = 0; // Dinheiro do Player.
+    public int money = 0; // Dinheiro total do Player.
+    public int currentMoney = 0; // Dinheiro do Player durante o level.
     public int deaths = 0; // Número de mortes de um jogador.
     public bool died; // Player morreu?
 

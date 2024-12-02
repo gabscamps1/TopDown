@@ -40,7 +40,7 @@ public class UnlockedDoors : MonoBehaviour
         }
 
         // Toca a animação da porta abrindo.
-        Animator doorAnimator = GetComponentInChildren<Animator>();
+        Animator doorAnimator = doorTransform.GetComponentInChildren<Animator>();
 
         if (doorAnimator != null)
         {

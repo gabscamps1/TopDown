@@ -252,7 +252,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 19456
+    m_Bits: 23552
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -348,8 +348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rdb: {fileID: 4795744522364625412}
   animator: {fileID: 4429867644762803864}
+  timeToStartPlayer: 0
   playerSpeed: 4.8
-  runSpeed: 1.5
   jumpTableVelocity: 1.5
   dodgeVelocity: 29
   dotProductRight: 0

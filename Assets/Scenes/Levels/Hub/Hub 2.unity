@@ -1542,7 +1542,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Right
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1518265279274526008, guid: edeccb14d0a70924796e86a9a8dc80ad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2450,10 +2451,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7424764007817262866, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 23552
-      objectReference: {fileID: 0}
     - target: {fileID: 8739493253982156035, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3082,6 +3079,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 981117982223723573, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -79.552
+      objectReference: {fileID: 0}
+    - target: {fileID: 981117982223723573, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 92.123
+      objectReference: {fileID: 0}
     - target: {fileID: 2194189371999307165, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       propertyPath: player
       value: 
