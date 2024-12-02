@@ -1489,6 +1489,10 @@ MonoBehaviour:
           de derrotar, afinal eu estou al\xE9m de um ser humano comum. "
         sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
         backgroundImage: {fileID: 0}
+      - characterName: 
+        sentence: <call:RevealBoss>
+        sentenceImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
+        backgroundImage: {fileID: 0}
   - flag: 1
     dialogueData:
       name: Segunda Vez
@@ -1509,6 +1513,10 @@ MonoBehaviour:
         sentence: "Ah, sim! Voc\xEA deve ser um homem de capacidades extraordin\xE1rias,
           que \xF3timo, vai ser melhor quando eu matar voc\xEA. "
         sentenceImage: {fileID: 21300000, guid: f1a612fdb09757c479016029f32b1a7c, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: 
+        sentence: <call:RevealBoss>
+        sentenceImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
         backgroundImage: {fileID: 0}
   - flag: 2
     dialogueData:
@@ -1534,6 +1542,10 @@ MonoBehaviour:
         sentence: 'Por favor. '
         sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
         backgroundImage: {fileID: 0}
+      - characterName: ' '
+        sentence: <call:RevealBoss>
+        sentenceImage: {fileID: 21300000, guid: 5d90500629e74d84385108d8b744b48d, type: 3}
+        backgroundImage: {fileID: 0}
   - flag: 3
     dialogueData:
       name: Quarta pra sempre
@@ -1553,6 +1565,10 @@ MonoBehaviour:
       - characterName: Johnny
         sentence: "N\xE3o"
         sentenceImage: {fileID: 21300000, guid: efb6630008d86274f84bbec05893c49e, type: 3}
+        backgroundImage: {fileID: 0}
+      - characterName: ' '
+        sentence: <call:RevealBoss>
+        sentenceImage: {fileID: 0}
         backgroundImage: {fileID: 0}
 --- !u!1001 &301142510
 PrefabInstance:

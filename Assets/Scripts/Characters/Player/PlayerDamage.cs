@@ -29,7 +29,7 @@ public class PlayerDamage : MonoBehaviour
     // Função que causa dano ao Inimigo.
     public void CallDamage(float damage)
     {
-        GameObject.FindObjectOfType<ShakeScreenEffect>().Shake(0.1f, 0.1f);
+        
         // Retorna o código se o Player estiver invulnerável.
         if (inInvulnerability) return;
 
@@ -38,6 +38,8 @@ public class PlayerDamage : MonoBehaviour
 
         // Inicia a coroutine de piscar o Player em vermelho.
         StartCoroutine(Blink());
+
+        GameObject.FindObjectOfType<ShakeScreenEffect>().Shake(0.1f, 0.1f);
 
         // Chama o Som de receber dano.
         if (SoundFXManager.instance != null && playerDamageSound != null)
