@@ -1444,14 +1444,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 904368868}
     m_Modifications:
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Size.y
-      value: 1.1171863
-      objectReference: {fileID: 0}
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.06640686
-      objectReference: {fileID: 0}
     - target: {fileID: 5397097933315929861, guid: 7324cc03758043241aff7e8625f3c387, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1511,6 +1503,14 @@ PrefabInstance:
     - target: {fileID: 7841898682157300349, guid: 7324cc03758043241aff7e8625f3c387, type: 3}
       propertyPath: m_Name
       value: spr_barriozao (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1171863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.06640686
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1122935830563672463, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
@@ -6348,14 +6348,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 904368868}
     m_Modifications:
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Size.x
-      value: 1.3547034
-      objectReference: {fileID: 0}
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.08561611
-      objectReference: {fileID: 0}
     - target: {fileID: 2400775558747201474, guid: 05aea79d78ea4364ba2eac9683060061, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6419,6 +6411,14 @@ PrefabInstance:
     - target: {fileID: 8220796953042806315, guid: 05aea79d78ea4364ba2eac9683060061, type: 3}
       propertyPath: m_Name
       value: spr_barriozao (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3547034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08561611
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1122935830563672463, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
@@ -7542,11 +7542,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1286251233675077564, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2194189371999307165, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1229194296}
     - target: {fileID: 2428762474997291626, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619415050252051898, guid: 14a5025df2ade6543a34ed17676e5921, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -14550,6 +14558,14 @@ PrefabInstance:
     - target: {fileID: 257926896738503817, guid: 4b8e2317946f3b44387ab349b4e40123, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 753247357168860380, guid: 4b8e2317946f3b44387ab349b4e40123, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8791904
+      objectReference: {fileID: 0}
+    - target: {fileID: 753247357168860380, guid: 4b8e2317946f3b44387ab349b4e40123, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.28047505
       objectReference: {fileID: 0}
     - target: {fileID: 2865824318131510463, guid: 4b8e2317946f3b44387ab349b4e40123, type: 3}
       propertyPath: m_Materials.Array.data[0]

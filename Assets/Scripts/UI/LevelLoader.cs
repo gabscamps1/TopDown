@@ -41,6 +41,8 @@ public class LevelLoader : MonoBehaviour
 
     public void Death()
     {
+        transform.parent.Find("HUD").transform.Find("DeathScreen").gameObject.SetActive(false);
+        
         StartCoroutine(LoadLevelString("Hub", "Death"));
     }
 

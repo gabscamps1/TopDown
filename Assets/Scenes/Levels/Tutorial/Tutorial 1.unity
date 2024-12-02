@@ -2949,10 +2949,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7424764007817262866, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 3072
-      objectReference: {fileID: 0}
     - target: {fileID: 8739493253982156035, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3874,14 +3870,6 @@ PrefabInstance:
     - target: {fileID: 1874800451849887871, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2751428026472086833, guid: eea65a27142148f4b907b790600a6760, type: 3}
-      propertyPath: m_Size.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 2751428026472086833, guid: eea65a27142148f4b907b790600a6760, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7572517070281141154, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: dialogosPorFlag.Array.data[0].dialogueData.sentences.Array.data[0].sentence

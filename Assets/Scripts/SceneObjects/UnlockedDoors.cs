@@ -21,7 +21,7 @@ public class UnlockedDoors : MonoBehaviour
 
     void OpenDoor()
     {
-        Transform doorTransform = transform.GetChild(0);
+        Transform doorTransform = transform.parent.GetChild(0);
 
         // Tira a porta como obstáculo.
         NavMeshObstacle doorObstacle = doorTransform.GetComponent<NavMeshObstacle>();

@@ -349,7 +349,7 @@ public class PlayerMovement : MonoBehaviour
         playerSprite.sortingLayerName = "SceneObjectsTop"; 
 
         // Distância de erro para considerar que chegou ao destino.
-        while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.05f) 
+        while (Vector2.Distance((Vector2)transform.position, targetPosition) > 0.06f) 
         {
             animator.SetInteger("WalkVertical", Mathf.FloorToInt(currentDirection.y));
             animator.SetInteger("WalkHorizontal", Mathf.FloorToInt(currentDirection.x));

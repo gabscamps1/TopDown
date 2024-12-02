@@ -639,14 +639,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4450430751047948756, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
-      propertyPath: m_Size.y
-      value: 1.0714079
-      objectReference: {fileID: 0}
-    - target: {fileID: 4450430751047948756, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.019019425
-      objectReference: {fileID: 0}
     - target: {fileID: 4917706861580638517, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1947,6 +1939,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 3772033941998192128, guid: 1f4cc0468f05c8c48be49eac7feb1838, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 8876313775843708520, guid: 1f4cc0468f05c8c48be49eac7feb1838, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.6829503
@@ -2721,6 +2717,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: spr_mesaPequena (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8656708963186443551, guid: 3565d4a9e9e1b444c98738fea331055d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9833953
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656708963186443551, guid: 3565d4a9e9e1b444c98738fea331055d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0050788224
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2878,6 +2882,10 @@ PrefabInstance:
     - target: {fileID: 3772033941998192128, guid: 1f4cc0468f05c8c48be49eac7feb1838, type: 3}
       propertyPath: m_Offset.y
       value: -0.22511266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772033941998192128, guid: 1f4cc0468f05c8c48be49eac7feb1838, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8192
       objectReference: {fileID: 0}
     - target: {fileID: 8876313775843708520, guid: 1f4cc0468f05c8c48be49eac7feb1838, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3846,10 +3854,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7424764007817262866, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 3072
-      objectReference: {fileID: 0}
     - target: {fileID: 8739493253982156035, guid: 6b553a96311a25a438f776d3e0f20fae, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4117,14 +4121,6 @@ PrefabInstance:
     - target: {fileID: 1874800451849887871, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2751428026472086833, guid: eea65a27142148f4b907b790600a6760, type: 3}
-      propertyPath: m_Size.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 2751428026472086833, guid: eea65a27142148f4b907b790600a6760, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7572517070281141154, guid: eea65a27142148f4b907b790600a6760, type: 3}
       propertyPath: dialogosPorFlag.Array.data[0].dialogueData.sentences.Array.data[0].sentence
@@ -4921,6 +4917,14 @@ PrefabInstance:
     - target: {fileID: 7308958451554981193, guid: 3565d4a9e9e1b444c98738fea331055d, type: 3}
       propertyPath: m_Name
       value: spr_mesaPequena
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656708963186443551, guid: 3565d4a9e9e1b444c98738fea331055d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9128473
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656708963186443551, guid: 3565d4a9e9e1b444c98738fea331055d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0011557341
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7229,6 +7233,14 @@ PrefabInstance:
     - target: {fileID: 3402153057127812861, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450430751047948756, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9880776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450430751047948756, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.020382166
       objectReference: {fileID: 0}
     - target: {fileID: 4917706861580638517, guid: 04fe624c984eab54cb517b6e59caa5b1, type: 3}
       propertyPath: m_Materials.Array.data[0]

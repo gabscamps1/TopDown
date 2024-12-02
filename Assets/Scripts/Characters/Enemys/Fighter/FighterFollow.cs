@@ -105,6 +105,8 @@ public class FighterFollow : MonoBehaviour
     // Função de ataque. Chamada na animação de ataque do Inimigo.
     void Attack(string direction)
     {
+        if (player == null) return;
+
         // Pega posição do Player em relação ao Inimigo.
         Vector2 playerDirection = (player.transform.position - transform.position).normalized;
 
