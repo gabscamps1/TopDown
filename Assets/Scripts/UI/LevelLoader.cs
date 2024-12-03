@@ -77,4 +77,9 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelIndexInt);
 
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

@@ -10751,8 +10751,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 279711147244162356, guid: e621db93f3009e840bd613465f984cab, type: 3}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:

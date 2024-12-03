@@ -64,7 +64,6 @@ public class DialogueManager : MonoBehaviour
 
 
                 DisplayNextSentence();
-                Debug.Log(isTalking);
 
                 PauseMenu.CanPause = false;
                 isTalking = true;

@@ -114,11 +114,10 @@ public class GunsPlayer : MonoBehaviour
                 }
 
                 // Inicia o processo de recarga se a munição for zero e não estiver reloading.
-                if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading && fireParticle != null)
+                /*if (Input.GetKeyDown(KeyCode.R) && currentAmmo < maxAmmo && !isReloading && fireParticle != null)
                 {
-
                     StartCoroutine(Recarregar());
-                }
+                }*/
             }
             else
             {

@@ -152,7 +152,6 @@ public class Boss : MonoBehaviour
             }
             
         }
-        print(nearestPointFromBoss);
         agent.SetDestination(nearestPointFromBoss.transform.position);
         animator.SetBool("Walk", true);
     }

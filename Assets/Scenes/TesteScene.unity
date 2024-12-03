@@ -3530,6 +3530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7680352475863962900, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8704
+      objectReference: {fileID: 0}
     - target: {fileID: 3903222704392435275, guid: 54eed515c99eef149a0b15f2a8ab52db, type: 3}
       propertyPath: m_Name
       value: Shooter_Resolver (1)

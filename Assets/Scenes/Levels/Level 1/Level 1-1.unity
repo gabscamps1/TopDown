@@ -5262,7 +5262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613662134105500048, guid: 668b16dccba30e24eaa1c23cbcf2f59e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.013334
+      value: -16.872
       objectReference: {fileID: 0}
     - target: {fileID: 6613662134105500048, guid: 668b16dccba30e24eaa1c23cbcf2f59e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6348,6 +6348,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 904368868}
     m_Modifications:
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3547034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08561611
+      objectReference: {fileID: 0}
     - target: {fileID: 2400775558747201474, guid: 05aea79d78ea4364ba2eac9683060061, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6411,14 +6419,6 @@ PrefabInstance:
     - target: {fileID: 8220796953042806315, guid: 05aea79d78ea4364ba2eac9683060061, type: 3}
       propertyPath: m_Name
       value: spr_barriozao (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Size.x
-      value: 1.3547034
-      objectReference: {fileID: 0}
-    - target: {fileID: 8922732896730696371, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.08561611
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1122935830563672463, guid: 6850d0b727286254da58f183ebe0bc01, type: 3}
@@ -10582,6 +10582,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 904368868}
     m_Modifications:
+    - target: {fileID: 6950519995774503388, guid: d4ad3092963b7fe4b81fbc03cb614d13, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1924727
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950519995774503388, guid: d4ad3092963b7fe4b81fbc03cb614d13, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0024863183
+      objectReference: {fileID: 0}
     - target: {fileID: 8215184463929806528, guid: d4ad3092963b7fe4b81fbc03cb614d13, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
