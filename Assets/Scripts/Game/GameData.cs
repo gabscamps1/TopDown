@@ -17,6 +17,7 @@ public class GameData : ScriptableObject
     public float soundFXVolume;
     public float musicVolume;
 
+    public bool inHub2;
 
     [Header("NPC FLAGS")]
     public int BarWomanFlag;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,22 @@ public class GameManager : MonoBehaviour
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
+        }
+
+        if (gameData.inHub2 && SceneManager.GetActiveScene().name == "Hub")
+        {
+            player.transform.position = new Vector3(7.71f, 0.43f, 0);
+            gameData.inHub2 = false;
+        }
+
+        if (SceneManager.GetActiveScene().name != "Hub")
+        {
+            gameData.inHub2 = false;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Hub 2")
+        {
+            gameData.inHub2 = true;
         }
     }
 
